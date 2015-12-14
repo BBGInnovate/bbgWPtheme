@@ -2692,29 +2692,29 @@ fieldset {
   content: "";
 }
 
-main#content .usa-bbg-banner {
+.usa-bbg-banner {
   background: #CCC no-repeat center center / cover;
   height: 400px;
   max-width: 9999px;
   position: relative;
   width: 100%;
 }
-main#content .usa-bbg-banner .usa-bbg-banner-site-logo-img {
+.usa-bbg-banner .usa-bbg-banner-site-logo-img {
   width: 100px;
 }
 @media screen and (min-width: 600px) {
-  main#content .usa-bbg-banner .usa-bbg-banner-site-logo-img {
+  .usa-bbg-banner .usa-bbg-banner-site-logo-img {
     width: 150px;
   }
 }
-main#content .usa-bbg-banner .usa-bbg-banner-box {
+.usa-bbg-banner .usa-bbg-banner-box {
   margin: 0 auto;
   max-width: 1040px;
   padding-bottom: 1.5rem;
   position: absolute;
   bottom: 0;
 }
-main#content .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
+.usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
   color: #FFF;
   font-size: 3.2rem;
   margin-bottom: 5px;
@@ -2723,11 +2723,11 @@ main#content .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 600px) {
-  main#content .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
+  .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
     font-size: 4rem;
   }
 }
-main#content .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-description {
+.usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-description {
   background-color: rgba(0, 0, 0, 0.3);
   color: #FFF;
   display: inline-block;
