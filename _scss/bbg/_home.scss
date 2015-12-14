@@ -1,0 +1,69 @@
+main#content .usa-bbg-banner{
+	background: #CCC no-repeat center center / cover;
+	height: $banner-image-height;
+	max-width: 9999px;
+	position: relative;
+	width: 100%;
+
+	.usa-bbg-banner-site-logo-img{
+		width: 100px;
+		@include media($medium-screen) {
+			width: 150px;
+		}
+	}
+
+	.usa-bbg-banner-box{
+		margin: 0 auto;
+		max-width: $site-max-width;
+		padding-bottom: $site-margins/2;
+		position: absolute;
+			bottom:0;
+
+		.usa-bbg-banner-site-title{
+			color: #FFF;
+			font-size: $h1-font-size * .8;
+			margin-bottom: 5px;
+			max-width: $site-max-width;
+			padding-right: $site-margins;
+			text-shadow: $text-shadow;
+			@include media($medium-screen) {
+				font-size: $h1-font-size;
+			}
+		}
+
+		.usa-bbg-banner-site-description{
+			background-color: $box-transparent;
+			color: #FFF;
+			display: inline-block;
+			font-family: $font-sans;
+			font-weight: $font-normal;
+			margin-top: 0;
+			margin-right: 0;
+			margin-left: -$site-margins;
+			padding: 10px $site-margins;
+			border-radius: 0 $border-radius $border-radius 0;
+		}
+	}
+}
+
+.usa-bbg-intro-large p{
+	font-size: 2rem;
+	line-height: 1.7em;
+
+	@include media($medium-screen) {
+		font-size: 2.5rem;
+		line-height: 4rem;
+	}
+}
+
+.usa-bbg-portfolio-project{
+	@include media($medium-large-screen) {
+		@include omega(4n);
+	}
+}
+
+
+.usa-bbg-footer-big-top{
+	padding: 0 $site-margins;
+}
+

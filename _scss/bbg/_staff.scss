@@ -1,0 +1,17 @@
+.bbg-staff-profile{
+	margin-bottom:7rem;
+}
+.bbg-staff-avatar {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+.bbg-staff-author{
+	margin-top:0;
+}
+.bbg-staff-contact-link:before{
+	content: "• ";
+}
+.bbg-staff-contact-link:first-of-type:before{
+	content: "";
+}

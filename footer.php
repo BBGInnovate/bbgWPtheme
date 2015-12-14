@@ -1,0 +1,108 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * US Web Design Standards (alpha) includes 3 footers alternatives.
+ * @link https://playbook.cio.gov/designstandards/footers/
+ *
+ * @package bbginnovate
+ */
+
+?>
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer usa-footer usa-footer-big usa-bbg-footer-big usa-sans" role="contentinfo">
+		<div class="usa-grid-full usa-bbg-footer-big-top">
+			<nav class="usa-footer-nav usa-width-two-thirds">
+				<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<h4 class="usa-footer-primary-link">Entities</h4>
+					<li><a href="http://www.voanews.com/">Voice of America</a></li>
+					<li><a href="http://www.rferl.org/">Radio Free Europe / Radio Liberty</a></li>
+					<li><a href="http://www.martinoticias.com/">Office of Cuba Broadcasting</a></li>
+					<li><a href="http://www.rfa.org/english/">Radio Free Asia</a></li>
+					<li><a href="http://www.alhurra.com/">Middle East Broadcasting Networks</a></li>
+				</ul>
+				<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<h4 class="usa-footer-primary-link">Footer links</h4>
+					<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/contact-us">Contact Us</a></li>
+					<li><a href="http://www.bbg.gov/about-the-agency/history/faqs/">FAQs</a></li>
+					<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/privacy-policy">Privacy Policy</a></li>
+					<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/">FOIA</a></li>
+					<li><a href="http://www.bbg.gov/sitemap">Sitemap</a></li>
+					<li><a href="http://www.bbg.gov/open">Open Gov</a></li>
+				</ul>
+				<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<h4 class="usa-footer-primary-link">Topic</h4>
+					<li><a href="#">About the BBG</a></li>
+					<li><a href="http://www.bbgstrategy.com/">Office of Strategy and Development</a></li>
+					<li><a href="http://oddi.bbg.gov">Office of Digital & Design Innovation</a></li>
+					<li><a href="#">Secondary link</a></li>
+				</ul>
+			</nav>
+
+			<div class="usa-sign_up-block usa-width-one-third">
+			  <h3 class="usa-sign_up-header">Sign up</h3>
+
+			  <label class="" for="email" id="">Your email address</label>
+			  <input id="email" name="email" type="email">
+
+			  <button type="submit">Sign up</button>
+			</div>
+		</div>
+
+
+		<div class="usa-footer-secondary_section usa-footer-big-secondary-section">
+			<div class="usa-grid">
+				<div class="usa-footer-logo usa-width-one-half">
+					<img class="usa-footer-logo-img" src="<?php echo get_template_directory_uri() ?>/img/logo-agency.png" alt="Broadcasting Board of Governors logo">
+					<h3 class="usa-footer-logo-heading">Broadcasting Board of Governors</h3>
+				</div>
+
+				<div class="usa-footer-contact-links usa-width-one-half">
+					<div class="usa-social-links">
+						<a href="https://www.facebook.com/BBGgov/">
+							<svg width="26" height="39" role="img" aria-label="Facebook">
+								<title>Facebook</title>
+								<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_template_directory_uri() ?>/img/social-icons/svg/facebook25.svg" src="<?php echo get_template_directory_uri() ?>/img/social-icons/png/facebook25.png" width="26" height="39"></image>
+							</svg>
+						</a>
+						<a href="https://twitter.com/BBGgov">
+							<svg width="26" height="39" role="img" aria-label="Twitter">
+							<title>Twitter</title>
+							<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_template_directory_uri() ?>/img/social-icons/svg/twitter16.svg" src="<?php echo get_template_directory_uri() ?>/img/social-icons/png/twitter16.png" width="26" height="39"></image>
+							</svg>
+						</a>
+						<a href="https://www.youtube.com/user/bbgtunein">
+							<svg width="26" height="39" role="img" aria-label="YouTube">
+								<title>YouTube</title>
+								<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_template_directory_uri() ?>/img/social-icons/svg/youtube15.svg" src="<?php echo get_template_directory_uri() ?>/img/social-icons/png/youtube15.png" width="26" height="39"></image>
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="26" height="39" role="img" aria-label="RSS">
+								<title>RSS</title>
+								<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo get_template_directory_uri() ?>/img/social-icons/svg/rss25.svg" src="<?php echo get_template_directory_uri() ?>/img/social-icons/png/rss25.png" width="26" height="39"></image>
+							</svg>
+						</a>
+					</div>
+
+					<address>
+						<h3 class="usa-footer-contact-heading">Agency Contact Center</h3>
+						<p>(202) 203-4400</p>
+						<a href="mailto:publicaffairs@bbg.gov">publicaffairs@bbg.gov</a>
+					</address>
+				</div>
+			</div><!-- .usa-grid -->
+		</div><!-- .usa-secondary-section -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+</html>
