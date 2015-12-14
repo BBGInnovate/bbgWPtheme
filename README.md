@@ -18,17 +18,12 @@ Design files of all the assets included on this site are available for download 
 
 1. Install [WordPress](https://codex.wordpress.org/Installing_WordPress).
 2. Clone or download this theme into the wp-content/themes folder.
-3. We're using grunt to compile the SASS files on the fly, so you'll need to install the Grunt command line interface and you'll need to make sure SASS is installed.
-
-To install the grunt command line interface:
+3. We're using grunt to compile the SASS files on the fly, so you'll need to install the Grunt command line interface and you'll need to make sure SASS is installed. To install the grunt command line interface:
     `$ npm install -g grunt-cli`
-
 The next step is to install Sass. 
     `$ sudo gem install sass`
-
 4. From inside of the theme directory type:
     `$ npm install`
-
 5. To start watching/compiling the SASS, type:
     `$ grunt`
 
