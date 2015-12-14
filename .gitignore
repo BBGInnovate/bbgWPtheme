@@ -1,0 +1,8 @@
+node_modules
+.npm-debug.log
+tmp
+.sass-cache
+*.css.map
+
+compiled
+.style-human.css
