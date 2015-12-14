@@ -94,7 +94,7 @@ get_header();
 
 					?>
 					</div>
-					<a href="<?php echo site_url(); ?>/category/portfolio/">Explore entire portfolio</a>
+					<a href="<?php echo site_url(); ?>/blog/category/portfolio/">Explore entire portfolio</a>
 
 				</div>
 			</section>

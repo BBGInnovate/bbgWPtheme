@@ -12,66 +12,67 @@ get_header();
 
 ?>
 <div id="main" class="site-main">
-    <div id="primary" class="content-area">
-        <main id="content" class="site-content" role="main">
-            <h1>STAFF</h1>
-            <?php
-$blogusers = get_users();
-// Loop through the users to create the staff profiles
-foreach ( $blogusers as $user ) {
-    $authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
-    $authorEmail = esc_html( $user->user_email );
-    $authorName = esc_html( $user->display_name );
-    $theauthorid = esc_html( $user->ID );
-    $count = 0;
-    $number_of_posts = 3;
-?>
+	<div id="primary" class="content-area">
+		<main id="content" class="site-content" role="main">
+			<div class="usa-grid">
+				<h1>STAFF</h1>
+				<?php
+	$blogusers = get_users();
+	// Loop through the users to create the staff profiles
+	foreach ( $blogusers as $user ) {
+		$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+		$authorEmail = esc_html( $user->user_email );
+		$authorName = esc_html( $user->display_name );
+		$theauthorid = esc_html( $user->ID );
+		$count = 0;
+		$number_of_posts = 3;
+	?>
 
-                <div class="bbg-staff-profile">
-                    <a href="<?php echo $authorPath ?>">
-                        <img src="<?php echo get_avatar_url( $user->user_email ); ?>" alt="<?php echo $authorName; ?>" class="bbg-staff-avatar usa-avatar"/>
-                    </a>
+					<div class="bbg-staff-profile">
+						<a href="<?php echo $authorPath ?>">
+							<img src="<?php echo get_avatar_url( $user->user_email ); ?>" alt="<?php echo $authorName; ?>" class="bbg-staff-avatar usa-avatar"/>
+						</a>
 
-                    <h2 class="bbg-staff-author">
-                        <a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
-                    </h2>
+						<h2 class="bbg-staff-author">
+							<a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
+						</h2>
 
-                    <?php if ( $user->occupation!="" ) { ?>
-                    <h5 class="bbg-staff-occupation"><?php echo esc_html( $user->occupation ); ?></h5>
-                    <?php } ?>
+						<?php if ( $user->occupation!="" ) { ?>
+						<h5 class="bbg-staff-occupation"><?php echo esc_html( $user->occupation ); ?></h5>
+						<?php } ?>
 
-                    <div class="bbg-staff-contact">
-                            <span class="bbg-staff-contact-link email"><a href="mailto:<?php echo $authorEmail; ?>">Email</a></span>
+						<div class="bbg-staff-contact">
+								<span class="bbg-staff-contact-link email"><a href="mailto:<?php echo $authorEmail; ?>">Email</a></span>
 
-                        <?php if ( $user->twitterHandle!="" ) { ?>
-                            <span class="bbg-staff-contact-link twitter"><a href="<?php echo  esc_html( $user->twitterHandle ); ?>"><?php echo '@' . esc_html( $user->twitterHandle ); ?></a></span>
-                        <?php } ?>
+							<?php if ( $user->twitterHandle!="" ) { ?>
+								<span class="bbg-staff-contact-link twitter"><a href="<?php echo  esc_html( $user->twitterHandle ); ?>"><?php echo '@' . esc_html( $user->twitterHandle ); ?></a></span>
+							<?php } ?>
 
-                        <?php if ( $user->user_url!="" ) { ?>
-                            <span class="bbg-staff-contact-link website"><a href="<?php echo  esc_html( $user->user_url ); ?>">Website</a></span>
-                        <?php } ?>
-                    </div>
+							<?php if ( $user->user_url!="" ) { ?>
+								<span class="bbg-staff-contact-link website"><a href="<?php echo  esc_html( $user->user_url ); ?>">Website</a></span>
+							<?php } ?>
+						</div>
 
-                    <?php if ( $user->user_description!="" ) { ?>
-                    <p><?php echo esc_html( $user->user_description ); ?></p>
-                    <?php } ?>
+						<?php if ( $user->user_description!="" ) { ?>
+						<p><?php echo esc_html( $user->user_description ); ?></p>
+						<?php } ?>
 
 
-                    <h3>Blog posts</h3>
-                    <?php query_posts( 'author=' . $theauthorid ); ?>
-                    <?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
-                        <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <?php $count++; ?>
-                    <?php endwhile; endif; ?>
+						<h3>Blog posts</h3>
+						<?php query_posts( 'author=' . $theauthorid ); ?>
+						<?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
+							<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<?php $count++; ?>
+						<?php endwhile; endif; ?>
 
-                </div>
+					</div>
 
-                <?php } ?>
-
-        </main>
-    </div><!-- #primary .content-area -->
-    <div id="secondary" class="widget-area" role="complementary">
-    </div><!-- #secondary .widget-area -->
+				<?php } ?>
+			</div><!-- .usa-grid -->
+		</main>
+	</div><!-- #primary .content-area -->
+	<div id="secondary" class="widget-area" role="complementary">
+	</div><!-- #secondary .widget-area -->
 
 </div><!-- #main .site-main -->
 
