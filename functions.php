@@ -290,3 +290,30 @@ if ( !current_user_can( 'edit_user', $user_id ) )
 /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
 update_usermeta( $user_id, 'occupation', $_POST['occupation'] );
 }
+
+
+/*===================================================================================
+ * CUSTOM PAGINATION LOGIC - we show X posts on front page but more posts on 'older post' pages
+ * the next several functions are for adding that functionality and also making it available in wordpress settings
+ * =================================================================================*/
+
+add_action('pre_get_posts', 'bbginnovate_query_offset', 1 ); 
+function bbginnovate_query_offset(&$query) {    
+    /* don't show in focus posts on homepage */
+    if ($query -> is_home()) {
+        $portfolio_cat_id=get_cat_id('Portfolio');
+        $siteintro_cat_id=get_cat_id('Site Introduction');
+        $tax_query = array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'term_id',
+                'terms' => [$portfolio_cat_id,$siteintro_cat_id],
+                'operator' => 'NOT IN',
+            )
+        );
+        $query->set( 'tax_query', $tax_query );
+    }
+    if ( ! ($query->is_home() &&  $query->is_main_query()) ) {
+        return;
+    }
+}
