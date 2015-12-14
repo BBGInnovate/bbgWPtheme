@@ -33,7 +33,7 @@ This will compile a human readable version of the CSS, a version of the CSS with
 
 ## Got feedback?
 
-You can reach us at oddi@bbg.gov.
+You can reach us at bwilliamson@bbg.gov.
 
 
 
