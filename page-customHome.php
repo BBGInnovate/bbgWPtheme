@@ -129,6 +129,39 @@ get_header();
 				?>
 				</div>
 			</section>
+
+			<section class="usa-bbg-management usa-section">
+				<div class="usa-grid">
+					<h2>Management</h2>
+					<div class="usa-grid-full">
+					<?php
+						$args = array( 'include' => [2,6]);
+						$blogusers = get_users($args);
+						// Loop through the users to create the staff profiles
+						foreach ( $blogusers as $user ) {
+						    $authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+						    $authorEmail = esc_html( $user->user_email );
+						    $authorName = esc_html( $user->display_name );
+						    $theauthorid = esc_html( $user->ID );
+						    $count = 0;
+						    $number_of_posts = 3;
+
+						?>
+						<div class="bbg-staff-profile">
+		                    <a href="<?php echo $authorPath ?>">
+		                        <img src="<?php echo get_avatar_url( $user->user_email ); ?>" alt="<?php echo $authorName; ?>" class="bbg-staff-avatar usa-avatar"/>
+		                    </a>
+		                    <h2 class="bbg-staff-author">
+		                        <a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
+		                    </h2>
+		                </div>
+                    <?php 
+                		} 
+					?>
+					</div>
+					<a href="<?php echo site_url(); ?>/staff">View All Staff</a>
+				</div>
+			</section>
 		</main>
 	</div><!-- #primary .content-area -->
 	<div id="secondary" class="widget-area" role="complementary">
