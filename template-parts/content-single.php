@@ -53,7 +53,7 @@
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="entry-content usa-bbg-entry-content">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
