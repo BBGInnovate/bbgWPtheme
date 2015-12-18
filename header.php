@@ -93,6 +93,10 @@ global $templateName;
 				<span class="usa-disclaimer-stage">This site is currently in alpha. <a href="https://18f.gsa.gov/dashboard/stages/#alpha">Learn more.</a></span>
 			</div>
 		</div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'bbginnovate' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
 
 
 		<?php 
@@ -123,10 +127,6 @@ global $templateName;
 		?>
 
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'bbginnovate' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
