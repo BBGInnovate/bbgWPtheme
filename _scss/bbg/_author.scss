@@ -1,0 +1,25 @@
+.usa-bbg-avatar {
+	border-radius: 50%;
+	margin: 0 auto;
+	@include media($medium-screen) {
+		float: left;
+	}
+}
+.usa-bbg-author-text{
+	width: 100%;
+	@include media($medium-screen) {
+		float: left;
+		margin-left: 20px;
+		width: calc(100% - 180px);
+	}
+}
+.usa-bbg-author-text > * {
+	text-align: center; 
+	@include media($medium-screen) {
+		text-align: left; 
+	}
+}
+
+.usa-bbg-author-name{
+	margin-top:0;
+}
