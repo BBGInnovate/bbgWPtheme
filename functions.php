@@ -254,6 +254,18 @@ return $c;
 }
 add_filter( 'user_contactmethods', 'bbg_extendAuthorContacts', 10, 1 );
 
+
+/**
+ * Add Twitter handle to author metadata using built-in wp hook for contact methods
+ * Reference: http://www.paulund.co.uk/how-to-display-author-bio-with-wordpress
+ */
+add_filter('get_avatar','change_avatar_css');
+
+function change_avatar_css($class) {
+    $class = str_replace('class="avatar', 'class="avatar usa-avatar usa-bbg-avatar', $class) ;
+    return $class;
+}
+
 /**
  * Add non-standard metadata to author
  * Reference: http://justintadlock.com/archives/2009/09/10/adding-and-using-custom-user-profile-fields

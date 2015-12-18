@@ -30,7 +30,10 @@ get_header();
 
 					<div class="bbg-staff-profile">
 						<a href="<?php echo $authorPath ?>">
+							<!--
 							<img src="<?php echo get_avatar_url( $user->user_email ); ?>" alt="<?php echo $authorName; ?>" class="bbg-staff-avatar usa-avatar"/>
+							-->
+							<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 						</a>
 
 						<h2 class="bbg-staff-author">
