@@ -104,7 +104,7 @@ global $templateName;
 			if ($templateName!="customHome"){
 		?>
 
-		<div class="site-branding">
+		<div class="usa-bbg-site-branding">
 			<div id="header" class="usa-grid">
 
 				<?php if ( is_front_page() && is_home() ) : ?>

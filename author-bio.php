@@ -8,16 +8,10 @@
 <section class="usa-section">
 	<div class="usa-grid usa-bbg-author">
 		<div class="usa-bbg-avatar">
-		<!-- 
-		<?php echo get_wp_user_avatar_src( 'user_email' ); ?>
-		<?php echo get_avatar_url( 'user_email' ); ?>
-			<img src="<?php echo get_avatar_url( 'user_email' ); ?>" alt="<?php echo esc_attr( get_the_author() ); ?>" class="bbg-staff-avatar usa-avatar"/>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( '', 100 ) ); ?>
-		-->
 			<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
 		</div>
 		<div class="usa-bbg-author-text">
-			<h1 class="usa-bbg-author-name"><?php printf( '%s', '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+			<h1 class="usa-bbg-author-name"><?php printf( '%s', get_the_author() ); ?></h1>
 
 			<div class="usa-bbg-author-description">
 					<?php 
