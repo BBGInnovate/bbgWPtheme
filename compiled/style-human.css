@@ -2698,6 +2698,14 @@ fieldset {
   margin-top: 0;
 }
 
+.usa-bbg-author-occupation {
+  text-transform: uppercase;
+}
+
+.usa-bbg-author-bio {
+  margin-top: 1rem;
+}
+
 .usa-bbg-entry-content > * {
   margin-left: auto;
   margin-right: auto;
@@ -2800,6 +2808,10 @@ fieldset {
 
 .usa-bbg-site-branding {
   margin-bottom: 40px;
+}
+
+section.usa-section {
+  margin-bottom: 3rem;
 }
 
 .bbg-staff-profile {
