@@ -2676,8 +2676,6 @@ fieldset {
 @media screen and (min-width: 600px) {
   .usa-bbg-avatar {
     float: left;
-    height: 100px;
-    width: 100px;
   }
 }
 
@@ -2702,6 +2700,9 @@ fieldset {
 }
 
 .usa-bbg-author-name {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 3rem;
+  margin-bottom: .1rem;
   margin-top: 0;
 }
 
@@ -2803,6 +2804,10 @@ fieldset {
 
 .usa-bbg-footer-big-top {
   padding: 0 3rem;
+}
+
+.usa-bbg-site-branding {
+  margin-bottom: 40px;
 }
 
 .bbg-staff-profile {
