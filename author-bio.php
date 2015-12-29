@@ -38,6 +38,6 @@
 				<div class='clearAll'></div>
 			</div>
 			<!-- .author-description -->
-		</div><!-- .usa-bbg-author -->
+		</div><!-- .usa-bbg-author-text -->
 	</div>
 </section> 

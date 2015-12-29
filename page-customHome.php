@@ -136,23 +136,45 @@ get_header();
 					<div class="usa-grid-full">
 					<?php
 						$args = array( 'include' => [8,2,6]);
+						//$args = array( 'include' => [1,2,3]);
 						$blogusers = get_users($args);
 						// Loop through the users to create the staff profiles
 						foreach ( $blogusers as $user ) {
 							$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
-							$authorEmail = esc_html( $user->user_email );
 							$authorName = esc_html( $user->display_name );
+							$authorOccupation = esc_html( $user->occupation );
+							$authorEmail = esc_html( $user->user_email );
+							$authorTwitter = esc_html( $user->twitterHandle );
+							$authorDescription = esc_html( $user->description );
 							$theauthorid = esc_html( $user->ID );
 							$count = 0;
 							$number_of_posts = 3;
 						?>
 						<div class="bbg-staff-profile">
-							<a href="<?php echo $authorPath ?>">
-								<img src="<?php echo get_avatar_url( $user->user_email ); ?>" alt="<?php echo $authorName; ?>" class="bbg-staff-avatar usa-avatar"/>
-							</a>
-							<h2 class="bbg-staff-author">
-								<a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
-							</h2>
+							<div class="usa-bbg-avatar">
+								<a href="<?php echo $authorPath ?>">
+								<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
+								</a>
+							</div>
+							<div class="usa-bbg-author-text">
+								<h1 class="usa-bbg-author-name">
+									<a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
+								</h1>
+
+								<div class="usa-bbg-author-description">
+										<?php 
+											/* ODDI CUSTOM: add twitter handle to bio */
+											echo '<div class="usa-bbg-author-occupation">' . $authorOccupation . '</div>';
+											echo '<div class="usa-bbg-author-contact"><a href="//www.twitter.com/' . $authorTwitter. '">@' . $authorTwitter . '</a> </div>';
+										?>
+									<div class="usa-bbg-author-bio">
+										<?php echo $authorDescription; ?>
+									</div>
+									<div class='clearAll'></div>
+								</div>
+								<!-- .author-description -->
+							</div><!-- .usa-bbg-author-text -->
+
 						</div>
 					<?php 
 							} 

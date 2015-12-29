@@ -263,6 +263,9 @@ add_filter('get_avatar','change_avatar_css');
 
 function change_avatar_css($class) {
     $class = str_replace("class='avatar", "class='avatar usa-avatar usa-bbg-avatar", $class) ;
+
+    //Adding a second version because we're using WP User Avatar plugin and it uses double quotes
+    $class = str_replace('class="avatar', 'class="avatar usa-avatar usa-bbg-avatar', $class) ;
     return $class;
 }
 
