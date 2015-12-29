@@ -108,15 +108,15 @@ global $templateName;
 			<div id="header" class="usa-grid">
 
 				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="usa-heading site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
-					<h1 class="usa-heading site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
 					<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
 				<?php endif;
 
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
-					<h5 class="usa-heading site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h5>
+					<h3 class="usa-heading usa-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>
 				<?php endif; ?>
 			</div>
 
