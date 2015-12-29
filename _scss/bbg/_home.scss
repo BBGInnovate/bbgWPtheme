@@ -5,11 +5,20 @@
 	position: relative;
 	width: 100%;
 
+	a:focus {
+			box-shadow: none;
+	}
+
 	.usa-bbg-banner-site-logo-img{
 		width: 100px;
 		@include media($medium-screen) {
 			width: 150px;
 		}
+
+		:focus {
+			box-shadow: none;
+		}
+
 	}
 
 	.usa-bbg-banner-box{

@@ -2828,6 +2828,9 @@ fieldset {
   position: relative;
   width: 100%;
 }
+.usa-bbg-banner a:focus {
+  box-shadow: none;
+}
 .usa-bbg-banner .usa-bbg-banner-site-logo-img {
   width: 100px;
 }
@@ -2835,6 +2838,9 @@ fieldset {
   .usa-bbg-banner .usa-bbg-banner-site-logo-img {
     width: 150px;
   }
+}
+.usa-bbg-banner .usa-bbg-banner-site-logo-img :focus {
+  box-shadow: none;
 }
 .usa-bbg-banner .usa-bbg-banner-box {
   margin: 0 auto;
@@ -2927,6 +2933,9 @@ section.usa-section {
 }
 .usa-heading-site-title a:hover {
   text-decoration: none;
+}
+.usa-heading-site-title a:focus {
+  box-shadow: none;
 }
 
 .usa-heading-site-description {
