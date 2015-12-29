@@ -35,8 +35,6 @@
 			background-color: $box-transparent;
 			color: #FFF;
 			display: inline-block;
-			font-family: $font-sans;
-			font-weight: $font-normal;
 			margin-top: 0;
 			margin-right: 0;
 			margin-left: -$site-margins;
@@ -61,7 +59,6 @@
 		@include omega(4n);
 	}
 }
-
 
 .usa-bbg-footer-big-top{
 	padding: 0 $site-margins;

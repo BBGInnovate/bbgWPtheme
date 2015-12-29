@@ -1,7 +1,47 @@
 .usa-bbg-site-branding {
-	margin-bottom: 40px;
+	margin-bottom: $site-margins;
 }
 
 section.usa-section{
 	margin-bottom: $site-margins;
+}
+
+.bbg-site-logo{
+	background: #CCC url(img/logo-agency-square.png) no-repeat center center / cover;
+	display: inline-block;
+	height: 2.5rem * 1.2;
+	margin-right: 10px;
+	vertical-align: middle;
+	width: 2.5rem * 1.2;
+
+	@include media($medium-screen) {
+		height: 4rem * 1.2;
+		width: 4rem * 1.2;
+	}
+}
+
+.usa-heading-site-title {
+	font-size: 2.5rem;
+
+	@include media($medium-screen) {
+		font-size: 4rem;
+	}
+
+		a {
+			color: $color-base;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+}
+
+.usa-heading-site-description{
+	font-family: $font-sans;
+	font-size: 1.5rem;
+	font-weight: $font-normal;
+
+	@include media($medium-screen) {
+		font-size: 2rem;
+	}
 }

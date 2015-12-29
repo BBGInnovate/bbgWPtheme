@@ -2704,10 +2704,11 @@ fieldset {
 
 .usa-bbg-author-bio {
   margin-top: 1rem;
-  font-weight: 100;
+  /*font-weight: 100;*/
 }
 
-.usa-bbg-entry-content > * {
+.usa-bbg-entry-content > *,
+.bbg-post-footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
@@ -2724,6 +2725,7 @@ fieldset {
 
 .usa-bbg-entry-content blockquote.pullquote {
   border-bottom: 6px solid #333;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 1201px) {
   .usa-bbg-entry-content blockquote.pullquote {
@@ -2733,6 +2735,82 @@ fieldset {
     max-width: 50%;
     padding: 0;
   }
+}
+
+@media screen and (min-width: 900px) {
+  .bbg-entry-meta {
+    margin-bottom: 4rem;
+  }
+}
+
+.bbg-post-share-menu {
+  margin-top: 0;
+}
+@media screen and (min-width: 900px) {
+  .bbg-post-share-menu {
+    float: left;
+  }
+}
+
+.bbg-post-share-menu-tool {
+  display: inline-block;
+  margin-right: 10px;
+}
+@media screen and (min-width: 900px) {
+  .bbg-post-share-menu-tool {
+    display: block;
+  }
+}
+
+.bbg-post-share-menu-tool:before {
+  content: "";
+}
+
+.bbg-share-icon {
+  background: #CCC no-repeat center center / cover;
+  border-radius: 0.3rem;
+  display: inline-block;
+  height: 40px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 40px;
+}
+@media screen and (min-width: 900px) {
+  .bbg-share-icon {
+    border-radius: 0;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.bbg-share-icon.email {
+  background-color: #CCC;
+  background-image: url(img/social-icons/png-white/social-icons_email.png);
+}
+
+.bbg-share-icon.facebook {
+  background-color: #3d5a98;
+  background-image: url(img/social-icons/png-white/social-icons_facebook.png);
+}
+
+.bbg-share-icon.twitter {
+  background-color: #55acee;
+  background-image: url(img/social-icons/png-white/social-icons_twitter.png);
+}
+
+.bbg-share-text {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .bbg-share-text {
+    display: inline-block;
+  }
+}
+
+.usa-single_post_thumbnail {
+  background-color: #F1F1F1;
+  line-height: 0;
+  text-align: center;
 }
 
 .usa-bbg-banner {
@@ -2774,8 +2852,6 @@ fieldset {
   background-color: rgba(0, 0, 0, 0.3);
   color: #FFF;
   display: inline-block;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
   margin-top: 0;
   margin-right: 0;
   margin-left: -3rem;
@@ -2794,7 +2870,7 @@ fieldset {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .usa-bbg-portfolio-project:nth-child(4n) {
     margin-right: 0;
   }
@@ -2808,11 +2884,52 @@ fieldset {
 }
 
 .usa-bbg-site-branding {
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 section.usa-section {
   margin-bottom: 3rem;
+}
+
+.bbg-site-logo {
+  background: #CCC url(img/logo-agency-square.png) no-repeat center center/cover;
+  display: inline-block;
+  height: 3rem;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 3rem;
+}
+@media screen and (min-width: 600px) {
+  .bbg-site-logo {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+}
+
+.usa-heading-site-title {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 600px) {
+  .usa-heading-site-title {
+    font-size: 4rem;
+  }
+}
+.usa-heading-site-title a {
+  color: #212121;
+}
+.usa-heading-site-title a:hover {
+  text-decoration: none;
+}
+
+.usa-heading-site-description {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 600px) {
+  .usa-heading-site-description {
+    font-size: 2rem;
+  }
 }
 
 .bbg-staff-profile {
