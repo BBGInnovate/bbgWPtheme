@@ -2704,6 +2704,7 @@ fieldset {
 
 .usa-bbg-author-bio {
   margin-top: 1rem;
+  font-weight: 100;
 }
 
 .usa-bbg-entry-content > * {
@@ -2815,7 +2816,14 @@ section.usa-section {
 }
 
 .bbg-staff-profile {
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
+}
+.bbg-staff-profile:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .usa-bbg-avatar {

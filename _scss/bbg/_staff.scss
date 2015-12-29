@@ -1,5 +1,6 @@
 .bbg-staff-profile{
-	margin-bottom:7rem;
+	@include clearfix;
+	margin-bottom: $site-margins;
 }
 .usa-bbg-avatar {
 	border-radius: 50%;
