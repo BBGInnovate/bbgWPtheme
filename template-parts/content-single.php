@@ -48,10 +48,16 @@
 		?>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-			<div class="entry-meta">
+			<div class="entry-meta bbg-entry-meta">
 				<?php bbginnovate_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
+
+		<ul class="bbg-post-share-menu">
+			<li class="bbg-post-share-menu-tool email"><a href="#"><span class="bbg-share-icon email"></span><span class="bbg-share-text ">Email</span></a></li>
+			<li class="bbg-post-share-menu-tool facebook"><a href="#"><span class="bbg-share-icon facebook"></span><span class="bbg-share-text ">Share</span></a></li>
+			<li class="bbg-post-share-menu-tool twitter"><a href="#"><span class="bbg-share-icon twitter"></span><span class="bbg-share-text ">Tweet</span></a></li>
+		</ul>
 
 		<div class="entry-content usa-bbg-entry-content">
 			<?php the_content(); ?>
@@ -64,7 +70,7 @@
 		</div><!-- .entry-content -->
 	</div><!-- .usa-grid -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer bbg-post-footer">
 		<?php bbginnovate_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
