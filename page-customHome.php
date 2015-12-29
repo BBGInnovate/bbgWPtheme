@@ -25,7 +25,7 @@ get_header();
 <div id="main" class="site-main">
 
 	<div id="primary" class="content-area">
-		<main id="content" class="site-content" role="main">
+		<main id="content" class="site-content bbg-home-main" role="main">
 			<?php
 				if ( get_header_image() != "") { 
 					/* Check if there's an image set. Ideally we'd tweak the design accorgingly. */
@@ -40,7 +40,7 @@ get_header();
 						<h1 class="usa-bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
 						<?php $description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
-							<h3 class="usa-bbg-banner-site-description"><?php echo $description; ?></h3>
+							<h3 class="usa-bbg-banner-site-description usa-heading-site-description"><?php echo $description; ?></h3>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ get_header();
 
 			<section class="usa-bbg-portfolio usa-section">
 				<div class="usa-grid">
-					<h2>Portfolio</h2>
+					<h6><span class="usa-label-big">Portfolio</span></h6>
 					<div class="usa-grid-full">
 					<?php
 						$qParams=array(
@@ -103,7 +103,7 @@ get_header();
 
 			<section class="usa-section">
 				<div class="usa-grid">
-				<h2>Recent posts</h2>
+					<h6><span class="usa-label-big">Recent posts</span></h6>
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
@@ -132,8 +132,11 @@ get_header();
 
 			<section class="usa-bbg-management usa-section">
 				<div class="usa-grid">
-					<h2>Management</h2>
+					<h6><span class="usa-label-big">Our team</span></h6>
 					<div class="usa-grid-full">
+					<div class="usa-bbg-intro-large">
+						<p>ODDI's team of designers, developers and storytellers help drive USIM digital projects — embracing cutting edge technology while recognizing our audiences' specific language, bandwidth and access challenges.</p>
+					</div>
 					<?php
 						$args = array( 'include' => [8,2,6]);
 						//$args = array( 'include' => [1,2,3]);
