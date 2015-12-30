@@ -3077,8 +3077,7 @@ object {
 
 .main-navigation {
   clear: both;
-  display: block;
-  /*float: left;*/
+  display: inline;
   width: 100%;
 }
 .main-navigation ul {
@@ -3088,13 +3087,6 @@ object {
   padding-left: 0;
 }
 .main-navigation ul ul {
-  /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*/
-  /*
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  */
   z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -3131,6 +3123,8 @@ object {
 
 /* Small menu. */
 .menu-toggle {
+  border-radius: 0 0 0.3rem 0.3rem;
+  margin-top: 0;
   position: absolute;
   width: auto;
 }

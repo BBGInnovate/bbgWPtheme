@@ -1,7 +1,6 @@
 .main-navigation {
 	clear: both;
-	display: block;
-	/*float: left;*/
+	display: inline;
 	width: 100%;
 
 	ul {
@@ -11,13 +10,6 @@
 		padding-left: 0;
 
 		ul {
-			/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*/
-			/*
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			*/
 			z-index: 99999;
 
 			ul {
@@ -81,6 +73,8 @@
 
 /* Small menu. */
 .menu-toggle{
+	border-radius: 0 0 $border-radius $border-radius;
+	margin-top: 0;
 	position: absolute;
 	width: auto;
 }
