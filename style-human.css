@@ -3150,9 +3150,11 @@ object {
   }
 
   .main-navigation li {
+    background-color: #FFF;
     border-bottom: none;
     float: left;
-    margin-right: 3rem;
+    margin-top: 0;
+    padding: 1.5rem 1.5rem 0 1.5rem;
   }
 }
 .site-main .comment-navigation, .site-main

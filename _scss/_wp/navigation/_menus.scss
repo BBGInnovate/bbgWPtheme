@@ -98,9 +98,11 @@
 	}
 	.main-navigation {
 		li {
+			background-color: #FFF;
 			border-bottom: none;
 			float: left;
-			margin-right: $navigation-margin-right;
+			margin-top: 0;
+			padding: 1.5rem 1.5rem 0 1.5rem;
 		}
 	}
 }
