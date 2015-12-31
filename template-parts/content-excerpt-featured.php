@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying a featured excerpt. 
+ * Large full width photo and large excerpt text.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

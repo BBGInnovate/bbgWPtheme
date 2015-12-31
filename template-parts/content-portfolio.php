@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying a portfolio excerpt.
+ * Template part for displaying a portfolio excerpt 
+ * 3 columns without byline or date
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
