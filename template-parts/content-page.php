@@ -14,7 +14,13 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<ul class="bbg-post-share-menu">
+		<li class="bbg-post-share-menu-tool email"><a href="#"><span class="bbg-share-icon email"></span><span class="bbg-share-text ">Email</span></a></li>
+		<li class="bbg-post-share-menu-tool facebook"><a href="#"><span class="bbg-share-icon facebook"></span><span class="bbg-share-text ">Share</span></a></li>
+		<li class="bbg-post-share-menu-tool twitter"><a href="#"><span class="bbg-share-icon twitter"></span><span class="bbg-share-text ">Tweet</span></a></li>
+	</ul>
+
+	<div class="entry-content usa-bbg-entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -24,7 +30,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer bbg-post-footer">
 		<?php
 			edit_post_link(
 				sprintf(
