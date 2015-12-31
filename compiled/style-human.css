@@ -2872,18 +2872,7 @@ fieldset {
 }
 
 .usa-bbg-intro-large {
-  margin-top: 3rem;
-}
-
-.usa-bbg-intro-large p {
-  font-size: 2rem;
-  line-height: 1.7em;
-}
-@media screen and (min-width: 600px) {
-  .usa-bbg-intro-large p {
-    font-size: 2.5rem;
-    line-height: 4rem;
-  }
+  /* margin-top: 3rem; */
 }
 
 @media screen and (min-width: 900px) {
@@ -2893,10 +2882,6 @@ fieldset {
   .usa-bbg-portfolio-project:nth-child(4n+1) {
     clear: left;
   }
-}
-
-.usa-bbg-footer-big-top {
-  padding: 0 3rem;
 }
 
 .usa-bbg-site-branding {
@@ -2953,6 +2938,21 @@ section.usa-section {
   }
 }
 
+.usa-bbg-footer-big-top {
+  padding: 0 3rem;
+}
+
+.usa-font-lead {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+  .usa-font-lead {
+    font-size: 2rem;
+    line-height: 2.5;
+  }
+}
+
 .bbg-staff-profile {
   margin-bottom: 3rem;
 }
@@ -2966,8 +2966,8 @@ section.usa-section {
 
 .usa-bbg-avatar {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
 }
 
 .bbg-staff-author {

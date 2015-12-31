@@ -27,18 +27,20 @@
 			?>
 
 		</a>
-
+		<!--
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php bbginnovate_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		</div>
 		<?php endif; ?>
+		-->
 
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+	<h3 class="usa-font-lead">
 		<?php
-			the_excerpt();
+			echo get_the_excerpt();
 			/*			
 			the_content( sprintf(
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bbginnovate' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -46,7 +48,7 @@
 			) );
 			*/
 		?>
-
+	</h3>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bbginnovate' ),

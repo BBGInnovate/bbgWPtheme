@@ -51,3 +51,17 @@ section.usa-section{
 		font-size: 2rem;
 	}
 }
+
+.usa-bbg-footer-big-top{
+	padding: 0 $site-margins;
+}
+
+.usa-font-lead {
+	font-size: $lead-font-size * .8;
+	font-weight: 300;
+
+	@include media($medium-screen) {
+		font-size: $lead-font-size;
+		line-height: 2.5;
+	}
+}

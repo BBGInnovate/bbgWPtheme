@@ -61,10 +61,10 @@ get_header();
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 						$siteIntroTitle=get_the_title();
-						echo '<section class="usa-section usa-bbg-intro-large">';
+						echo '<section class="usa-section"><h3 class="usa-font-lead">';
 						/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
-						the_content();
-						echo '</section>';
+						echo get_the_content();
+						echo '</h3></section>';
 					endwhile;
 				endif;
 				wp_reset_query();
@@ -132,12 +132,12 @@ get_header();
 				</div>
 			</section>
 
-			<section class="usa-bbg-management usa-section">
+			<section class="usa-bbg-staff usa-section usa-section-dark">
 				<div class="usa-grid">
 					<h6><span class="usa-label-big">Our team</span></h6>
 					<div class="usa-grid-full">
-					<div class="usa-bbg-intro-large">
-						<p>ODDI's team of designers, developers and storytellers help drive USIM digital projects.</p>
+					<div class="usa-intro">
+						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
 						$args = array( 'include' => [8,2,6]);
