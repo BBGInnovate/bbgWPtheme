@@ -1,7 +1,7 @@
 <?php
 /**
  * The custom home page for the Broadcasting Board of Governors.
- * It includes the mission, a portfolio of recent projects and recent blog posts.
+ * It includes the mission, a portfolio of recent projects, recent blog posts and staff.
  *
  * @package Independent Publisher
  * @since   Independent Publisher 1.0
@@ -47,8 +47,9 @@ get_header();
 				</div>
 			</section>
 
-			<div class="usa-grid">
 
+			<!-- Site introduction -->
+			<div class="usa-grid">
 			<?php
 				$qParams=array(
 					'post_type' => array('post'),
@@ -69,11 +70,14 @@ get_header();
 				endif;
 				wp_reset_query();
 			?>
-			</div>
+			</div><!-- Site introduction -->
 
+
+			<!-- Portfolio -->
 			<section class="usa-bbg-portfolio usa-section">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><span class="usa-label-big">Portfolio</span></h6>
+					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
+
 					<div class="usa-grid-full">
 					<?php
 						$qParams=array(
@@ -94,16 +98,17 @@ get_header();
 
 					?>
 					</div>
+
 					<a href="<?php echo site_url(); ?>/blog/category/portfolio/">Explore entire portfolio</a>
 
 				</div>
-			</section>
+			</section><!-- Portfolio -->
 
 
-
+			<!-- Recent posts -->
 			<section class="usa-section">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><span class="usa-label-big">Recent posts</span></h6>
+					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/blog/"><span class="usa-label-big">Recent posts</span></a></h6>
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
@@ -130,18 +135,20 @@ get_header();
 					endif;
 				?>
 				</div>
-			</section>
+			</section><!-- Recent posts -->
 
+
+			<!-- Staff -->
 			<section class="usa-bbg-staff usa-section usa-section-dark">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><span class="usa-label-big">Our team</span></h6>
+					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our team</span></a></h6>
 					<div class="usa-grid-full">
 					<div class="usa-intro">
 						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
-						$args = array( 'include' => [8,2,6]);
-						//$args = array( 'include' => [1,2,3]);
+						$args = array( 'include' => [8,2,6,1,3,4,5]);
+						//$args = array( 'include' => [1,2,3,4,5]);
 						$blogusers = get_users($args);
 						// Loop through the users to create the staff profiles
 						foreach ( $blogusers as $user ) {
@@ -152,9 +159,12 @@ get_header();
 							$authorTwitter = esc_html( $user->twitterHandle );
 							$authorDescription = esc_html( $user->description );
 							$theauthorid = esc_html( $user->ID );
+							/*
 							$count = 0;
 							$number_of_posts = 3;
+							*/
 						?>
+					<article id="" <?php post_class("usa-width-one-half usa-bbg-staff-profile "); ?>>
 						<div class="bbg-staff-profile">
 							<div class="usa-bbg-avatar">
 								<a href="<?php echo $authorPath ?>">
@@ -170,7 +180,7 @@ get_header();
 										<?php 
 											/* ODDI CUSTOM: add twitter handle to bio */
 											echo '<div class="usa-bbg-author-occupation">' . $authorOccupation . '</div>';
-											echo '<div class="usa-bbg-author-contact"><a href="//www.twitter.com/' . $authorTwitter. '">@' . $authorTwitter . '</a> </div>';
+											/*echo '<div class="usa-bbg-author-contact"><a href="//www.twitter.com/' . $authorTwitter. '">@' . $authorTwitter . '</a> </div>';*/
 										?>
 									<div class="usa-bbg-author-bio">
 										<?php echo $authorDescription; ?>
@@ -181,13 +191,16 @@ get_header();
 							</div><!-- .usa-bbg-author-text -->
 
 						</div>
+						</article>
 					<?php 
 							} 
 					?>
 					</div>
 					<a href="<?php echo site_url(); ?>/staff">View All Staff</a>
 				</div>
-			</section>
+			</section><!-- Staff -->
+
+
 		</main>
 	</div><!-- #primary .content-area -->
 	<div id="secondary" class="widget-area" role="complementary">

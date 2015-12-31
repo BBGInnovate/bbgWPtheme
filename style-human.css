@@ -480,6 +480,14 @@ body {
   .usa-grid-full .usa-width-one-half:last-child {
     margin-right: 0;
   }
+  .usa-grid .usa-width-one-half:nth-child(2n),
+  .usa-grid-full .usa-width-one-half:nth-child(2n) {
+    margin-right: 0;
+  }
+  .usa-grid .usa-width-one-half:nth-child(2n+1),
+  .usa-grid-full .usa-width-one-half:nth-child(2n+1) {
+    clear: left;
+  }
   .usa-grid .usa-width-one-third,
   .usa-grid-full .usa-width-one-third {
     float: left;
@@ -2700,7 +2708,6 @@ fieldset {
 }
 
 .usa-bbg-author-name {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
   font-size: 3rem;
   margin-bottom: .1rem;
   margin-top: 0;
@@ -2895,6 +2902,10 @@ fieldset {
 .usa-bbg-label {
   margin-bottom: 3rem;
   margin-top: 6rem;
+}
+.usa-bbg-label a:hover .usa-label-big {
+  background-color: #205493;
+  text-decoration: none;
 }
 
 .usa-bbg-site-branding {

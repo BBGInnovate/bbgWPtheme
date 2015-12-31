@@ -27,6 +27,7 @@ get_header();
 		$count = 0;
 		$number_of_posts = 3;
 	?>
+					<article id="" <?php post_class("usa-width-one-half usa-bbg-staff-profile "); ?>>
 
 					<div class="bbg-staff-profile">
 						<a href="<?php echo $authorPath ?>">
@@ -66,7 +67,7 @@ get_header();
 						<?php endwhile; endif; ?>
 
 					</div>
-
+					</article>
 				<?php } ?>
 			</div><!-- .usa-grid -->
 		</main>
