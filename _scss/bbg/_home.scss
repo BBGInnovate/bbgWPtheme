@@ -5,6 +5,10 @@
 	position: relative;
 	width: 100%;
 
+	@include media($medium-screen) {
+		margin-bottom: 6rem;
+	}
+
 	a:focus {
 			box-shadow: none;
 	}
@@ -42,15 +46,19 @@
 
 		.usa-bbg-banner-site-description{
 			background-color: $box-transparent;
+			border-radius: 0 $border-radius $border-radius 0;
 			color: #FFF;
 			display: inline-block;
 			margin-top: 0;
 			margin-right: 0;
 			margin-left: -$site-margins;
 			padding: 10px $site-margins;
-			border-radius: 0 $border-radius $border-radius 0;
+			text-transform: uppercase;
 		}
 	}
+}
+.usa-bbg-intro-large {
+	margin-top: 3rem;
 }
 
 .usa-bbg-intro-large p{

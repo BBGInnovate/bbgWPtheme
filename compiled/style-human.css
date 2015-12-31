@@ -2820,6 +2820,11 @@ fieldset {
   position: relative;
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .usa-bbg-banner {
+    margin-bottom: 6rem;
+  }
+}
 .usa-bbg-banner a:focus {
   box-shadow: none;
 }
@@ -2856,13 +2861,18 @@ fieldset {
 }
 .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-description {
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
   display: inline-block;
   margin-top: 0;
   margin-right: 0;
   margin-left: -3rem;
   padding: 10px 3rem;
-  border-radius: 0 0.3rem 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.usa-bbg-intro-large {
+  margin-top: 3rem;
 }
 
 .usa-bbg-intro-large p {
@@ -2934,6 +2944,8 @@ section.usa-section {
   font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 600px) {
   .usa-heading-site-description {
