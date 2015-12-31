@@ -12,7 +12,21 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
+		<?php 
+			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+		?>
+
+			<?php
+				if (has_post_thumbnail()) {
+					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail">';
+					echo the_post_thumbnail('large-thumb');
+					echo '</div>';
+				}
+			?>
+
+		</a>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -42,3 +56,4 @@
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
+<br/>
