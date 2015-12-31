@@ -38,6 +38,7 @@ get_header();
 					</a>
 					<div class="usa-bbg-banner-box">
 						<h1 class="usa-bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
+						<!--<h1 class="usa-bbg-banner-site-title"><?php /*echo bbginnovate_site_name_html();*/ ?></h1> -->
 						<?php $description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
 							<h3 class="usa-bbg-banner-site-description usa-heading-site-description"><?php echo $description; ?></h3>
@@ -45,7 +46,6 @@ get_header();
 					</div>
 				</div>
 			</section>
-
 
 			<div class="usa-grid">
 
@@ -62,7 +62,7 @@ get_header();
 					while ( have_posts() ) : the_post();
 						$siteIntroTitle=get_the_title();
 						echo '<section class="usa-section usa-bbg-intro-large">';
-						echo '<h2>' . $siteIntroTitle . '</h2>';
+						/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
 						the_content();
 						echo '</section>';
 					endwhile;
@@ -121,7 +121,9 @@ get_header();
 						$counter=0;
 						while ( have_posts() ) : the_post();
 							$counter++;
-							if ($counter <= $maxPostsToShow) {
+							if ($counter == 1) {
+								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
+							} else if ($counter <= $maxPostsToShow) {
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 							}
 						endwhile;
@@ -135,7 +137,7 @@ get_header();
 					<h6><span class="usa-label-big">Our team</span></h6>
 					<div class="usa-grid-full">
 					<div class="usa-bbg-intro-large">
-						<p>ODDI's team of designers, developers and storytellers help drive USIM digital projects — embracing cutting edge technology while recognizing our audiences' specific language, bandwidth and access challenges.</p>
+						<p>ODDI's team of designers, developers and storytellers help drive USIM digital projects.</p>
 					</div>
 					<?php
 						$args = array( 'include' => [8,2,6]);
