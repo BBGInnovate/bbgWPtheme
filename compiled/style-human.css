@@ -2871,10 +2871,6 @@ fieldset {
   text-transform: uppercase;
 }
 
-.usa-bbg-intro-large {
-  /* margin-top: 3rem; */
-}
-
 @media screen and (min-width: 900px) {
   .usa-bbg-portfolio-project:nth-child(4n) {
     margin-right: 0;
@@ -2882,6 +2878,15 @@ fieldset {
   .usa-bbg-portfolio-project:nth-child(4n+1) {
     clear: left;
   }
+}
+
+.usa-bbg-featured-title {
+  margin-top: 0;
+}
+
+.usa-bbg-label {
+  margin-bottom: 3rem;
+  margin-top: 6rem;
 }
 
 .usa-bbg-site-branding {
@@ -2951,6 +2956,13 @@ section.usa-section {
     font-size: 2rem;
     line-height: 2.5;
   }
+}
+
+.usa-bbg-continue a {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .9em;
 }
 
 .bbg-staff-profile {

@@ -73,7 +73,7 @@ get_header();
 
 			<section class="usa-bbg-portfolio usa-section">
 				<div class="usa-grid">
-					<h6><span class="usa-label-big">Portfolio</span></h6>
+					<h6 class="usa-bbg-label"><span class="usa-label-big">Portfolio</span></h6>
 					<div class="usa-grid-full">
 					<?php
 						$qParams=array(
@@ -103,7 +103,7 @@ get_header();
 
 			<section class="usa-section">
 				<div class="usa-grid">
-					<h6><span class="usa-label-big">Recent posts</span></h6>
+					<h6 class="usa-bbg-label"><span class="usa-label-big">Recent posts</span></h6>
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
@@ -134,7 +134,7 @@ get_header();
 
 			<section class="usa-bbg-staff usa-section usa-section-dark">
 				<div class="usa-grid">
-					<h6><span class="usa-label-big">Our team</span></h6>
+					<h6 class="usa-bbg-label"><span class="usa-label-big">Our team</span></h6>
 					<div class="usa-grid-full">
 					<div class="usa-intro">
 						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>

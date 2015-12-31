@@ -12,11 +12,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
 		<?php 
 			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		?>
+
+			<?php the_title( sprintf( '<h1 class="entry-title usa-bbg-featured-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+
 
 			<?php
 				if (has_post_thumbnail()) {
@@ -48,6 +49,10 @@
 			) );
 			*/
 		?>
+		<span class="usa-bbg-continue">
+		<?php echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ); ?>
+			Continue reading </a>
+		</span>
 	</h3>
 		<?php
 			wp_link_pages( array(

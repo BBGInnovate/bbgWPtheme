@@ -57,12 +57,18 @@
 		}
 	}
 }
-.usa-bbg-intro-large {
-	/* margin-top: 3rem; */
-}
 
-.usa-bbg-portfolio-project{
+.usa-bbg-portfolio-project {
 	@include media($medium-large-screen) {
 		@include omega(4n);
 	}
+}
+
+.usa-bbg-featured-title {
+	margin-top: 0;
+}
+
+.usa-bbg-label {
+	margin-bottom: $site-margins;
+	margin-top: $site-margins * 2;
 }
