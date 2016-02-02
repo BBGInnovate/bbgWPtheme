@@ -110,10 +110,8 @@ global $templateName;
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
-					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
-					<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
+					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>
 				<?php endif;
-
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
 					<h3 class="usa-heading usa-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>

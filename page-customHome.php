@@ -37,7 +37,7 @@ get_header();
 						<img class="usa-bbg-banner-site-logo-img" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Logo image">
 					</a>
 					<div class="usa-bbg-banner-box">
-						<h1 class="usa-bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
+						<h1 class="usa-bbg-banner-site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
 						<!--<h1 class="usa-bbg-banner-site-title"><?php /*echo bbginnovate_site_name_html();*/ ?></h1> -->
 						<?php $description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
@@ -128,8 +128,17 @@ get_header();
 							$counter++;
 							if ($counter == 1) {
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
-							} else if ($counter <= $maxPostsToShow) {
+							} 
+							else if ($counter <= $maxPostsToShow) {
+								if ($counter == 2){
+									echo "<div class='usa-width-one-half'>";
+								}
+
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
+
+								if ($counter == $maxPostsToShow){
+									echo "</div>";
+								}
 							}
 						endwhile;
 					endif;

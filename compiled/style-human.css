@@ -2801,7 +2801,7 @@ fieldset {
 }
 
 .bbg-share-icon.twitter {
-  background-color: #55acee;
+  background-color: #900;
   background-image: url(img/social-icons/png-white/social-icons_twitter.png);
 }
 
@@ -3003,6 +3003,12 @@ section.usa-section {
 
 .bbg-staff-contact-link:first-of-type:before {
   content: "";
+}
+
+@media screen and (min-width: 481px) {
+  .u_no-wrap {
+    white-space: nowrap;
+  }
 }
 
 .page-content .wp-smiley,

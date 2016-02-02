@@ -1,0 +1,5 @@
+.u_no-wrap {
+	@include media($small-screen) {
+		white-space: nowrap;
+	}
+}
