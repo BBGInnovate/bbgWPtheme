@@ -93,7 +93,7 @@ add_action( 'after_setup_theme', 'bbginnovate_setup' );
 function bbginnovate_site_name_html(){
 	//$html_site_name = bloginfo( 'name' ); //This is the default
 	//<?php echo html_entity_decode(get_bloginfo('name')); //This works if you include tags in the WP title setting
-	$html_site_name = "Office of Digital <span class='u_no-wrap'>& Design Innovation</span>";
+	$html_site_name = "<span class='u--hide-mobile'>Office of Digital <span class='u--no-wrap'>& Design Innovation</span></span><span class='u--show-mobile'>ODDI</span>";
 	return $html_site_name;
 }
 

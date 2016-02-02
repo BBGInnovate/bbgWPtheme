@@ -3006,8 +3006,23 @@ section.usa-section {
 }
 
 @media screen and (min-width: 481px) {
-  .u_no-wrap {
+  .u--no-wrap {
     white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .u--show-mobile {
+    display: none;
+  }
+}
+
+.u--hide-mobile {
+  display: none;
+}
+@media screen and (min-width: 481px) {
+  .u--hide-mobile {
+    display: inline;
   }
 }
 

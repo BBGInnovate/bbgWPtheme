@@ -1,5 +1,19 @@
-.u_no-wrap {
+.u--no-wrap {
 	@include media($small-screen) {
 		white-space: nowrap;
+	}
+}
+
+.u--show-mobile {
+	@include media($small-screen) {
+		display: none;
+	}
+}
+
+.u--hide-mobile {
+	display: none;
+
+	@include media($small-screen) {
+		display: inline;
 	}
 }
