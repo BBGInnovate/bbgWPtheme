@@ -52,6 +52,8 @@
     }
     .usa-width-one-half {
       @include span-columns(6);
+
+          @include omega(2n);
     }
     .usa-width-one-third {
       @include span-columns(4);

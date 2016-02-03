@@ -603,6 +603,14 @@ body {
   .usa-grid-full .usa-width-one-half:last-child {
     margin-right: 0;
   }
+  .usa-grid .usa-width-one-half:nth-child(2n),
+  .usa-grid-full .usa-width-one-half:nth-child(2n) {
+    margin-right: 0;
+  }
+  .usa-grid .usa-width-one-half:nth-child(2n+1),
+  .usa-grid-full .usa-width-one-half:nth-child(2n+1) {
+    clear: left;
+  }
   .usa-grid .usa-width-one-third,
   .usa-grid-full .usa-width-one-third {
     float: left;
@@ -2669,73 +2677,73 @@ fieldset {
   margin-bottom: 0;
 }
 
-.usa-bbg-avatar {
+.bbg-avatar {
   border-radius: 50%;
   margin: 0 auto;
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-avatar {
+  .bbg-avatar {
     float: left;
   }
 }
 
-.usa-bbg-author-text {
+.bbg-author-text {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-author-text {
+  .bbg-author-text {
     float: left;
     margin-left: 20px;
     width: calc(100% - 180px);
   }
 }
 
-.usa-bbg-author-text > * {
+.bbg-author-text > * {
   text-align: center;
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-author-text > * {
+  .bbg-author-text > * {
     text-align: left;
   }
 }
 
-.usa-bbg-author-name {
+.bbg-author-name {
   font-size: 3rem;
   margin-bottom: .1rem;
   margin-top: 0;
 }
 
-.usa-bbg-author-occupation {
+.bbg-author-occupation {
   text-transform: uppercase;
 }
 
-.usa-bbg-author-bio {
+.bbg-author-bio {
   margin-top: 1rem;
   /*font-weight: 100;*/
 }
 
-.usa-bbg-entry-content > *,
+.bbg-entry-content > *,
 .bbg-post-footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
 }
 
-.usa-bbg-entry-content > h4 {
+.bbg-entry-content > h4 {
   clear: none;
 }
 
-.usa-bbg-entry-content blockquote {
+.bbg-entry-content blockquote {
   font-size: 2.5rem;
   margin: 0 auto;
 }
 
-.usa-bbg-entry-content blockquote.pullquote {
+.bbg-entry-content blockquote.pullquote {
   border-bottom: 6px solid #333;
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 1201px) {
-  .usa-bbg-entry-content blockquote.pullquote {
+  .bbg-entry-content blockquote.pullquote {
     float: left;
     font-family: "Merriweather", "Georgia", "Times New Roman", serif;
     margin-right: 3rem;
@@ -2820,7 +2828,7 @@ fieldset {
   text-align: center;
 }
 
-.usa-bbg-banner {
+.bbg-banner {
   background: #CCC no-repeat center center / cover;
   height: 400px;
   max-width: 9999px;
@@ -2828,32 +2836,32 @@ fieldset {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-banner {
+  .bbg-banner {
     margin-bottom: 6rem;
   }
 }
-.usa-bbg-banner a:focus {
+.bbg-banner a:focus {
   box-shadow: none;
 }
-.usa-bbg-banner .usa-bbg-banner-site-logo-img {
+.bbg-banner .bbg-banner-site-logo-img {
   width: 100px;
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-banner .usa-bbg-banner-site-logo-img {
+  .bbg-banner .bbg-banner-site-logo-img {
     width: 150px;
   }
 }
-.usa-bbg-banner .usa-bbg-banner-site-logo-img :focus {
+.bbg-banner .bbg-banner-site-logo-img :focus {
   box-shadow: none;
 }
-.usa-bbg-banner .usa-bbg-banner-box {
+.bbg-banner .bbg-banner-box {
   margin: 0 auto;
   max-width: 1040px;
   padding-bottom: 1.5rem;
   position: absolute;
   bottom: 0;
 }
-.usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
+.bbg-banner .bbg-banner-box .bbg-banner-site-title {
   color: #FFF;
   font-size: 3.2rem;
   margin-bottom: 5px;
@@ -2862,11 +2870,11 @@ fieldset {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 600px) {
-  .usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-title {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title {
     font-size: 4rem;
   }
 }
-.usa-bbg-banner .usa-bbg-banner-box .usa-bbg-banner-site-description {
+.bbg-banner .bbg-banner-box .bbg-banner-site-description {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
@@ -2879,28 +2887,71 @@ fieldset {
 }
 
 @media screen and (min-width: 900px) {
-  .usa-bbg-portfolio-project:nth-child(4n) {
+  .bbg-portfolio-project:nth-child(4n) {
     margin-right: 0;
   }
-  .usa-bbg-portfolio-project:nth-child(4n+1) {
+  .bbg-portfolio-project:nth-child(4n+1) {
     clear: left;
   }
 }
 
-.usa-bbg-featured-title {
+.bbg-featured-title {
   margin-top: 0;
 }
 
-.usa-bbg-label {
+.bbg-label {
   margin-bottom: 3rem;
   margin-top: 6rem;
 }
-.usa-bbg-label a:hover .usa-label-big {
+.bbg-label a:hover .usa-label-big {
   background-color: #205493;
   text-decoration: none;
 }
 
-.usa-bbg-site-branding {
+@media screen and (min-width: 600px) {
+  .bbg-width-one-half {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0;
+  }
+  .bbg-width-one-half:last-child {
+    margin-right: 0;
+  }
+
+  .bbg-width-one-half:nth-child(2n) {
+    clear: left;
+    margin-right: 2%;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-width-one-half {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 2%;
+    clear: none;
+  }
+  .bbg-width-one-half:last-child {
+    margin-right: 0;
+  }
+
+  .bbg-width-one-half:nth-child(2n) {
+    clear: none;
+    margin-right: 2%;
+  }
+
+  .bbg-width-one-half:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .bbg-width-one-half:nth-child(3n+1) {
+    clear: left;
+  }
+}
+.bbg-site-branding {
   margin-bottom: 3rem;
 }
 
@@ -2954,7 +3005,7 @@ section.usa-section {
   }
 }
 
-.usa-bbg-footer-big-top {
+.bbg-footer-big-top {
   padding: 0 3rem;
 }
 
@@ -2969,7 +3020,7 @@ section.usa-section {
   }
 }
 
-.usa-bbg-continue a {
+.bbg-continue a {
   font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;

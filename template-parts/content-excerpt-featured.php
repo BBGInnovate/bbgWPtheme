@@ -17,7 +17,7 @@
 			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		?>
 
-			<?php the_title( sprintf( '<h1 class="entry-title usa-bbg-featured-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+			<?php the_title( sprintf( '<h1 class="entry-title bbg-featured-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
 
 
 			<?php
@@ -29,13 +29,6 @@
 			?>
 
 		</a>
-		<!--
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php bbginnovate_posted_on(); ?>
-		</div>
-		<?php endif; ?>
-		-->
 
 	</header><!-- .entry-header -->
 
@@ -50,7 +43,7 @@
 			) );
 			*/
 		?>
-		<span class="usa-bbg-continue">
+		<span class="bbg-continue">
 		<?php echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ); ?>
 			Continue reading </a>
 		</span>

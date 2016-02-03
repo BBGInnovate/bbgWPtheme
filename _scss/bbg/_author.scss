@@ -1,4 +1,4 @@
-.usa-bbg-avatar {
+.bbg-avatar {
 	border-radius: 50%;
 	margin: 0 auto;
 	@include media($medium-screen) {
@@ -6,7 +6,7 @@
 	}
 }
 
-.usa-bbg-author-text{
+.bbg-author-text{
 	width: 100%;
 	@include media($medium-screen) {
 		float: left;
@@ -15,24 +15,24 @@
 	}
 }
 
-.usa-bbg-author-text > * {
+.bbg-author-text > * {
 	text-align: center; 
 	@include media($medium-screen) {
 		text-align: left; 
 	}
 }
 
-.usa-bbg-author-name{
+.bbg-author-name{
 	font-size: 3rem;
 	margin-bottom: .1rem;
 	margin-top: 0;
 }
 
-.usa-bbg-author-occupation {
+.bbg-author-occupation {
 	text-transform: uppercase;
 }
 
-.usa-bbg-author-bio {
+.bbg-author-bio {
 	margin-top: 1rem;
 	/*font-weight: 100;*/
 }

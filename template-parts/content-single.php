@@ -20,15 +20,15 @@
 	if (has_post_thumbnail()) {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large-thumb' );
 		$url = $thumb['0'];
-			<section class="usa-bbg-banner" style="background-image:url(<?php echo $url; ?>)">
+			<section class="bbg-banner" style="background-image:url(<?php echo $url; ?>)">
 				<div class="usa-grid">
 					<a href="#">
 					</a>
-					<div class="usa-bbg-banner-box">
-						<h1 class="usa-bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
+					<div class="bbg-banner-box">
+						<h1 class="bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
 						<?php $description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
-							<h3 class="usa-bbg-banner-site-description"><?php echo $description; ?></h3>
+							<h3 class="bbg-banner-site-description"><?php echo $description; ?></h3>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -59,7 +59,7 @@
 			<li class="bbg-post-share-menu-tool twitter"><a href="#"><span class="bbg-share-icon twitter"></span><span class="bbg-share-text ">Tweet</span></a></li>
 		</ul>
 
-		<div class="entry-content usa-bbg-entry-content">
+		<div class="entry-content bbg-entry-content">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(

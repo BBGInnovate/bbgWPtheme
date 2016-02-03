@@ -31,17 +31,16 @@ get_header();
 					/* Check if there's an image set. Ideally we'd tweak the design accorgingly. */
 				}
 			?>
-			<section class="usa-bbg-banner" style="background-image:url(<?php echo get_header_image(); ?>)">
+			<section class="bbg-banner" style="background-image:url(<?php echo get_header_image(); ?>)">
 				<div class="usa-grid">
 					<a href="<?php echo site_url(); ?>">
-						<img class="usa-bbg-banner-site-logo-img" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Logo image">
+						<img class="bbg-banner__site-logo" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="BBG logo">
 					</a>
-					<div class="usa-bbg-banner-box">
-						<h1 class="usa-bbg-banner-site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
-						<!--<h1 class="usa-bbg-banner-site-title"><?php /*echo bbginnovate_site_name_html();*/ ?></h1> -->
+					<div class="bbg-banner-box">
+						<h1 class="bbg-banner-site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
 						<?php $description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
-							<h3 class="usa-bbg-banner-site-description usa-heading-site-description"><?php echo $description; ?></h3>
+							<h3 class="bbg-banner-site-description usa-heading-site-description"><?php echo $description; ?></h3>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -74,9 +73,9 @@ get_header();
 
 
 			<!-- Portfolio -->
-			<section class="usa-bbg-portfolio usa-section">
+			<section class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -97,22 +96,22 @@ get_header();
 						wp_reset_query();
 
 					?>
-					</div>
+					</div><!-- .usa-grid-full -->
 
 					<a href="<?php echo site_url(); ?>/blog/category/portfolio/">Explore entire portfolio</a>
 
-				</div>
-			</section><!-- Portfolio -->
+				</div><!-- .usa-grid -->
+			</section><!-- .bbg-portfolio -->
 
 
 			<!-- Recent posts -->
 			<section class="usa-section">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/blog/"><span class="usa-label-big">Recent posts</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/blog/"><span class="usa-label-big">Recent posts</span></a></h6>
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
-					$maxPostsToShow=3;
+					$maxPostsToShow=7;
 					$qParams=array(
 						'post_type' => array('post'),
 						'posts_per_page' => $maxPostsToShow,
@@ -130,27 +129,28 @@ get_header();
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							} 
 							else if ($counter <= $maxPostsToShow) {
-								if ($counter == 2){
-									echo "<div class='usa-width-one-half'>";
-								}
+								//if ($counter == 2){
+									echo "<div class='bbg-width-one-half'>";
+								//}
 
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 
-								if ($counter == $maxPostsToShow){
+								//if ($counter == $maxPostsToShow){
 									echo "</div>";
-								}
+								//}
 							}
 						endwhile;
 					endif;
 				?>
+
 				</div>
 			</section><!-- Recent posts -->
 
 
 			<!-- Staff -->
-			<section class="usa-bbg-staff usa-section usa-section-dark">
+			<section class="bbg-staff usa-section usa-section-dark">
 				<div class="usa-grid">
-					<h6 class="usa-bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our team</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our team</span></a></h6>
 					<div class="usa-grid-full">
 					<div class="usa-intro">
 						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
@@ -173,31 +173,31 @@ get_header();
 							$number_of_posts = 3;
 							*/
 						?>
-					<article id="" <?php post_class("usa-width-one-half usa-bbg-staff-profile "); ?>>
+					<article id="" <?php post_class("usa-width-one-half bbg-staff-profile "); ?>>
 						<div class="bbg-staff-profile">
-							<div class="usa-bbg-avatar">
+							<div class="bbg-avatar">
 								<a href="<?php echo $authorPath ?>">
 								<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 								</a>
 							</div>
-							<div class="usa-bbg-author-text">
-								<h1 class="usa-bbg-author-name">
+							<div class="bbg-author-text">
+								<h1 class="bbg-author-name">
 									<a href="<?php echo $authorPath ?>" class="bbg-staff-author-link"><?php echo $authorName; ?></a>
 								</h1>
 
-								<div class="usa-bbg-author-description">
+								<div class="bbg-author-description">
 										<?php 
 											/* ODDI CUSTOM: add twitter handle to bio */
-											echo '<div class="usa-bbg-author-occupation">' . $authorOccupation . '</div>';
-											/*echo '<div class="usa-bbg-author-contact"><a href="//www.twitter.com/' . $authorTwitter. '">@' . $authorTwitter . '</a> </div>';*/
+											echo '<div class="bbg-author-occupation">' . $authorOccupation . '</div>';
+											/*echo '<div class="bbg-author-contact"><a href="//www.twitter.com/' . $authorTwitter. '">@' . $authorTwitter . '</a> </div>';*/
 										?>
-									<div class="usa-bbg-author-bio">
+									<div class="bbg-author-bio">
 										<?php echo $authorDescription; ?>
 									</div>
 									<div class='clearAll'></div>
 								</div>
 								<!-- .author-description -->
-							</div><!-- .usa-bbg-author-text -->
+							</div><!-- .bbg-author-text -->
 
 						</div>
 						</article>
