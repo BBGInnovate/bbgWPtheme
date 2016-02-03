@@ -10,19 +10,19 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__article--featured"); ?>>
+	<header class="entry-header bbg-blog__article-header--featured">
 
 		<?php 
 			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		?>
 
-			<?php the_title( sprintf( '<h1 class="entry-title bbg-featured-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
+			<?php the_title( sprintf( '<h1 class="entry-title bbg-blog__article-title--featured">', esc_url( get_permalink() ) ), '</h1>' ); ?>
 
 
 			<?php
 				if (has_post_thumbnail()) {
-					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail">';
+					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__article-header__thumbnail--large">';
 					echo the_post_thumbnail('large-thumb');
 					echo '</div>';
 				}
@@ -30,24 +30,18 @@
 
 		</a>
 
-	</header><!-- .entry-header -->
+	</header><!-- .bbg-blog__article-header--featured -->
 
-	<div class="entry-content">
-	<h3 class="usa-font-lead">
-		<?php
-			echo get_the_excerpt();
-			/*			
-			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bbginnovate' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-			*/
-		?>
-		<span class="bbg-continue">
-		<?php echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ); ?>
-			Continue reading </a>
-		</span>
-	</h3>
+	<div class="entry-content bbg-blog__article-content--featured">
+		<h3 class="usa-font-lead">
+			<?php
+				echo get_the_excerpt();
+			?>
+			<span class="bbg-continue">
+			<?php echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ); ?>
+				Continue reading </a>
+			</span>
+		</h3>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bbginnovate' ),

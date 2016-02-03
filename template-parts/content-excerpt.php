@@ -9,20 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__article"); ?>>
+	<header class="entry-header bbg-blog__article-header">
 
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title bbg-blog__article-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta bbg__article-meta">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-	</header><!-- .entry-header -->
+	</header><!-- .bbg-blog__article-header -->
 
-	<div class="entry-content">
+	<div class="entry-content bbg-blog__article-content">
 		<?php
 			the_excerpt();
 			/*			
@@ -39,6 +39,6 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .bbg-blog__article-content -->
 
 </article><!-- #post-## -->

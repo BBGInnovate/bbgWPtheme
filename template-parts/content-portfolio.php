@@ -11,11 +11,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("usa-width-one-third bbg-portfolio__article"); ?>>
-	<header class="entry-header">
+	<header class="entry-header bbg-portfolio__article-header">
 	<?php 
 		echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 	?>
-		<div class="single-post-thumbnail clear usa-single_post_thumbnail">
+		<div class="single-post-thumbnail clear bbg__article-header__thumbnail--medium">
 			<?php
 				/* Set a default thumbnail image in case one isn't set */
 				$thumbnail = '<img src="' . get_template_directory_uri() . '/img/portfolio-project-default.png" alt="This is a default image." />';
@@ -27,10 +27,10 @@
 			?>
 		</div>
 
-		<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title bbg-portfolio__article__title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta bbg__article-meta">
 			<!--<?php bbginnovate_posted_on(); ?>-->
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -38,7 +38,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content bbg-portfolio__article-title">
 		<?php the_excerpt(); ?>
 
 		<?php
@@ -47,6 +47,6 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .bbg-portfolio__article-title -->
 
-</article><!-- #post-## -->
+</article><!-- .bbg-portfolio__article -->
