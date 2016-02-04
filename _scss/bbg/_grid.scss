@@ -1,4 +1,4 @@
-//Experiment to see if grid can convert from 1- to 2- to 3-columns (small, medium and large).
+//Grid converts from 1- to 2- to 3-columns (small, medium and large).
 @include media($medium-screen) {
 	.bbg-grid--1-2-3 {
 		@include span-columns(6);
@@ -31,9 +31,7 @@
 	}
 }
 
-
-
-//Experiment to see if grid can convert from 1- to 2- to 2-columns.
+//Grid from 1- to 2- to 2-columns.
 @include media($medium-screen) {
 	.bbg-grid--1-2-2 {
 		@include span-columns(6);
@@ -45,10 +43,7 @@
 	}
 }
 
-
-
-
-//Experiment to see if grid can convert from 1- to 3- to 3-columns.
+//Grid from 1- to 3- to 3-columns.
 @include media($medium-screen) {
 	.bbg-grid--1-3-3 {
 		@include span-columns(4);
@@ -69,6 +64,3 @@
 		clear: left;
 	}
 }
-
-
-

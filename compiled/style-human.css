@@ -3066,10 +3066,10 @@ section.usa-section {
   font-size: .9em;
 }
 
-.bbg-staff-profile {
+.bbg-staff__author {
   margin-bottom: 3rem;
 }
-.bbg-staff-profile:after {
+.bbg-staff__author:after {
   content: ".";
   display: block;
   height: 0;
@@ -3077,21 +3077,21 @@ section.usa-section {
   visibility: hidden;
 }
 
-.usa-bbg-avatar {
+.bbg-avatar {
   border-radius: 50%;
   width: 125px;
   height: 125px;
 }
 
-.bbg-staff-author {
+.bbg-staff__author {
   margin-top: 0;
 }
 
-.bbg-staff-contact-link:before {
+.bbg-staff__author__contact-link:before {
   content: "• ";
 }
 
-.bbg-staff-contact-link:first-of-type:before {
+.bbg-staff__author__contact-link:first-of-type:before {
   content: "";
 }
 

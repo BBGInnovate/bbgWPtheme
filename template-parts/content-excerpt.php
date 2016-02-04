@@ -12,16 +12,15 @@ global $gridClass;
 if ( empty ($gridClass)) {
 	$gridClass="";
 }
-$classNames="bbg-blog__article ".$gridClass;
+$classNames="bbg-blog__excerpt ".$gridClass;
 ?>
 
 
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class($classNames); ?> >
-	<header class="entry-header bbg-blog__article-header">
+	<header class="entry-header bbg-blog__excerpt-header">
 
-		<?php the_title( sprintf( '<h3 class="entry-title bbg-blog__article-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title bbg-blog__excerpt-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta bbg__article-meta">
@@ -29,9 +28,9 @@ $classNames="bbg-blog__article ".$gridClass;
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-	</header><!-- .bbg-blog__article-header -->
+	</header><!-- .bbg-blog__excerpt-header -->
 
-	<div class="entry-content bbg-blog__article-content">
+	<div class="entry-content bbg-blog__excerpt-content">
 		<?php
 			the_excerpt();
 			/*			
@@ -48,6 +47,6 @@ $classNames="bbg-blog__article ".$gridClass;
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .bbg-blog__article-content -->
+	</div><!-- .bbg-blog__excerpt-content -->
 
 </article><!-- #post-## -->
