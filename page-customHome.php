@@ -150,7 +150,13 @@ get_header();
 						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
-						$args = array( 'include' => [11,10,19,13,24,9,3,1]);
+						//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
+						$featuredUserIDsStr=get_option( 'featuredUserIDs' );
+						$featuredUserIDs = explode( ',', $featuredUserIDsStr );
+						array_walk( $featuredUserIDs, 'intval' );
+						$args = array( 'include' => $featuredUserIDs, 'orderby' => 'include');
+						//$args = array( 'include' => [1,2,3,4,5]);
+
 						//$args = array( 'include' => [2,8,12,10,9,11]);
 						$blogusers = get_users($args);
 						// Loop through the users to create the staff profiles
