@@ -170,7 +170,7 @@ get_header();
 							$theauthorid = esc_html( $user->ID );
 							$website = esc_html( $user->user_url );
 						?>
-						<div id="" <?php post_class("bbg-grid--1-2-2  bbg-staff__author "); ?>>
+						<div <?php post_class("bbg-grid--1-2-2  bbg-staff__author "); ?>>
 							<div class="bbg-avatar">
 								<a href="<?php echo $authorPath ?>">
 								<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>

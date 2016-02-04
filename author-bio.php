@@ -16,40 +16,47 @@ $authorEmail = 	get_the_author_meta( 'user_email' );
 ?>
 
 <div class="usa-section">
-	<div class="usa-grid bbg-staff__author">
-		<div class="bbg-avatar">
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
-		</div>
-		<div class="bbg-staff__author__text">
-			<h2 class="bbg-staff__author-name"><?php printf( '%s', get_the_author() ); ?></h2>
+	<div class="usa-grid">
 
-			<div class="bbg-staff__author-description">
 
-					<?php 
-						echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>';
+		<div class="bbg-staff__author">
+			<div class="bbg-avatar">
+				<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
+			</div>
 
-						if ( $website && $website != '' ) {
-							$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-						}
+			<div class="bbg-staff__author__text">
+				<h2 class="bbg-staff__author-name"><?php printf( '%s', get_the_author() ); ?></h2>
 
-						if ( $twitterHandle && $twitterHandle != '' ) {
-							$twitterHandle=str_replace("@", "", $twitterHandle);
-							$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
-						}
-					?>
+				<div class="bbg-staff__author-description">
 
-						<div class="bbg-staff__author-contact">
-							<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
-							<?php echo $website; ?>
+						<?php 
+							echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>';
+
+							if ( $website && $website != '' ) {
+								$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
+							}
+
+							if ( $twitterHandle && $twitterHandle != '' ) {
+								$twitterHandle=str_replace("@", "", $twitterHandle);
+								$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+							}
+						?>
+
+							<div class="bbg-staff__author-contact">
+								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
+								<?php echo $website; ?>
+							</div>
+
+						<div class="bbg-staff__author-bio">
+							<?php if ( get_the_author_meta( 'description' ) ) : ?>
+								<?php the_author_meta( 'description' ); ?>
+							<?php endif; ?>
 						</div>
+					<div class='clearAll'></div>
+				</div><!-- .author-description -->
+			</div><!-- .bbg-author-text -->
+		</div><!-- .bbg-staff__author -->
 
-					<div class="bbg-staff__author-bio">
-						<?php if ( get_the_author_meta( 'description' ) ) : ?>
-							<?php the_author_meta( 'description' ); ?>
-						<?php endif; ?>
-					</div>
-				<div class='clearAll'></div>
-			</div><!-- .author-description -->
-		</div><!-- .bbg-author-text -->
-	</div>
+
+	</div><!-- .usa-grid -->
 </div> 
