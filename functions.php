@@ -348,6 +348,28 @@ function pippin_show_user_id_column_content($value, $column_name, $user_id) {
     return $value;
 }
 
+// add a custom field to the 'GENERAL' section of wordpress with our list of featured userIDs
+function featuredUserIDs_callback( $args ) {
+	$val = get_option( 'featuredUserIDs' );
+	if (! $val ) {
+		$val = '';
+	}
+	$html = '<input type="text" id="featuredUserIDs" name="featuredUserIDs" value="' . $val . '" size="15" />';
+	$html .= '<p class="description" >(comma separated list of id\'s for users on homepage - get them from <a target="_blank" href="users.php">Users</a></label>)';
+	echo $html;
+}
+
+function oddi_settings_api_init() {
+	add_settings_field(
+		'featuredUserIDs',
+		'Featured User IDs',
+		'featuredUserIDs_callback',
+		'general'
+	);
+	register_setting('general','featuredUserIDs');
+}
+	 
+add_action( 'admin_init', 'oddi_settings_api_init' );
 /*===================================================================================
  * CUSTOM PAGINATION LOGIC - we show X posts on front page but more posts on 'older post' pages
  * the next several functions are for adding that functionality and also making it available in wordpress settings
@@ -373,3 +395,10 @@ function bbginnovate_query_offset(&$query) {
 		return;
 	}
 }
+
+
+	add_filter( 'pre_update_option_blogname', 'blogname_with_html', 10, 2 );
+	function blogname_with_html( $value, $old_value ) {
+		return "saved something";
+	}
+?>
