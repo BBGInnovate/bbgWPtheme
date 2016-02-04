@@ -8,9 +8,17 @@
  * @package bbginnovate
  */
 
+
+
+global $gridClass;
+if ( empty ($gridClass)) {
+	$gridClass="bbg-grid--1-2-2";
+}
+$classNames="bbg-portfolio__article ".$gridClass;
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-grid--1-3-3 bbg-portfolio__article"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($classNames); ?>>
 	<header class="entry-header bbg-portfolio__article-header">
 	<?php 
 		echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );

@@ -90,6 +90,7 @@ get_header();
 
 						if ( have_posts() ) :
 							while ( have_posts() ) : the_post();
+								$gridClass = "bbg-grid--1-3-3";
 								get_template_part( 'template-parts/content-portfolio', get_post_format() );
 							endwhile;
 						endif;
@@ -129,15 +130,8 @@ get_header();
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							} 
 							else if ($counter <= $maxPostsToShow) {
-								//if ($counter == 2){
-									echo "<div class='bbg-grid--1-2-2'>";
-								//}
-
+								$gridClass = "bbg-grid--1-2-2";
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
-
-								//if ($counter == $maxPostsToShow){
-									echo "</div><!-- .bbg-grid--1-2-2 -->";
-								//}
 							}
 						endwhile;
 					endif;
@@ -156,7 +150,7 @@ get_header();
 						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
-						$args = array( 'include' => [8,2,6,1,3,4,5]);
+						$args = array( 'include' => [11,10,19,13,24,9,3,1]);
 						//$args = array( 'include' => [1,2,3,4,5]);
 						$blogusers = get_users($args);
 						// Loop through the users to create the staff profiles
