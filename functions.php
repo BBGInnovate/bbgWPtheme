@@ -333,8 +333,10 @@ add_filter('manage_users_columns', 'pippin_add_user_id_column');
 function pippin_add_user_id_column($columns) {
 	$new = array();
 	foreach($columns as $key => $title) {
-	if ($key=='username') // Put the Thumbnail column before the Author column
-		$new['user_id'] = 'ID';
+		if ($key=='username') {
+			$new['user_id'] = 'ID';
+			$new['isActive'] = 'Active';
+		}
 		$new[$key] = $title;
 	}
 	return $new;
@@ -343,10 +345,25 @@ function pippin_add_user_id_column($columns) {
 add_action('manage_users_custom_column',  'pippin_show_user_id_column_content', 10, 3);
 function pippin_show_user_id_column_content($value, $column_name, $user_id) {
     $user = get_userdata( $user_id );
-	if ( 'user_id' == $column_name )
+	if ( 'user_id' == $column_name ) {
 		return $user_id;
+	}
+	if ('isActive' == $column_name) {
+		return ($user->isActive == "on") ? "<span class='adminYes'>Yes</span>": "<span class='adminNo'>No</span>";
+	}
     return $value;
 }
+
+function admin_css() {
+   echo '<style type="text/css">
+           th#user_id {width:50px;}
+           th#isActive {width:100px;}
+           .adminYes {color:green;}
+           .adminNo {color:red;}
+         </style>';
+}
+
+add_action('admin_head', 'admin_css');
 
 // add a custom field to the 'GENERAL' section of wordpress with our list of featured userIDs
 function featuredUserIDs_callback( $args ) {
