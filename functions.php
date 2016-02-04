@@ -354,7 +354,7 @@ function featuredUserIDs_callback( $args ) {
 	if (! $val ) {
 		$val = '';
 	}
-	$html = '<input type="text" id="featuredUserIDs" name="featuredUserIDs" value="' . $val . '" size="15" />';
+	$html = '<input type="text" id="featuredUserIDs" name="featuredUserIDs" value="' . $val . '" size="35" class="regular-text" />';
 	$html .= '<p class="description" >(comma separated list of id\'s for users on homepage - get them from <a target="_blank" href="users.php">Users</a></label>)';
 	echo $html;
 }
