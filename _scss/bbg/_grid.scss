@@ -1,31 +1,74 @@
-//Experiment to see if grid can convert from 1- to 2- to 3-columns.
+//Experiment to see if grid can convert from 1- to 2- to 3-columns (small, medium and large).
 @include media($medium-screen) {
-	.bbg-width-one-half {
+	.bbg-grid--1-2-3 {
 		@include span-columns(6);
 		margin-right: 0;
 	}
-	.bbg-width-one-half:nth-child(2n) {
+	.bbg-grid--1-2-3:nth-child(2n) {
 		clear: left;
 		margin-right: 2%;
 	}
 }
 
 @include media($large-screen) {
-	.bbg-width-one-half {
+	.bbg-grid--1-2-3 {
 		@include span-columns(4);
 		margin-right: 2%;
 		clear:none;
 	}
 
-	.bbg-width-one-half:nth-child(2n) {
+	.bbg-grid--1-2-3:nth-child(2n) {
 		clear: none;
 		margin-right: 2%;
 	}
-	.bbg-width-one-half:nth-child(3n) {
+
+	.bbg-grid--1-2-3:nth-child(3n) {
 		margin-right: 0;
 	}
 
-	.bbg-width-one-half:nth-child(3n+1) {
+	.bbg-grid--1-2-3:nth-child(3n+1) {
 		clear: left;
 	}
 }
+
+
+
+//Experiment to see if grid can convert from 1- to 2- to 2-columns.
+@include media($medium-screen) {
+	.bbg-grid--1-2-2 {
+		@include span-columns(6);
+		margin-right: 0;
+	}
+	.bbg-grid--1-2-2:nth-child(2n) {
+		clear: left;
+		margin-right: 2%;
+	}
+}
+
+
+
+
+//Experiment to see if grid can convert from 1- to 3- to 3-columns.
+@include media($medium-screen) {
+	.bbg-grid--1-3-3 {
+		@include span-columns(4);
+		margin-right: 2%;
+		clear:none;
+	}
+
+	.bbg-grid--1-3-3:nth-child(2n) {
+		clear: none;
+		margin-right: 2%;
+	}
+
+	.bbg-grid--1-3-3:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	.bbg-grid--1-3-3:nth-child(3n+1) {
+		clear: left;
+	}
+}
+
+
+

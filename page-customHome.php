@@ -130,13 +130,13 @@ get_header();
 							} 
 							else if ($counter <= $maxPostsToShow) {
 								//if ($counter == 2){
-									echo "<div class='bbg-width-one-half'>";
+									echo "<div class='bbg-grid--1-2-2'>";
 								//}
 
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 
 								//if ($counter == $maxPostsToShow){
-									echo "</div>";
+									echo "</div><!-- .bbg-grid--1-2-2 -->";
 								//}
 							}
 						endwhile;
@@ -173,7 +173,7 @@ get_header();
 							$number_of_posts = 3;
 							*/
 						?>
-					<article id="" <?php post_class("usa-width-one-half bbg-staff-profile "); ?>>
+					<article id="" <?php post_class("bbg-grid--1-2-2  bbg-staff-profile "); ?>>
 						<div class="bbg-staff-profile">
 							<div class="bbg-avatar">
 								<a href="<?php echo $authorPath ?>">

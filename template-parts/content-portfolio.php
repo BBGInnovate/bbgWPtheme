@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("usa-width-one-third bbg-portfolio__article"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-grid--1-3-3 bbg-portfolio__article"); ?>>
 	<header class="entry-header bbg-portfolio__article-header">
 	<?php 
 		echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
