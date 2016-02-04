@@ -285,7 +285,11 @@ function change_avatar_css($class) {
 
 add_action( 'show_user_profile', 'bbg_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'bbg_show_extra_profile_fields' );
-function bbg_show_extra_profile_fields( $user ) { ?>
+function bbg_show_extra_profile_fields( $user ) { 
+	$isActive=esc_attr( get_the_author_meta( 'isActive', $user->ID ));
+	$isActiveChecked= ($isActive=="on") ? "checked" : "";
+
+?>
 
 	<h3>Additional Profile Information</h3>
 
@@ -297,6 +301,14 @@ function bbg_show_extra_profile_fields( $user ) { ?>
 			<td>
 				<input type="text" name="occupation" id="occupation" value="<?php echo esc_attr( get_the_author_meta( 'occupation', $user->ID ) ); ?>" class="regular-text" /><br />
 				<span class="description">Please enter your Occupation.</span>
+			</td>
+		</tr>
+		<tr>
+			<th><label for="isActive">Active</label></th>
+
+			<td>
+				<input type="checkbox" name="isActive" id="isActive" <?php echo $isActiveChecked; ?>  />
+				<span class="description">User is active</span>
 			</td>
 		</tr>
 
@@ -313,8 +325,28 @@ if ( !current_user_can( 'edit_user', $user_id ) )
 
 /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
 update_usermeta( $user_id, 'occupation', $_POST['occupation'] );
+update_usermeta( $user_id, 'isActive', $_POST['isActive'] );
 }
 
+/*=========== ADD USERID TO USER LIST SO THAT IT'S EASY TO SET THE RANKING GENERAL SETTING *===========*/
+add_filter('manage_users_columns', 'pippin_add_user_id_column');
+function pippin_add_user_id_column($columns) {
+	$new = array();
+	foreach($columns as $key => $title) {
+	if ($key=='username') // Put the Thumbnail column before the Author column
+		$new['user_id'] = 'ID';
+		$new[$key] = $title;
+	}
+	return $new;
+}
+ 
+add_action('manage_users_custom_column',  'pippin_show_user_id_column_content', 10, 3);
+function pippin_show_user_id_column_content($value, $column_name, $user_id) {
+    $user = get_userdata( $user_id );
+	if ( 'user_id' == $column_name )
+		return $user_id;
+    return $value;
+}
 
 /*===================================================================================
  * CUSTOM PAGINATION LOGIC - we show X posts on front page but more posts on 'older post' pages
