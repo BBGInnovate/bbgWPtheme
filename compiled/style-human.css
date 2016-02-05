@@ -2669,6 +2669,15 @@ fieldset {
   margin-bottom: 0;
 }
 
+.bbg-staff__author {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .bbg-staff__author {
+    margin-bottom: 5rem;
+  }
+}
+
 .bbg-avatar__container {
   margin: 0 auto;
   max-width: 200px;
@@ -2704,10 +2713,6 @@ fieldset {
     width: 100px;
     */
   }
-}
-
-.bbg-testingHound {
-  font-size: 100%;
 }
 
 .bbg-staff__author__text {
@@ -3069,7 +3074,7 @@ section.usa-section {
 }
 
 body:not(.home) .menu-all-pages-container {
-  min-height: 4rem;
+  min-height: 5rem;
 }
 
 .usa-heading-site-title {

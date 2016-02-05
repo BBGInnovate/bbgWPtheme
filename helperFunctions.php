@@ -32,10 +32,9 @@
 				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?></div>
 			<?php } ?>
 
-			<?php 
 
-			if ($mode=="home") { 
-?>
+
+
 				<div class="bbg-staff__author-description">
 					<?php 
 
@@ -53,35 +52,29 @@
 					</div>
 					<div class='clearAll'></div>
 				</div>
+
+
 <?php 
-			} elseif ($mode=="staff") { 
+			//if you wanted a different view for staff
+			if ($mode=="staff") { 
 ?>
-				<div class="bbg-staff__author__contact">
-					<span class="bbg-staff__author__contact-link email"><a href="mailto:<?php echo $authorEmail; ?>">Email</a></span>
 
-					<?php if ( $user->twitterHandle!="" ) { ?>
-						<span class="bbg-staff__author__contact-link twitter"><a href="<?php echo  esc_html( $user->twitterHandle ); ?>"><?php echo '@' . esc_html( $user->twitterHandle ); ?></a></span>
-					<?php } ?>
 
-					<?php if ( $user->user_url!="" ) { ?>
-						<span class="bbg-staff__author__contact-link website"><a href="<?php echo  esc_html( $user->user_url ); ?>">Website</a></span>
-					<?php } ?>
-				</div>
 
-				<?php if ( $user->user_description!="" ) { ?>
-				<p><?php echo esc_html( $user->user_description ); ?></p>
-				<?php } ?>
+
 				<?php query_posts( 'author=' . $theauthorid ); ?>
 					<?php if ( have_posts() ) { ?>
-						<h3>Blog posts</h3>
+						<!--<h3>Blog posts</h3>-->
 						<?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
-							<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<!--<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>-->
 							<?php $count++; ?>
 						<?php endwhile; endif; ?>
 					<?php } ?>
 				<?php
 					}
 				?>
+
+
 			<!-- .author-description -->
 		</div><!-- .bbg-author-text -->
 	</div>

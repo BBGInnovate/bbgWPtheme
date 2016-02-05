@@ -1,3 +1,11 @@
+.bbg-staff__author {
+	margin-bottom: 2rem;
+
+	@include media($medium-screen) {
+		margin-bottom: 5rem;
+	}
+}
+
 .bbg-avatar__container {
 	margin: 0 auto;
 	max-width: 200px;
@@ -28,7 +36,6 @@
 		*/
 	}
 }
-.bbg-testingHound { font-size: 100%; }
 
 .bbg-staff__author__text{
 	width: 100%;
