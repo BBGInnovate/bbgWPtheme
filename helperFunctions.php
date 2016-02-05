@@ -12,6 +12,7 @@
 		$count = 0;
 		$number_of_posts = 3;
 
+
 		if ( $user->isActive=="on" ) {
 
 	?>
@@ -32,7 +33,12 @@
 				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?></div>
 			<?php } ?>
 
-
+				<?php 
+					if ($user->headOfTeam != "") {
+						$category = get_category($user->headOfTeam);
+						echo "head of team $category->name<BR> desc is $category->description";
+					}
+				?>
 
 
 				<div class="bbg-staff__author-description">
