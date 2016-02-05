@@ -3038,6 +3038,12 @@ section.usa-section {
   }
 }
 
+.menu-all-pages-container {
+  margin: 0 auto;
+  max-width: 1040px;
+  position: relative;
+}
+
 .usa-heading-site-title {
   font-size: 2.5rem;
 }
@@ -3114,14 +3120,14 @@ section.usa-section {
   margin-top: 0;
 }
 
-.bbg-staff__author__contact-link:before {
-  content: "• ";
+/*
+.bbg-staff__author__contact-link:before{
+	content: "• ";
 }
-
-.bbg-staff__author__contact-link:first-of-type:before {
-  content: "";
+.bbg-staff__author__contact-link:first-of-type:before{
+	content: "";
 }
-
+*/
 @media screen and (min-width: 481px) {
   .u--no-wrap {
     white-space: nowrap;

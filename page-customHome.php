@@ -144,10 +144,10 @@ get_header();
 			<!-- Staff -->
 			<section class="usa-section bbg-staff">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our team</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our teams</span></a></h6>
 					<div class="usa-grid-full">
 					<div class="usa-intro">
-						<h3 class="usa-font-lead">ODDI's team of designers, developers and storytellers help drive USIM digital projects.</h3>
+						<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
 						//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
