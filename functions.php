@@ -419,4 +419,26 @@ function bbginnovate_query_offset(&$query) {
 		return "saved something";
 	}
 	*/
+
+if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
+	/**
+	 * Returns categories for current post with separator.
+	 * Optionally returns only a single category.
+	 *
+	 * @since bbginnovate 1.0
+	 */
+	function bbginnovate_post_categories( $separator = ',', $single = true ) {
+		$categories = get_the_category();
+		$output     = '';
+		if ( $categories ) {
+			foreach ( $categories as $category ) {
+				$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '"><span class="usa-label-big">' . $category->cat_name . '</span></a></h5>' . $separator;
+				if ( $single )
+				break;
+			}
+		}
+
+		return $output;
+	}
+endif;
 ?>

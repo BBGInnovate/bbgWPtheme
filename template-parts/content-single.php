@@ -9,11 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
-
-
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
 
 <?php
 	/*
@@ -37,8 +33,11 @@
 	*/
 ?>
 	<div class="usa-grid">
+		
+		<?php echo bbginnovate_post_categories( '', true ); ?>
+		<!-- .bbg-label -->
 
-		<header class="entry-header">
+		<header class="entry-header bbg__article-header">
 		<?php
 			if (has_post_thumbnail()) {
 				echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail usa-banner">';
