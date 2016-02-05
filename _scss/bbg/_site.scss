@@ -36,6 +36,8 @@ body:not(.home) .menu-all-pages-container {
 
 .usa-heading-site-title {
 	font-size: 2.5rem;
+	font-family: $font-sans !important;
+	line-height: 1;
 
 	@include media($medium-screen) {
 		font-size: 4rem;

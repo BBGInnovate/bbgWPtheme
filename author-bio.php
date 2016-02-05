@@ -20,7 +20,7 @@ $authorEmail = 	get_the_author_meta( 'user_email' );
 
 
 		<div class="bbg-staff__author">
-			<div class="bbg-avatar">
+			<div class="bbg-avatar__container">
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
 			</div>
 

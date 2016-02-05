@@ -34,13 +34,18 @@
 
 		.bbg-banner-site-title{
 			color: #FFF;
+			font-family: $font-sans !important;
 			font-size: $h1-font-size * .8;
+			line-height: 1;
 			margin-bottom: 5px;
 			max-width: $site-max-width;
 			padding-right: $site-margins;
 			text-shadow: $text-shadow;
 			@include media($medium-screen) {
-				font-size: $h1-font-size;
+				font-size: $h1-font-size * 1.2;
+			}
+			@include media($large-screen) {
+				font-size: $h1-font-size * 1.5;
 			}
 		}
 
@@ -58,20 +63,6 @@
 	}
 }
 
-.bbg-portfolio-project {
-	@include media($medium-large-screen) {
-		@include omega(4n);
-	}
-}
-
-.bbg-staff-profile {
-	@include media($large-screen) {
-	}
-}
-
-.bbg-featured-title {
-	margin-top: 0;
-}
 
 .bbg-label {
 	margin-bottom: $site-margins;

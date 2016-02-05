@@ -75,7 +75,7 @@ get_header();
 			<!-- Portfolio -->
 			<section class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/blog/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
 
 					<div class="usa-grid-full">
 					<?php

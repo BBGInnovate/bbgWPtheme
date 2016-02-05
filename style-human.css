@@ -2698,6 +2698,19 @@ fieldset {
   }
 }
 
+.bbg-avatar__container--small {
+  margin: 0 auto;
+  max-width: 50px;
+}
+@media screen and (min-width: 600px) {
+  .bbg-avatar__container--small {
+    float: left;
+    margin: 0 1rem .5rem 0;
+    width: 20%;
+    max-width: 50px;
+  }
+}
+
 .bbg-avatar {
   border-radius: 50%;
   display: block;
@@ -2705,21 +2718,8 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-avatar {
-    /*
-    float: left;
-    height: 70px;
-    width: 70px;
-    */
     height: 100%;
     width: 100%;
-  }
-}
-@media screen and (min-width: 1201px) {
-  .bbg-avatar {
-    /*
-    height: 100px;
-    width: 100px;
-    */
   }
 }
 
@@ -2743,12 +2743,8 @@ fieldset {
 }
 @media screen and (min-width: 1201px) {
   .bbg-staff__author-name {
-    font-size: 3rem;
+    font-size: 2rem;
   }
-}
-
-.bbg-staff__author-occupation {
-  text-transform: uppercase;
 }
 
 .bbg-staff__author__contact {
@@ -2759,71 +2755,66 @@ fieldset {
   margin-top: 1rem;
 }
 
-/* Post category label */
-.bbg__article .bbg-label {
-  margin-top: 4rem;
-  margin-bottom: 1rem;
+.bbg-entry-content > *,
+.bbg-post-footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
 }
 
-/** HEADER AREA */
-/* Featured image */
-.bbg__article-header__thumbnail--large {
-  background-color: #F1F1F1;
-  line-height: 0;
-  text-align: center;
+.bbg-entry-content > h4 {
+  clear: none;
 }
 
-/* Post title */
-.bbg__article-header__title {
-  font-size: 3.2rem;
-  margin-top: 2rem;
+.bbg-entry-content blockquote {
+  font-size: 2.5rem;
+  margin: 0 auto;
 }
-@media screen and (min-width: 600px) {
-  .bbg__article-header__title {
-    font-size: 4rem;
+
+.bbg-entry-content blockquote.pullquote {
+  border-bottom: 6px solid #333;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 1201px) {
+  .bbg-entry-content blockquote.pullquote {
+    float: left;
+    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+    margin-right: 3rem;
+    max-width: 50%;
+    padding: 0;
   }
 }
 
-/* Author byline */
-.bbg__article-meta {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
 @media screen and (min-width: 900px) {
-  .bbg__article-meta {
-    margin-top: -.5rem;
+  .bbg-entry-meta {
     margin-bottom: 4rem;
   }
 }
 
-/** ARTICLE SHARE AREA */
-.bbg__article-share {
+.bbg-post-share-menu {
   margin-top: 0;
 }
 @media screen and (min-width: 900px) {
-  .bbg__article-share {
+  .bbg-post-share-menu {
     float: left;
-    margin-top: -1%;
   }
 }
 
-/* Article share links */
-.bbg__article-share__link {
+.bbg-post-share-menu-tool {
   display: inline-block;
   margin-right: 10px;
 }
 @media screen and (min-width: 900px) {
-  .bbg__article-share__link {
+  .bbg-post-share-menu-tool {
     display: block;
   }
 }
 
-.bbg__article-share__link:before {
+.bbg-post-share-menu-tool:before {
   content: "";
 }
 
-/* Article share links: icons */
-.bbg__article-share__icon {
+.bbg-share-icon {
   background: #CCC no-repeat center center / cover;
   border-radius: 0.3rem;
   display: inline-block;
@@ -2833,73 +2824,41 @@ fieldset {
   width: 40px;
 }
 @media screen and (min-width: 900px) {
-  .bbg__article-share__icon {
+  .bbg-share-icon {
     border-radius: 0;
     height: 20px;
     width: 20px;
   }
 }
 
-.bbg__article-share__icon.email {
+.bbg-share-icon.email {
   background-color: #CCC;
   background-image: url(img/social-icons/png-white/social-icons_email.png);
 }
 
-.bbg__article-share__icon.facebook {
+.bbg-share-icon.facebook {
   background-color: #3d5a98;
   background-image: url(img/social-icons/png-white/social-icons_facebook.png);
 }
 
-.bbg__article-share__icon.twitter {
-  background-color: #900;
+.bbg-share-icon.twitter {
+  background-color: #55acee;
   background-image: url(img/social-icons/png-white/social-icons_twitter.png);
 }
 
-/* Article share links: text */
-.bbg__article-share__text {
+.bbg-share-text {
   display: none;
 }
 @media screen and (min-width: 900px) {
-  .bbg__article-share__text {
+  .bbg-share-text {
     display: inline-block;
   }
 }
 
-/** POST CONTENT AREA */
-.bbg__article-content > *,
-.bbg__article-footer {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-}
-
-.bbg__article-content p:first-of-type {
-  font-size: 2.4rem;
-  margin: 0 auto;
-  font-weight: 300;
-}
-
-.bbg__article-content > h4 {
-  clear: none;
-}
-
-.bbg__article-content blockquote {
-  font-size: 2.5rem;
-  margin: 0 auto;
-}
-
-.bbg__article-content blockquote.pullquote {
-  border-bottom: 6px solid #333;
-  margin-bottom: 3rem;
-}
-@media screen and (min-width: 1201px) {
-  .bbg__article-content blockquote.pullquote {
-    float: left;
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-    margin-right: 3rem;
-    max-width: 50%;
-    padding: 0;
-  }
+.usa-single_post_thumbnail {
+  background-color: #F1F1F1;
+  line-height: 0;
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -3040,7 +2999,9 @@ fieldset {
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-title {
   color: #FFF;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important;
   font-size: 3.2rem;
+  line-height: 1;
   margin-bottom: 5px;
   max-width: 1040px;
   padding-right: 3rem;
@@ -3048,7 +3009,12 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
-    font-size: 4rem;
+    font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title {
+    font-size: 6rem;
   }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
@@ -3061,19 +3027,6 @@ fieldset {
   margin-left: -3rem;
   padding: 10px 3rem;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 900px) {
-  .bbg-portfolio-project:nth-child(4n) {
-    margin-right: 0;
-  }
-  .bbg-portfolio-project:nth-child(4n+1) {
-    clear: left;
-  }
-}
-
-.bbg-featured-title {
-  margin-top: 0;
 }
 
 .bbg-label {
@@ -3124,6 +3077,8 @@ body:not(.home) .menu-all-pages-container {
 
 .usa-heading-site-title {
   font-size: 2.5rem;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important;
+  line-height: 1;
 }
 @media screen and (min-width: 600px) {
   .usa-heading-site-title {

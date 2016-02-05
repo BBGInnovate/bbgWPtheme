@@ -12,11 +12,56 @@
 		$count = 0;
 		$number_of_posts = 3;
 
+
 		if ( $user->isActive=="on" ) {
 
 	?>
 	<div <?php post_class("bbg-grid--1-2-2 bbg-staff__author "); ?>>
-		<div class="bbg-avatar__container">
+
+<?php 
+
+			if ($mode=="home") { 
+?>
+
+
+
+				<?php 
+					if ($user->headOfTeam != "") {
+						$category = get_category($user->headOfTeam);
+						$categoryUrl = "blog/category/".$category->category_nicename;
+						echo "<h2><a href='$categoryUrl'>$category->name</a></h2> <p>$category->description</p>";
+					}
+				?>
+
+
+
+		<div class="bbg-avatar__container--small">
+			<a href="<?php echo $authorPath ?>">
+				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
+			</a>
+		</div>
+
+		<div class="bbg-staff__author__text">
+			
+			<h4 class="bbg-staff__author-name">Contact: 
+				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
+			</h4>
+			
+			<?php if ( $authorOccupation!="" ) { ?>
+				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a></div>
+			<?php } ?>
+
+
+
+
+
+<?php 
+			//if you wanted a different view for staff
+			} elseif ($mode=="staff") { 
+?>
+
+
+<div class="bbg-avatar__container">
 			<a href="<?php echo $authorPath ?>">
 				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 			</a>
@@ -31,8 +76,6 @@
 			<?php if ( $authorOccupation!="" ) { ?>
 				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?></div>
 			<?php } ?>
-
-
 
 
 				<div class="bbg-staff__author-description">
@@ -52,14 +95,6 @@
 					</div>
 					<div class='clearAll'></div>
 				</div>
-
-
-<?php 
-			//if you wanted a different view for staff
-			if ($mode=="staff") { 
-?>
-
-
 
 
 				<?php query_posts( 'author=' . $theauthorid ); ?>

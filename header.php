@@ -114,7 +114,7 @@ global $templateName;
 				<?php endif;
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
-					<h3 class="usa-heading usa-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>
+					<!--<h3 class="usa-heading usa-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>-->
 				<?php endif; ?>
 			</div>
 
