@@ -20,12 +20,12 @@
 		<div class="usa-grid-full usa-bbg-footer-big-top">
 			<nav class="usa-footer-nav usa-width-two-thirds">
 				<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
-					<h4 class="usa-footer-primary-link">Entities</h4>
-					<li><a href="http://www.voanews.com/">Voice of America</a></li>
-					<li><a href="http://www.rferl.org/">Radio Free Europe / Radio Liberty</a></li>
-					<li><a href="http://www.martinoticias.com/">Office of Cuba Broadcasting</a></li>
-					<li><a href="http://www.rfa.org/english/">Radio Free Asia</a></li>
-					<li><a href="http://www.alhurra.com/">Middle East Broadcasting Networks</a></li>
+					<h4 class="usa-footer-primary-link">Broadcasters</h4>
+					<li><a href="http://www.voanews.com/" title="Voice of America">VOA</a></li>
+					<li><a href="http://www.rferl.org/" title="Radio Free Europe / Radio Liberty">RFERL</a></li>
+					<li><a href="http://www.martinoticias.com/" title="Office of Cuba Broadcasting">OCB</a></li>
+					<li><a href="http://www.rfa.org/english/" title="Radio Free Asia">RFA</a></li>
+					<li><a href="http://www.alhurra.com/" title="Middle East Broadcasting Networks">MBN</a></li>
 				</ul>
 				<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
 					<h4 class="usa-footer-primary-link">Footer links</h4>
@@ -45,13 +45,9 @@
 				</ul>
 			</nav>
 
-			<div class="usa-sign_up-block usa-width-one-third">
-			  <h3 class="usa-sign_up-header">Sign up</h3>
-
-			  <label class="" for="email" id="">Your email address</label>
-			  <input id="email" name="email" type="email">
-
-			  <button type="submit">Sign up</button>
+			<div class="usa-width-one-third">
+				<h3 class="usa-sign_up-header">Search</h3>
+				<?php get_search_form ( $echo = true ) ?>
 			</div>
 		</div>
 
