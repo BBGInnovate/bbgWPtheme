@@ -2779,6 +2779,7 @@ fieldset {
 }
 @media screen and (min-width: 900px) {
   .bbg__article-meta {
+    font-size: 1.7rem;
     margin-top: -.5rem;
     margin-bottom: 4rem;
   }
@@ -2861,9 +2862,9 @@ fieldset {
   max-width: 600px;
 }
 
-.bbg__article-content p:first-of-type {
+.bbg__article-content > p:first-of-type {
   font-size: 2.4rem;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   font-weight: 300;
 }
 
@@ -2872,8 +2873,9 @@ fieldset {
 }
 
 .bbg__article-content blockquote {
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .bbg__article-content blockquote.pullquote {

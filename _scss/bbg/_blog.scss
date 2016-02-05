@@ -25,7 +25,9 @@
 .bbg__article-meta {
 	font-size: $small-font-size;
 	font-weight: 700;
+	
 	@include media($medium-large-screen) {
+		font-size: $base-font-size;
 		margin-top: -.5rem;
 		margin-bottom: 4rem;
 	}
@@ -105,9 +107,9 @@
 	max-width: $article-max-width;
 }
 
-.bbg__article-content p:first-of-type {
+.bbg__article-content > p:first-of-type {
     font-size: $h2-font-size * .8;
-	margin: 0 auto;
+	margin: 0 auto 3rem;
 	font-weight: 300;
 }
 
@@ -116,8 +118,9 @@
 }
 
 .bbg__article-content blockquote {
-	font-size: 2.5rem;
+	/*font-size: 2.5rem;*/
 	margin: 0 auto;
+	padding: 0 2rem;
 }
 
 .bbg__article-content blockquote.pullquote {
