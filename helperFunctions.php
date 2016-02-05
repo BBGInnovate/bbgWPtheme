@@ -15,10 +15,12 @@
 		if ( $user->isActive=="on" ) {
 
 	?>
-	<div <?php post_class("bbg-grid--1-2-2  bbg-staff__author "); ?>>
-		<a href="<?php echo $authorPath ?>">
-			<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
-		</a>
+	<div <?php post_class("bbg-grid--1-2-2 bbg-staff__author "); ?>>
+		<div class="bbg-avatar">
+			<a href="<?php echo $authorPath ?>">
+				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
+			</a>
+		</div>
 
 		<div class="bbg-staff__author__text">
 			

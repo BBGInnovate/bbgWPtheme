@@ -1,13 +1,20 @@
 .bbg-avatar {
 	border-radius: 50%;
+	display: block;
 	margin: 0 auto;
 	@include media($medium-screen) {
 		float: left;
+		height: 70px;
+		width: 70px;
+	}
+	@include media($large-screen) {
+		height: 100px;
+		width: 100px;
 	}
 }
 .bbg-testingHound { font-size: 100%; }
 
-.bbg-author-text{
+.bbg-staff__author__text{
 	width: 100%;
 	@include media($medium-screen) {
 		float: left;
@@ -16,24 +23,23 @@
 	}
 }
 
-.bbg-author-text > * {
+.bbg-staff__author__text > * {
 	text-align: center; 
 	@include media($medium-screen) {
 		text-align: left; 
 	}
 }
 
-.bbg-author-name{
+.bbg-staff__author-name{
 	font-size: 3rem;
 	margin-bottom: .1rem;
 	margin-top: 0;
 }
 
-.bbg-author-occupation {
+.bbg-staff__author-occupation {
 	text-transform: uppercase;
 }
 
-.bbg-author-bio {
+.bbg-staff__author-bio {
 	margin-top: 1rem;
-	/*font-weight: 100;*/
 }

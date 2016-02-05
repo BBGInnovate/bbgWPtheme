@@ -31,6 +31,19 @@
 	}
 }
 
+//Grid from 1- to 1- to 2-columns.
+@include media($large-screen) {
+	.bbg-grid--1-1-2 {
+		@include span-columns(6);
+		margin-right: 0;
+	}
+	.bbg-grid--1-1-2:nth-child(2n) {
+		clear: left;
+		margin-right: 2.35765%;
+	}
+}
+
+
 //Grid from 1- to 2- to 2-columns.
 @include media($medium-screen) {
 	.bbg-grid--1-2-2 {

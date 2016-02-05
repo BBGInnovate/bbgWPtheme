@@ -2679,11 +2679,20 @@ fieldset {
 
 .bbg-avatar {
   border-radius: 50%;
+  display: block;
   margin: 0 auto;
 }
 @media screen and (min-width: 600px) {
   .bbg-avatar {
     float: left;
+    height: 70px;
+    width: 70px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-avatar {
+    height: 100px;
+    width: 100px;
   }
 }
 
@@ -2691,39 +2700,38 @@ fieldset {
   font-size: 100%;
 }
 
-.bbg-author-text {
+.bbg-staff__author__text {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .bbg-author-text {
+  .bbg-staff__author__text {
     float: left;
     margin-left: 20px;
     width: calc(100% - 180px);
   }
 }
 
-.bbg-author-text > * {
+.bbg-staff__author__text > * {
   text-align: center;
 }
 @media screen and (min-width: 600px) {
-  .bbg-author-text > * {
+  .bbg-staff__author__text > * {
     text-align: left;
   }
 }
 
-.bbg-author-name {
+.bbg-staff__author-name {
   font-size: 3rem;
   margin-bottom: .1rem;
   margin-top: 0;
 }
 
-.bbg-author-occupation {
+.bbg-staff__author-occupation {
   text-transform: uppercase;
 }
 
-.bbg-author-bio {
+.bbg-staff__author-bio {
   margin-top: 1rem;
-  /*font-weight: 100;*/
 }
 
 .bbg-entry-content > *,
@@ -2873,6 +2881,23 @@ fieldset {
 
   .bbg-grid--1-2-3:nth-child(3n+1) {
     clear: left;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-grid--1-1-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0;
+  }
+  .bbg-grid--1-1-2:last-child {
+    margin-right: 0;
+  }
+
+  .bbg-grid--1-1-2:nth-child(2n) {
+    clear: left;
+    margin-right: 2.35765%;
   }
 }
 @media screen and (min-width: 600px) {
@@ -3086,9 +3111,11 @@ section.usa-section {
 }
 
 .bbg-avatar {
-  border-radius: 50%;
-  width: 125px;
-  height: 125px;
+  /*
+  	border-radius: 50%;
+  	width: 125px;
+  	height: 125px;
+  	*/
 }
 
 .bbg-staff__author {
