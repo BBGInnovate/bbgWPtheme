@@ -288,6 +288,8 @@ add_action( 'edit_user_profile', 'bbg_show_extra_profile_fields' );
 function bbg_show_extra_profile_fields( $user ) { 
 	$isActive=esc_attr( get_the_author_meta( 'isActive', $user->ID ));
 	$isActiveChecked= ($isActive=="on") ? "checked" : "";
+	$headOfTeam=esc_attr( get_the_author_meta( 'headOfTeam', $user->ID ));
+
 
 ?>
 
@@ -311,6 +313,26 @@ function bbg_show_extra_profile_fields( $user ) {
 				<span class="description">User is active</span>
 			</td>
 		</tr>
+		<tr>
+			<th><label for="isActive">Head of Team</label></th>
+			<td><select name="headOfTeam"><option value="">None</option>
+				<?php
+					$categories = get_categories( ); 
+					foreach ( $categories as $category ) {
+						$optionSelected=($headOfTeam==$category->term_id) ? "selected" : "";
+						$term = get_option( "taxonomy_" . $category->term_id );
+						if ($term['isTeamName'] == 1) {
+							printf( '<option %1$s value="%2$s">%3$s</option>',
+								$optionSelected,
+								esc_attr( $category->term_id ),
+								esc_html( $category->cat_name )
+						    );
+						}
+					}
+				?>
+				</select>
+			</td>
+		</tr>
 
 	</table>
 <?php }
@@ -320,12 +342,12 @@ add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
 
 function my_save_extra_profile_fields( $user_id ) {
 
-if ( !current_user_can( 'edit_user', $user_id ) )
-	return false;
+	if ( !current_user_can( 'edit_user', $user_id ) )
+		return false;
 
-/* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
-update_usermeta( $user_id, 'occupation', $_POST['occupation'] );
-update_usermeta( $user_id, 'isActive', $_POST['isActive'] );
+	update_usermeta( $user_id, 'occupation', $_POST['occupation'] );
+	update_usermeta( $user_id, 'isActive', $_POST['isActive'] );
+	update_usermeta( $user_id, 'headOfTeam', $_POST['headOfTeam'] );
 }
 
 /*=========== ADD USERID TO USER LIST SO THAT IT'S EASY TO SET THE RANKING GENERAL SETTING *===========*/
@@ -387,6 +409,43 @@ function oddi_settings_api_init() {
 }
 	 
 add_action( 'admin_init', 'oddi_settings_api_init' );
+
+
+/*===================================================================================
+ * ADD CATEGORY METADATA - http://php.quicoto.com/add-metadata-categories-wordpress/
+ * We needed the ability to 
+ * =================================================================================*/
+
+
+function xg_edit_featured_category_field( $term ){
+    $term_id = $term->term_id;
+    $term_meta = get_option( "taxonomy_$term_id" );         
+?>
+    <tr class="form-field">
+        <th scope="row">
+            <label for="term_meta[isTeamName]"><?php echo _e('Is Team Name') ?></label>
+            <td>
+            	<select name="term_meta[isTeamName]" id="term_meta[isTeamName]">
+                	<option value="0" <?=($term_meta['isTeamName'] == 0) ? 'selected': ''?>><?php echo _e('No'); ?></option>
+                	<option value="1" <?=($term_meta['isTeamName'] == 1) ? 'selected': ''?>><?php echo _e('Yes'); ?></option>
+            	</select>                   
+            </td>
+        </th>
+    </tr>
+<?php
+} 
+function xg_save_tax_meta( $term_id ){ 
+    if ( isset( $_POST['term_meta'] ) ) {
+		$term_meta = array();
+		$term_meta['isTeamName'] = isset ( $_POST['term_meta']['isTeamName'] ) ? intval( $_POST['term_meta']['isTeamName'] ) : '';
+		update_option( "taxonomy_$term_id", $term_meta );
+	} 
+} // save_tax_meta
+	
+add_action( 'category_edit_form_fields', 'xg_edit_featured_category_field' ); 
+add_action( 'edited_category', 'xg_save_tax_meta', 10, 2 ); 
+
+
 /*===================================================================================
  * CUSTOM PAGINATION LOGIC - we show X posts on front page but more posts on 'older post' pages
  * the next several functions are for adding that functionality and also making it available in wordpress settings
