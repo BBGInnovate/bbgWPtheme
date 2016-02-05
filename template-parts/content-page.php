@@ -9,7 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
+
+	<?php echo bbginnovate_post_categories( '', true ); ?>
+	<!-- .bbg-label -->
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
@@ -20,7 +24,7 @@
 		<li class="bbg-post-share-menu-tool twitter"><a href="#"><span class="bbg-share-icon twitter"></span><span class="bbg-share-text ">Tweet</span></a></li>
 	</ul>
 
-	<div class="entry-content usa-bbg-entry-content">
+	<div class="entry-content bbg__article-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

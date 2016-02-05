@@ -40,25 +40,42 @@
 		<header class="entry-header bbg__article-header">
 		<?php
 			if (has_post_thumbnail()) {
-				echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail usa-banner">';
+				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				echo the_post_thumbnail('large-thumb');
 				echo '</div>';
 			}
-		?>
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		?><!-- .bbg__article-header__thumbnail -->
 
-			<div class="entry-meta bbg-entry-meta">
+			<?php the_title( '<h1 class="entry-title bbg__article-header__title">', '</h1>' ); ?>
+			<!-- .bbg__article-header__title -->
+
+			<div class="entry-meta bbg__article-meta">
 				<?php bbginnovate_posted_on(); ?>
-			</div><!-- .entry-meta -->
-		</header><!-- .entry-header -->
+			</div><!-- .bbg__article-meta -->
+		</header><!-- .bbg__article-header -->
 
-		<ul class="bbg-post-share-menu">
-			<li class="bbg-post-share-menu-tool email"><a href="#"><span class="bbg-share-icon email"></span><span class="bbg-share-text ">Email</span></a></li>
-			<li class="bbg-post-share-menu-tool facebook"><a href="#"><span class="bbg-share-icon facebook"></span><span class="bbg-share-text ">Share</span></a></li>
-			<li class="bbg-post-share-menu-tool twitter"><a href="#"><span class="bbg-share-icon twitter"></span><span class="bbg-share-text ">Tweet</span></a></li>
+		<ul class="bbg__article-share">
+			<li class="bbg__article-share__link email">
+				<a href="#">
+					<span class="bbg__article-share__icon email"></span>
+					<span class="bbg__article-share__text">Email</span>
+				</a>
+			</li>
+			<li class="bbg__article-share__link facebook">
+				<a href="#">
+					<span class="bbg__article-share__icon facebook"></span>
+					<span class="bbg__article-share__text">Share</span>
+				</a>
+			</li>
+			<li class="bbg__article-share__link twitter">
+				<a href="#">
+					<span class="bbg__article-share__icon twitter"></span>
+					<span class="bbg__article-share__text">Tweet</span>
+				</a>
+			</li>
 		</ul>
 
-		<div class="entry-content bbg-entry-content">
+		<div class="entry-content bbg__article-content">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -91,7 +108,7 @@
 		</div><!-- .entry-content -->
 	</div><!-- .usa-grid -->
 
-	<footer class="entry-footer bbg-post-footer">
+	<footer class="entry-footer bbg__article-footer">
 		<?php bbginnovate_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
