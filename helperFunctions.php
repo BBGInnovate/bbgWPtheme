@@ -16,7 +16,7 @@
 
 	?>
 	<div <?php post_class("bbg-grid--1-2-2 bbg-staff__author "); ?>>
-		<div class="bbg-avatar">
+		<div class="bbg-avatar__container">
 			<a href="<?php echo $authorPath ?>">
 				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 			</a>
@@ -24,9 +24,9 @@
 
 		<div class="bbg-staff__author__text">
 			
-			<h2 class="bbg-staff__author-name">
+			<h3 class="bbg-staff__author-name">
 				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
-			</h2>
+			</h3>
 			
 			<?php if ( $authorOccupation!="" ) { ?>
 				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?></div>
@@ -45,7 +45,7 @@
 
 						if ( $twitterHandle && $twitterHandle != '' ) {
 							$twitterHandle=str_replace("@", "", $twitterHandle);
-							echo '<div class="bbg-author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail .'</a><span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ' . $website .'</div>';
+							echo '<div class="bbg-staff__author__contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail .'</a><span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ' . $website .'</div>';
 						}
 					?>
 					<div class="bbg-staff__author-bio">

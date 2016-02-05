@@ -1,15 +1,31 @@
+.bbg-avatar__container {
+	margin: 0 auto;
+	max-width: 200px;
+	@include media($medium-screen) {
+		float: left;
+		margin: 0 1rem .5rem 0;
+		width: 20%;
+	}
+}
+
 .bbg-avatar {
 	border-radius: 50%;
 	display: block;
 	margin: 0 auto;
 	@include media($medium-screen) {
+		/*
 		float: left;
 		height: 70px;
 		width: 70px;
+		*/
+		height: 100%;
+		width: 100%;
 	}
 	@include media($large-screen) {
+		/*
 		height: 100px;
 		width: 100px;
+		*/
 	}
 }
 .bbg-testingHound { font-size: 100%; }
@@ -17,9 +33,6 @@
 .bbg-staff__author__text{
 	width: 100%;
 	@include media($medium-screen) {
-		float: left;
-		margin-left: 20px;
-		width: calc(100% - 180px);
 	}
 }
 
@@ -31,13 +44,20 @@
 }
 
 .bbg-staff__author-name{
-	font-size: 3rem;
+	clear: none;
 	margin-bottom: .1rem;
-	margin-top: 0;
+	margin-top: 1rem;
+	@include media($large-screen) {
+		font-size: 3rem;
+	}
 }
 
 .bbg-staff__author-occupation {
 	text-transform: uppercase;
+}
+
+.bbg-staff__author__contact {
+	clear: left;
 }
 
 .bbg-staff__author-bio {

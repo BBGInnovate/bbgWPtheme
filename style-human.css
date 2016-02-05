@@ -2677,6 +2677,18 @@ fieldset {
   margin-bottom: 0;
 }
 
+.bbg-avatar__container {
+  margin: 0 auto;
+  max-width: 200px;
+}
+@media screen and (min-width: 600px) {
+  .bbg-avatar__container {
+    float: left;
+    margin: 0 1rem .5rem 0;
+    width: 20%;
+  }
+}
+
 .bbg-avatar {
   border-radius: 50%;
   display: block;
@@ -2684,15 +2696,21 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-avatar {
+    /*
     float: left;
     height: 70px;
     width: 70px;
+    */
+    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1201px) {
   .bbg-avatar {
+    /*
     height: 100px;
     width: 100px;
+    */
   }
 }
 
@@ -2702,13 +2720,6 @@ fieldset {
 
 .bbg-staff__author__text {
   width: 100%;
-}
-@media screen and (min-width: 600px) {
-  .bbg-staff__author__text {
-    float: left;
-    margin-left: 20px;
-    width: calc(100% - 180px);
-  }
 }
 
 .bbg-staff__author__text > * {
@@ -2721,13 +2732,22 @@ fieldset {
 }
 
 .bbg-staff__author-name {
-  font-size: 3rem;
+  clear: none;
   margin-bottom: .1rem;
-  margin-top: 0;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1201px) {
+  .bbg-staff__author-name {
+    font-size: 3rem;
+  }
 }
 
 .bbg-staff__author-occupation {
   text-transform: uppercase;
+}
+
+.bbg-staff__author__contact {
+  clear: left;
 }
 
 .bbg-staff__author-bio {
@@ -3023,6 +3043,10 @@ fieldset {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: .5rem;
+}
+
 .bbg-site-branding {
   margin-bottom: 3rem;
 }
@@ -3047,9 +3071,14 @@ section.usa-section {
 }
 
 .menu-all-pages-container {
+  height: 5rem;
   margin: 0 auto;
   max-width: 1040px;
   position: relative;
+}
+
+body.home .menu-all-pages-container {
+  height: 0rem;
 }
 
 .usa-heading-site-title {
@@ -3105,37 +3134,6 @@ section.usa-section {
   font-size: .9em;
 }
 
-.bbg-staff__author {
-  margin-bottom: 3rem;
-}
-.bbg-staff__author:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.bbg-avatar {
-  /*
-  	border-radius: 50%;
-  	width: 125px;
-  	height: 125px;
-  	*/
-}
-
-.bbg-staff__author {
-  margin-top: 0;
-}
-
-/*
-.bbg-staff__author__contact-link:before{
-	content: "• ";
-}
-.bbg-staff__author__contact-link:first-of-type:before{
-	content: "";
-}
-*/
 @media screen and (min-width: 481px) {
   .u--no-wrap {
     white-space: nowrap;
