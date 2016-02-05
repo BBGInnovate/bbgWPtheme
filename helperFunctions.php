@@ -38,7 +38,7 @@
 
 		<div class="bbg-staff__author__text">
 			
-			<p class="bbg-staff__author-name"><strong>Project lead: </strong> 
+			<p class="bbg-staff__author-name"><strong>Project lead: </strong><br/>
 				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a>
 			</p>
 
