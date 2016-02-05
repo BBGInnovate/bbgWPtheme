@@ -9,7 +9,7 @@
  */
 
 $templateName = "customHome";
-
+include_once("helperFunctions.php");
 
 
 /*
@@ -161,52 +161,8 @@ get_header();
 						$blogusers = get_users($args);
 						// Loop through the users to create the staff profiles
 						foreach ( $blogusers as $user ) {
-							$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
-							$authorName = esc_html( $user->display_name );
-							$authorOccupation = esc_html( $user->occupation );
-							$authorEmail = esc_html( $user->user_email );
-							$twitterHandle = esc_html( $user->twitterHandle );
-							$authorDescription = esc_html( $user->description );
-							$theauthorid = esc_html( $user->ID );
-							$website = esc_html( $user->user_url );
-						?>
-						<div <?php post_class("bbg-grid--1-2-2  bbg-staff__author "); ?>>
-							<div class="bbg-avatar">
-								<a href="<?php echo $authorPath ?>">
-								<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
-								</a>
-							</div>
-							<div class="bbg-staff__author__text">
-								<h2 class="bbg-staff__author-name">
-									<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
-								</h2>
-								<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?></div>
-
-								<div class="bbg-staff__author-description">
-									<?php 
-
-										if ( $website && $website != '' ) {
-											$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-										}
-
-										if ( $twitterHandle && $twitterHandle != '' ) {
-											$twitterHandle=str_replace("@", "", $twitterHandle);
-											echo '<div class="bbg-author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail .'</a><span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ' . $website .'</div>';
-										}
-									?>
-
-
-									<div class="bbg-staff__author-bio">
-										<?php echo $authorDescription; ?>
-									</div>
-									<div class='clearAll'></div>
-								</div>
-								<!-- .author-description -->
-							</div><!-- .bbg-author-text -->
-
-						</div>
-					<?php 
-							} 
+							outputUser($user,"home");
+						} 
 					?>
 					</div>
 					<a href="<?php echo site_url(); ?>/staff">Meet the full ODDI team</a>
