@@ -35,17 +35,12 @@
 
 
 
-		<div class="bbg-avatar__container--small">
-			<a href="<?php echo $authorPath ?>">
-				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
-			</a>
-		</div>
 
 		<div class="bbg-staff__author__text">
 			
-			<h4 class="bbg-staff__author-name">Contact: 
-				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
-			</h4>
+			<p class="bbg-staff__author-name"><strong>Contact: </strong> 
+				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a>
+			</p>
 			
 			<?php if ( $authorOccupation!="" ) { ?>
 				<div class="bbg-staff__author-occupation"><?php echo $authorOccupation; ?>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a></div>
