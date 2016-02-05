@@ -66,6 +66,28 @@
 					'after'  => '</div>',
 				) );
 			?>
+			<?php 
+				$usersInProjectStr=get_post_meta( get_the_ID(), 'users_in_project', true );
+				if ( $usersInProjectStr != "") {
+					//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
+					$userIDs = explode( ',', $usersInProjectStr );
+					array_walk( $userIDs, 'intval' );
+					$args = array( 'include' => $userIDs, 'orderby' => 'include');
+
+					$blogusers = get_users($args);
+					// Loop through the users to create the staff profiles
+					if ($blogusers) {
+						echo "Users in Project: <ul>";
+						foreach ( $blogusers as $user ) {
+							$authorName = esc_html( $user->display_name );
+							$authorOccupation = esc_html( $user->occupation );
+							echo "<li>$authorName - $authorOccupation</li>";
+						}
+						echo "</ul>";
+					} 
+						
+				}
+			?>
 		</div><!-- .entry-content -->
 	</div><!-- .usa-grid -->
 
