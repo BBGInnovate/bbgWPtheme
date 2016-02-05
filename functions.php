@@ -413,9 +413,10 @@ function bbginnovate_query_offset(&$query) {
 	}
 }
 
-
+	/*
 	add_filter( 'pre_update_option_blogname', 'blogname_with_html', 10, 2 );
 	function blogname_with_html( $value, $old_value ) {
 		return "saved something";
 	}
+	*/
 ?>
