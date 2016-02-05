@@ -321,7 +321,7 @@ function bbg_show_extra_profile_fields( $user ) {
 					foreach ( $categories as $category ) {
 						$optionSelected=($headOfTeam==$category->term_id) ? "selected" : "";
 						$term = get_option( "taxonomy_" . $category->term_id );
-						if ($term['isTeamName'] == 1) {
+						if ($term['isTeamName'] == 1 || true) {
 							printf( '<option %1$s value="%2$s">%3$s</option>',
 								$optionSelected,
 								esc_attr( $category->term_id ),
