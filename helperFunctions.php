@@ -12,6 +12,8 @@
 		$count = 0;
 		$number_of_posts = 3;
 
+		if ( $user->isActive=="on" ) {
+
 	?>
 	<div <?php post_class("bbg-grid--1-2-2  bbg-staff__author "); ?>>
 		<a href="<?php echo $authorPath ?>">
@@ -81,7 +83,9 @@
 		</div><!-- .bbg-author-text -->
 	</div>
 <?php
+		}	
 	}
+
 
 
 	
