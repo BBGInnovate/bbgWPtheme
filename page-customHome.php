@@ -112,7 +112,7 @@ get_header();
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
-					$maxPostsToShow=5;
+					$maxPostsToShow=3;
 					$qParams=array(
 						'post_type' => array('post'),
 						'posts_per_page' => $maxPostsToShow,
@@ -209,7 +209,7 @@ get_header();
 							} 
 					?>
 					</div>
-					<a href="<?php echo site_url(); ?>/staff">View All Staff</a>
+					<a href="<?php echo site_url(); ?>/staff">Meet the full ODDI team</a>
 				</div>
 			</section><!-- Staff -->
 
