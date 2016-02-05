@@ -25,14 +25,13 @@ section.usa-section{
 }
 
 .menu-all-pages-container {
-	height: 5rem;
 	margin: 0 auto;
 	max-width: $site-max-width;
 	position: relative;
 }
 
-body.home .menu-all-pages-container {
-	height: 0rem;
+body:not(.home) .menu-all-pages-container {
+	min-height: 4rem;
 }
 
 .usa-heading-site-title {
