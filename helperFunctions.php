@@ -71,16 +71,17 @@
 				<?php if ( $user->user_description!="" ) { ?>
 				<p><?php echo esc_html( $user->user_description ); ?></p>
 				<?php } ?>
-
-				<h3>Blog posts</h3>
 				<?php query_posts( 'author=' . $theauthorid ); ?>
-				<?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
-					<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-					<?php $count++; ?>
-				<?php endwhile; endif; ?>
-<?php			
-			} 
-?>
+					<?php if ( have_posts() ) { ?>
+						<h3>Blog posts</h3>
+						<?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
+							<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+							<?php $count++; ?>
+						<?php endwhile; endif; ?>
+					<?php } ?>
+				<?php
+					}
+				?>
 			<!-- .author-description -->
 		</div><!-- .bbg-author-text -->
 	</div>
