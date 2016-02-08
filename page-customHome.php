@@ -195,12 +195,14 @@ get_header();
 							$args = array( 'include' => $featuredCategoryIDs, 'orderby' => 'include', 'hide_empty' => false);
 
 							$categories = get_categories($args ); 
-							foreach ( $categories as $category ) { ?>
+							foreach ( $categories as $category ) { 
+								$iconName = "bbg-team__icon__".$category->category_nicename;
+							?>
 							<div class="bbg-team bbg-grid--1-1-1-2">
 
 								<div class="bbg-avatar__container bbg-team__icon">
 									<a href="#">
-									<div class="bbg-avatar" style="display: block; width: 100%; height: 100%;"></div>
+									<div class="bbg-avatar <?php echo $iconName ?>" style="display: block; width: 100%; height: 100%;"></div>
 									</a>
 								</div>
 
