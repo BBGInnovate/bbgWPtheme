@@ -1,6 +1,7 @@
 <?php 
 	function outputUser($user, $mode) {
-		$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+		//$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+		$authorPath=get_author_posts_url($user->ID);
 		$authorName = esc_html( $user->display_name );
 		$authorOccupation = esc_html( $user->occupation );
 		$authorEmail = esc_html( $user->user_email );

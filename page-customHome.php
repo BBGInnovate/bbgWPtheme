@@ -208,7 +208,7 @@ get_header();
 
 									<?php
 										$user=$categoryHeads[$category->term_id];
-										$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+										$authorPath = get_author_posts_url($user->ID);
 										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='" . get_category_link( $category->term_id ) . "'>".$category->name."</a></h2>";
 										echo $category->description . " <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
 									?>
