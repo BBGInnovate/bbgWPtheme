@@ -64,6 +64,26 @@
 	}
 }
 
+.bbg-team__icon__project-rize {
+	background-color: #CC0;
+	@include backgroundCover;
+	background-image: url();
+}
+.bbg-team__icon__storytelling {
+	background-color: #900;
+	@include backgroundCover;
+	background-image: url();
+}
+.bbg-team__icon__mobile {
+	background-color: #999;
+	@include backgroundCover;
+	background-image: url();
+}
+.bbg-team__icon__audio-video {
+	background-color: #CCC;
+	@include backgroundCover;
+	background-image: url();
+}
 
 
 
