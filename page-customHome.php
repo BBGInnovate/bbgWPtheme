@@ -150,19 +150,52 @@ get_header();
 						<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
 					</div>
 					<?php
+						
+						/****** THE OLD WAY 
 						//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
+						//$args = array( 'include' => [1,2,3,4,5]);
+						//$args = array( 'include' => [2,8,12,10,9,11]);
+
+
 						$featuredUserIDsStr=get_option( 'featuredUserIDs' );
 						$featuredUserIDs = explode( ',', $featuredUserIDsStr );
 						array_walk( $featuredUserIDs, 'intval' );
 						$args = array( 'include' => $featuredUserIDs, 'orderby' => 'include');
-						//$args = array( 'include' => [1,2,3,4,5]);
 
-						//$args = array( 'include' => [2,8,12,10,9,11]);
 						$blogusers = get_users($args);
-						// Loop through the users to create the staff profiles
 						foreach ( $blogusers as $user ) {
 							outputUser($user,"home");
 						} 
+						*****/
+
+						/* 
+						   we need a way to know which categories are owned by which user - create a quick data structure.
+						   there is likely a more efficient way to do that but with <100 users, no harm 
+						*/
+
+						$categoryHeads=array();
+						$blogusers = get_users();
+						foreach ( $blogusers as $user ) {
+							if ($user->headOfTeam != "") {
+								$categoryHeads[$user->headOfTeam]=$user;
+							} 
+						}
+
+						/** in general settings we've entered featured categoryIDs as a comma separated list which should be ones that are specified
+						as teams and have users that are specified as their heads */
+						$featuredCategoryIDsStr=get_option( 'featuredCategoryIDs' );
+						$featuredCategoryIDs = explode( ',', $featuredCategoryIDsStr );
+						array_walk( $featuredCategoryIDs, 'intval' );
+						$args = array( 'include' => $featuredCategoryIDs, 'orderby' => 'include', 'hide_empty' => false);
+
+						$categories = get_categories($args ); 
+						foreach ( $categories as $category ) {
+							$user=$categoryHeads[$category->term_id];
+							echo $category->name . " <em>" . $category->description . "</em> $user->display_name <em>$user->occupation</em>  <BR>";
+							//outputUser($user,"home");
+						}
+
+
 					?>
 					</div>
 					<a href="<?php echo site_url(); ?>/staff">Meet the full ODDI team</a>

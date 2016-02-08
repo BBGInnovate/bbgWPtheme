@@ -317,15 +317,15 @@ function bbg_show_extra_profile_fields( $user ) {
 			<th><label for="isActive">Head of Team</label></th>
 			<td><select name="headOfTeam"><option value="">None</option>
 				<?php
-					$categories = get_categories( ); 
+					$categories = get_terms('category', 'hide_empty=0' ); 
 					foreach ( $categories as $category ) {
 						$optionSelected=($headOfTeam==$category->term_id) ? "selected" : "";
 						$term = get_option( "taxonomy_" . $category->term_id );
-						if ($term['isTeamName'] == 1 || true) {
+						if ($term['isTeamName'] == 1 ) {
 							printf( '<option %1$s value="%2$s">%3$s</option>',
 								$optionSelected,
 								esc_attr( $category->term_id ),
-								esc_html( $category->cat_name )
+								esc_html( $category->name )
 						    );
 						}
 					}
@@ -397,8 +397,18 @@ function featuredUserIDs_callback( $args ) {
 	$html .= '<p class="description" >(comma separated list of id\'s for users on homepage - get them from <a target="_blank" href="users.php">Users</a></label>)';
 	echo $html;
 }
+function featuredCategoryIDs_callback( $args ) {
+	$val = get_option( 'featuredCategoryIDs' );
+	if (! $val ) {
+		$val = '';
+	}
+	$html = '<input type="text" id="featuredCategoryIDs" name="featuredCategoryIDs" value="' . $val . '" size="35" class="regular-text" />';
+	$html .= '<p class="description" >(comma separated list of id\'s for categories on homepage - get them from term_id in query strings on <a target="_blank" href="edit-tags.php?taxonomy=category">Categories</a></label>)';
+	echo $html;
+}
 
 function oddi_settings_api_init() {
+	/*
 	add_settings_field(
 		'featuredUserIDs',
 		'Featured User IDs',
@@ -406,9 +416,19 @@ function oddi_settings_api_init() {
 		'general'
 	);
 	register_setting('general','featuredUserIDs');
+	*/
+	add_settings_field(
+		'featuredCategoryIDs',
+		'Featured Category IDs',
+		'featuredCategoryIDs_callback',
+		'general'
+	);
+	register_setting('general','featuredCategoryIDs');
 }
 	 
 add_action( 'admin_init', 'oddi_settings_api_init' );
+
+
 
 
 /*===================================================================================
