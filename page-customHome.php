@@ -146,57 +146,79 @@ get_header();
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our teams</span></a></h6>
 					<div class="usa-grid-full">
-					<div class="usa-intro">
-						<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
-					</div>
-					<?php
-						
-						/****** THE OLD WAY 
-						//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
-						//$args = array( 'include' => [1,2,3,4,5]);
-						//$args = array( 'include' => [2,8,12,10,9,11]);
+						<div class="usa-intro">
+							<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
+						</div>
 
 
-						$featuredUserIDsStr=get_option( 'featuredUserIDs' );
-						$featuredUserIDs = explode( ',', $featuredUserIDsStr );
-						array_walk( $featuredUserIDs, 'intval' );
-						$args = array( 'include' => $featuredUserIDs, 'orderby' => 'include');
+						<div class="bbg-team">
 
-						$blogusers = get_users($args);
-						foreach ( $blogusers as $user ) {
-							outputUser($user,"home");
-						} 
-						*****/
 
-						/* 
-						   we need a way to know which categories are owned by which user - create a quick data structure.
-						   there is likely a more efficient way to do that but with <100 users, no harm 
-						*/
 
-						$categoryHeads=array();
-						$blogusers = get_users();
-						foreach ( $blogusers as $user ) {
-							if ($user->headOfTeam != "") {
-								$categoryHeads[$user->headOfTeam]=$user;
+
+						<?php
+							
+							/****** THE OLD WAY 
+							//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
+							//$args = array( 'include' => [1,2,3,4,5]);
+							//$args = array( 'include' => [2,8,12,10,9,11]);
+
+
+							$featuredUserIDsStr=get_option( 'featuredUserIDs' );
+							$featuredUserIDs = explode( ',', $featuredUserIDsStr );
+							array_walk( $featuredUserIDs, 'intval' );
+							$args = array( 'include' => $featuredUserIDs, 'orderby' => 'include');
+
+							$blogusers = get_users($args);
+							foreach ( $blogusers as $user ) {
+								outputUser($user,"home");
 							} 
-						}
+							*****/
 
-						/** in general settings we've entered featured categoryIDs as a comma separated list which should be ones that are specified
-						as teams and have users that are specified as their heads */
-						$featuredCategoryIDsStr=get_option( 'featuredCategoryIDs' );
-						$featuredCategoryIDs = explode( ',', $featuredCategoryIDsStr );
-						array_walk( $featuredCategoryIDs, 'intval' );
-						$args = array( 'include' => $featuredCategoryIDs, 'orderby' => 'include', 'hide_empty' => false);
+							/* 
+							   we need a way to know which categories are owned by which user - create a quick data structure.
+							   there is likely a more efficient way to do that but with <100 users, no harm 
+							*/
 
-						$categories = get_categories($args ); 
-						foreach ( $categories as $category ) {
-							$user=$categoryHeads[$category->term_id];
-							echo $category->name . " <em>" . $category->description . "</em> $user->display_name <em>$user->occupation</em>  <BR>";
-							//outputUser($user,"home");
-						}
+							$categoryHeads=array();
+							$blogusers = get_users();
+							foreach ( $blogusers as $user ) {
+								if ($user->headOfTeam != "") {
+									$categoryHeads[$user->headOfTeam]=$user;
+								} 
+							}
+
+							/** in general settings we've entered featured categoryIDs as a comma separated list which should be ones that are specified
+							as teams and have users that are specified as their heads */
+							$featuredCategoryIDsStr=get_option( 'featuredCategoryIDs' );
+							$featuredCategoryIDs = explode( ',', $featuredCategoryIDsStr );
+							array_walk( $featuredCategoryIDs, 'intval' );
+							$args = array( 'include' => $featuredCategoryIDs, 'orderby' => 'include', 'hide_empty' => false);
+
+							$categories = get_categories($args ); 
+							foreach ( $categories as $category ) { ?>
+
+								<div class="bbg-avatar__container bbg-team__icon">
+									<a href="#">
+									<div class="bbg-avatar" style="display: block; width: 100%; height: 100%;"></div>
+									</a>
+								</div>
+
+								<div class="bbg-team__text">
 
 
-					?>
+									<?php
+										$user=$categoryHeads[$category->term_id];
+										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='SSSSSS_categoryUrl'>".$category->name."</a></h2>";
+										echo $category->description . " <span style='font-weight: bold;'>Project lead: </span><a href='SSSSSS_authorPath' class='bbg-staff__author-link'>$user->display_name</a></p>";
+										//outputUser($user,"home");
+									?>
+								</div><!-- .bbg-team__text -->
+
+							<?php } ?>
+						</div>
+
+
 					</div>
 					<a href="<?php echo site_url(); ?>/staff">Meet the full ODDI team</a>
 				</div>

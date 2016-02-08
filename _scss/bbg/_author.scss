@@ -36,6 +36,38 @@
 	}
 }
 
+
+//Styles for the team icons
+.bbg-team {
+	clear: left;
+	margin-bottom: 3rem;
+}
+
+.bbg-team__name {
+	margin-bottom: 0;
+	text-align: center;
+	@include media($medium-screen) {
+		text-align: left;
+	}
+}
+
+.bbg-team__icon {
+	background-color: #999;
+	border-radius: 50%;
+	height: 100px;
+	margin: 0 auto;
+	width: 100px;
+}
+
+@include media($medium-screen) {
+	.bbg-team__text {
+		padding-left: 110px;
+	}
+}
+
+
+
+
 .bbg-staff__author__text{
 	width: 100%;
 	@include media($medium-screen) {
