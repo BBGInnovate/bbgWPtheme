@@ -151,7 +151,6 @@ get_header();
 						</div>
 
 
-						<div class="bbg-team">
 
 
 
@@ -197,6 +196,7 @@ get_header();
 
 							$categories = get_categories($args ); 
 							foreach ( $categories as $category ) { ?>
+							<div class="bbg-team bbg-grid--1-1-1-2">
 
 								<div class="bbg-avatar__container bbg-team__icon">
 									<a href="#">
@@ -206,17 +206,16 @@ get_header();
 
 								<div class="bbg-team__text">
 
-
 									<?php
 										$user=$categoryHeads[$category->term_id];
-										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='SSSSSS_categoryUrl'>".$category->name."</a></h2>";
-										echo $category->description . " <span style='font-weight: bold;'>Project lead: </span><a href='SSSSSS_authorPath' class='bbg-staff__author-link'>$user->display_name</a></p>";
-										//outputUser($user,"home");
+										$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='" . get_category_link( $category->term_id ) . "'>".$category->name."</a></h2>";
+										echo $category->description . " <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
 									?>
-								</div><!-- .bbg-team__text -->
+							</div><!-- .bbg-team__text -->
+						</div>
 
 							<?php } ?>
-						</div>
 
 
 					</div>
