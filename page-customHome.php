@@ -108,7 +108,7 @@ get_header();
 			<!-- Recent posts -->
 			<section class="usa-section">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/blog/"><span class="usa-label-big">Recent posts</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>"><span class="usa-label-big">Recent posts</span></a></h6>
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
@@ -144,7 +144,7 @@ get_header();
 			<!-- Staff -->
 			<section class="usa-section bbg-staff">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/staff"><span class="usa-label-big">Our teams</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>"><span class="usa-label-big">Our teams</span></a></h6>
 					<div class="usa-grid-full">
 						<div class="usa-intro">
 							<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
