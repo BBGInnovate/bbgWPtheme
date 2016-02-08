@@ -90,7 +90,7 @@ global $templateName;
 					<img class="usa-flag_icon" alt="U.S. flag signifying that this is a United States federal government website" src="<?php echo get_template_directory_uri() ?>/img/us_flag_small.png">
 					An official website of the United States government
 				</span>
-				<span class="usa-disclaimer-stage">This site is currently in alpha. <a href="https://18f.gsa.gov/dashboard/stages/#alpha">Learn more.</a></span>
+				<span class="usa-disclaimer-stage">This site is an alpha version of the USWDS. <a href="https://playbook.cio.gov/designstandards/">Learn more.</a></span>
 			</div>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
