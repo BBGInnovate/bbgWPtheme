@@ -75,7 +75,7 @@ get_header();
 			<!-- Portfolio -->
 			<section class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/blog/category/Portfolio/"><span class="usa-label-big">Portfolio</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_category_link(get_cat_id('Portfolio')); ?>"><span class="usa-label-big">Portfolio</span></a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -99,7 +99,7 @@ get_header();
 					?>
 					</div><!-- .usa-grid-full -->
 
-					<a href="<?php echo site_url(); ?>/blog/category/portfolio/">Explore entire portfolio</a>
+					<a href="<?php echo get_category_link(get_cat_id('Portfolio')); ?>">Explore entire portfolio</a>
 
 				</div><!-- .usa-grid -->
 			</section><!-- .bbg-portfolio -->
