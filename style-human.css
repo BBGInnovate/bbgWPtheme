@@ -2723,6 +2723,34 @@ fieldset {
   }
 }
 
+.bbg-team {
+  clear: left;
+  margin-bottom: 3rem;
+}
+
+.bbg-team__name {
+  margin-bottom: 0;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .bbg-team__name {
+    text-align: left;
+  }
+}
+
+.bbg-team__icon {
+  background-color: #999;
+  border-radius: 50%;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+@media screen and (min-width: 600px) {
+  .bbg-team__text {
+    padding-left: 110px;
+  }
+}
 .bbg-staff__author__text {
   width: 100%;
 }
@@ -3316,21 +3344,26 @@ object {
   left: auto;
 }
 .main-navigation li {
-  /*
-  float: left;
-  position: relative;
-  margin-right: $navigation-margin-right;
-  */
   border-bottom: 1px solid #CCC;
   display: block;
-  padding-left: 3rem;
+  margin: 0;
 }
 .main-navigation li:before {
   content: none;
 }
+.main-navigation li:after {
+  display: none;
+}
 .main-navigation a {
   display: block;
+  padding: 1rem 3rem;
   text-decoration: none;
+}
+.main-navigation a:hover {
+  background-color: #ECECEC;
+}
+.main-navigation a:focus {
+  box-shadow: none;
 }
 
 /* Small menu. */
@@ -3365,8 +3398,14 @@ object {
     background-color: #FFF;
     border-bottom: none;
     float: left;
-    margin-top: 0;
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .main-navigation li:after {
+    display: none;
+  }
+  .main-navigation a {
+    padding: 1.5rem 1.5rem .5rem 1.5rem;
   }
 }
 .site-main .comment-navigation, .site-main
