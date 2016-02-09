@@ -6,6 +6,30 @@
  *
  * @package bbginnovate
  */
+/* we go through the loop once and reset it in order to get some vars for our og tags */
+if ( have_posts() ) {
+	the_post(); 
+
+
+	$metaAuthor= get_the_author(); 
+	$metaAuthorTwitter= get_the_author_meta( 'twitterHandle' ); 
+	$ogTitle=get_the_title();
+
+	$metaKeywords= strip_tags(get_the_tag_list('',', ',''));
+
+	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'Full' ); 
+	$ogImage = $thumb['0'];
+
+	$socialImageID = get_post_meta( $post->ID, 'social_image',true );
+	if ($socialImageID) {
+		$socialImage = wp_get_attachment_image_src( $socialImageID , 'Full');
+		$ogImage = $socialImage[0];
+	}
+	
+	$ogDescription=get_the_excerpt(); //get_the_excerpt()
+
+	rewind_posts();
+}
 
 get_header(); ?>
 

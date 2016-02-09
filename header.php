@@ -9,8 +9,51 @@
  * @package bbginnovate
  */
 
-
+/* ODDI CUSTOM: several variables can be passed into the header */ 
+global $ogImage, $ogTitle, $ogDescription, $ogUrl;
+global $pageBodyID, $metaAuthor, $metaAuthorTwitter, $metaKeywords;
 global $templateName;
+
+if (! isset( $ogImage ) ) {
+	$ogImage=DEFAULT_IMAGE;
+}
+
+if (! isset( $ogTitle ) ) {
+	$ogTitle=DEFAULT_TITLE;
+}
+
+if (! isset( $ogDescription ) ) {
+	$ogDescription=DEFAULT_DESCRIPTION;
+}
+
+if (! isset( $metaAuthor ) ) {
+	$metaAuthor=DEFAULT_AUTHOR;
+}
+
+$metaTwitter = "";
+if (isset( $metaAuthorTwitter ) ) {
+	$metaAuthorTwitter = str_replace("@","", $metaAuthorTwitter);
+	$metaTwitter = '<meta name="twitter:creator" content="@'.$metaAuthorTwitter.'">';
+}
+
+if (! isset( $metaKeywords ) ) {
+	$metaKeywords=DEFAULT_KEYWORDS;
+}
+
+if (! isset( $ogUrl ) ) {
+	//only place we override this is on our trending page where it's the permalink to the post instead of the page itself
+	$ogUrl = get_permalink();
+}
+
+/* remove smart quotes from title */
+$ogTitle = iconv('UTF-8', 'ASCII//TRANSLIT', $ogTitle);  
+
+/* remove html tags, smart quotes and trailing ellipses from description */
+$ogDescription = wp_strip_all_tags($ogDescription); 
+$ogDescription = iconv('UTF-8', 'ASCII//TRANSLIT', $ogDescription); 
+$ogDescription = str_replace("[&hellip;]", "...", $ogDescription); 
+$ogDescription = str_replace('"','&qout;',$ogDescription);
+
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -31,6 +74,25 @@ global $templateName;
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- for Facebook -->
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="<?php echo $ogTitle; ?>" />
+	<meta property="og:description" content="<?php echo $ogDescription; ?>" />
+	<meta property="og:image" content="<?php echo $ogImage; ?>" />
+	<meta property="og:url" content="<?php echo $ogUrl; ?>" />
+
+	<!-- for Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@bbginnovate">
+	<?php echo $metaTwitter ?>
+	<meta property="twitter:title" content="<?php echo $ogTitle; ?>">
+	<meta property="twitter:description" content="<?php echo $ogDescription; ?>">
+	<meta property="twitter:image" content="<?php echo $ogImage; ?>">
+	<?php /* <meta property="twitter:url" content="<?php echo $ogUrl; ?>"> */ ?>
+
+	<!-- other og:tags -->
+	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

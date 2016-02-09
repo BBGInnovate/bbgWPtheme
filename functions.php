@@ -7,6 +7,8 @@
  * @package bbginnovate
  */
 
+require "config_bbgWPtheme.php";
+
 if ( ! function_exists( 'bbginnovate_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
