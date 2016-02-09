@@ -55,12 +55,14 @@
 		</header><!-- .bbg__article-header -->
 
 		<ul class="bbg__article-share">
+			<!--
 			<li class="bbg__article-share__link email">
 				<a href="#">
 					<span class="bbg__article-share__icon email"></span>
 					<span class="bbg__article-share__text">Email</span>
 				</a>
 			</li>
+			-->
 			<li class="bbg__article-share__link facebook">
 				<a href="#">
 					<span class="bbg__article-share__icon facebook"></span>
