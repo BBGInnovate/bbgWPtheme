@@ -6,7 +6,21 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: $site-margins;
 }
 
+.bbg-label {
+	margin-bottom: $site-margins;
+	margin-top: 0;
+
+	a:hover .usa-label-big {
+		background-color: #205493;
+		text-decoration: none;
+	}
+}
+
 section.usa-section{
+	margin-bottom: $site-margins * 2;
+}
+
+article {
 	margin-bottom: $site-margins;
 }
 

@@ -48,7 +48,7 @@ get_header();
 
 
 			<!-- Site introduction -->
-			<div class="usa-grid">
+			<section class="usa-grid">
 			<?php
 				$qParams=array(
 					'post_type' => array('post'),
@@ -61,7 +61,7 @@ get_header();
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 						$siteIntroTitle=get_the_title();
-						echo '<section class="usa-section"><h3 class="usa-font-lead">';
+						echo '<section class="usa-section"><h3 id="content" class="usa-font-lead">';
 						/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
 						echo get_the_content();
 						echo '</h3></section>';
@@ -69,7 +69,7 @@ get_header();
 				endif;
 				wp_reset_query();
 			?>
-			</div><!-- Site introduction -->
+			</section><!-- Site introduction -->
 
 
 			<!-- Portfolio -->
@@ -198,11 +198,11 @@ get_header();
 							foreach ( $categories as $category ) { 
 								$iconName = "bbg-team__icon__".$category->category_nicename;
 							?>
-							<div class="bbg-team bbg-grid--1-1-1-2">
+							<article class="bbg-team bbg-grid--1-1-1-2">
 
 								<div class="bbg-avatar__container bbg-team__icon">
 									<a href='<?php echo get_category_link( $category->term_id ) ?>'>
-									<div class="bbg-avatar <?php echo $iconName ?>" style="display: block; width: 100%; height: 100%;"></div>
+									<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(wp-content/themes/bbg-wp/img/icon_team_<?php echo $category->category_nicename; ?>.png);"></div>
 									</a>
 								</div>
 
@@ -212,10 +212,10 @@ get_header();
 										$user=$categoryHeads[$category->term_id];
 										$authorPath = get_author_posts_url($user->ID);
 										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='" . get_category_link( $category->term_id ) . "'>".$category->name."</a></h2>";
-										echo $category->description . " <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
+										echo $category->description . "<br/> <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
 									?>
-							</div><!-- .bbg-team__text -->
-						</div>
+								</div><!-- .bbg-team__text -->
+							</article>
 
 							<?php } ?>
 

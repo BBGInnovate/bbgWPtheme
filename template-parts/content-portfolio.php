@@ -38,9 +38,10 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 		<?php the_title( sprintf( '<h3 class="entry-title bbg-portfolio__excerpt__title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
+			<!--
 		<div class="entry-meta bbg__article-meta">
-			<!--<?php bbginnovate_posted_on(); ?>-->
-		</div><!-- .entry-meta -->
+			<?php bbginnovate_posted_on(); ?>
+		</div>-->
 		<?php endif; ?>
 	</a>
 

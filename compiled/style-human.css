@@ -2749,7 +2749,6 @@ fieldset {
 }
 
 .bbg-team__icon {
-  background-color: #999;
   border-radius: 50%;
   height: 100px;
   margin: 0 auto;
@@ -2761,36 +2760,41 @@ fieldset {
     padding-left: 110px;
   }
 }
-.bbg-team__icon__project-rize {
-  background-color: #CC0;
+.bbg-team__icon__image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url();
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.bbg-team__icon__project-rize {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(img/icon_team_project-rize.png);
 }
 
 .bbg-team__icon__storytelling {
-  background-color: #900;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url();
+  background-image: url(img/icon_team_storytelling.png);
 }
 
-.bbg-team__icon__mobile {
-  background-color: #999;
+.bbg-team__icon__mobile-apps {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url();
+  background-image: url(img/icon_team_mobile-apps.png);
 }
 
 .bbg-team__icon__audio-video {
-  background-color: #CCC;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url();
+  background-image: url(img/icon_team_audio-video.png);
 }
 
 .bbg-staff__author__text {
@@ -3162,7 +3166,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
 }
 
+.bbg-label {
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+.bbg-label a:hover .usa-label-big {
+  background-color: #205493;
+  text-decoration: none;
+}
+
 section.usa-section {
+  margin-bottom: 6rem;
+}
+
+article {
   margin-bottom: 3rem;
 }
 

@@ -39,7 +39,7 @@
 
 //Styles for the team icons
 .bbg-team {
-	margin-bottom: 3rem;
+	margin-bottom: $site-margins;
 }
 
 .bbg-team__name {
@@ -51,7 +51,6 @@
 }
 
 .bbg-team__icon {
-	background-color: #999;
 	border-radius: 50%;
 	height: 100px;
 	margin: 0 auto;
@@ -64,28 +63,30 @@
 	}
 }
 
-.bbg-team__icon__project-rize {
-	background-color: #CC0;
+.bbg-team__icon__image {
 	@include backgroundCover;
-	background-image: url();
+	display: block; 
+	height: 100%;
+	width: 100%; 
+}
+
+
+.bbg-team__icon__project-rize {
+	@include backgroundCover;
+	background-image: url(img/icon_team_project-rize.png);
 }
 .bbg-team__icon__storytelling {
-	background-color: #900;
 	@include backgroundCover;
-	background-image: url();
+	background-image: url(img/icon_team_storytelling.png);
 }
-.bbg-team__icon__mobile {
-	background-color: #999;
+.bbg-team__icon__mobile-apps {
 	@include backgroundCover;
-	background-image: url();
+	background-image: url(img/icon_team_mobile-apps.png);
 }
 .bbg-team__icon__audio-video {
-	background-color: #CCC;
 	@include backgroundCover;
-	background-image: url();
+	background-image: url(img/icon_team_audio-video.png);
 }
-
-
 
 .bbg-staff__author__text{
 	width: 100%;
