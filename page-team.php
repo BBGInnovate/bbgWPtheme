@@ -65,13 +65,8 @@ get_header(); ?>
 					while ( have_posts() )  {
 						the_post();
 						$counter=$counter+1;
-						if ($counter == 1) {
-							get_template_part( 'template-parts/content', get_post_format() );
-						} 
-						else {
-							//$gridClass = "bbg-grid--1-2-2";
-							get_template_part( 'template-parts/content', get_post_format() );
-						}
+						$gridClass = "bbg-grid--1-2-2";
+						get_template_part( 'template-parts/content-excerpt', get_post_format() );
 					}
 				?>
 
