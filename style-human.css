@@ -3266,6 +3266,37 @@ body:not(.home) .menu-all-pages-container {
   font-weight: 700;
 }
 
+.bbg-fuego__article__source-link,
+.bbg-fuego__article__source-link:visited {
+  color: #981b1e;
+}
+
+.bbg-fuego__article__header-link,
+.bbg-fuego__article__header-link:visited {
+  color: #333;
+}
+
+.bbg-fuego__article__description:hover,
+.bbg-fuego__article__description:hover p {
+  color: #333;
+  text-decoration: none;
+}
+
+.bbg-fuego__article__description p {
+  color: #333;
+}
+
+.bbg-fuego__article__thumbnail {
+  background-color: #CCC;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  height: 120px;
+  margin: 0 1.5rem 1rem 0;
+  width: 200px;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

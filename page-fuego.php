@@ -202,21 +202,21 @@ get_header();
 				}
 
 			?>
-				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>'>
+				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article">
 
 					<?php if (!$isTwitter){ ?>
 						<header class='entry-header'>
-							<h5 class='entry-category'><a href='<?php echo $provider_url; ?>'><?php echo $provider_name; ?></a></h5>
-							<h1 class='entry-title'><?php echo "<a href='$url'>$title</a>"; ?></h1>
+							<h5 class='bbg-fuego__article__source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__source-link'><?php echo $provider_name; ?></a></h5>
+							<h1 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h1>
 						</header>
 						<div class='entry-content'>
 						<?php 
 							if ($image != "" && $imageSize) {
 								echo "<a href='$url'>"; 
-								echo "<div class='listThumbnail' style='background-image: url($image);'></div>";
+								echo "<div class='listThumbnail bbg-fuego__article__thumbnail' style='background-image: url($image);'></div>";
 								echo "</a>"; 
 							}
-							echo "<a href='$url'>"; 
+							echo "<a href='$url' class='bbg-fuego__article__description'>"; 
 							echo $desc; 
 
 							echo "</a>"; 

@@ -1,0 +1,28 @@
+.bbg-fuego__article__source-link,
+.bbg-fuego__article__source-link:visited {
+	color: $color-secondary-darkest;
+}
+
+.bbg-fuego__article__header-link,
+.bbg-fuego__article__header-link:visited {
+	color: #333;
+}
+
+.bbg-fuego__article__description:hover,
+.bbg-fuego__article__description:hover p {
+	color: #333;
+	text-decoration: none;
+}
+
+.bbg-fuego__article__description p {
+	color: #333;
+}
+
+.bbg-fuego__article__thumbnail {
+	background-color: #CCC;
+	@include backgroundCover();
+	float: left;
+	height: 120px;
+	margin: 0 1.5rem 1rem 0;
+	width: 200px;
+}
