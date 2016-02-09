@@ -3266,8 +3266,13 @@ body:not(.home) .menu-all-pages-container {
   font-weight: 700;
 }
 
-.bbg-fuego__article__source-link,
-.bbg-fuego__article__source-link:visited {
+.bbg-fuego__article {
+  padding-bottom: 3rem;
+  border-bottom: 1px dotted #CCC;
+}
+
+.bbg-fuego__article__header-source-link,
+.bbg-fuego__article__header-source-link:visited {
   color: #981b1e;
   font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
 }
@@ -3275,6 +3280,12 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__article__header-link,
 .bbg-fuego__article__header-link:visited {
   color: #333;
+}
+
+@media screen and (min-width: 600px) {
+  .bbg-fuego__article__header-title {
+    font-size: 3rem;
+  }
 }
 
 .bbg-fuego__article__description:hover,
@@ -3299,6 +3310,8 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-fuego__article__footer {
+  color: #999;
+  font-size: 1.4rem;
   text-align: right;
 }
 
@@ -3311,6 +3324,10 @@ body:not(.home) .menu-all-pages-container {
   height: 3rem;
   vertical-align: middle;
   width: 3rem;
+}
+
+.bbg-fuego__button__hide-link {
+  background-color: #981b1e;
 }
 
 .page-content .wp-smiley,

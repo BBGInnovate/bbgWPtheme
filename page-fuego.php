@@ -205,11 +205,11 @@ get_header();
 				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article">
 
 					<?php if (!$isTwitter){ ?>
-						<header class='entry-header'>
-							<h5 class='bbg-fuego__article__source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__source-link'><?php echo $provider_name; ?></a></h5>
-							<h2 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h2>
+						<header class='bbg-fuego__article__header'>
+							<h5 class='bbg-fuego__article__header-source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__header-source-link'><?php echo $provider_name; ?></a></h5>
+							<h3 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h3>
 						</header>
-						<div class='entry-content'>
+						<div class='bbg-fuego__article-content'>
 						<?php 
 							echo "<a href='$url' class='bbg-fuego__article__description'>"; 
 							if ($image != "" && $imageSize) {
@@ -221,22 +221,22 @@ get_header();
 						?>
 						</div>
 						<footer class="bbg-fuego__article__footer">
-							<span class="byline">
-								<span class="author vcard"><span class='firstShared'>first shared by </span><a class="url fn n" href="http://twitter.com/<?php echo $author ?>" rel="author">
+							<span class="bbg-fuego__article__footer-byline">
+								<span class="author"><span class='firstShared'>first shared by </span><a class="twitter-link" href="http://twitter.com/<?php echo $author ?>" rel="author">
 								<?php echo "<span class='bbg-fueg__article__footer-image' style='background-image: url(".$twitterImage.");'>" ?>
 								</span>
 								<?php echo "<a href='http://twitter.com/$author'>@$author</a>"; ?></span>
 							</span>	
 							<span class="sep sep-byline"> | </span>
-							<time class="entry-date" itemprop="datePublished" pubdate="pubdate"><?php echo $agoTime ?></time>
+							<time class="bbg-fuego__article__footer-date" itemprop="datePublished" pubdate="pubdate"><?php echo $agoTime ?></time>
 						</footer>
 
 					<?php } else { ?>
 
-						<header class='entry-header'>
-							<h5 class='entry-category'><a href='<?php echo $tweetUrl; ?>' style='float:none;'>Overheard on Twitter</a></h5>
+						<header class='bbg-fuego__article__header'>
+							<h5 class='bbg-fuego__article__header-source'><a href='<?php echo $tweetUrl; ?>' style='float:none;' class='bbg-fuego__article__header-source-link'>Overheard on Twitter</a></h5>
 						</header>
-						<div class='entry-content twitter-conversation'>
+						<div class='bbg-fuego__article-content bbg-fuego__article__twitter-conversation'>
 							<a href='https://twitter.com/<?php echo $author; ?>' target='_blank'>
 								<div class='twitterProfilePhoto' style='background-image:url(<?php echo $twitterImage ?>)'>
 									<img src='../wp-content/images/transparentSquare.png'>
@@ -291,7 +291,7 @@ get_header();
 					<?php 
 
 						if (current_user_can('publish_posts')) {
-							echo "<a href='/trending?hideLink=$linkID' class='hideLink'>Hide this link</a><BR>";
+							echo "<a href='/trending?hideLink=$linkID' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a><BR>";
 						}
 					?>
 				</article>

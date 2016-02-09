@@ -1,5 +1,10 @@
-.bbg-fuego__article__source-link,
-.bbg-fuego__article__source-link:visited {
+.bbg-fuego__article {
+	padding-bottom: $site-margins;
+	border-bottom: 1px dotted #CCC;
+}
+
+.bbg-fuego__article__header-source-link,
+.bbg-fuego__article__header-source-link:visited {
 	color: $color-secondary-darkest;
 	font-family: $font-sans;
 }
@@ -7,6 +12,12 @@
 .bbg-fuego__article__header-link,
 .bbg-fuego__article__header-link:visited {
 	color: #333;
+}
+
+.bbg-fuego__article__header-title {
+	@include media($medium-screen) {
+		font-size: $h2-font-size;
+	}
 }
 
 .bbg-fuego__article__description:hover,
@@ -29,6 +40,8 @@
 }
 
 .bbg-fuego__article__footer {
+	color: #999;
+	font-size: 1.4rem;
 	text-align: right;
 }
 
@@ -39,4 +52,8 @@
 	height: 3rem;
 	vertical-align: middle;
 	width: 3rem;
+}
+
+.bbg-fuego__button__hide-link {
+	background-color: $color-secondary-darkest;
 }
