@@ -201,7 +201,7 @@ get_header();
 							<div class="bbg-team bbg-grid--1-1-1-2">
 
 								<div class="bbg-avatar__container bbg-team__icon">
-									<a href="#">
+									<a href='<?php echo get_category_link( $category->term_id ) ?>'>
 									<div class="bbg-avatar <?php echo $iconName ?>" style="display: block; width: 100%; height: 100%;"></div>
 									</a>
 								</div>
