@@ -151,29 +151,7 @@ get_header();
 						</div>
 
 
-
-
-
-
 						<?php
-							
-							/****** THE OLD WAY 
-							//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
-							//$args = array( 'include' => [1,2,3,4,5]);
-							//$args = array( 'include' => [2,8,12,10,9,11]);
-
-
-							$featuredUserIDsStr=get_option( 'featuredUserIDs' );
-							$featuredUserIDs = explode( ',', $featuredUserIDsStr );
-							array_walk( $featuredUserIDs, 'intval' );
-							$args = array( 'include' => $featuredUserIDs, 'orderby' => 'include');
-
-							$blogusers = get_users($args);
-							foreach ( $blogusers as $user ) {
-								outputUser($user,"home");
-							} 
-							*****/
-
 							/* 
 							   we need a way to know which categories are owned by which user - create a quick data structure.
 							   there is likely a more efficient way to do that but with <100 users, no harm 

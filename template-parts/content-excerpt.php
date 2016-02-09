@@ -23,7 +23,7 @@ $classNames="bbg-blog__excerpt ".$gridClass;
 		<?php the_title( sprintf( '<h3 class="entry-title bbg-blog__excerpt-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta bbg__article-meta">
+		<div class="entry-meta bbg__excerpt-meta">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

@@ -3149,15 +3149,6 @@ fieldset {
   text-transform: uppercase;
 }
 
-.bbg-label {
-  margin-bottom: 3rem;
-  margin-top: 6rem;
-}
-.bbg-label a:hover .usa-label-big {
-  background-color: #205493;
-  text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: .5rem;
 }
@@ -3261,6 +3252,10 @@ body:not(.home) .menu-all-pages-container {
   font-weight: 700;
   text-transform: uppercase;
   font-size: .9em;
+}
+
+.bbg__excerpt-meta {
+  font-weight: 700;
 }
 
 .page-content .wp-smiley,
