@@ -21,6 +21,30 @@ if (  isset( $_GET['hideLink'] ) && current_user_can('publish_posts') ) {
 get_header(); 
 
 ?>
+<style type="text/css">
+	blink, .blink {
+  -webkit-animation: blink 1s step-end infinite;
+  -moz-animation: blink 1s step-end infinite;
+  -o-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-moz-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-o-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@keyframes blink {
+  67% { opacity: 0 }
+}
+</style>
 <div id="main" class="site-main">
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
@@ -208,7 +232,7 @@ get_header();
 					<?php if (!$isTwitter){ ?>
 						<header class='bbg-fuego__article__header'>
 							<h5 class='bbg-fuego__article__header-source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__header-source-link'><?php echo $provider_name; ?></a></h5>
-							<h3 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h3>
+							<h3 class='bbg-fuego__article__header-title'><blink><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></blink></h3>
 						</header>
 						<div class='bbg-fuego__article-content'>
 						<?php 
