@@ -3269,6 +3269,7 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__article__source-link,
 .bbg-fuego__article__source-link:visited {
   color: #981b1e;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
 }
 
 .bbg-fuego__article__header-link,
@@ -3295,6 +3296,21 @@ body:not(.home) .menu-all-pages-container {
   height: 120px;
   margin: 0 1.5rem 1rem 0;
   width: 200px;
+}
+
+.bbg-fuego__article__footer {
+  text-align: right;
+}
+
+.bbg-fueg__article__footer-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  display: inline-block;
+  height: 3rem;
+  vertical-align: middle;
+  width: 3rem;
 }
 
 .page-content .wp-smiley,

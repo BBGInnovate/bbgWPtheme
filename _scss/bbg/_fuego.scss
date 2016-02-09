@@ -1,6 +1,7 @@
 .bbg-fuego__article__source-link,
 .bbg-fuego__article__source-link:visited {
 	color: $color-secondary-darkest;
+	font-family: $font-sans;
 }
 
 .bbg-fuego__article__header-link,
@@ -25,4 +26,17 @@
 	height: 120px;
 	margin: 0 1.5rem 1rem 0;
 	width: 200px;
+}
+
+.bbg-fuego__article__footer {
+	text-align: right;
+}
+
+.bbg-fueg__article__footer-image {
+	@include backgroundCover();
+	border-radius: 50%;
+	display: inline-block;
+	height: 3rem;
+	vertical-align: middle;
+	width: 3rem;
 }

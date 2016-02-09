@@ -207,26 +207,23 @@ get_header();
 					<?php if (!$isTwitter){ ?>
 						<header class='entry-header'>
 							<h5 class='bbg-fuego__article__source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__source-link'><?php echo $provider_name; ?></a></h5>
-							<h1 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h1>
+							<h2 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h2>
 						</header>
 						<div class='entry-content'>
 						<?php 
-							if ($image != "" && $imageSize) {
-								echo "<a href='$url'>"; 
-								echo "<div class='listThumbnail bbg-fuego__article__thumbnail' style='background-image: url($image);'></div>";
-								echo "</a>"; 
-							}
 							echo "<a href='$url' class='bbg-fuego__article__description'>"; 
+							if ($image != "" && $imageSize) {
+								echo "<div class='listThumbnail bbg-fuego__article__thumbnail' style='background-image: url($image);'></div>";
+							}
 							echo $desc; 
 
 							echo "</a>"; 
 						?>
 						</div>
-						<footer class="entry-meta" style='border-top:none;'>
+						<footer class="bbg-fuego__article__footer">
 							<span class="byline">
 								<span class="author vcard"><span class='firstShared'>first shared by </span><a class="url fn n" href="http://twitter.com/<?php echo $author ?>" rel="author">
-								<?php echo "<span class='twitterImageCredit' style='background-image: url(".$twitterImage.");'>" ?>
-									<img src='../wp-content/images/transparentSquare.png'>
+								<?php echo "<span class='bbg-fueg__article__footer-image' style='background-image: url(".$twitterImage.");'>" ?>
 								</span>
 								<?php echo "<a href='http://twitter.com/$author'>@$author</a>"; ?></span>
 							</span>	
