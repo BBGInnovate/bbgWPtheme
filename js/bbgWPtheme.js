@@ -40,12 +40,13 @@ jQuery(document).ready(function() {
 		var t = (e.target ? e.target : e.srcElement);
 		//logger(t)
 
+
 		// popup position
 		var px = Math.floor(((screen.availWidth || 1024) - shareConfig.Width) / 2),
 			py = Math.floor(((screen.availHeight || 700) - shareConfig.Height) / 2);
 
 		// open popup
-		var popup = window.open(t.href, "social", 
+		var popup = window.open(t.parentElement.href, "social", 
 			"width="+shareConfig.Width+",height="+shareConfig.Height+
 			",left="+px+",top="+py+
 			",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
