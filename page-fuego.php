@@ -85,8 +85,8 @@ get_header();
 				}
 	 
 				$image = "";
-				$provider_name = "Africa Rizing";
-				$provider_url = "https://africa.rizing.org";
+				$provider_name = "";
+				$provider_url = "";
 				$linkID=$item['link_id'];
 
 				$weightedCount = $item['weighted_count'];
@@ -203,19 +203,41 @@ get_header();
 				}
 
 			?>
+					<?php if ($counter<=2){ ?>
 				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article bbg-grid--1-2-2">
+					<?php } else { ?>
+				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article" style="clear: left;">
+					<?php } ?>
 
 					<?php if (!$isTwitter){ ?>
 						<header class='bbg-fuego__article__header'>
 							<h5 class='bbg-fuego__article__header-source'><a href='<?php echo $provider_url; ?>' class='bbg-fuego__article__header-source-link'><?php echo $provider_name; ?></a></h5>
+
+					<?php if ($counter<=2){ ?>
+							<h3 class='bbg-fuego__article__header-title--large'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h3>
+					<?php } else { ?>
 							<h3 class='bbg-fuego__article__header-title'><?php echo "<a href='$url' class='bbg-fuego__article__header-link'>$title</a>"; ?></h3>
+					<?php } ?>
+
+
 						</header>
 						<div class='bbg-fuego__article-content'>
 						<?php 
 							echo "<a href='$url' class='bbg-fuego__article__description'>"; 
+
+
+						if ($counter<=2){ 
+							if ($image != "" && $imageSize) {
+								echo "<div class='listThumbnail bbg-fuego__article__thumbnail--large' style='background-image: url($image);'></div>";
+							}
+						} else {
 							if ($image != "" && $imageSize) {
 								echo "<div class='listThumbnail bbg-fuego__article__thumbnail' style='background-image: url($image);'></div>";
 							}
+						}
+
+
+
 							echo $desc; 
 
 							echo "</a>"; 
