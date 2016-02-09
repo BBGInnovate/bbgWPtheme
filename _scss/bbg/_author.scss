@@ -70,23 +70,10 @@
 	width: 100%; 
 }
 
+.bbg-team__text-description {
+	margin-top: 0;
+}
 
-.bbg-team__icon__project-rize {
-	@include backgroundCover;
-	background-image: url(img/icon_team_project-rize.png);
-}
-.bbg-team__icon__storytelling {
-	@include backgroundCover;
-	background-image: url(img/icon_team_storytelling.png);
-}
-.bbg-team__icon__mobile-apps {
-	@include backgroundCover;
-	background-image: url(img/icon_team_mobile-apps.png);
-}
-.bbg-team__icon__audio-video {
-	@include backgroundCover;
-	background-image: url(img/icon_team_audio-video.png);
-}
 
 .bbg-staff__author__text{
 	width: 100%;

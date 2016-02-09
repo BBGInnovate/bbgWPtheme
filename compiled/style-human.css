@@ -2769,32 +2769,8 @@ fieldset {
   width: 100%;
 }
 
-.bbg-team__icon__project-rize {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(img/icon_team_project-rize.png);
-}
-
-.bbg-team__icon__storytelling {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(img/icon_team_storytelling.png);
-}
-
-.bbg-team__icon__mobile-apps {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(img/icon_team_mobile-apps.png);
-}
-
-.bbg-team__icon__audio-video {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(img/icon_team_audio-video.png);
+.bbg-team__text-description {
+  margin-top: 0;
 }
 
 .bbg-staff__author__text {

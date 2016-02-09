@@ -25,6 +25,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
 			<div class="usa-grid">
+			<br/>
 
 			<?php 
 
@@ -202,7 +203,7 @@ get_header();
 				}
 
 			?>
-				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article">
+				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article bbg-grid--1-2-2">
 
 					<?php if (!$isTwitter){ ?>
 						<header class='bbg-fuego__article__header'>
