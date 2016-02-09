@@ -202,7 +202,7 @@ get_header();
 
 								<div class="bbg-avatar__container bbg-team__icon">
 									<a href='<?php echo get_category_link( $category->term_id ) ?>'>
-									<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(wp-content/themes/bbg-wp/img/icon_team_<?php echo $category->category_nicename; ?>.png);"></div>
+									<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $category->category_nicename; ?>.png);"></div>
 									</a>
 								</div>
 
