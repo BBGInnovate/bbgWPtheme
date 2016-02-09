@@ -32,7 +32,7 @@ get_header();
 				}
 			?>
 			<section class="bbg-banner" style="background-image:url(<?php echo get_header_image(); ?>)">
-				<div class="usa-grid">
+				<div class="usa-grid bbg-banner__box">
 					<a href="<?php echo site_url(); ?>">
 						<img class="bbg-banner__site-logo" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="BBG logo">
 					</a>

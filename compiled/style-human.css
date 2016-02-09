@@ -2669,10 +2669,8 @@ fieldset {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 481px) {
-  .u--no-wrap {
-    white-space: nowrap;
-  }
+.u--no-wrap {
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 481px) {
@@ -3085,6 +3083,13 @@ fieldset {
 @media screen and (min-width: 600px) {
   .bbg-banner {
     margin-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-banner .bbg-banner__box {
+    border-left: 1px solid rgba(240, 240, 240, 0.5);
+    border-right: 1px solid rgba(240, 240, 240, 0.5);
+    height: 100%;
   }
 }
 .bbg-banner a:focus {

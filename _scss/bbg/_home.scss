@@ -7,6 +7,15 @@
 
 	@include media($medium-screen) {
 		margin-bottom: 6rem;
+
+	}
+
+	.bbg-banner__box {
+		@include media($medium-large-screen) {
+			border-left: 1px solid rgba(240, 240, 240, .5);
+			border-right: 1px solid rgba(240, 240, 240, .5);
+			height: 100%;
+		}
 	}
 
 	a:focus {
