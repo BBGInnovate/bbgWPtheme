@@ -165,7 +165,7 @@ get_header();
 							$title = $m['title'];	
 
 							/*trying to remove offending news org credits */
-							$search = array(' - BBC News', ' - BBC World Service', ' - CNN.com', ' - CNNPolitics.com', ' - FT.com', ' - Premium Times Nigeria', ' | Reuters', ' | Reuters.com', ' - TODAY.ng');
+							$search = array(' - BBC News', ' - BBC', ' - BBC World Service', ' - CNN.com', ' - CNNPolitics.com', ' - FT.com', ' - Premium Times Nigeria', ' | Reuters', ' | Reuters.com');
 							$title = str_replace($search, '', $title);
 						}
 
