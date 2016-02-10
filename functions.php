@@ -496,6 +496,31 @@ function bbginnovate_query_offset(&$query) {
 	}
 }
 
+/*===================================================================================
+ * CUSTOM YOUTUBE EMBED LOGIC - Always make youtube emebeds responsive
+ * see http://tutorialshares.com/youtube-oembed-urls-remove-showinfo/
+ * =================================================================================*/
+
+function custom_youtube_settings($code){
+	if(strpos($code, 'youtu.be') !== false || strpos($code, 'youtube.com') !== false){
+		//$return = preg_replace("@src=(['\"])?([^'\">\s]*)@", "src=$1$2&showinfo=0&rel=0&autohide=1", $code);
+		
+		//remove the width/height attributes
+		$return = preg_replace(
+			array('/width="\d+"/i', '/height="\d+"/i'),
+				array('',''),
+			$code);
+		//wrap in a responsive div
+		$return="<div class='embed-container'>" . $return . "</div>";
+	} else {
+		$return = $code;
+	}
+	return $return;
+}
+add_filter('embed_handler_html', 'custom_youtube_settings');
+add_filter('embed_oembed_html', 'custom_youtube_settings');
+
+
 	/*
 	add_filter( 'pre_update_option_blogname', 'blogname_with_html', 10, 2 );
 	function blogname_with_html( $value, $old_value ) {
