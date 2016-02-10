@@ -175,11 +175,13 @@ get_header();
 							$categories = get_categories($args ); 
 							foreach ( $categories as $category ) { 
 								$iconName = "bbg-team__icon__".$category->category_nicename;
+								//$categoryLink=get_category_link( $category->term_id );
+								$categoryLink=site_url() . "/team/?cat=" . $category->term_id;
 							?>
 							<article class="bbg-team bbg-grid--1-1-1-2">
 
 								<div class="bbg-avatar__container bbg-team__icon">
-									<a href='<?php echo get_category_link( $category->term_id ) ?>'>
+									<a href='<?php echo $categoryLink; ?>'>
 									<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $category->category_nicename; ?>.png);"></div>
 									</a>
 								</div>
@@ -189,7 +191,7 @@ get_header();
 									<?php
 										$user=$categoryHeads[$category->term_id];
 										$authorPath = get_author_posts_url($user->ID);
-										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='" . get_category_link( $category->term_id ) . "'>".$category->name."</a></h2>";
+										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='$categoryLink'>".$category->name."</a></h2>";
 										echo "<p class='bbg-team__text-description'>" . $category->description . "<br/> <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
 									?>
 								</div><!-- .bbg-team__text -->
