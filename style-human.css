@@ -2699,9 +2699,16 @@ fieldset {
 .bbg-staff__author {
   margin-bottom: 2rem;
 }
+.bbg-staff__author:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 @media screen and (min-width: 600px) {
   .bbg-staff__author {
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
   }
 }
 
@@ -2784,6 +2791,11 @@ fieldset {
 .bbg-staff__author__text {
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .bbg-staff__author__text {
+    padding-left: 23%;
+  }
+}
 
 .bbg-staff__author__text > * {
   text-align: center;
@@ -2805,12 +2817,12 @@ fieldset {
   }
 }
 
-.bbg-staff__author__contact {
-  clear: left;
+.bbg-staff__author-occupation {
+  text-transform: uppercase;
 }
 
-.bbg-staff__author-bio {
-  margin-top: 1rem;
+.bbg-staff__author__contact {
+  margin-bottom: 1rem;
 }
 
 /* Post category label */
@@ -3239,6 +3251,26 @@ body:not(.home) .menu-all-pages-container {
   font-size: .9em;
 }
 
+/*****************************/
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*****************************/
 .bbg__excerpt-meta {
   font-weight: 700;
 }

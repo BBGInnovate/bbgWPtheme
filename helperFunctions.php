@@ -17,11 +17,12 @@
 		if ( $user->isActive=="on" ) {
 
 	?>
-	<div <?php post_class("bbg-grid--1-2-2 bbg-staff__author "); ?>>
+	<div <?php post_class("bbg-grid--1-1-1-2 bbg-staff__author "); ?>>
 
 <?php 
 
 			if ($mode=="home") { 
+				//Not currently using this on the homepage.
 ?>
 
 
@@ -38,7 +39,6 @@
 
 
 		<div class="bbg-staff__author__text">
-			
 			<p class="bbg-staff__author-name"><strong>Project lead: </strong><br/>
 				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a>
 			</p>

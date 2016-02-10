@@ -1,18 +1,18 @@
 .bbg-staff__author {
 	margin-bottom: 2rem;
-
+	@include clearfix();
 	@include media($medium-screen) {
-		margin-bottom: 5rem;
+		margin-bottom: $site-margins * 1.5;
 	}
 }
 
 .bbg-avatar__container {
 	margin: 0 auto;
-	max-width: 200px;
+	max-width: $bbg-avatar-width;
 	@include media($medium-screen) {
 		float: left;
 		margin: 0 1rem .5rem 0;
-		width: 20%;
+		width: $bbg-avatar-width-percentage;
 	}
 }
 .bbg-avatar__container--small {
@@ -78,6 +78,7 @@
 .bbg-staff__author__text{
 	width: 100%;
 	@include media($medium-screen) {
+		padding-left: $bbg-avatar-width-percentage + 3%;
 	}
 }
 
@@ -98,13 +99,9 @@
 }
 
 .bbg-staff__author-occupation {
-	//text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .bbg-staff__author__contact {
-	clear: left;
-}
-
-.bbg-staff__author-bio {
-	margin-top: 1rem;
+	margin-bottom: 1rem;
 }

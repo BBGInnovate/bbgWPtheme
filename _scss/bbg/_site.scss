@@ -108,8 +108,30 @@ body:not(.home) .menu-all-pages-container {
 
 
 
+/*****************************/
+// Responsive YouTube embeds 
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	 height: 100%;
+	 position: absolute;
+	 	left: 0;
+	 	top: 0; 
+	 width: 100%;
+}
 
 
+
+
+/*****************************/
+// Excerpt styles 
 .bbg__excerpt-meta {
 	font-weight: 700;
 }
