@@ -7,7 +7,6 @@
 	padding-top: $site-margins;
 }
 
-
 .bbg-fuego__article__header-source-link,
 .bbg-fuego__article__header-source-link:visited {
 	color: $color-secondary-darkest;
@@ -24,15 +23,11 @@
 	font-size: $h2-font-size;
 }
 
-
-
 .bbg-fuego__article__header-title {
 	@include media($large-screen) {
 		font-size: $h2-font-size;
 	}
 }
-
-
 
 .bbg-fuego__article__description:hover,
 .bbg-fuego__article__description:hover p {
