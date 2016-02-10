@@ -107,6 +107,16 @@ body:not(.home) .menu-all-pages-container {
 
 
 
+
+
 .bbg__excerpt-meta {
 	font-weight: 700;
+}
+
+.bbg-blog__excerpt-title--featured {
+	margin-top: $site-margins / 2;
+	@include media($medium-large-screen) {
+		font-size: $h1-font-size;
+		margin-top: $site-margins;
+	}
 }

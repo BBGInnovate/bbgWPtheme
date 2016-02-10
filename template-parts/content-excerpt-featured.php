@@ -17,9 +17,6 @@
 			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		?>
 
-			<?php the_title( sprintf( '<h1 class="entry-title bbg-blog__excerpt-title--featured">', esc_url( get_permalink() ) ), '</h1>' ); ?>
-
-
 			<?php
 				if (has_post_thumbnail()) {
 					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__excerpt-header__thumbnail--large">';
@@ -27,6 +24,7 @@
 					echo '</div>';
 				}
 			?>
+			<?php the_title( sprintf( '<h2 class="entry-title bbg-blog__excerpt-title--featured">', esc_url( get_permalink() ) ), '</h2>' ); ?>
 
 		</a>
 

@@ -25,7 +25,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title">Special Portfolio Landing Page</h1>
+					<h6 class="bbg-label"><span class="usa-label-big">Portfolio</span></h6>
 				</header><!-- .page-header -->
 
 				<?php 

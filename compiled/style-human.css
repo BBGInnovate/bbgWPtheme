@@ -3234,6 +3234,16 @@ body:not(.home) .menu-all-pages-container {
   font-weight: 700;
 }
 
+.bbg-blog__excerpt-title--featured {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 900px) {
+  .bbg-blog__excerpt-title--featured {
+    font-size: 4rem;
+    margin-top: 3rem;
+  }
+}
+
 .bbg-fuego__article.bbg-grid--1-2-2 {
   border-top: none !important;
   padding-top: 0;
