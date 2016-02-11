@@ -8,10 +8,13 @@
   template name: Team
  */
 
+/*** SHARING VARS ****/
 $teamCategoryID=$_GET["cat"];
 $teamCategory=get_category($teamCategoryID);
 
-
+$ogTitle=$teamCategory->name . " team page";
+$ogDescription=$teamCategory->description; 
+/*** END SHARING VARS ****/
 
 $numPortfolioPostsToShow=4;
 $numBlogPostsToShow=10;
