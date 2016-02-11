@@ -44,7 +44,7 @@
 		<?php
 			if (has_post_thumbnail()) {
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
-				echo the_post_thumbnail();
+				echo the_post_thumbnail('large-thumb');
 				echo '</div>';
 			}
 		?><!-- .bbg__article-header__thumbnail -->

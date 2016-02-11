@@ -43,7 +43,7 @@ if ( ! function_exists( 'bbginnovate_setup' ) ) :
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'large-thumb', 1060, 650, true );
+		add_image_size( 'large-thumb', 1060, 636, true );
 		add_image_size( 'index-thumb', 780, 250, true );
 		add_image_size( 'medium-thumb', 600, 360, true );
 		add_image_size( 'small-thumb', 300, 180, true );
