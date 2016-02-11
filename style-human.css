@@ -2827,7 +2827,7 @@ fieldset {
 
 /* Post category label */
 .bbg__article .bbg-label {
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -2837,12 +2837,13 @@ fieldset {
   background-color: #F1F1F1;
   line-height: 0;
   text-align: center;
+  margin-bottom: 1rem;
+  border: #f1f1f1 solid 1px;
 }
 
 /* Post title */
 .bbg__article-header__title {
   font-size: 3.2rem;
-  margin-top: 2rem;
 }
 @media screen and (min-width: 600px) {
   .bbg__article-header__title {
@@ -2858,8 +2859,7 @@ fieldset {
 @media screen and (min-width: 900px) {
   .bbg__article-meta {
     font-size: 1.7rem;
-    margin-top: -.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3.9rem;
   }
 }
 
@@ -2871,13 +2871,14 @@ fieldset {
   .bbg__article-share {
     float: left;
     margin-top: -1%;
+    /* Added to overwrite the existing margin-top applied to all UL tags :: GIGI */
   }
 }
 
 /* Article share links */
 .bbg__article-share__link {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 @media screen and (min-width: 900px) {
   .bbg__article-share__link {
@@ -2895,7 +2896,7 @@ fieldset {
   border-radius: 0.3rem;
   display: inline-block;
   height: 40px;
-  margin-right: 5px;
+  margin-right: .5rem;
   vertical-align: middle;
   width: 40px;
 }
@@ -2932,7 +2933,7 @@ fieldset {
   }
 }
 
-/** POST CONTENT AREA */
+/** POST CONTENT */
 .bbg__article-content > *,
 .bbg__article-footer {
   margin-left: auto;
@@ -2940,14 +2941,24 @@ fieldset {
   max-width: 600px;
 }
 
-.bbg__article-content > p:first-of-type {
-  font-size: 2.4rem;
-  margin: 0 auto 3rem;
+.single-post .bbg__article-content > p:first-of-type {
+  font-size: 2.55rem;
   font-weight: 300;
+  margin: 0 auto 3rem;
+}
+
+.bbg__article-content > h3 {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  margin-top: 2em;
+  text-transform: uppercase;
 }
 
 .bbg__article-content > h4 {
   clear: none;
+}
+
+.bbg__article-content li {
+  margin-bottom: 3.5em;
 }
 
 .bbg__article-content blockquote {

@@ -1,7 +1,7 @@
 /* Post category label */
 .bbg__article .bbg-label {
-	margin-top: 4rem;
-	margin-bottom: 1rem;
+	margin-top: $site-margins;
+	margin-bottom: $site-margins-small;
 }
 
 /** HEADER AREA */
@@ -10,12 +10,14 @@
 	background-color: #F1F1F1;
 	line-height: 0;
 	text-align: center;
+	margin-bottom: $site-margins-small;
+	border: $color-gray-lightest solid 1px;
 }
 
 /* Post title */
 .bbg__article-header__title {
 	font-size: $h1-font-size * .8;
-	margin-top: $h1-font-size * .5;
+
 	@include media($medium-screen) {
 		font-size: $h1-font-size;
 	}
@@ -28,8 +30,7 @@
 	
 	@include media($medium-large-screen) {
 		font-size: $base-font-size;
-		margin-top: -.5rem;
-		margin-bottom: 4rem;
+		margin-bottom: $site-margins * 1.3;
 	}
 }
 
@@ -40,14 +41,14 @@
 
 	@include media($medium-large-screen) {
 		float: left;
-		margin-top: -1%;
+		margin-top: -1%; /* Added to overwrite the existing margin-top applied to all UL tags :: GIGI */
 	}
 }
 
  /* Article share links */
 .bbg__article-share__link {
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 1rem;
 
 	@include media($medium-large-screen) {
 		display: block;
@@ -64,7 +65,7 @@
 	border-radius: $border-radius;
 	display: inline-block;
 	height: $share-icon-large;
-	margin-right: 5px;
+	margin-right: .5rem;
 	vertical-align: middle;
 	width: $share-icon-large;
 
@@ -99,7 +100,7 @@
 	}
 }
 
-/** POST CONTENT AREA */
+/** POST CONTENT */
 .bbg__article-content > *,
 .bbg__article-footer {
 	margin-left: auto;
@@ -107,14 +108,24 @@
 	max-width: $article-max-width;
 }
 
-.bbg__article-content > p:first-of-type {
-    font-size: $h2-font-size * .8;
-	margin: 0 auto 3rem;
-	font-weight: 300;
+.single-post .bbg__article-content > p:first-of-type {
+    font-size: $base-font-size * 1.5;
+	font-weight: $font-light;
+	margin: 0 auto $site-margins;
+}
+
+.bbg__article-content > h3 {
+	font-family: $font-sans;
+	margin-top: 2em;
+	text-transform: uppercase;
 }
 
 .bbg__article-content > h4 {
 	clear: none;
+}
+
+.bbg__article-content li {
+  margin-bottom: 3.5em;
 }
 
 .bbg__article-content blockquote {
