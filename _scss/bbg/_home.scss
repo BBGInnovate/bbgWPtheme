@@ -65,8 +65,8 @@
 			display: inline-block;
 			margin-top: 0;
 			margin-right: 0;
-			margin-left: -$site-margins;
-			padding: 10px $site-margins;
+			margin-left: -$grid-margins;
+			padding: 10px $site-margins 10px $grid-margins;
 			text-transform: uppercase;
 		}
 	}

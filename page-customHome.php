@@ -75,7 +75,7 @@ get_header();
 			<!-- Portfolio -->
 			<section class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo get_category_link(get_cat_id('Portfolio')); ?>"><span class="usa-label-big">Portfolio</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/portfolio"><span class="usa-label-big">Portfolio</span></a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -176,7 +176,7 @@ get_header();
 							foreach ( $categories as $category ) { 
 								$iconName = "bbg-team__icon__".$category->category_nicename;
 								//$categoryLink=get_category_link( $category->term_id );
-								$categoryLink=site_url() . "/team/?cat=" . $category->term_id;
+								$categoryLink= get_permalink( get_page_by_path( 'team' ) ) . "?cat=" . $category->term_id;
 							?>
 							<article class="bbg-team bbg-grid--1-1-1-2">
 
@@ -201,7 +201,7 @@ get_header();
 
 
 					</div>
-					<a href="<?php echo site_url(); ?>/staff">Meet the full ODDI team</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team</a>
 				</div>
 			</section><!-- Staff -->
 

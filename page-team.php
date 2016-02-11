@@ -29,7 +29,8 @@ get_header(); ?>
 			<div class="usa-grid">
 
 				<header class="page-header">
-					<h1 class="page-title"><?php echo $teamCategory->name; ?> Team Landing Page</h1>
+					<h1 class="page-title"><?php echo $teamCategory->name; ?> Team</h1>
+					<h3 class="usa-font-lead"><?php echo $ogDescription; ?></h3>
 				</header><!-- .page-header -->
 
 				<h3>PORTFOLIO</h3>
