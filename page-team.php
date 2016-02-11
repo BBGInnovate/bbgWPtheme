@@ -42,6 +42,7 @@ get_header(); ?>
 
 
 				<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
+				<br/>
 				<?php 
 					$qParams=array(
 						'post_type' => array('post'),
