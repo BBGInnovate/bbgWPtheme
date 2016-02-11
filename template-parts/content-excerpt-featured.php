@@ -20,7 +20,8 @@
 			<?php
 				if (has_post_thumbnail()) {
 					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__excerpt-header__thumbnail--large">';
-					echo the_post_thumbnail('large-thumb');
+					//echo the_post_thumbnail('large-thumb')  --- CHANGED FOR RESPONSIVE IMAGES;
+					echo the_post_thumbnail();
 					echo '</div>';
 				}
 			?>

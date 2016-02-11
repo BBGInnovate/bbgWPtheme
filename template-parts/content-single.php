@@ -12,25 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
 
 <?php
-	/*
-	if (has_post_thumbnail()) {
-		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large-thumb' );
-		$url = $thumb['0'];
-			<section class="bbg-banner" style="background-image:url(<?php echo $url; ?>)">
-				<div class="usa-grid">
-					<a href="#">
-					</a>
-					<div class="bbg-banner-box">
-						<h1 class="bbg-banner-site-title"><?php bloginfo( 'name' ); ?></h1>
-						<?php $description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) : ?>
-							<h3 class="bbg-banner-site-description"><?php echo $description; ?></h3>
-						<?php endif; ?>
-					</div>
-				</div>
-			</section>
-	}
-	*/
+	
 	//the title/headline field, followed by the URL and the author's twitter handle
 	$twitterText= "";
 	$twitterText .= html_entity_decode(get_the_title());
@@ -62,7 +44,7 @@
 		<?php
 			if (has_post_thumbnail()) {
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
-				echo the_post_thumbnail('large-thumb');
+				echo the_post_thumbnail();
 				echo '</div>';
 			}
 		?><!-- .bbg__article-header__thumbnail -->
