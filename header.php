@@ -1,4 +1,4 @@
-<?php
+f<?php
 /**
  * The header for our theme.
  *
@@ -105,7 +105,6 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 
 
 
-
 <!-- IE <9 patch
 ================================================== -->
 
@@ -115,6 +114,8 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 	  <script src="<?php echo get_template_directory_uri() ?>/js/vendor/selectivizr-min.js"></script>
 	<![endif]-->
 
+	<!-- picturefill - polyfill for srcset sizes on older and/or mobile browsers -->
+	<script src="<?php echo get_template_directory_uri() ?>/js/vendor/picturefill.min.js"></script>
 
 
 <!-- Favicons
