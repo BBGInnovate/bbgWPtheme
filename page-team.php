@@ -42,7 +42,6 @@ get_header(); ?>
 
 
 				<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
-				<br/>
 				<?php 
 					$qParams=array(
 						'post_type' => array('post'),
@@ -57,19 +56,18 @@ get_header(); ?>
 						the_post();
 						$counter=$counter+1;
 						$gridClass = "";
-						if ($counter <= 1) {
+						if ($counter <= 2) {
 							$gridClass = "bbg-grid--1-2-2";
 						} else {
 							$gridClass = " ";
 						}
-						get_template_part( 'template-parts/content-portfolio', get_post_format() );
+						get_template_part( 'template-parts/content-excerpt', get_post_format() );
 					}
 				?>
 
 
 
 				<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/portfolio">Portfolio</a></h6>
-				<br/>
 				<?php 
 					$qParams=array(
 						'post_type' => array('post'),
@@ -88,10 +86,10 @@ get_header(); ?>
 						} 
 						else 
 						*/
-						if ($counter <= 4) {
+						//if ($counter <= 4) {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
-						}
+						//}
 					}
 				?>
 

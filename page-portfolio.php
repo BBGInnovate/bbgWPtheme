@@ -37,7 +37,7 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 						} 
 						else if ($counter <= $maxPostsToShow) {
-							$gridClass = "bbg-grid--1-2-2";
+							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}

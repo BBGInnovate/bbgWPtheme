@@ -3011,6 +3011,7 @@ fieldset {
   }
 
   .bbg-grid--1-2-3:nth-child(3n) {
+    clear: none;
     margin-right: 0;
   }
 
