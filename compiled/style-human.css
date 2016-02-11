@@ -3158,7 +3158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bbg-label {
   font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
   margin-top: 0;
@@ -3166,6 +3166,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .bbg-label a {
   color: #981b1e;
+}
+@media screen and (min-width: 600px) {
+  .bbg-label {
+    font-size: 3.5rem;
+  }
 }
 
 section.usa-section {
