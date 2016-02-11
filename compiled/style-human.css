@@ -2746,6 +2746,7 @@ fieldset {
 }
 
 .bbg-team__name {
+  clear: none;
   margin-bottom: 0;
   text-align: center;
 }
@@ -2777,6 +2778,7 @@ fieldset {
 }
 
 .bbg-team__text-description {
+  clear: none;
   margin-top: 0;
 }
 

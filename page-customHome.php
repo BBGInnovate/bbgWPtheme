@@ -198,7 +198,7 @@ get_header();
 									<?php
 										$user=$categoryHeads[$category->term_id];
 										$authorPath = get_author_posts_url($user->ID);
-										echo "<h2 style='clear: none;' class='bbg-team__name'><a href='$categoryLink'>".$category->name."</a></h2>";
+										echo "<h2 class='bbg-team__name'><a href='$categoryLink'>".$category->name."</a></h2>";
 										echo "<p class='bbg-team__text-description'>" . $category->description . "<br/> <span style='font-weight: bold;'>Project lead: </span><a href='" . $authorPath . "' class='bbg-staff__author-link'>$user->display_name</a></p>";
 									?>
 								</div><!-- .bbg-team__text -->
