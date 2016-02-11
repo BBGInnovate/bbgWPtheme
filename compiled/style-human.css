@@ -3141,9 +3141,9 @@ fieldset {
   border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
   display: inline-block;
-  margin-top: 0;
-  margin-right: 0;
   margin-left: -3rem;
+  margin-right: 0;
+  margin-top: 0;
   padding: 10px 3rem 10px 3rem;
   text-transform: uppercase;
 }
@@ -3157,12 +3157,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bbg-label {
-  margin-bottom: 3rem;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
   margin-top: 0;
+  text-transform: uppercase;
 }
-.bbg-label a:hover .usa-label-big {
-  background-color: #205493;
-  text-decoration: none;
+.bbg-label a {
+  color: #981b1e;
 }
 
 section.usa-section {

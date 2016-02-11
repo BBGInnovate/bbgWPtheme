@@ -11,6 +11,7 @@
 /*** SHARING VARS ****/
 $teamCategoryID=$_GET["cat"];
 $teamCategory=get_category($teamCategoryID);
+$iconName = "bbg-team__icon__".$teamCategory->category_nicename;
 
 $ogTitle=$teamCategory->name . " team page";
 $ogDescription=$teamCategory->description; 
@@ -29,6 +30,10 @@ get_header(); ?>
 			<div class="usa-grid">
 
 				<header class="page-header">
+					<div class="bbg-avatar__container bbg-team__icon">
+						<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $teamCategory->category_nicename; ?>.png);"></div>
+					</div>
+
 					<h1 class="page-title"><?php echo $teamCategory->name; ?> Team</h1>
 					<h3 class="usa-font-lead"><?php echo $ogDescription; ?></h3>
 				</header><!-- .page-header -->

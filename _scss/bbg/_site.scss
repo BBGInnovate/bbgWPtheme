@@ -6,13 +6,21 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: $site-margins;
 }
 
-.bbg-label {
-	margin-bottom: $site-margins;
-	margin-top: 0;
 
-	a:hover .usa-label-big {
-		background-color: #205493;
-		text-decoration: none;
+
+.bbg-label {
+	font-family: $font-sans;
+	font-size: 3.5rem;
+	font-weight: bold;
+	margin: {
+		bottom: 1rem;
+		top: 0;
+	};
+
+	text-transform: uppercase;
+	
+	a {
+		color: $color-secondary-darkest;
 	}
 }
 
@@ -120,11 +128,11 @@ body:not(.home) .menu-all-pages-container {
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
-	 height: 100%;
-	 position: absolute;
-	 	left: 0;
-	 	top: 0; 
-	 width: 100%;
+	height: 100%;
+	position: absolute;
+		left: 0;
+		top: 0; 
+	width: 100%;
 }
 
 

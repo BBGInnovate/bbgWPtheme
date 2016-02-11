@@ -63,9 +63,11 @@
 			border-radius: 0 $border-radius $border-radius 0;
 			color: #FFF;
 			display: inline-block;
-			margin-top: 0;
-			margin-right: 0;
-			margin-left: -$grid-margins;
+			margin: {
+				left: -$grid-margins;
+				right: 0;
+				top: 0;
+			}
 			padding: 10px $site-margins 10px $grid-margins;
 			text-transform: uppercase;
 		}

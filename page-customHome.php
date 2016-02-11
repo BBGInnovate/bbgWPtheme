@@ -22,10 +22,16 @@ siteintroduction
 get_header();
 
 ?>
+
+<style>
+	/*a h1, a h2, a h3, a h4, h1 a, h2 a, h3 a, h4 a{font-family: 'Oswald','Roboto Slab', 'Helvetica', 'Arial', sans-serif; color: #000 !important;}*/
+</style>
+
 <div id="main" class="site-main">
 
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content bbg-home-main" role="main">
+
 			<?php
 				if ( get_header_image() != "") { 
 					/* Check if there's an image set. Ideally we'd tweak the design accorgingly. */
@@ -75,7 +81,7 @@ get_header();
 			<!-- Portfolio -->
 			<section class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/portfolio"><span class="usa-label-big">Portfolio</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/portfolio">Portfolio</a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -108,7 +114,8 @@ get_header();
 			<!-- Recent posts -->
 			<section class="usa-section">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>"><span class="usa-label-big">Recent posts</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
+
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
 					So we hardcode the display code to ignore anything after the 3rd item */
@@ -144,7 +151,7 @@ get_header();
 			<!-- Staff -->
 			<section class="usa-section bbg-staff">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>"><span class="usa-label-big">Our teams</span></a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Our teams</a></h6>
 					<div class="usa-grid-full">
 						<div class="usa-intro">
 							<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
