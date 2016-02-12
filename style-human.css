@@ -749,7 +749,7 @@ html {
 }
 
 body {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -1008,7 +1008,7 @@ select {
   box-sizing: border-box;
   color: #000;
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: .2em 0;
   max-width: 46rem;
   width: 100%;
@@ -1089,14 +1089,14 @@ select.usa-input-success {
 
 .usa-input-error-label {
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 .usa-input-error-message {
   color: #cd2026;
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   padding-bottom: 3px;
   padding-top: 3px;
@@ -1358,7 +1358,7 @@ button,
   cursor: pointer;
   display: inline-block;
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   margin-top: .5em;
@@ -1839,7 +1839,7 @@ figure {
 }
 
 .usa-label-big {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   padding-left: .9rem;
   padding-right: .9rem;
 }
@@ -2872,7 +2872,7 @@ fieldset {
 }
 @media screen and (min-width: 900px) {
   .bbg__article-meta {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 3.9rem;
   }
 }
@@ -2956,7 +2956,7 @@ fieldset {
 }
 
 .single-post .bbg__article-content > p:first-of-type {
-  font-size: 2.21rem;
+  font-size: 1.95rem;
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-weight: 300;
   margin: 0 auto 3rem;
