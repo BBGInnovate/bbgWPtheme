@@ -272,7 +272,7 @@ get_header();
 								</p>
 							</div>
 							<div class='clearAll'></div>
-							<div class='tweet' style=''>
+							<div class='bbg-fuego__twitter__tweet'>
 								<?php echo $desc; ?>
 								<?php /* echo preg_replace($pattern, $replacement, $desc);  */ ?>
 							</div>
@@ -281,14 +281,13 @@ get_header();
 
 							<div class='quotedTweet'>
 								<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
-									<div class='twitterProfilePhoto' style='background-image:url(<?php echo $quoteMakerImage; ?>)' >
-										<img src='../wp-content/images/transparentSquare.png'>
+									<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $quoteMakerImage; ?>)' >
 									</div>
 								</a>
-								<div class='quoteMaker'>
-									<p class='quoteMakerName'><?php echo $quoteMakerName; ?> </p>
+								<div class='bbg-fuego__twitter__quote'>
+									<p class='bbg-fuego__twitter__quote-maker'><?php echo $quoteMakerName; ?> </p>
 									<?php if ($quoteMakerHandle != ""): ?>
-									<p>
+									<p class="bbg-fuego__twitter__quote-text">
 										<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
 											@<?php echo $quoteMakerHandle; ?>
 										</a>

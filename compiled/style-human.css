@@ -3409,10 +3409,23 @@ body:not(.home) .menu-all-pages-container {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border-radius: 50%;
   float: left;
   height: 70px;
   vertical-align: middle;
   width: 70px;
+}
+
+.bbg-fuego__twitter__tweet {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.bbg-fuego__twitter__quote {
+  background-color: #FFF;
+  border-radius: 1rem;
+  border: 1px solid #CCC;
+  padding: 1rem;
 }
 
 .page-content .wp-smiley,

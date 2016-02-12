@@ -80,10 +80,22 @@
 
 .bbg-fuego__twitter-photo {
 	@include backgroundCover(); 
+	border-radius: 50%;
 	float: left;
 	height: $bbg-avatar-twitter;
 	vertical-align: middle;
 	width: $bbg-avatar-twitter;
 }
 
+.bbg-fuego__twitter__tweet {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.bbg-fuego__twitter__quote {
+	background-color: #FFF;
+	border-radius: 1rem;
+	border: 1px solid #CCC;
+	padding: 1rem;
+}
 
