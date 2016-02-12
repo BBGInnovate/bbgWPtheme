@@ -2786,7 +2786,7 @@ fieldset {
 
 .bbg-team__header {
   border-bottom: 1px solid #CCC;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   padding-bottom: 3rem;
 }
 
@@ -3163,8 +3163,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a,
-a h1, a h2, a h3, a h4 {
+h1 a, h2 a, h3 a, h4 a {
   color: #112e51;
 }
 
