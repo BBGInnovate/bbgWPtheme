@@ -36,7 +36,7 @@
 
 ?>
 	<div class="usa-grid">
-		
+
 		<?php echo bbginnovate_post_categories( '', true ); ?>
 		<!-- .bbg-label -->
 
