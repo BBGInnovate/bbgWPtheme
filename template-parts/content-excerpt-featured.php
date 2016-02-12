@@ -14,19 +14,19 @@
 	<header class="entry-header bbg-blog__excerpt-header--featured">
 
 		<?php 
-			echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+			$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+			$linkH2 = '<h2 class="entry-title bbg-blog__excerpt-title--featured">'.$link;
+			echo $link;
+
+			if (has_post_thumbnail()) {
+				echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__excerpt-header__thumbnail--large">';
+				echo the_post_thumbnail('large-thumb');
+				echo '</div>';
+			}
 		?>
-
-			<?php
-				if (has_post_thumbnail()) {
-					echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__excerpt-header__thumbnail--large">';
-					echo the_post_thumbnail('large-thumb');
-					echo '</div>';
-				}
-			?>
-			<?php the_title( sprintf( '<h2 class="entry-title bbg-blog__excerpt-title--featured">', esc_url( get_permalink() ) ), '</h2>' ); ?>
-
 		</a>
+
+		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 	</header><!-- .bbg-blog__excerpt-header--featured -->
 
