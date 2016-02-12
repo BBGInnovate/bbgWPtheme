@@ -2837,12 +2837,6 @@ fieldset {
   margin-bottom: 1rem;
 }
 
-/* Post category label */
-.bbg__article .bbg-label {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
 /** HEADER AREA */
 /* Featured image */
 .bbg__article-header__thumbnail--large {
