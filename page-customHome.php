@@ -54,7 +54,7 @@ get_header();
 
 
 			<!-- Site introduction -->
-			<section class="usa-grid">
+			<section id="mission" class="usa-section usa-grid">
 			<?php
 				$qParams=array(
 					'post_type' => array('post'),
@@ -67,10 +67,10 @@ get_header();
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 						$siteIntroTitle=get_the_title();
-						echo '<section class="usa-section"><h3 id="content" class="usa-font-lead">';
+						echo '<h3 id="content" class="usa-font-lead">';
 						/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
 						echo get_the_content();
-						echo '</h3></section>';
+						echo '</h3>';
 					endwhile;
 				endif;
 				wp_reset_query();
@@ -79,7 +79,7 @@ get_header();
 
 
 			<!-- Portfolio -->
-			<section class="usa-section bbg-portfolio">
+			<section id="projects" class="usa-section bbg-portfolio">
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Portfolio</a></h6>
 
@@ -112,7 +112,7 @@ get_header();
 
 
 			<!-- Recent posts -->
-			<section class="usa-section">
+			<section id="recent-posts" class="usa-section">
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
 
@@ -150,7 +150,7 @@ get_header();
 
 
 			<!-- Staff -->
-			<section class="usa-section bbg-staff">
+			<section id="teams" class="usa-section bbg-staff">
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Our teams</a></h6>
 

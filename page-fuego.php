@@ -25,8 +25,6 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
 			<div class="usa-grid">
-			<br/>
-
 			<?php 
 
 			//require('../../fuego/init.php');

@@ -25,7 +25,9 @@
 
 /* Author byline */
 .bbg__article-meta {
+	font-family: $font-serif;
 	font-size: $small-font-size;
+	font-style: italic;
 	font-weight: 700;
 	
 	@include media($medium-large-screen) {
