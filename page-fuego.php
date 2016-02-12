@@ -34,7 +34,6 @@ get_header();
 				$linkDetailID = $_GET['linkID'];
 			} 
 			$items = $fuego->getItems(20, 24, FALSE, TRUE, 2, $linkDetailID); // quantity, hours, scoring, metadata
-			
 			$counter=0;
 
 			function twitterify($ret) {
@@ -176,11 +175,13 @@ get_header();
 						}
 
 						$image ='';
+						$image = $item['remoteImage'];
+						/*
 						if ( isset ($item['localImage'] ) ) {
 							//$image=$m['thumbnail_url'];
 							$image = $item['localImage'];
 							$image = str_replace('/var/www/wordpress/','/',$image);
-						}
+						}*/
 						if ( $image != '' ) {
 							if ($m['thumbnail_width'] <= $imageSizeMax && $m['thumbnail_height'] <= $imageSizeMax && $m['thumbnail_width'] >= $imageSizeMin){
 								$imageSize = true;
@@ -259,8 +260,7 @@ get_header();
 						</header>
 						<div class='bbg-fuego__article-content bbg-fuego__article__twitter-conversation'>
 							<a href='https://twitter.com/<?php echo $author; ?>' target='_blank'>
-								<div class='twitterProfilePhoto' style='background-image:url(<?php echo $twitterImage ?>)'>
-									<img src='../wp-content/images/transparentSquare.png'>
+								<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $twitterImage ?>);'>
 								</div>
 							</a>
 							<div class='tweetAuthor'>

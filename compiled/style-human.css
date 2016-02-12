@@ -3147,9 +3147,9 @@ fieldset {
   border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
   display: inline-block;
-  margin-left: -3rem;
-  margin-right: 0;
   margin-top: 0;
+  margin-right: 0;
+  margin-left: -3rem;
   padding: 10px 3rem 10px 3rem;
   text-transform: uppercase;
 }
@@ -3178,8 +3178,8 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   margin-top: 0;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 .bbg-label a {
@@ -3206,7 +3206,7 @@ article {
   background: #CCC url(img/logo-agency-square.png) no-repeat center center/cover;
   display: inline-block;
   height: 3rem;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: middle;
   width: 3rem;
 }
@@ -3297,8 +3297,8 @@ body:not(.home) .menu-all-pages-container {
 .embed-container embed {
   height: 100%;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -3403,6 +3403,16 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-fuego__button__hide-link {
   background-color: #981b1e;
+}
+
+.bbg-fuego__twitter-photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  height: 70px;
+  vertical-align: middle;
+  width: 70px;
 }
 
 .page-content .wp-smiley,

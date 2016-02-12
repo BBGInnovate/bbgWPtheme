@@ -75,3 +75,15 @@
 .bbg-fuego__button__hide-link {
 	background-color: $color-secondary-darkest;
 }
+
+
+
+.bbg-fuego__twitter-photo {
+	@include backgroundCover(); 
+	float: left;
+	height: $bbg-avatar-twitter;
+	vertical-align: middle;
+	width: $bbg-avatar-twitter;
+}
+
+
