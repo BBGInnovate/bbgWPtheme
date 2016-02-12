@@ -2768,6 +2768,7 @@ fieldset {
     padding-left: 110px;
   }
 }
+
 .bbg-team__icon__image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -2780,6 +2781,13 @@ fieldset {
 .bbg-team__text-description {
   clear: none;
   margin-top: 0;
+  max-width: 600px;
+}
+
+.bbg-team__header {
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .bbg-staff__author__text {
@@ -3170,6 +3178,9 @@ h1, h2, h3, h4, h5, h6 {
   .bbg-label {
     font-size: 3.5rem;
   }
+}
+.bbg-label.small {
+  font-size: 2rem;
 }
 
 section.usa-section {

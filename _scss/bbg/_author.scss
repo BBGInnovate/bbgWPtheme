@@ -58,8 +58,8 @@
 	width: 100px;
 }
 
-@include media($medium-screen) {
-	.bbg-team__text {
+.bbg-team__text {
+	@include media($medium-screen) {
 		padding-left: 110px;
 	}
 }
@@ -74,7 +74,16 @@
 .bbg-team__text-description {
 	clear: none;
 	margin-top: 0;
+	max-width: $article-max-width;
 }
+
+.bbg-team__header {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 3rem;
+	padding-bottom: 3rem;
+}
+
+
 
 
 .bbg-staff__author__text{

@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5, h6 {
 		bottom: 1rem;
 		top: 0;
 	};
-
 	text-transform: uppercase;
 	
 	a {
@@ -25,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 	@include media($medium-screen) {
 		font-size: 3.5rem;
+	}
+
+	&.small{
+		font-size: 2rem;
 	}
 }
 
