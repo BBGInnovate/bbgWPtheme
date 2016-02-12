@@ -263,8 +263,8 @@ get_header();
 								<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $twitterImage ?>);'>
 								</div>
 							</a>
-							<div class='tweetAuthor'>
-								<p class='tweetAuthorName'>
+							<div class='bbg-fuego__twitter__author'>
+								<p class='bbg-fuego__twitter__author-name'>
 									<?php echo $authorDisplayName; ?>
 								</p>
 								<p style='display: block; margin-bottom:0;'>
@@ -279,13 +279,13 @@ get_header();
 
 							<div class='clearAll'></div>
 
-							<div class='quotedTweet'>
+							<div class='bbg-fuego__twitter__quoted-tweet'>
 								<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
 									<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $quoteMakerImage; ?>)' >
 									</div>
 								</a>
 								<div class='bbg-fuego__twitter__quote'>
-									<p class='bbg-fuego__twitter__quote-maker'><?php echo $quoteMakerName; ?> </p>
+									<p class='bbg-fuego__twitter__author-name'><?php echo $quoteMakerName; ?> </p>
 									<?php if ($quoteMakerHandle != ""): ?>
 									<p class="bbg-fuego__twitter__quote-text">
 										<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>

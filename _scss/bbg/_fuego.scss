@@ -87,12 +87,17 @@
 	width: $bbg-avatar-twitter;
 }
 
+.bbg-fuego__twitter__author-name {
+	font-size: 17px;
+	font-weight: bold;
+}
+
 .bbg-fuego__twitter__tweet {
 	font-size: 2rem;
 	font-weight: bold;
 }
 
-.bbg-fuego__twitter__quote {
+.bbg-fuego__twitter__quoted-tweet {
 	background-color: #FFF;
 	border-radius: 1rem;
 	border: 1px solid #CCC;
