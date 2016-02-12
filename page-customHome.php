@@ -135,15 +135,16 @@ get_header();
 							$counter++;
 							if ($counter == 1) {
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
+								echo '<div class="usa-grid-full">';
 							} 
 							else if ($counter <= $maxPostsToShow) {
 								$gridClass = "bbg-grid--1-2-2";
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 							}
 						endwhile;
+						echo '</div><!-- .usa-grid-full -->';
 					endif;
 				?>
-
 				</div>
 			</section><!-- Recent posts -->
 
@@ -152,11 +153,12 @@ get_header();
 			<section class="usa-section bbg-staff">
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Our teams</a></h6>
-					<div class="usa-grid-full">
-						<div class="usa-intro">
-							<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
-						</div>
 
+					<div class="usa-intro">
+						<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
+					</div>
+
+					<div class="usa-grid-full">
 
 						<?php
 							/* 

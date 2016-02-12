@@ -40,35 +40,35 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 
-
 				<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
-				<br/>
-				<?php 
-					$qParams=array(
-						'post_type' => array('post'),
-						'posts_per_page' => $numBlogPostsToShow,
-						'category__in' => [$teamCategoryID],
-						'category__not_in' => [get_cat_id('Portfolio')]
-					);
-					query_posts($qParams);
+				<div class="bbg-grid__container">
+					<?php 
+						$qParams=array(
+							'post_type' => array('post'),
+							'posts_per_page' => $numBlogPostsToShow,
+							'category__in' => [$teamCategoryID],
+							'category__not_in' => [get_cat_id('Portfolio')]
+						);
+						query_posts($qParams);
 
-					$counter=0;
-					while ( have_posts() )  {
-						the_post();
-						$counter=$counter+1;
-						$gridClass = "";
-						if ($counter <= 2) {
-							$gridClass = "bbg-grid--1-2-2";
-						} else {
-							$gridClass = " ";
+						$counter=0;
+						while ( have_posts() )  {
+							the_post();
+							$counter=$counter+1;
+							$gridClass = "";
+							if ($counter <= 2) {
+								$gridClass = "bbg-grid--1-2-2";
+							} else {
+								$gridClass = " ";
+							}
+							get_template_part( 'template-parts/content-excerpt', get_post_format() );
 						}
-						get_template_part( 'template-parts/content-excerpt', get_post_format() );
-					}
-				?>
-
+					?>
+				</div>
 
 
 				<h6 class="bbg-label"><a href="<?php echo site_url(); ?>/portfolio">Portfolio</a></h6>
+				<div class="bbg-grid__container">
 				<?php 
 					$qParams=array(
 						'post_type' => array('post'),
@@ -88,15 +88,14 @@ get_header(); ?>
 						else 
 						*/
 						//if ($counter <= 4) {
-							$gridClass = "bbg-grid--1-2-3";
+							$gridClass = "bbg-grid--1-3-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						//}
 					}
 				?>
+				</div><!--.bbg-grid__containter -->
 
 
-
-			
 			</div><!-- .usa-grid -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
