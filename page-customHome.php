@@ -23,10 +23,6 @@ get_header();
 
 ?>
 
-<style>
-	/*a h1, a h2, a h3, a h4, h1 a, h2 a, h3 a, h4 a{font-family: 'Oswald','Roboto Slab', 'Helvetica', 'Arial', sans-serif; color: #000 !important;}*/
-</style>
-
 <div id="main" class="site-main">
 
 	<div id="primary" class="content-area">

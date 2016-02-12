@@ -3176,7 +3176,7 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 
 .bbg-label {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   margin-top: 0;
@@ -3187,7 +3187,7 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 }
 @media screen and (min-width: 600px) {
   .bbg-label {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 .bbg-label.small {
@@ -3306,6 +3306,10 @@ body:not(.home) .menu-all-pages-container {
 .bbg__excerpt-meta {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-style: italic;
+}
+
+.bbg__excerpt-meta--featured {
+  margin-bottom: 1.5rem;
 }
 
 .bbg-blog__excerpt-title--featured {
