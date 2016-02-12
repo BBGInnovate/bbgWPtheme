@@ -20,11 +20,15 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($classNames); ?>>
 	<header class="entry-header bbg-portfolio__excerpt-header">
+
 	<?php 
-		echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+		$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+		$linkH3 = '<h3 class="entry-title bbg-portfolio__excerpt__title">'.$link;
 	?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--medium">
 			<?php
+				echo $link;
+
 				/* Set a default thumbnail image in case one isn't set */
 				$thumbnail = '<img src="' . get_template_directory_uri() . '/img/portfolio-project-default.png" alt="This is a default image." />';
 
@@ -33,17 +37,16 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 				}
 				echo $thumbnail;
 			?>
+			</a>
 		</div>
-
-		<?php the_title( sprintf( '<h3 class="entry-title bbg-portfolio__excerpt__title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
-
+		<?php the_title( sprintf( $linkH3, esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<!--
 		<div class="entry-meta bbg__article-meta">
 			<?php bbginnovate_posted_on(); ?>
 		</div>-->
 		<?php endif; ?>
-	</a>
 
 	</header><!-- .entry-header -->
 

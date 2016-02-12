@@ -18,10 +18,7 @@ $ogDescription=$teamCategory->description;
 /*** END SHARING VARS ****/
 
 $numPortfolioPostsToShow=4;
-$numBlogPostsToShow=10;
-
-
-
+$numBlogPostsToShow=4;
 
 get_header(); ?>
 
@@ -39,8 +36,10 @@ get_header(); ?>
 					</div>
 				</header><!-- .page-header -->
 
+
+
 				<section class="usa-section">
-					<h6 class="bbg-label small"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
+					<h6 class="bbg-label small"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent <?php echo $teamCategory->name; ?> posts</a></h6>
 					<div class="bbg-grid__container">
 						<?php 
 							$qParams=array(
@@ -58,14 +57,18 @@ get_header(); ?>
 								$gridClass = "";
 								if ($counter <= 2) {
 									$gridClass = "bbg-grid--1-2-2";
+									get_template_part( 'template-parts/content-portfolio', get_post_format() );
 								} else {
 									$gridClass = " ";
+									get_template_part( 'template-parts/content-excerpt', get_post_format() );
 								}
-								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 							}
 						?>
-					</div>
+					</div><!-- .bbg-grid__container -->
+					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio</a>
 				</section>
+
+
 
 				<section class="usa-section">
 					<h6 class="bbg-label small"><a href="<?php echo site_url(); ?>/portfolio">Portfolio</a></h6>
@@ -95,6 +98,7 @@ get_header(); ?>
 						}
 					?>
 					</div><!--.bbg-grid__containter -->
+					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio</a>
 				</section>
 
 			</div><!-- .usa-grid -->
