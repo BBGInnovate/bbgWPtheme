@@ -3308,7 +3308,8 @@ body:not(.home) .menu-all-pages-container {
 
 /*****************************/
 .bbg__excerpt-meta {
-  font-weight: 700;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-style: italic;
 }
 
 .bbg-blog__excerpt-title--featured {
