@@ -742,8 +742,9 @@ body {
   left: -999em;
 }
 
+/*MOVED FROM BELOW TO UPDATE FONTS*/
 html {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
@@ -807,7 +808,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -837,7 +838,7 @@ p a,
 .usa-sans a,
 .usa-sans li,
 .usa-sans span {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
 .usa-serif p,
@@ -1134,7 +1135,7 @@ legend {
 
 .usa-form-hint {
   color: #757575;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0;
 }
 
@@ -1356,7 +1357,7 @@ button,
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
@@ -1942,7 +1943,7 @@ a.usa-label:hover, a.usa-label-big:hover {
   border: none;
   color: #212121;
   display: block;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   line-height: 1;
   padding-bottom: 1rem;
   padding-left: 1.8rem;
@@ -2298,7 +2299,7 @@ form input[name="password"] {
 
 .usa-form-note {
   float: right;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 1.5rem;
   margin: 0;
   margin-bottom: 1.5rem;
@@ -2559,7 +2560,7 @@ fieldset {
 }
 
 .usa-alert-text {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -2608,7 +2609,7 @@ fieldset {
 .usa-accordion > ul > li,
 .usa-accordion-bordered > ul > li {
   background-color: #f1f1f1;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   list-style: none;
   margin-bottom: 6px;
   width: 100%;
@@ -2631,7 +2632,7 @@ fieldset {
   color: #212121;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin: 0;
   padding-bottom: 1.5rem;
   padding-left: 3rem;
@@ -2677,6 +2678,7 @@ fieldset {
   margin-bottom: 0;
 }
 
+/*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
 .u--no-wrap {
   white-space: nowrap;
 }
@@ -2954,13 +2956,14 @@ fieldset {
 }
 
 .single-post .bbg__article-content > p:first-of-type {
-  font-size: 2.55rem;
+  font-size: 2.21rem;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-weight: 300;
   margin: 0 auto 3rem;
 }
 
 .bbg__article-content > h3 {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin-top: 2em;
   text-transform: uppercase;
 }
@@ -3135,7 +3138,7 @@ fieldset {
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-title {
   color: #FFF;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
   font-size: 3.2rem;
   line-height: 1;
   margin-bottom: 5px;
@@ -3166,7 +3169,7 @@ fieldset {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin-top: .5rem;
 }
 
@@ -3187,7 +3190,7 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 }
 
 .bbg-label {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -3242,7 +3245,7 @@ body:not(.home) .menu-all-pages-container {
 .usa-heading-site-title {
   border-bottom: 1px solid #CCC;
   font-size: 2.5rem;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
   line-height: 1;
 }
 @media screen and (min-width: 600px) {
@@ -3261,7 +3264,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .usa-heading-site-description {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 0;
@@ -3289,7 +3292,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-continue a {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: .9em;
@@ -3343,7 +3346,7 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__article__header-source-link,
 .bbg-fuego__article__header-source-link:visited {
   color: #981b1e;
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
 .bbg-fuego__article__header-link,

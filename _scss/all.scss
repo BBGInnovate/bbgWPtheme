@@ -17,7 +17,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/ 
+*/
 
 
 
@@ -36,6 +36,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'core/base';
 @import 'core/grid';
 @import 'core/utilities';
+
+@import 'bbg/variables-bbg'; /*MOVED FROM BELOW TO UPDATE FONTS*/
 
 
 // Elements -------------- //
@@ -62,7 +64,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 
 // BBG -------------- //
-@import 'bbg/variables-bbg';
+/*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
 @import 'bbg/utilities';
 @import 'bbg/author';
 @import 'bbg/blog';

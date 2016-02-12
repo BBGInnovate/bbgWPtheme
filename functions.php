@@ -149,12 +149,14 @@ function bbginnovate_scripts() {
 
 	wp_enqueue_style( 'bbginnovate-style-fonts', get_template_directory_uri() . "/css/google-fonts.css" );
 
+    wp_enqueue_style( 'bbginnovate-style-fonts', get_template_directory_uri() . "/css/bbg-fonts.css" ); //Updating the default @font-face calls for new fonts :: GIGI
+
 	wp_enqueue_script( 'bbginnovate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'bbginnovate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'bbgWPtheme', get_template_directory_uri() . '/js/bbgWPtheme.js', array( 'jquery' ));
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -289,7 +291,7 @@ function change_avatar_css($class) {
 
 add_action( 'show_user_profile', 'bbg_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'bbg_show_extra_profile_fields' );
-function bbg_show_extra_profile_fields( $user ) { 
+function bbg_show_extra_profile_fields( $user ) {
 	$isActive=esc_attr( get_the_author_meta( 'isActive', $user->ID ));
 	$isActiveChecked= ($isActive=="on") ? "checked" : "";
 	$headOfTeam=esc_attr( get_the_author_meta( 'headOfTeam', $user->ID ));
@@ -321,7 +323,7 @@ function bbg_show_extra_profile_fields( $user ) {
 			<th><label for="isActive">Head of Team</label></th>
 			<td><select name="headOfTeam"><option value="">None</option>
 				<?php
-					$categories = get_terms('category', 'hide_empty=0' ); 
+					$categories = get_terms('category', 'hide_empty=0' );
 					foreach ( $categories as $category ) {
 						$optionSelected=($headOfTeam==$category->term_id) ? "selected" : "";
 						$term = get_option( "taxonomy_" . $category->term_id );
@@ -367,7 +369,7 @@ function pippin_add_user_id_column($columns) {
 	}
 	return $new;
 }
- 
+
 add_action('manage_users_custom_column',  'pippin_show_user_id_column_content', 10, 3);
 function pippin_show_user_id_column_content($value, $column_name, $user_id) {
     $user = get_userdata( $user_id );
@@ -429,7 +431,7 @@ function oddi_settings_api_init() {
 	);
 	register_setting('general','featuredCategoryIDs');
 }
-	 
+
 add_action( 'admin_init', 'oddi_settings_api_init' );
 
 
@@ -437,13 +439,13 @@ add_action( 'admin_init', 'oddi_settings_api_init' );
 
 /*===================================================================================
  * ADD CATEGORY METADATA - http://php.quicoto.com/add-metadata-categories-wordpress/
- * We needed the ability to 
+ * We needed the ability to
  * =================================================================================*/
 
 
 function xg_edit_featured_category_field( $term ){
     $term_id = $term->term_id;
-    $term_meta = get_option( "taxonomy_$term_id" );         
+    $term_meta = get_option( "taxonomy_$term_id" );
 ?>
     <tr class="form-field">
         <th scope="row">
@@ -452,22 +454,22 @@ function xg_edit_featured_category_field( $term ){
             	<select name="term_meta[isTeamName]" id="term_meta[isTeamName]">
                 	<option value="0" <?=($term_meta['isTeamName'] == 0) ? 'selected': ''?>><?php echo _e('No'); ?></option>
                 	<option value="1" <?=($term_meta['isTeamName'] == 1) ? 'selected': ''?>><?php echo _e('Yes'); ?></option>
-            	</select>                   
+            	</select>
             </td>
         </th>
     </tr>
 <?php
-} 
-function xg_save_tax_meta( $term_id ){ 
+}
+function xg_save_tax_meta( $term_id ){
     if ( isset( $_POST['term_meta'] ) ) {
 		$term_meta = array();
 		$term_meta['isTeamName'] = isset ( $_POST['term_meta']['isTeamName'] ) ? intval( $_POST['term_meta']['isTeamName'] ) : '';
 		update_option( "taxonomy_$term_id", $term_meta );
-	} 
+	}
 } // save_tax_meta
-	
-add_action( 'category_edit_form_fields', 'xg_edit_featured_category_field' ); 
-add_action( 'edited_category', 'xg_save_tax_meta', 10, 2 ); 
+
+add_action( 'category_edit_form_fields', 'xg_edit_featured_category_field' );
+add_action( 'edited_category', 'xg_save_tax_meta', 10, 2 );
 
 
 /*===================================================================================
@@ -475,8 +477,8 @@ add_action( 'edited_category', 'xg_save_tax_meta', 10, 2 );
  * the next several functions are for adding that functionality and also making it available in wordpress settings
  * =================================================================================*/
 
-add_action('pre_get_posts', 'bbginnovate_query_offset', 1 ); 
-function bbginnovate_query_offset(&$query) {    
+add_action('pre_get_posts', 'bbginnovate_query_offset', 1 );
+function bbginnovate_query_offset(&$query) {
 	/* don't show in focus posts on homepage */
 	if ($query -> is_home()) {
 		$portfolio_cat_id=get_cat_id('Portfolio');
@@ -504,7 +506,7 @@ function bbginnovate_query_offset(&$query) {
 function custom_youtube_settings($code){
 	if(strpos($code, 'youtu.be') !== false || strpos($code, 'youtube.com') !== false){
 		//$return = preg_replace("@src=(['\"])?([^'\">\s]*)@", "src=$1$2&showinfo=0&rel=0&autohide=1", $code);
-		
+
 		//remove the width/height attributes
 		$return = preg_replace(
 			array('/width="\d+"/i', '/height="\d+"/i'),
