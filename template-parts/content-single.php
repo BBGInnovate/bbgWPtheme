@@ -105,7 +105,8 @@
 						echo "<h3>Users in Project:</h3> <ul>";
 						foreach ( $blogusers as $user ) {
 							$authorName = esc_html( $user->display_name );
-							$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+							//$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+							$authorUrl=get_author_posts_url( $user->ID,$user->user_nicename);
 							$authorOccupation = esc_html( $user->occupation );
 							echo "<li><a href='$authorUrl'>$authorName</a> - $authorOccupation</li>";
 						}
