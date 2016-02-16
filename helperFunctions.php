@@ -8,9 +8,11 @@
 		$twitterHandle = esc_html( $user->twitterHandle );
 		$authorDescription = esc_html( $user->description );
 		$theauthorid = esc_html( $user->ID );
+		$twitterLink = "";
+
+		//Disabling the website url for now
 		//$website = esc_html( $user->user_url );
 		$website = "";
-		$twitterLink = "";
 
 		$count = 0;
 		$number_of_posts = 3;
@@ -20,26 +22,18 @@
 	?>
 	<div <?php post_class("bbg-grid--1-1-1-2 bbg-staff__author "); ?>>
 
-<?php 
-
+		<?php 
 			if ($mode=="home") { 
 				//Not currently using this on the homepage.
-?>
+		?>
 
-
-
-
-
-
-
-
-<?php 
+		<?php 
 			//if you wanted a different view for staff
 			} elseif ($mode=="staff") { 
-?>
+		?>
 
 
-<div class="bbg-avatar__container">
+		<div class="bbg-avatar__container">
 			<a href="<?php echo $authorPath ?>">
 				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 			</a>
@@ -59,7 +53,7 @@
 				<?php 
 
 					/*
-					//Disabling the url for now
+					//Disabling the website url for now
 					if ( $website && $website != '' ) {
 						$website='<span class="sep"> // </span><a href="' . $website . '">' . $website . '</a>';
 					}
@@ -91,14 +85,9 @@
 					}
 				?>
 
-
 			<!-- .author-description -->
 		</div><!-- .bbg-author-text -->
 	</div>
 <?php
-		}	
+		}
 	}
-
-
-
-	
