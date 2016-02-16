@@ -10,10 +10,10 @@
 		$theauthorid = esc_html( $user->ID );
 		//$website = esc_html( $user->user_url );
 		$website = "";
+		$twitterLink = "";
 
 		$count = 0;
 		$number_of_posts = 3;
-
 
 		if ( $user->isActive=="on" ) {
 
@@ -28,21 +28,6 @@
 
 
 
-				<?php 
-					if ($user->headOfTeam != "") {
-						$category = get_category($user->headOfTeam);
-						$categoryUrl = "blog/category/".$category->category_nicename;
-						echo "<h2><a href='$categoryUrl'>$category->name</a></h2> <p>$category->description</p>";
-					}
-				?>
-
-
-
-
-		<div class="bbg-staff__author__text">
-			<p class="bbg-staff__author-name"><strong>Project lead: </strong><br/>
-				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a>
-			</p>
 
 
 
@@ -71,7 +56,6 @@
 			<?php } ?>
 
 
-				<div class="bbg-staff__author-description">
 					<?php 
 
 						/*
@@ -82,10 +66,12 @@
 						*/
 
 						if ( $twitterHandle && $twitterHandle != '' ) {
-							$twitterHandle=str_replace("@", "", $twitterHandle);
-							echo '<div class="bbg-staff__author__contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail .'</a><span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ' . $website .'</div>';
+							$twitterHandle = str_replace("@", "", $twitterHandle);
+							$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
 						}
+						echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . $twitterLink . $website .'</div>';
 					?>
+				<div class="bbg-staff__author-description">
 					<div class="bbg-staff__author-bio">
 						<?php echo $authorDescription; ?>
 					</div>
