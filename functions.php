@@ -93,9 +93,9 @@ add_action( 'after_setup_theme', 'bbginnovate_setup' );
 
 /* Add an html version of the site title */
 function bbginnovate_site_name_html(){
-	//$html_site_name = "Office of Digital <span class='u--no-wrap'>& Design Innovation</span>";
 	$html_site_name = get_bloginfo( 'name' );
 
+	//SITE_TITLE_MARKUP is defined in config_bbgWPtheme.php
 	if (defined('SITE_TITLE_MARKUP')) {
 		$html_site_name = SITE_TITLE_MARKUP;
 	}
