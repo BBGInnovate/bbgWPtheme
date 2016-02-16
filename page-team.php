@@ -41,7 +41,7 @@ get_header(); ?>
 				<section class="usa-section">
 					<?php $categoryLink=get_category_link( $teamCategoryID ); ?>
 
-					<h6 class="bbg-label small"><a href="<?php echo $categoryLink; ?>">Recent <?php echo $teamCategory->name; ?> posts</a></h6>
+					<h6 class="bbg-label small"><a href="<?php echo $categoryLink; ?>">Recent posts</a></h6>
 					<div class="bbg-grid__container">
 						<?php 
 							$qParams=array(
@@ -67,7 +67,7 @@ get_header(); ?>
 							}
 						?>
 					</div><!-- .bbg-grid__container -->
-					<a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>" style="display: block; clear: left;">Read more posts</a>
+					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?> posts</a>
 				</section>
 
 

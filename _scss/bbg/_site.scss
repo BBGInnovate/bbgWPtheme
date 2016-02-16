@@ -24,16 +24,17 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 
 	background-color: $color-secondary-darkest;
 	color: #FFF;
-	display: inline;
-	padding: 5px;
-
-	font-family: $font-sans;
-	font-size: 2rem;
-	font-weight: bold;
+	display: inline-block;
+	font: {
+		family: $font-sans;
+		size: 1.7rem;
+		weight: bold;
+	}
 	margin: {
 		top: 0;
 		bottom: 1rem;
 	};
+	padding: .5rem 1rem;
 	text-transform: uppercase;
 	
 	a {

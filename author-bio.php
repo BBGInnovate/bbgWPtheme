@@ -9,9 +9,10 @@
 
 /* ODDI CUSTOM: add twitter handle to bio */
 $twitterHandle = get_the_author_meta( 'twitterHandle' );
-$website = get_the_author_meta( 'user_url' );
 $occupation = get_the_author_meta( 'occupation' );
 $authorEmail = 	get_the_author_meta( 'user_email' );
+$website = get_the_author_meta( 'user_url' );
+$website = "";
 
 ?>
 
