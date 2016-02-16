@@ -56,21 +56,21 @@
 			<?php } ?>
 
 
-					<?php 
+				<?php 
 
-						/*
-						//Disabling the url for now
-						if ( $website && $website != '' ) {
-							$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-						}
-						*/
+					/*
+					//Disabling the url for now
+					if ( $website && $website != '' ) {
+						$website='<span class="sep"> // </span><a href="' . $website . '">' . $website . '</a>';
+					}
+					*/
 
-						if ( $twitterHandle && $twitterHandle != '' ) {
-							$twitterHandle = str_replace("@", "", $twitterHandle);
-							$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
-						}
-						echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . $twitterLink . $website .'</div>';
-					?>
+					if ( $twitterHandle && $twitterHandle != '' ) {
+						$twitterHandle = str_replace("@", "", $twitterHandle);
+						$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
+					}
+					echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink . $website .'</div>';
+				?>
 				<div class="bbg-staff__author-description">
 					<div class="bbg-staff__author-bio">
 						<?php echo $authorDescription; ?>
