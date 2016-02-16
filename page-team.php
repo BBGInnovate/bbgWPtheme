@@ -94,7 +94,7 @@ get_header(); ?>
 							else 
 							*/
 							//if ($counter <= 4) {
-								$gridClass = "bbg-grid--1-3-3";
+								$gridClass = "bbg-grid--1-2-3";
 								get_template_part( 'template-parts/content-portfolio', get_post_format() );
 							//}
 						}
