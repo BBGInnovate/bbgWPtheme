@@ -181,9 +181,16 @@ body:not(.home) .menu-all-pages-container {
 .bbg-page__header {
 	border-bottom: 1px solid #CCC;
 	margin: $site-margins 0;
-	padding-bottom: $site-margins;
+	padding: 0 $site-margins $site-margins $site-margins;
 }
 
+.bbg-page__header-title {
+	margin-bottom: 0;
+}
+
+.bbg-page__header-description {
+	//max-width: $article-max-width;
+}
 
 
 

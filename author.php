@@ -11,6 +11,7 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+			<div class="usa-grid-full">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -49,7 +50,7 @@ get_header(); ?>
 				<?php get_template_part( 'author-bio' ); ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
-
+			</div><!-- .usa-grid-full -->
 		</div>
 		<!-- #content -->
 	</section><!-- #primary .content-area -->

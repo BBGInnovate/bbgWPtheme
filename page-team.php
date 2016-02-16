@@ -24,7 +24,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="usa-grid">
+			<div class="usa-grid-full">
 
 				<header class="page-header bbg-page__header">
 					<div class="bbg-avatar__container bbg-team__icon">
@@ -38,7 +38,7 @@ get_header(); ?>
 
 
 
-				<section class="usa-section">
+				<section class="usa-section usa-grid">
 					<?php $categoryLink=get_category_link( $teamCategoryID ); ?>
 
 					<h6 class="bbg-label small"><a href="<?php echo $categoryLink; ?>">Recent posts</a></h6>
@@ -72,7 +72,7 @@ get_header(); ?>
 
 
 
-				<section class="usa-section">
+				<section class="usa-section usa-grid">
 					<h6 class="bbg-label small"><a href="<?php echo site_url(); ?>/portfolio"><?php echo $teamCategory->name; ?> projects</a></h6>
 					<div class="bbg-grid__container">
 					<?php 

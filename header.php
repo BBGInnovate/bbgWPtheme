@@ -168,7 +168,7 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 		?>
 
 		<div class="usa-bbg-site-branding">
-			<div id="header" class="usa-grid">
+			<div id="header" class="usa-grid-full">
 
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>

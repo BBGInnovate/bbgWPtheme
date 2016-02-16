@@ -3403,7 +3403,11 @@ body:not(.home) .menu-all-pages-container {
 .bbg-page__header {
   border-bottom: 1px solid #CCC;
   margin: 3rem 0;
-  padding-bottom: 3rem;
+  padding: 0 3rem 3rem 3rem;
+}
+
+.bbg-page__header-title {
+  margin-bottom: 0;
 }
 
 /*****************************/

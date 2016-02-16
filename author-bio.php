@@ -17,7 +17,7 @@ $website = "";
 ?>
 
 <div class="usa-section">
-	<div class="usa-grid">
+	<div class="usa-grid-full">
 
 
 		<header class="page-header bbg-page__header">
