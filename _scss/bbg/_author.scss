@@ -75,7 +75,10 @@
 
 .bbg-staff__author {
 	clear: left;
-	margin-bottom: 2rem;
+	margin-bottom: $site-margins;
+	@include media($medium-screen) {
+		margin-bottom: $site-margins*2;
+	}
 }
 
 .bbg-staff__author__text{
@@ -98,6 +101,9 @@
 	line-height: 1;
 	margin-bottom: .1rem;
 	margin-top: 1rem;
+	@include media($medium-large-screen) {
+		font-size: $h2-font-size;
+	}
 }
 
 .bbg-staff__author-occupation {

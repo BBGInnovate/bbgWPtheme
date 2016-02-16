@@ -2818,7 +2818,12 @@ fieldset {
 
 .bbg-staff__author {
   clear: left;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 600px) {
+  .bbg-staff__author {
+    margin-bottom: 6rem;
+  }
 }
 
 .bbg-staff__author__text {
@@ -2845,6 +2850,11 @@ fieldset {
   line-height: 1;
   margin-bottom: .1rem;
   margin-top: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .bbg-staff__author-name {
+    font-size: 3rem;
+  }
 }
 
 .bbg-staff__author-occupation {
