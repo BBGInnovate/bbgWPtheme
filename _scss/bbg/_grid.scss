@@ -17,7 +17,7 @@
 		clear:none;
 	}
 
-	.bbg-grid--1-2-3:nth-child(2n) {
+	.bbg-grid--1-2-3:nth-child(2n+1) {
 		clear: none;
 		margin-right: 2%;
 	}
