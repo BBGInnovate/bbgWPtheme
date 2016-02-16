@@ -18,20 +18,31 @@ get_header(); ?>
 				<?php get_template_part( 'author-bio' ); ?>
 
 
-				<?php /* Start the Loop */ ?>
+				<?php /* Start the Loop */ 
+					$counter=0;
+				?>
+				<div class="usa-grid">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<article class="usa-grid">
-					<?php
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content-excerpt', get_post_format() );
+
+
+					<?php 
+						$counter=$counter+1;
+						$gridClass = "";
+						if ($counter <= 2) {
+							$gridClass = "bbg-grid--1-2-2";
+							get_template_part( 'template-parts/content-portfolio', get_post_format() );
+						} else {
+							$gridClass = " ";
+							/*
+							 * Include the Post-Format-specific template for the content.
+							 */
+							get_template_part( 'template-parts/content-excerpt', get_post_format() );
+						}
+
 					?>
-					</article>
 				<?php endwhile; ?>
+				</div>
 
 
 			<?php else : ?>

@@ -21,6 +21,12 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 
 
 .bbg-label {
+
+	background-color: $color-secondary-darkest;
+	color: #FFF;
+	display: inline;
+	padding: 5px;
+
 	font-family: $font-sans;
 	font-size: 2rem;
 	font-weight: bold;
@@ -31,11 +37,19 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 	text-transform: uppercase;
 	
 	a {
-		color: $color-secondary-darkest;
+		color: #FFF;
 	}
 
 	@include media($medium-screen) {
+		background-color: transparent;
+		color: $color-secondary-darkest;
+		display: block;
 		font-size: 2.5rem;
+		padding: 0;
+
+		a {
+			color: $color-secondary-darkest;
+		}
 	}
 
 	&.small{
@@ -159,6 +173,17 @@ body:not(.home) .menu-all-pages-container {
 		left: 0;
 	width: 100%;
 }
+
+
+/*****************************/
+//page header styles
+.bbg-page__header {
+	border-bottom: 1px solid #CCC;
+	margin: $site-margins 0;
+	padding-bottom: $site-margins;
+}
+
+
 
 
 

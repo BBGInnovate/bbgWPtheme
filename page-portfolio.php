@@ -16,6 +16,16 @@ $qParams=array(
 query_posts($qParams);
 
 
+/*** SHARING VARS ****/
+/*
+$teamCategoryID=$_GET["cat"];
+$teamCategory=get_category($teamCategoryID);
+$portfolioDescription=$teamCategory->description; 
+*/
+$portfolioDescription="some portfolio description could go here based on the category description?"; 
+
+
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -25,7 +35,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label">Portfolio</h6>
+					<h1>Portfolio</h1>
 				</header><!-- .page-header -->
 
 				<?php 

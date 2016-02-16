@@ -26,7 +26,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="usa-grid">
 
-				<header class="page-header bbg-team__header">
+				<header class="page-header bbg-page__header">
 					<div class="bbg-avatar__container bbg-team__icon">
 						<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $teamCategory->category_nicename; ?>.png);"></div>
 					</div>
