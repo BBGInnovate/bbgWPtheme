@@ -12,14 +12,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
 
 <?php
-	
+
 	//the title/headline field, followed by the URL and the author's twitter handle
 	$twitterText= "";
 	$twitterText .= html_entity_decode(get_the_title());
 	$twitterHandle = get_the_author_meta( 'twitterHandle' );
 	$twitterHandle=str_replace("@", "", $twitterHandle);
 	if ( $twitterHandle && $twitterHandle != '' ) {
-		$twitterText .= " by @" . $twitterHandle; 
+		$twitterText .= " by @" . $twitterHandle;
 	} else {
 		$authorDisplayName=get_the_author();
 		if ($authorDisplayName && $authorDisplayName!='') {
@@ -82,13 +82,15 @@
 
 		<div class="entry-content bbg__article-content">
 			<?php the_content(); ?>
+
 			<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bbginnovate' ),
 					'after'  => '</div>',
 				) );
 			?>
-			<?php 
+
+			<?php
 				$usersInProjectStr=get_post_meta( get_the_ID(), 'users_in_project', true );
 				if ( $usersInProjectStr != "") {
 					//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
@@ -107,14 +109,14 @@
 							echo "<li><a href='$authorUrl'>$authorName</a> - $authorOccupation</li>";
 						}
 						echo "</ul>";
-					} 
-						
+					}
+
 				}
 			?>
 		</div><!-- .entry-content -->
 	</div><!-- .usa-grid -->
 
-	<footer class="entry-footer bbg__article-footer">
+	<!-- <footer class="entry-footer bbg__article-footer">
 		<?php bbginnovate_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer> --><!-- .entry-footer -->
 </article><!-- #post-## -->

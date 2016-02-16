@@ -67,3 +67,16 @@
          url('../fonts/Lato-BoldItalic.ttf') format('truetype');
 
 }
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/merriweather-bold-italic-webfont.eot');
+    src: url('../fonts/merriweather-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/merriweather-bold-italic-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-italic-webfont.woff') format('woff'),
+         url('../fonts/merriweather-bold-italic-webfont.ttf') format('truetype'),
+         url('../fonts/merriweather-bold-italic-webfont.svg#source_sans_probold') format('svg');
+
+}

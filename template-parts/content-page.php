@@ -34,7 +34,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer bbg-post-footer">
+	<footer class="entry-footer bbg-post-footer 1234">
 		<?php
 			edit_post_link(
 				sprintf(
