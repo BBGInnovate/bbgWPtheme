@@ -16,6 +16,16 @@ $qParams=array(
 query_posts($qParams);
 
 
+/*** SHARING VARS ****/
+/*
+$teamCategoryID=$_GET["cat"];
+$teamCategory=get_category($teamCategoryID);
+$portfolioDescription=$teamCategory->description; 
+*/
+$portfolioDescription="some portfolio description could go here based on the category description?"; 
+
+
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -25,7 +35,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label">Portfolio</h6>
+					<h1>Portfolio</h1>
 				</header><!-- .page-header -->
 
 				<?php 
@@ -35,12 +45,14 @@ get_header(); ?>
 						$counter=$counter+1;
 						if ($counter == 1) {
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
+							echo '<div class="usa-grid-full">';
 						} 
 						else if ($counter <= $maxPostsToShow) {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
+					echo '</div><!-- .usa-grid-full -->';
 					the_posts_navigation(); 
 				?>
 

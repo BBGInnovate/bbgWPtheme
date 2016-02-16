@@ -17,8 +17,8 @@ $ogTitle=$teamCategory->name . " team page";
 $ogDescription=$teamCategory->description; 
 /*** END SHARING VARS ****/
 
-$numPortfolioPostsToShow=4;
-$numBlogPostsToShow=4;
+$numPortfolioPostsToShow=9;
+$numBlogPostsToShow=2;
 
 get_header(); ?>
 
@@ -26,7 +26,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="usa-grid">
 
-				<header class="page-header bbg-team__header">
+				<header class="page-header bbg-page__header">
 					<div class="bbg-avatar__container bbg-team__icon">
 						<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $teamCategory->category_nicename; ?>.png);"></div>
 					</div>
@@ -39,7 +39,9 @@ get_header(); ?>
 
 
 				<section class="usa-section">
-					<h6 class="bbg-label small"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent <?php echo $teamCategory->name; ?> posts</a></h6>
+					<?php $categoryLink=get_category_link( $teamCategoryID ); ?>
+
+					<h6 class="bbg-label small"><a href="<?php echo $categoryLink; ?>">Recent <?php echo $teamCategory->name; ?> posts</a></h6>
 					<div class="bbg-grid__container">
 						<?php 
 							$qParams=array(
@@ -55,23 +57,23 @@ get_header(); ?>
 								the_post();
 								$counter=$counter+1;
 								$gridClass = "";
-								if ($counter <= 2) {
+								//if ($counter <= 2) {
 									$gridClass = "bbg-grid--1-2-2";
-									get_template_part( 'template-parts/content-portfolio', get_post_format() );
-								} else {
-									$gridClass = " ";
 									get_template_part( 'template-parts/content-excerpt', get_post_format() );
-								}
+								/*} else {
+									$gridClass = " ";
+									get_template_part( 'template-parts/content-portfolio', get_post_format() );
+								}*/
 							}
 						?>
 					</div><!-- .bbg-grid__container -->
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>" style="display: block; clear: left;">Read more posts</a>
 				</section>
 
 
 
 				<section class="usa-section">
-					<h6 class="bbg-label small"><a href="<?php echo site_url(); ?>/portfolio">Portfolio</a></h6>
+					<h6 class="bbg-label small"><a href="<?php echo site_url(); ?>/portfolio"><?php echo $teamCategory->name; ?> projects</a></h6>
 					<div class="bbg-grid__container">
 					<?php 
 						$qParams=array(
@@ -92,13 +94,13 @@ get_header(); ?>
 							else 
 							*/
 							//if ($counter <= 4) {
-								$gridClass = "bbg-grid--1-3-3";
+								$gridClass = "bbg-grid--1-2-3";
 								get_template_part( 'template-parts/content-portfolio', get_post_format() );
 							//}
 						}
 					?>
 					</div><!--.bbg-grid__containter -->
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
 				</section>
 
 			</div><!-- .usa-grid -->

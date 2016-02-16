@@ -1,3 +1,4 @@
+/*
 .bbg-staff__author {
 	margin-bottom: 2rem;
 	@include clearfix();
@@ -5,6 +6,7 @@
 		margin-bottom: $site-margins * 1.5;
 	}
 }
+*/
 
 .bbg-avatar__container {
 	margin: 0 auto;
@@ -53,14 +55,14 @@
 
 .bbg-team__icon {
 	border-radius: 50%;
-	height: 100px;
+	height: $bbg-team__icon-width;
 	margin: 0 auto;
-	width: 100px;
+	width: $bbg-team__icon-width;
 }
 
 .bbg-team__text {
 	@include media($medium-screen) {
-		padding-left: 110px;
+		padding-left: $bbg-team__icon-width + 10px;
 	}
 }
 
@@ -77,19 +79,13 @@
 	max-width: $article-max-width;
 }
 
-.bbg-team__header {
-	border-bottom: 1px solid #CCC;
-	margin: $site-margins 0;
-	padding-bottom: $site-margins;
-}
-
-
 
 
 .bbg-staff__author__text{
 	width: 100%;
+	max-width: $article-max-width;
 	@include media($medium-screen) {
-		padding-left: $bbg-avatar-width-percentage + 3%;
+		padding-left: $bbg-team__icon-width + 10px;
 	}
 }
 
@@ -104,9 +100,11 @@
 	clear: none;
 	margin-bottom: .1rem;
 	margin-top: 1rem;
+	/*
 	@include media($large-screen) {
 		font-size: 2rem;
 	}
+	*/
 }
 
 .bbg-staff__author-occupation {

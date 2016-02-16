@@ -19,13 +19,13 @@ $authorEmail = 	get_the_author_meta( 'user_email' );
 	<div class="usa-grid">
 
 
-		<div class="bbg-staff__author">
-			<div class="bbg-avatar__container">
+		<header class="page-header bbg-page__header">
+			<div class="bbg-avatar__container bbg-team__icon">
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
 			</div>
 
 			<div class="bbg-staff__author__text">
-				<h2 class="bbg-staff__author-name"><?php printf( '%s', get_the_author() ); ?></h2>
+				<h1 class="bbg-staff__author-name"><?php printf( '%s', get_the_author() ); ?></h1>
 
 				<div class="bbg-staff__author-description">
 
@@ -55,7 +55,7 @@ $authorEmail = 	get_the_author_meta( 'user_email' );
 					<div class='clearAll'></div>
 				</div><!-- .author-description -->
 			</div><!-- .bbg-author-text -->
-		</div><!-- .bbg-staff__author -->
+		</header><!-- .bbg-page__header -->
 
 
 	</div><!-- .usa-grid -->

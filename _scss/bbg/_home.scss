@@ -43,8 +43,10 @@
 
 		.bbg-banner-site-title{
 			color: #FFF;
-			font-family: $font-sans !important;
-			font-size: $h1-font-size * .8;
+			font: {
+				family: $font-sans !important;
+				size: $h1-font-size * .8;
+			}
 			line-height: 1;
 			margin-bottom: 5px;
 			max-width: $site-max-width;
@@ -64,9 +66,9 @@
 			color: #FFF;
 			display: inline-block;
 			margin: {
-				left: -$grid-margins;
-				right: 0;
 				top: 0;
+				right: 0;
+				left: -$grid-margins;
 			}
 			padding: 10px $site-margins 10px $grid-margins;
 			text-transform: uppercase;

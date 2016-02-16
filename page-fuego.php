@@ -34,7 +34,6 @@ get_header();
 				$linkDetailID = $_GET['linkID'];
 			} 
 			$items = $fuego->getItems(20, 24, FALSE, TRUE, 2, $linkDetailID); // quantity, hours, scoring, metadata
-			
 			$counter=0;
 
 			function twitterify($ret) {
@@ -176,11 +175,13 @@ get_header();
 						}
 
 						$image ='';
+						$image = $item['remoteImage'];
+						/*
 						if ( isset ($item['localImage'] ) ) {
 							//$image=$m['thumbnail_url'];
 							$image = $item['localImage'];
 							$image = str_replace('/var/www/wordpress/','/',$image);
-						}
+						}*/
 						if ( $image != '' ) {
 							if ($m['thumbnail_width'] <= $imageSizeMax && $m['thumbnail_height'] <= $imageSizeMax && $m['thumbnail_width'] >= $imageSizeMin){
 								$imageSize = true;
@@ -259,12 +260,11 @@ get_header();
 						</header>
 						<div class='bbg-fuego__article-content bbg-fuego__article__twitter-conversation'>
 							<a href='https://twitter.com/<?php echo $author; ?>' target='_blank'>
-								<div class='twitterProfilePhoto' style='background-image:url(<?php echo $twitterImage ?>)'>
-									<img src='../wp-content/images/transparentSquare.png'>
+								<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $twitterImage ?>);'>
 								</div>
 							</a>
-							<div class='tweetAuthor'>
-								<p class='tweetAuthorName'>
+							<div class='bbg-fuego__twitter__author'>
+								<p class='bbg-fuego__twitter__author-name'>
 									<?php echo $authorDisplayName; ?>
 								</p>
 								<p style='display: block; margin-bottom:0;'>
@@ -272,23 +272,22 @@ get_header();
 								</p>
 							</div>
 							<div class='clearAll'></div>
-							<div class='tweet' style=''>
+							<div class='bbg-fuego__twitter__tweet'>
 								<?php echo $desc; ?>
 								<?php /* echo preg_replace($pattern, $replacement, $desc);  */ ?>
 							</div>
 
 							<div class='clearAll'></div>
 
-							<div class='quotedTweet'>
+							<div class='bbg-fuego__twitter__quoted-tweet'>
 								<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
-									<div class='twitterProfilePhoto' style='background-image:url(<?php echo $quoteMakerImage; ?>)' >
-										<img src='../wp-content/images/transparentSquare.png'>
+									<div class='bbg-fuego__twitter-photo' style='background-image:url(<?php echo $quoteMakerImage; ?>)' >
 									</div>
 								</a>
-								<div class='quoteMaker'>
-									<p class='quoteMakerName'><?php echo $quoteMakerName; ?> </p>
+								<div class='bbg-fuego__twitter__quote'>
+									<p class='bbg-fuego__twitter__author-name'><?php echo $quoteMakerName; ?> </p>
 									<?php if ($quoteMakerHandle != ""): ?>
-									<p>
+									<p class="bbg-fuego__twitter__quote-text">
 										<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
 											@<?php echo $quoteMakerHandle; ?>
 										</a>

@@ -8,7 +8,8 @@
 		$twitterHandle = esc_html( $user->twitterHandle );
 		$authorDescription = esc_html( $user->description );
 		$theauthorid = esc_html( $user->ID );
-		$website = esc_html( $user->user_url );
+		//$website = esc_html( $user->user_url );
+		$website = "";
 
 		$count = 0;
 		$number_of_posts = 3;
@@ -73,9 +74,12 @@
 				<div class="bbg-staff__author-description">
 					<?php 
 
+						/*
+						//Disabling the url for now
 						if ( $website && $website != '' ) {
 							$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
 						}
+						*/
 
 						if ( $twitterHandle && $twitterHandle != '' ) {
 							$twitterHandle=str_replace("@", "", $twitterHandle);

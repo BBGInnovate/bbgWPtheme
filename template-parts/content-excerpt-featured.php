@@ -28,6 +28,11 @@
 
 		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
+
+		<div class="entry-meta bbg__excerpt-meta--featured">
+			<?php bbginnovate_posted_on(); ?>
+		</div><!-- .entry-meta -->
+
 	</header><!-- .bbg-blog__excerpt-header--featured -->
 
 	<div class="entry-content bbg-blog__excerpt-content--featured">

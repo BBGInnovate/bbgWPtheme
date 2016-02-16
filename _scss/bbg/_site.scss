@@ -13,7 +13,7 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 	text-decoration: none;
 }
 */
-
+ 
 .bbg-site-branding {
 	margin-bottom: $site-margins;
 }
@@ -21,21 +21,35 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 
 
 .bbg-label {
+
+	background-color: $color-secondary-darkest;
+	color: #FFF;
+	display: inline;
+	padding: 5px;
+
 	font-family: $font-sans;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	margin: {
-		bottom: 1rem;
 		top: 0;
+		bottom: 1rem;
 	};
 	text-transform: uppercase;
 	
 	a {
-		color: $color-secondary-darkest;
+		color: #FFF;
 	}
 
 	@include media($medium-screen) {
-		font-size: 3.5rem;
+		background-color: transparent;
+		color: $color-secondary-darkest;
+		display: block;
+		font-size: 2.5rem;
+		padding: 0;
+
+		a {
+			color: $color-secondary-darkest;
+		}
 	}
 
 	&.small{
@@ -55,7 +69,7 @@ article {
 	background: #CCC url(img/logo-agency-square.png) no-repeat center center / cover;
 	display: inline-block;
 	height: 2.5rem * 1.2;
-	margin-right: 10px;
+	margin-right: 1rem;
 	vertical-align: middle;
 	width: 2.5rem * 1.2;
 
@@ -85,23 +99,25 @@ body:not(.home) .menu-all-pages-container {
 		font-size: 4rem;
 	}
 
-		a {
-			color: $color-base;
-		}
+	a {
+		color: $color-base;
+	}
 
-		a:hover {
-			text-decoration: none;
-		}
+	a:hover {
+		text-decoration: none;
+	}
 
-		a:focus {
-			box-shadow: none;
-		}
+	a:focus {
+		box-shadow: none;
+	}
 }
 
 .usa-heading-site-description{
-	font-family: $font-sans;
-	font-size: 1.5rem;
-	font-weight: $font-normal;
+	font: {
+		family: $font-sans;
+		size: 1.5rem;
+		weight: $font-normal;
+	}
 	margin-top: 0;
 	text-transform: uppercase;
 
@@ -115,8 +131,10 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .usa-font-lead {
-	font-size: $lead-font-size * .8;
-	font-weight: 300;
+	font: {
+		size: $lead-font-size * .8;
+		weight: 300;
+	}
 
 	@include media($medium-screen) {
 		font-size: $lead-font-size;
@@ -126,8 +144,10 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-continue {
 	a {
-		font-family: $font-sans;
-		font-weight: 700;
+		font: {
+			family: $font-sans;
+			weight: 700;
+		}
 		text-transform: uppercase;
 		font-size: .9em;
 	}
@@ -149,10 +169,21 @@ body:not(.home) .menu-all-pages-container {
 .embed-container embed {
 	height: 100%;
 	position: absolute;
-		left: 0;
 		top: 0; 
+		left: 0;
 	width: 100%;
 }
+
+
+/*****************************/
+//page header styles
+.bbg-page__header {
+	border-bottom: 1px solid #CCC;
+	margin: $site-margins 0;
+	padding-bottom: $site-margins;
+}
+
+
 
 
 
@@ -160,8 +191,14 @@ body:not(.home) .menu-all-pages-container {
 /*****************************/
 // Excerpt styles 
 .bbg__excerpt-meta {
-	font-family: $font-serif;
-	font-style: italic;
+	font: {
+		family: $font-serif;
+		style: italic;
+	}
+}
+
+.bbg__excerpt-meta--featured {
+	margin-bottom: $site-margins *.5;
 }
 
 .bbg-blog__excerpt-title--featured {
