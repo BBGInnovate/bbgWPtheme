@@ -556,7 +556,7 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 endif;
 
 
-if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
+if ( ! function_exists( 'bbg_first_sentence_excerpt' ) ):
 	/**
 	 * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
 	 * Based on same function from the independent publisher theme http://independentpublisher.me/
@@ -610,6 +610,6 @@ if ( ! function_exists( 'independent_publisher_first_sentence_excerpt' ) ):
 	}
 endif;
 
-add_filter( 'the_excerpt', 'bbg_first_sentence_excerpt' );
+add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 
 ?>
