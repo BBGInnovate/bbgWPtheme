@@ -35,12 +35,14 @@ get_header(); ?>
 						$counter=$counter+1;
 						if ($counter == 1) {
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
+							echo '<div class="usa-grid-full">';
 						} 
 						else if ($counter <= $maxPostsToShow) {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
+					echo '</div><!-- .usa-grid-full -->';
 					the_posts_navigation(); 
 				?>
 
