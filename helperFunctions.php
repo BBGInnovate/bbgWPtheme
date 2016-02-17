@@ -34,9 +34,14 @@
 
 
 		<div class="bbg-avatar__container">
-			<a href="<?php echo $authorPath ?>">
-				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
-			</a>
+			<?php if ($mode != "staff" || $postCounts[$user->ID] > 0): ?>
+				<a href="<?php echo $authorPath ?>">
+					<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
+				</a>
+			<?php else: 
+				echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) );
+				endif;
+			?>
 		</div>
 
 		<div class="bbg-staff__author__text">
