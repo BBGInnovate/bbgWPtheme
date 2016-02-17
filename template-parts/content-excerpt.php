@@ -8,11 +8,26 @@
  */
 
 
+//You can set the grid and breakpoints
 global $gridClass;
-if ( empty ($gridClass)) {
+if (! isset ($gridClass)) {
 	$gridClass="";
 }
 $classNames="bbg-blog__excerpt ".$gridClass;
+
+//The image is included by default 
+global $includeImage;
+if (! isset ($includeImage)) {
+	$includeImage=TRUE;
+}
+
+//The byline meta info is displayed by default 
+global $includeMeta;
+if (! isset ($includeMeta)) {
+	$includeMeta=TRUE;
+}
+
+$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 ?>
 
 
@@ -20,12 +35,35 @@ $classNames="bbg-blog__excerpt ".$gridClass;
 <article id="post-<?php the_ID(); ?>" <?php post_class($classNames); ?> >
 	<header class="entry-header bbg-blog__excerpt-header">
 
+		<?php if ($includeImage) { ?>
+		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--medium">
+			<?php
+				echo $link;
+
+				/* Set a default thumbnail image in case one isn't set */
+				$thumbnail = '<img src="' . get_template_directory_uri() . '/img/portfolio-project-default.png" alt="This is a default image." />';
+
+				if (has_post_thumbnail()) {
+					$thumbnail = the_post_thumbnail('medium-thumb');
+				}
+				echo $thumbnail;
+			?>
+			</a>
+		</div>
+		<?php } ?>
+
+
 		<?php the_title( sprintf( '<h3 class="entry-title bbg-blog__excerpt-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
+
+
+		<?php if ($includeMeta) { ?>
 		<div class="entry-meta bbg__excerpt-meta">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php } ?>
+
 		<?php endif; ?>
 
 	</header><!-- .bbg-blog__excerpt-header -->
@@ -33,12 +71,6 @@ $classNames="bbg-blog__excerpt ".$gridClass;
 	<div class="entry-content bbg-blog__excerpt-content">
 		<?php
 			the_excerpt();
-			/*			
-			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bbginnovate' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-			*/
 		?>
 
 		<?php

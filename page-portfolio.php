@@ -44,7 +44,7 @@ get_header(); ?>
 						the_post();
 						$counter=$counter+1;
 						if ($counter == 1) {
-							$includeMeta = FALSE;
+							$includeMetaFeatured = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							echo '<div class="usa-grid-full">';
 						} 

@@ -11,7 +11,7 @@
 
 
 global $gridClass;
-if ( empty ($gridClass)) {
+if (! isset ($gridClass)) {
 	$gridClass="bbg-grid--1-2-2";
 }
 $classNames="bbg-portfolio__excerpt ".$gridClass;

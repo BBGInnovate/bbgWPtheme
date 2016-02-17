@@ -52,18 +52,12 @@ get_header(); ?>
 							);
 							query_posts($qParams);
 
-							$counter=0;
 							while ( have_posts() )  {
 								the_post();
-								$counter=$counter+1;
-								$gridClass = "";
-								//if ($counter <= 2) {
-									$gridClass = "bbg-grid--1-2-2";
-									get_template_part( 'template-parts/content-excerpt', get_post_format() );
-								/*} else {
-									$gridClass = " ";
-									get_template_part( 'template-parts/content-portfolio', get_post_format() );
-								}*/
+
+								$gridClass = "bbg-grid--1-2-2";
+								$includeImage = FALSE;
+								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 							}
 						?>
 					</div><!-- .bbg-grid__container -->
@@ -86,17 +80,9 @@ get_header(); ?>
 						$counter=0;
 						while ( have_posts() )  {
 							the_post();
-							$counter=$counter+1;
-							/*
-							if ($counter == 1) {
-								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
-							} 
-							else 
-							*/
-							//if ($counter <= 4) {
-								$gridClass = "bbg-grid--1-2-3";
-								get_template_part( 'template-parts/content-portfolio', get_post_format() );
-							//}
+
+							$gridClass = "bbg-grid--1-2-3";
+							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					?>
 					</div><!--.bbg-grid__containter -->

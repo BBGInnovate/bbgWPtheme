@@ -9,9 +9,9 @@
  */
 
 //The byline meta info is displayed by default 
-global $includeMeta;
-if ( is_null ($includeMeta)) {
-	$includeMeta=TRUE;
+global $includeMetaFeatured;
+if (! isset ($includeMeta)) {
+	$includeMetaFeatured=TRUE;
 }
 ?>
 
@@ -34,7 +34,7 @@ if ( is_null ($includeMeta)) {
 		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 
-		<?php if ($includeMeta){ ?>
+		<?php if ($includeMetaFeatured){ ?>
 		<div class="entry-meta bbg__excerpt-meta bbg__excerpt-meta--featured">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
