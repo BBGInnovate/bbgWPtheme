@@ -88,11 +88,12 @@ body:not(.home) .menu-all-pages-container {
 	min-height: 5rem;
 }
 
-.usa-heading-site-title {
+.bbg-heading-site-title {
 	border-bottom: 1px solid #CCC;
 	font-size: 2.5rem;
 	font-family: $font-sans !important;
 	line-height: 1;
+	margin-bottom: 0;
 
 	@include media($medium-screen) {
 		font-size: 4rem;
@@ -111,7 +112,7 @@ body:not(.home) .menu-all-pages-container {
 	}
 }
 
-.usa-heading-site-description{
+.bbg-heading-site-description{
 	font: {
 		family: $font-sans;
 		size: 1.5rem;
@@ -178,8 +179,8 @@ body:not(.home) .menu-all-pages-container {
 //page header styles
 .bbg-page__header {
 	border-bottom: 1px solid #CCC;
-	margin: $site-margins 0;
-	padding: 0 $site-margins $site-margins $site-margins;
+	margin: 0 0 $site-margins 0;
+	padding: $site-margins;
 }
 
 .bbg-page__header-title {
