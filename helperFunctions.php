@@ -20,7 +20,7 @@
 		if ( $user->isActive=="on" ) {
 
 	?>
-	<div <?php post_class("bbg-grid--1-1-1-2 bbg-staff__author "); ?>>
+	<div <?php post_class("bbg-grid--1-2-3 bbg-staff__author "); ?>>
 
 		<?php 
 			if ($mode=="home") { 
