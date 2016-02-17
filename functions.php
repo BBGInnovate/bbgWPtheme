@@ -287,6 +287,23 @@ function change_avatar_css($class) {
 	return $class;
 }
 
+
+/**
+* Removing labels from archive.php pages (e.g. "Category: XYZ")
+*/
+add_filter( 'get_the_archive_title', function ($title) {
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+		$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+	}
+	return $title;
+});
+
+
+
 /**
  * Add non-standard metadata to author
  * Reference: http://justintadlock.com/archives/2009/09/10/adding-and-using-custom-user-profile-fields
