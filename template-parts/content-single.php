@@ -42,7 +42,8 @@
 
 		<header class="entry-header bbg__article-header">
 		<?php
-			if (has_post_thumbnail()) {
+			$hideFeaturedImage=get_post_meta(get_the_ID(), "hide_featured_image", true);
+			if (has_post_thumbnail() && ($hideFeaturedImage != 1)) {
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				echo the_post_thumbnail('large-thumb');
 				echo '</div>';
@@ -104,7 +105,8 @@
 						echo "<h3>Users in Project:</h3> <ul>";
 						foreach ( $blogusers as $user ) {
 							$authorName = esc_html( $user->display_name );
-							$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+							//$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
+							$authorUrl=get_author_posts_url( $user->ID,$user->user_nicename);
 							$authorOccupation = esc_html( $user->occupation );
 							echo "<li><a href='$authorUrl'>$authorName</a> - $authorOccupation</li>";
 						}

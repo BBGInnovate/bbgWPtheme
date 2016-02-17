@@ -14,8 +14,13 @@ get_header();
 <div id="main" class="site-main">
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
-			<section class="usa-section usa-grid">
-				<h1>STAFF</h1>
+			<section class="usa-section usa-grid-full">
+				<header class="bbg-page__header usa-grid">
+					<h1 class="bbg-page__header-title">STAFF</h1>
+					<div class="usa-intro bbg-page__header-description">
+						<h3 class="usa-font-lead">ODDI's designers, developers and storytellers help drive USIM digital projects.</h3>
+					</div>
+				</header>
 				<div class="usa-grid">
 					<?php
 						$blogusers = get_users();

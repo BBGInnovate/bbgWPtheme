@@ -93,9 +93,12 @@ add_action( 'after_setup_theme', 'bbginnovate_setup' );
 
 /* Add an html version of the site title */
 function bbginnovate_site_name_html(){
-	//$html_site_name = bloginfo( 'name' ); //This is the default
-	//<?php echo html_entity_decode(get_bloginfo('name')); //This works if you include tags in the WP title setting
-	$html_site_name = "Office of Digital <span class='u--no-wrap'>& Design Innovation</span>";
+	$html_site_name = get_bloginfo( 'name' );
+
+	//SITE_TITLE_MARKUP is defined in config_bbgWPtheme.php
+	if (defined('SITE_TITLE_MARKUP')) {
+		$html_site_name = SITE_TITLE_MARKUP;
+	}
 	return $html_site_name;
 }
 
@@ -551,4 +554,62 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 		return $output;
 	}
 endif;
+
+
+if ( ! function_exists( 'bbg_first_sentence_excerpt' ) ):
+	/**
+	 * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
+	 * Based on same function from the independent publisher theme http://independentpublisher.me/
+	 */
+	function bbg_first_sentence_excerpt( $text = '' ) {
+		global $post;
+		$content_post = get_post( $post->ID );
+
+		// Only generate a one-sentence excerpt if there is no excerpt set and One Sentence Excerpts is enabled
+		if ( ! $content_post->post_excerpt ) {
+
+			// The following mimics the functionality of wp_trim_excerpt() in wp-includes/formatting.php
+			// and ensures that no shortcodes or embed URLs are included in our generated excerpt.
+			$text           = get_the_content( '' );
+			$text           = strip_shortcodes( $text );
+			$text           = apply_filters( 'the_content', $text );
+			$text           = str_replace( ']]>', ']]&gt;', $text );
+			$excerpt_length = 150; // Something long enough that we're likely to get a full sentence.
+			$excerpt_more   = ''; // Not used, but included here for clarity
+
+			$startIndex=0;
+
+			$firstP_openPosition = strpos( $text, "<p" );
+			if ( $firstP_openPosition !== false ) {
+				$firstP_closePosition = strpos( $text, ">", $firstP_openPosition );
+				if ( $firstP_closePosition !== false ) {
+					$startIndex = $firstP_closePosition +1;
+				}
+			}
+			$endIndex=strpos($text, "</p>")+4;
+			$strLength=$endIndex-$startIndex;
+			$text = substr($text, $startIndex, $strLength);
+			$text='<p>' . strip_tags($text) . '</p>';
+			/*** ODDI CUSTOM - REMOVE ONE SENTENCE LOGIC
+			$text           = wp_trim_words( $text, $excerpt_length, $excerpt_more ); // See wp_trim_words() in wp-includes/formatting.php
+
+			// Get the first sentence
+			// This looks for three punctuation characters: . (period), ! (exclamation), or ? (question mark), followed by a space
+			$strings = preg_split( '/(\.|!|\?)\s/', strip_tags( $text ), 2, PREG_SPLIT_DELIM_CAPTURE );
+
+			// $strings[0] is the first sentence and $strings[1] is the punctuation character at the end
+			if ( ! empty( $strings[0] ) && ! empty( $strings[1] ) ) {
+				$text = $strings[0] . $strings[1];
+			}
+
+			$text = wpautop( $text );
+			****/
+		}
+
+		return $text;
+	}
+endif;
+
+add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
+
 ?>

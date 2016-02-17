@@ -21,3 +21,12 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+@mixin hide-text {
+	font: 0px/0 a;
+  	text-shadow: none;
+  	color: transparent;
+    overflow: hidden;
+    text-indent: -9000px;
+    display: block;
+}

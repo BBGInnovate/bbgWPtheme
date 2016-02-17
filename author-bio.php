@@ -9,14 +9,41 @@
 
 /* ODDI CUSTOM: add twitter handle to bio */
 $twitterHandle = get_the_author_meta( 'twitterHandle' );
-$website = get_the_author_meta( 'user_url' );
 $occupation = get_the_author_meta( 'occupation' );
 $authorEmail = 	get_the_author_meta( 'user_email' );
+$website = get_the_author_meta( 'user_url' );
+$website = "";
+
+$authorID=get_the_author_meta( 'ID');
+
+$qParams=array(
+	'post_type' => array('post'),
+	'posts_per_page' => 3,
+	'orderby' => 'post_date',
+	'order' => 'desc',
+	'cat' => get_cat_id('Portfolio')
+);
+query_posts($qParams);
+$projectIDs= array();
+if ( have_posts() ) :
+	while ( have_posts() ) : the_post();
+		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true );
+		//echo "project " . get_the_ID() . " has users " . $usersInProjectStr;
+		if (strpos($usersInProjectStr,",$authorID")) {
+			array_push($projectIDs, get_the_ID());
+		}
+	endwhile;
+endif;
+wp_reset_query();
+foreach ($projectIDs as $projectID) {
+	echo "member of projectID " . $projectID . "<BR>";
+}
+
 
 ?>
 
 <div class="usa-section">
-	<div class="usa-grid">
+	<div class="usa-grid-full">
 
 
 		<header class="page-header bbg-page__header">

@@ -6,6 +6,6 @@ define("DEFAULT_IMAGE", site_url() . "/wp-content/themes/bbginnovate/img/logo-ag
 define("DEFAULT_TITLE",get_bloginfo('name'));
 define("DEFAULT_AUTHOR","");
 define("DEFAULT_KEYWORDS","");
-	
+define("SITE_TITLE_MARKUP","Office of Digital <span class='u--no-wrap'>& Design Innovation</span>");
 
 ?>

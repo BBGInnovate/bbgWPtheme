@@ -1,26 +1,17 @@
-/*
-.bbg-staff__author {
-	margin-bottom: 2rem;
-	@include clearfix();
-	@include media($medium-screen) {
-		margin-bottom: $site-margins * 1.5;
-	}
-}
-*/
 
 .bbg-avatar__container {
 	margin: 0 auto;
 	max-width: $bbg-avatar-width;
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		float: left;
 		margin: 0 1rem .5rem 0;
-		width: $bbg-avatar-width-percentage;
+		width: $bbg-team__icon-width;
 	}
 }
 .bbg-avatar__container--small {
 	margin: 0 auto;
 	max-width: 50px;
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		float: left;
 		margin: 0 1rem .5rem 0;
 		width: 20%;
@@ -32,7 +23,7 @@
 	border-radius: 50%;
 	display: block;
 	margin: 0 auto;
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		height: 100%;
 		width: 100%;
 	}
@@ -48,7 +39,7 @@
 	clear: none;
 	margin-bottom: 0;
 	text-align: center;
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		text-align: left;
 	}
 }
@@ -61,7 +52,7 @@
 }
 
 .bbg-team__text {
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		padding-left: $bbg-team__icon-width + 10px;
 	}
 }
@@ -81,36 +72,61 @@
 
 
 
+
+.bbg-staff__author {
+	clear: left;
+	margin-bottom: $site-margins;
+	@include media($medium-screen) {
+		margin-bottom: $site-margins*2;
+	}
+}
+
 .bbg-staff__author__text{
 	width: 100%;
 	max-width: $article-max-width;
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		padding-left: $bbg-team__icon-width + 10px;
 	}
 }
 
 .bbg-staff__author__text > * {
 	text-align: center; 
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		text-align: left; 
 	}
 }
 
 .bbg-staff__author-name{
 	clear: none;
+	line-height: 1;
 	margin-bottom: .1rem;
 	margin-top: 1rem;
-	/*
-	@include media($large-screen) {
-		font-size: 2rem;
+	@include media($medium-large-screen) {
+		font-size: $h2-font-size;
 	}
-	*/
 }
 
 .bbg-staff__author-occupation {
 	text-transform: uppercase;
+	@include media($medium-screen) {
+		display: inline-block;
+	}
+	:after {
+		content: " // ";
+	}
 }
 
-.bbg-staff__author__contact {
+.bbg-staff__author-occupation:after {
+	@include media($medium-screen) {
+		content: " // ";
+	}
+}
+
+
+
+.bbg-staff__author-contact {
 	margin-bottom: 1rem;
+	@include media($medium-screen) {
+		display: inline-block;
+	}
 }

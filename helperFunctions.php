@@ -8,53 +8,32 @@
 		$twitterHandle = esc_html( $user->twitterHandle );
 		$authorDescription = esc_html( $user->description );
 		$theauthorid = esc_html( $user->ID );
+		$twitterLink = "";
+
+		//Disabling the website url for now
 		//$website = esc_html( $user->user_url );
 		$website = "";
 
 		$count = 0;
 		$number_of_posts = 3;
 
-
 		if ( $user->isActive=="on" ) {
 
 	?>
 	<div <?php post_class("bbg-grid--1-1-1-2 bbg-staff__author "); ?>>
 
-<?php 
-
+		<?php 
 			if ($mode=="home") { 
 				//Not currently using this on the homepage.
-?>
+		?>
 
-
-
-				<?php 
-					if ($user->headOfTeam != "") {
-						$category = get_category($user->headOfTeam);
-						$categoryUrl = "blog/category/".$category->category_nicename;
-						echo "<h2><a href='$categoryUrl'>$category->name</a></h2> <p>$category->description</p>";
-					}
-				?>
-
-
-
-
-		<div class="bbg-staff__author__text">
-			<p class="bbg-staff__author-name"><strong>Project lead: </strong><br/>
-				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>, <a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email"><?php echo $authorEmail; ?></a>
-			</p>
-
-
-
-
-
-<?php 
+		<?php 
 			//if you wanted a different view for staff
 			} elseif ($mode=="staff") { 
-?>
+		?>
 
 
-<div class="bbg-avatar__container">
+		<div class="bbg-avatar__container">
 			<a href="<?php echo $authorPath ?>">
 				<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
 			</a>
@@ -71,21 +50,22 @@
 			<?php } ?>
 
 
+				<?php 
+
+					/*
+					//Disabling the website url for now
+					if ( $website && $website != '' ) {
+						$website='<span class="sep"> // </span><a href="' . $website . '">' . $website . '</a>';
+					}
+					*/
+
+					if ( $twitterHandle && $twitterHandle != '' ) {
+						$twitterHandle = str_replace("@", "", $twitterHandle);
+						$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
+					}
+					echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink . $website .'</div>';
+				?>
 				<div class="bbg-staff__author-description">
-					<?php 
-
-						/*
-						//Disabling the url for now
-						if ( $website && $website != '' ) {
-							$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-						}
-						*/
-
-						if ( $twitterHandle && $twitterHandle != '' ) {
-							$twitterHandle=str_replace("@", "", $twitterHandle);
-							echo '<div class="bbg-staff__author__contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail .'</a><span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ' . $website .'</div>';
-						}
-					?>
 					<div class="bbg-staff__author-bio">
 						<?php echo $authorDescription; ?>
 					</div>
@@ -105,14 +85,9 @@
 					}
 				?>
 
-
 			<!-- .author-description -->
 		</div><!-- .bbg-author-text -->
 	</div>
 <?php
-		}	
+		}
 	}
-
-
-
-	

@@ -29,7 +29,7 @@
 		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 
-		<div class="entry-meta bbg__excerpt-meta--featured">
+		<div class="entry-meta bbg__excerpt-meta bbg__excerpt-meta--featured">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
 
