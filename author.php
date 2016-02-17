@@ -35,9 +35,7 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						} else {
 							$gridClass = " ";
-							/*
-							 * Include the Post-Format-specific template for the content.
-							 */
+							$includeImage = FALSE;
 							get_template_part( 'template-parts/content-excerpt', get_post_format() );
 						}
 

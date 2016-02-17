@@ -171,13 +171,22 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 			<div id="header" class="usa-grid-full">
 
 				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
-					<h1 class="usa-heading usa-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>
+					<!--
+					<div class="">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Broadcasting Board of Governors logo" class="bbg-site-logo-image"/>
+							<h1 class="usa-heading usa-heading-site-title site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
+						</a>
+					</div>
+					-->
+
+					<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>
 				<?php endif;
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
-					<!--<h3 class="usa-heading usa-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>-->
+					<!--<h3 class="usa-heading usa-heading-site-description bbg-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>-->
 				<?php endif; ?>
 			</div>
 
