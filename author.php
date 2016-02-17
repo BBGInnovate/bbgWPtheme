@@ -36,6 +36,7 @@ get_header(); ?>
 						} else {
 							$gridClass = " ";
 							$includeImage = FALSE;
+							$includeMeta = FALSE;
 							get_template_part( 'template-parts/content-excerpt', get_post_format() );
 						}
 

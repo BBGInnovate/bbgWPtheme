@@ -226,7 +226,10 @@ body:not(.home) .menu-all-pages-container {
 	margin-top: 0;
 }
 
-
+.bbg__excerpt-header__thumbnail--medium a {
+	display: block;
+	line-height: 0;
+}
 
 .bbg-blog__excerpt--list {
 	clear: both;
@@ -242,12 +245,12 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg__excerpt-header__thumbnail--small {
-	display: none;
-	@include media($small-screen) {
+	//display: none;
+	//@include media($small-screen) {
 		display: block;
 		float: left;
 		margin-right: 1rem;
 		max-width: 200px;
-		width: 30%;
-	}
+		width: 50%;
+	//}
 }
