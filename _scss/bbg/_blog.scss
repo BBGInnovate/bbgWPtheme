@@ -114,7 +114,6 @@
 
 
 /* Article share links: text */
-
 .bbg__article-share__text {
     display: none;
 
@@ -125,7 +124,6 @@
 
 
 /** POST CONTENT */
-
 .bbg__article-content > *,
 .bbg__article-footer {
     margin: {
@@ -205,18 +203,33 @@ h1, h2, h3, h4, h5, h6, p {
 
 .bbg_article-footer {
 	margin: {
-		right: 6em;
-		left: 6em;
+		right: 3em;
+		left: 3em;
 	}
-	h2 {
+
+	/* h2 {
 		display: none;
-	}
+	} */
 
 	.nav-previous a {
 		@extend .usa-button;
+		content: "";
+		line-height: $small-line-height;
 
 		&:before {
 			content: "« ";
+			font-size: $lead-font-size;
+			font-weight: $font-bold;
+		}
+	}
+
+	.nav-next a {
+		@extend .usa-button;
+
+		&:after {
+			content: " »";
+			font-size: $lead-font-size;
+			font-weight: $font-bold;
 		}
 	}
 }

@@ -42,7 +42,7 @@ get_header(); ?>
 
 			<div class="bbg_article-footer">
 				<div class="usa-grid">
-					<?php the_post_navigation(); ?>
+					<?php /*the_post_navigation();*/ ?> <!-- Hiding previous/next navigation buttons :: GIGI -->
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template.
