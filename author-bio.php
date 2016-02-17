@@ -70,7 +70,7 @@ wp_reset_query();
 						?>
 
 							<?php 
-								/*
+								
 								if (count($projects)) {
 									$maxProjectsToShow=5;
 									echo '<h6 class="bbg-label">Projects:</h2>';
@@ -81,7 +81,7 @@ wp_reset_query();
 									}
 									echo '</ul>';
 								}
-								*/
+								
 							?>
 
 
