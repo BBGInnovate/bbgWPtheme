@@ -1,0 +1,74 @@
+/*.bbg__comments {
+	border-top: {
+		color: $color-secondary-darkest;
+		style: dotted;
+		width: 1px;
+	}
+	padding-top: 2rem;
+}*/
+
+.bbg__comments-title {
+	border-bottom: {
+		color: $color-secondary-darkest;
+		style: dotted;
+		width: 1px;
+	}
+	color: $color-secondary-darkest;
+	font-size: $h3-font-size;
+
+	@include media($medium-screen) {
+		font-size: $h2-font-size;
+	}
+}
+
+.bbg__comments-list {
+	list-style-type: none;
+}
+
+.bbg__comments-list .comment {
+	clear: left;
+    margin-bottom: 3rem;
+
+    &:before { 
+    	content: none; //remove bullets from all comments
+    }
+}
+
+.bbg__comments-list .comment-author {
+    display: table-row;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+
+    .fn, .says {
+    	display: table-cell;
+    	padding-left: .5rem;
+    }
+
+    .fn {
+    	color: $color-primary-alt-darkest;
+    }
+}
+
+.bbg__comments-list .comment-metadata a {
+    color: $color-gray-dark;
+    cursor: default;
+	font-size: $small-font-size;
+	margin-left: 3.75rem; 
+	pointer-events: none;
+}
+
+.bbg__comments-list .comment-content {
+	font: {
+		family: $font-serif;
+		size: $small-font-size;
+	}
+	margin-left: 3.75rem; 
+}
+
+.bbg__comments-list .reply {
+	@extend .usa-button.usa-button-outline;
+
+	float: right;
+	padding: .25rem 1rem;
+	width: 6rem;
+}
