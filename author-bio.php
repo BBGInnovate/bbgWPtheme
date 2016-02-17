@@ -7,15 +7,37 @@
 ?>
 <?php
 
-/* ODDI CUSTOM: add twitter handle to bio */
-$twitterHandle = get_the_author_meta( 'twitterHandle' );
-$occupation = get_the_author_meta( 'occupation' );
-$authorEmail = 	get_the_author_meta( 'user_email' );
-$website = get_the_author_meta( 'user_url' );
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+
+/**** BEGIN PREPARING AUTHOR vars ****/
+$theAuthorID=$curauth->ID;
+$website = $curauth->user_url;
+$authorName=$curauth->display_name;
+$authorEmail = $curauth->user_email;
+$avatar=get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 100) );
+
+
 $website = "";
 
-$theAuthorID=get_the_author_meta( 'ID');
 
+$m=get_user_meta($theAuthorID);
+$twitterHandle ="";
+if (isset($m['twitterHandle'])) {
+	$twitterHandle=$m['twitterHandle'][0];
+} 
+
+$occupation = "";
+if (isset($m['occupation'])) {
+	$occupation=$m['occupation'][0];
+}
+$description="";
+if (isset($m['description'])) {
+	$occupation=$m['description'][0];
+}
+/**** DONE PREPARING AUTHOR vars ****/
+
+
+/**** BEGIN QUERYING PROJECTS THIS USER IS A PART OF ****/
 $qParams=array(
 	'post_type' => array('post'),
 	'orderby' => 'post_date',
@@ -25,7 +47,8 @@ $qParams=array(
 query_posts($qParams);
 $projects= array();
 if ( have_posts() ) :
-	while ( have_posts() ) : the_post();
+	while ( have_posts() ) :
+		the_post();
 		$usersInProjectStr=get_post_meta( get_the_ID(), 'users_in_project', true );
 		$usersInProject = array_map('trim', explode(',', $usersInProjectStr));  //get rid of whitespace and turn it into array
 		array_walk( $usersInProject, 'intval' );	
@@ -37,7 +60,7 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 wp_reset_query();
-
+/**** DONE QUERYING PROJECTS THIS USER IS A PART OF ****/
 
 
 ?>
@@ -48,11 +71,11 @@ wp_reset_query();
 
 		<header class="page-header bbg-page__header">
 			<div class="bbg-avatar__container bbg-team__icon">
-				<?php echo get_avatar( get_the_author_meta( 'user_email' ) , apply_filters( 'change_avatar_css', 100) ); ?>
+				<?php echo $avatar; ?>
 			</div>
 
 			<div class="bbg-staff__author__text">
-				<h1 class="bbg-staff__author-name"><?php printf( '%s', get_the_author() ); ?></h1>
+				<h1 class="bbg-staff__author-name"><?php echo $authorName; ?></h1>
 
 				<div class="bbg-staff__author-description">
 
@@ -84,16 +107,13 @@ wp_reset_query();
 								
 							?>
 
-
 							<div class="bbg-staff__author-contact">
 								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
 								<?php echo $website; ?>
 							</div>
 
 						<div class="bbg-staff__author-bio">
-							<?php if ( get_the_author_meta( 'description' ) ) : ?>
-								<?php the_author_meta( 'description' ); ?>
-							<?php endif; ?>
+							<?php echo $description; ?>
 						</div>
 					<div class='clearAll'></div>
 				</div><!-- .author-description -->

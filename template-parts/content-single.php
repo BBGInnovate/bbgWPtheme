@@ -37,8 +37,6 @@
 ?>
 	<div class="usa-grid">
 
-		<?php echo bbginnovate_post_categories( '', true ); ?>
-		<!-- .bbg-label -->
 
 		<header class="entry-header bbg__article-header">
 		<?php
@@ -49,6 +47,8 @@
 				echo '</div>';
 			}
 		?><!-- .bbg__article-header__thumbnail -->
+		<?php echo bbginnovate_post_categories( '', true ); ?>
+		<!-- .bbg-label -->
 
 			<?php the_title( '<h1 class="entry-title bbg__article-header__title">', '</h1>' ); ?>
 			<!-- .bbg__article-header__title -->
