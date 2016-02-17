@@ -14,7 +14,7 @@ $authorEmail = 	get_the_author_meta( 'user_email' );
 $website = get_the_author_meta( 'user_url' );
 $website = "";
 
-$authorID=get_the_author_meta( 'ID');
+$theAuthorID=get_the_author_meta( 'ID');
 
 $qParams=array(
 	'post_type' => array('post'),
@@ -27,14 +27,17 @@ $projects= array();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true ) . ",";
+		$usersInProject = explode( ',', $usersInProjectStr );
+		array_walk( $usersInProject, 'intval' );	
 		//echo "project " . get_the_ID() . " has users " . $usersInProjectStr;
-		if (strpos($usersInProjectStr,",$authorID,")) {
+		if (in_array($theAuthorID,$usersInProject)) {
 			$oneProjectPost=get_post(get_the_id());
 			array_push($projects,$oneProjectPost);
 		}
 	endwhile;
 endif;
 wp_reset_query();
+
 
 
 ?>
@@ -67,6 +70,7 @@ wp_reset_query();
 						?>
 
 							<?php 
+								/*
 								if (count($projects)) {
 									$maxProjectsToShow=5;
 									echo '<h6 class="bbg-label">Projects:</h2>';
@@ -77,6 +81,7 @@ wp_reset_query();
 									}
 									echo '</ul>';
 								}
+								*/
 							?>
 
 
