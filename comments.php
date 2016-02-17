@@ -53,6 +53,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ul',
 					'short_ping' => true,
+					'avatar_size' => 150
 				) );
 			?>
 		</ul><!-- .comment-list -->

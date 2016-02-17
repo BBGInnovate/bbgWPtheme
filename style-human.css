@@ -3609,44 +3609,75 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg__comments-list {
   list-style-type: none;
+  	/*padding: {
+      	right: 2em;
+      	left: 2em;
+      }*/
+  width: 100%;
 }
 
 .bbg__comments-list .comment {
-  clear: left;
+  /*background-color: $color-gray-lightest;*/
+  border-bottom-color: #f1f1f1;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: inline-block;
   margin-bottom: 3rem;
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
 }
 .bbg__comments-list .comment:before {
   content: none;
 }
-
-.bbg__comments-list .comment-author {
+.bbg__comments-list .comment > .children {
+  margin-top: 1rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.bbg__comments-list .comment > .children .comment {
+  border-bottom: none;
+  border-top-color: #f1f1f1;
+  border-top-style: solid;
+  border-top-width: 1px;
+  margin-right: 2rem;
+  margin-bottom: 0;
+  margin-left: 5.5rem;
+  padding: 0;
+}
+.bbg__comments-list .comment .comment-author {
   display: table-row;
   font-size: 1.8rem;
   margin-bottom: 0;
 }
-.bbg__comments-list .comment-author .fn, .bbg__comments-list .comment-author .says {
+.bbg__comments-list .comment .comment-author .bbg-avatar {
+  width: 50px;
+  height: 50px;
+}
+.bbg__comments-list .comment .comment-author .fn, .bbg__comments-list .comment .comment-author .says {
   display: table-cell;
   padding-left: .5rem;
 }
-.bbg__comments-list .comment-author .fn {
+.bbg__comments-list .comment .comment-author .fn {
   color: #046b99;
 }
-
-.bbg__comments-list .comment-metadata a {
+.bbg__comments-list .comment .comment-metadata a {
   color: #323a45;
   cursor: default;
   font-size: 1.4rem;
-  margin-left: 3.75rem;
+  font-weight: 300;
+  margin-left: 5.5rem;
   pointer-events: none;
 }
-
-.bbg__comments-list .comment-content {
+.bbg__comments-list .comment .comment-content {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.4rem;
-  margin-left: 3.75rem;
 }
 
 .bbg__comments-list .reply {
+  clear: left;
   float: right;
   padding: .25rem 1rem;
   width: 6rem;
