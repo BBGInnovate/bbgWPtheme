@@ -26,9 +26,9 @@ query_posts($qParams);
 $projects= array();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
-		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true );
+		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true ) . ",";
 		//echo "project " . get_the_ID() . " has users " . $usersInProjectStr;
-		if (strpos($usersInProjectStr,",$authorID")) {
+		if (strpos($usersInProjectStr,",$authorID,")) {
 			$oneProjectPost=get_post(get_the_id());
 			array_push($projects,$oneProjectPost);
 		}
