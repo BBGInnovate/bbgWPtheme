@@ -23,24 +23,18 @@ $qParams=array(
 	'cat' => get_cat_id('Portfolio')
 );
 query_posts($qParams);
-$projectIDs= array();
+$projects= array();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true );
 		//echo "project " . get_the_ID() . " has users " . $usersInProjectStr;
 		if (strpos($usersInProjectStr,",$authorID")) {
-			array_push($projectIDs, get_the_ID());
+			$oneProjectPost=get_post(get_the_id());
+			array_push($projects,$oneProjectPost);
 		}
 	endwhile;
 endif;
 wp_reset_query();
-
-echo "authorID is " . $authorID . "<BR>";
-echo "projectIDs is <BR>";
-var_dump($projectIDs);
-foreach ($projectIDs as $projectID) {
-	echo "member of projectID " . $projectID . "<BR>";
-}
 
 
 ?>
@@ -71,6 +65,20 @@ foreach ($projectIDs as $projectID) {
 								$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
 							}
 						?>
+
+							<?php 
+								if (count($projects)) {
+									$maxProjectsToShow=5;
+									echo '<h6 class="bbg-label">Projects:</h2>';
+									echo '<ul>';
+									for ($i=0; $i<min($maxProjectsToShow,count($projects)); $i++) {
+										$p=$projects[$i];
+										echo '<li><a href="' . get_permalink($p) . '">' . $p->post_title . '</a></li>';
+									}
+									echo '</ul>';
+								}
+							?>
+
 
 							<div class="bbg-staff__author-contact">
 								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
