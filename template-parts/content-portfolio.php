@@ -23,7 +23,7 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 
 	<?php 
 		$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
-		$linkH3 = '<h3 class="entry-title bbg-portfolio__excerpt__title">'.$link;
+		$linkH3 = '<h3 class="entry-title bbg-portfolio__excerpt-title">'.$link;
 	?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--medium">
 			<?php
@@ -50,7 +50,7 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content bbg-portfolio__excerpt-title">
+	<div class="entry-content bbg-portfolio__excerpt-content">
 		<?php the_excerpt(); ?>
 
 		<?php

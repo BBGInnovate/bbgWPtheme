@@ -3307,12 +3307,6 @@ h1 a, h2 a, h3 a, h4 a {
   color: #112e51;
 }
 
-/*
-h1 a:hover, h2 a:hover, h3 a:hover,h4 a:hover,
-a:hover h1, a:hover h2, a:hover h3, a:hover h4{
-	text-decoration: none;
-}
-*/
 .bbg-site-branding {
   margin-bottom: 3rem;
 }
@@ -3485,6 +3479,15 @@ body:not(.home) .menu-all-pages-container {
     font-size: 4rem;
     margin-top: 3rem;
   }
+}
+
+.bbg-portfolio__excerpt-title {
+  margin-top: 1rem;
+  margin-bottom: .75rem;
+}
+
+.bbg-portfolio__excerpt-content > p {
+  margin-top: 0;
 }
 
 .bbg-fuego__article.bbg-grid--1-2-2 {

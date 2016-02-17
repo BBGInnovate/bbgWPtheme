@@ -7,12 +7,6 @@ h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a,h4 a {
 	color: $color-primary-darkest;
 }
-/*
-h1 a:hover, h2 a:hover, h3 a:hover,h4 a:hover,
-a:hover h1, a:hover h2, a:hover h3, a:hover h4{
-	text-decoration: none;
-}
-*/
  
 .bbg-site-branding {
 	margin-bottom: $site-margins;
@@ -21,7 +15,6 @@ a:hover h1, a:hover h2, a:hover h3, a:hover h4{
 
 
 .bbg-label {
-
 	background-color: $color-secondary-darkest;
 	color: #FFF;
 	display: inline-block;
@@ -79,6 +72,8 @@ article {
 		width: 4rem * 1.2;
 	}
 }
+
+
 
 .menu-all-pages-container {
 	margin: 0 auto;
@@ -215,4 +210,14 @@ body:not(.home) .menu-all-pages-container {
 		font-size: $h1-font-size;
 		margin-top: $site-margins;
 	}
+}
+
+.bbg-portfolio__excerpt-title {
+	margin: {
+		top: 1rem;
+		bottom: .75rem;
+	}
+}
+.bbg-portfolio__excerpt-content > p {
+	margin-top: 0;
 }

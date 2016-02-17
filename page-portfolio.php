@@ -35,7 +35,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1>Portfolio</h1>
+					<h6 class="bbg-label small">Portfolio</h6>
 				</header><!-- .page-header -->
 
 				<?php 
