@@ -8,6 +8,11 @@
  * @package bbginnovate
  */
 
+//The byline meta info is displayed by default 
+global $includeMeta;
+if ( is_null ($includeMeta)) {
+	$includeMeta=TRUE;
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__excerpt--featured"); ?>>
@@ -29,9 +34,12 @@
 		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 
+		<?php if ($includeMeta){ ?>
 		<div class="entry-meta bbg__excerpt-meta bbg__excerpt-meta--featured">
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php }?>
+
 
 	</header><!-- .bbg-blog__excerpt-header--featured -->
 
@@ -40,10 +48,6 @@
 			<?php
 				echo get_the_excerpt();
 			?>
-			<span class="bbg-continue">
-			<?php echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ); ?>
-				Continue reading </a>
-			</span>
 		</h3>
 		<?php
 			wp_link_pages( array(

@@ -3326,7 +3326,7 @@ h1 a, h2 a, h3 a, h4 a {
 .bbg-label a {
   color: #FFF;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 481px) {
   .bbg-label {
     background-color: transparent;
     color: #981b1e;
@@ -3339,7 +3339,12 @@ h1 a, h2 a, h3 a, h4 a {
   }
 }
 .bbg-label.small {
-  font-size: 2rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg-label.small {
+    font-size: 2rem;
+  }
 }
 
 section.usa-section {

@@ -34,7 +34,7 @@ h1 a, h2 a, h3 a,h4 a {
 		color: #FFF;
 	}
 
-	@include media($medium-screen) {
+	@include media($small-screen) {
 		background-color: transparent;
 		color: $color-secondary-darkest;
 		display: block;
@@ -47,7 +47,10 @@ h1 a, h2 a, h3 a,h4 a {
 	}
 
 	&.small{
-		font-size: 2rem;
+		font-size: 1.3rem;
+		@include media($small-screen) {
+			font-size: 2rem;
+		}
 	}
 }
 
