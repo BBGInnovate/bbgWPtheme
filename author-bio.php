@@ -35,6 +35,10 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 wp_reset_query();
+
+echo "authorID is " . $authorID . "<BR>";
+echo "projectIDs is <BR>";
+var_dump($projectIDs);
 foreach ($projectIDs as $projectID) {
 	echo "member of projectID " . $projectID . "<BR>";
 }
