@@ -24,9 +24,14 @@ get_header();
 				<div class="usa-grid">
 					<?php
 						$blogusers = get_users();
+						$ids=array();
+						foreach($blogusers as $user) {
+							array_push($ids,$user->ID);
+						}
+						$postCounts=count_many_users_posts($ids);
 						// Loop through the users to create the staff profiles
 						foreach ( $blogusers as $user ) {
-							outputUser($user,"staff");
+							outputUser($user,"staff",$postCounts);
 						}
 					?>
 				</div><!-- .usa-grid -->

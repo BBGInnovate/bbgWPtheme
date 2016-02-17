@@ -1,5 +1,5 @@
 <?php 
-	function outputUser($user, $mode) {
+	function outputUser($user, $mode, $postCounts) {
 		//$authorPath = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
 		$authorPath=get_author_posts_url($user->ID);
 		$authorName = esc_html( $user->display_name );
@@ -42,7 +42,12 @@
 		<div class="bbg-staff__author__text">
 			
 			<h3 class="bbg-staff__author-name">
-				<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
+				<?php if ($mode != "staff" || $postCounts[$user->ID] > 0): ?>
+					<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
+				<?php else: 
+					echo $authorName;
+					endif; 
+				?>
 			</h3>
 			
 			<?php if ( $authorOccupation!="" ) { ?>
