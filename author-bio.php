@@ -18,7 +18,6 @@ $authorID=get_the_author_meta( 'ID');
 
 $qParams=array(
 	'post_type' => array('post'),
-	'posts_per_page' => 3,
 	'orderby' => 'post_date',
 	'order' => 'desc',
 	'cat' => get_cat_id('Portfolio')
