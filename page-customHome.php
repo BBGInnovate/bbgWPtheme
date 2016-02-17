@@ -135,6 +135,7 @@ get_header();
 							} 
 							else if ($counter <= $maxPostsToShow) {
 								$gridClass = "bbg-grid--1-2-2";
+								$includeImage = FALSE;
 								get_template_part( 'template-parts/content-excerpt', get_post_format() );
 							}
 						endwhile;
