@@ -26,8 +26,8 @@ query_posts($qParams);
 $projects= array();
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
-		$usersInProjectStr="," . get_post_meta( get_the_ID(), 'users_in_project', true ) . ",";
-		$usersInProject = explode( ',', $usersInProjectStr );
+		$usersInProjectStr=get_post_meta( get_the_ID(), 'users_in_project', true );
+		$usersInProject = array_map('trim', explode(',', $usersInProjectStr));  //get rid of whitespace and turn it into array
 		array_walk( $usersInProject, 'intval' );	
 		//echo "project " . get_the_ID() . " has users " . $usersInProjectStr;
 		if (in_array($theAuthorID,$usersInProject)) {
