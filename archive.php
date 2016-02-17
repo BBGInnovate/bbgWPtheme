@@ -11,11 +11,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="usa-grid">
+			<div class="usa-grid-full">
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
+				<header class="page-header bbg-page__header">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -23,6 +23,7 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<?php /* Start the Loop */ ?>
+				<div class="usa-grid">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
@@ -38,7 +39,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php the_posts_navigation(); ?>
-
+				</div><!-- .usa-grid -->
 			<?php else : ?>
 
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>

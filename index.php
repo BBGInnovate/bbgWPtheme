@@ -21,22 +21,34 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h4 class="page-title screen-reader-text"><?php single_post_title(); ?></h4>
+					<header class="page-header">
+						<h6 class="page-title screen-reader-text bbg-label small"><?php single_post_title(); ?></h6>
 					</header>
 				<?php endif; ?>
 
-				<?php /* Start the Loop */ ?>
+				<?php /* Start the Loop */ 
+					$counter = 0;
+				?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content-excerpt', get_post_format() );
+						$counter++;
+
+						if ($counter==1){
+							$includeMeta = FALSE;
+							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
+						} else {
+							/*
+							 * Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							 */
+							$includeImage = TRUE;
+							$includeMeta = TRUE;
+							get_template_part( 'template-parts/content-excerpt-list', get_post_format() );
+						}
+
 					?>
 
 				<?php endwhile; ?>

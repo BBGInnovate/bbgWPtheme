@@ -3440,6 +3440,33 @@ body:not(.home) .menu-all-pages-container {
   margin-top: 0;
 }
 
+.bbg-blog__excerpt--list {
+  clear: both;
+  margin-bottom: 3.75rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg-blog__excerpt--list {
+    margin-bottom: 3rem;
+  }
+}
+
+.bbg-blog__excerpt-title--list {
+  clear: none;
+}
+
+.bbg__excerpt-header__thumbnail--small {
+  display: none;
+}
+@media screen and (min-width: 481px) {
+  .bbg__excerpt-header__thumbnail--small {
+    display: block;
+    float: left;
+    margin-right: 1rem;
+    max-width: 200px;
+    width: 30%;
+  }
+}
+
 .bbg-fuego__article.bbg-grid--1-2-2 {
   border-top: none !important;
   padding-top: 0;

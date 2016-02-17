@@ -224,3 +224,29 @@ body:not(.home) .menu-all-pages-container {
 .bbg-portfolio__excerpt-content > p {
 	margin-top: 0;
 }
+
+
+
+.bbg-blog__excerpt--list {
+	clear: both;
+	margin-bottom: $site-margins * 1.25;
+
+	@include media($small-screen) {
+		margin-bottom: $site-margins;
+	}
+}
+
+.bbg-blog__excerpt-title--list {
+	clear: none;
+}
+
+.bbg__excerpt-header__thumbnail--small {
+	display: none;
+	@include media($small-screen) {
+		display: block;
+		float: left;
+		margin-right: 1rem;
+		max-width: 200px;
+		width: 30%;
+	}
+}
