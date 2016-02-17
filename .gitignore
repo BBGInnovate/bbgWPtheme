@@ -4,5 +4,5 @@ tmp
 .sass-cache
 *.css.map
 
-compiled
+compiled/
 .style-human.css
