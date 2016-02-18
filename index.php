@@ -35,17 +35,14 @@ get_header(); ?>
 
 						$counter++;
 
-						$offset=0;
-						if (is_paged()) {
-							$offset=-1;
-						}
+						
 						//Add a check here to only show featured if it's not paginated.
-						if ( $counter == (1 + $offset) ){
+						if (  (!is_paged() && $counter==1) ){
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 						} else {
-							if( $counter == 2 ){
+							if( (!is_paged() && $counter == 2) || (is_paged() && $counter==1) ){
 								echo '<div class="bbg-grid--1-1-1-2 secondary-stories">';
-							} elseif( $counter == 4 ){
+							} elseif( (!is_paged() && $counter == 4) || (is_paged() && $counter==3)){
 								echo '</div><!-- left column -->';
 								echo '<div class="bbg-grid--1-1-1-2 tertiary-stories">';
 
