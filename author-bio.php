@@ -92,6 +92,17 @@ wp_reset_query();
 							}
 						?>
 
+
+							<div class="bbg-staff__author-contact">
+								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
+								<?php echo $website; ?>
+							</div>
+
+						<div class="bbg-staff__author-bio">
+							<?php echo $description; ?>
+						</div>
+
+
 							<?php 
 								
 								if (count($projects)) {
@@ -107,14 +118,6 @@ wp_reset_query();
 								
 							?>
 
-							<div class="bbg-staff__author-contact">
-								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
-								<?php echo $website; ?>
-							</div>
-
-						<div class="bbg-staff__author-bio">
-							<?php echo $description; ?>
-						</div>
 					<div class='clearAll'></div>
 				</div><!-- .author-description -->
 			</div><!-- .bbg-author-text -->
