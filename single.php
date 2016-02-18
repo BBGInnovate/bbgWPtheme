@@ -11,11 +11,11 @@ if ( have_posts() ) {
 	the_post();
 
 
-	$metaAuthor= get_the_author();
-	$metaAuthorTwitter= get_the_author_meta( 'twitterHandle' );
-	$ogTitle=get_the_title();
+	$metaAuthor = get_the_author();
+	$metaAuthorTwitter = get_the_author_meta( 'twitterHandle' );
+	$ogTitle = get_the_title();
 
-	$metaKeywords= strip_tags(get_the_tag_list('',', ',''));
+	$metaKeywords = strip_tags(get_the_tag_list('',', ',''));
 
 	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'Full' );
 	$ogImage = $thumb['0'];

@@ -2953,8 +2953,8 @@ fieldset {
 
 /** POST CONTENT */
 .bbg__article-content > * {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   max-width: 600px;
 }
 
@@ -3016,6 +3016,44 @@ p + ol {
     max-width: 50%;
     padding: 0;
   }
+}
+
+.bbg__article-author {
+  background-color: #f1f1f1;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  max-width: 600px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.bbg__article-author .bbg-avatar__container {
+  margin-right: 1rem;
+}
+.bbg__article-author .bbg-staff__author-name {
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.bbg__article-author .bbg-staff__author-description {
+  float: left;
+  width: 50%;
+}
+.bbg__article-author .bbg-staff__author-description .bbg-staff__author-occupation {
+  margin-bottom: .75rem;
+}
+.bbg__article-author .bbg-staff__author-description .bbg-staff__author-bio {
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.4rem;
+}
+.bbg__article-author .bbg-staff__author-contact {
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__email {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -3199,13 +3237,26 @@ p + ol {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
   margin-top: .5rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-h1 a, h2 a, h3 a, h4 a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a {
   color: #112e51;
 }
 

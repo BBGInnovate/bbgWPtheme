@@ -118,9 +118,9 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 			?>
 		</div><!-- .entry-content -->
 
-		<?php bbg_post_author_bottom_card() ?>
-
 	</div><!-- .usa-grid -->
+
+	<?php bbg_post_author_bottom_card(get_the_ID()); ?>
 
 	<!-- <footer class="entry-footer bbg__article-footer">
 		<?php bbginnovate_entry_footer(); ?>

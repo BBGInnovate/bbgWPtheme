@@ -638,48 +638,76 @@ add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 		 * Outputs post author info for display on bottom of single posts
 		 *
 		 */
-		function bbg_post_author_bottom_card() {
+		//$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
 
-			do_action( 'bbg_post_author_bottom_card' ); ?>
+		function bbg_post_author_bottom_card($theAuthorID) {
+			$curauth = get_userdata( $theAuthorID );
 
-			<div class="usa-section">
-				<div class="usa-grid-full">
+			/**** BEGIN PREPARING AUTHOR vars ****/
+			$authorPath = get_author_posts_url($curauth -> ID);
+			$authorName = $curauth -> display_name;
+			$authorEmail = $curauth -> user_email;
+			$avatar = get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 150 ) );
+			$website = $curauth -> user_url;
+			$website = str_replace('http://', '', $website);
 
-					<div class="bbg-avatar__container bbg-team__icon">
+
+			$m = get_user_meta( $theAuthorID );
+			$twitterHandle = "";
+			if ( isset( $m['twitterHandle'] ) ) {
+				$twitterHandle = $m['twitterHandle'][0];
+			}
+
+			$occupation = "";
+			if ( isset( $m['occupation'] ) ) {
+				$occupation = $m['occupation'][0];
+			}
+			$description = "";
+			if ( isset( $m['description'] ) ) {
+				$description = $m['description'][0];
+			}
+			/**** DONE PREPARING AUTHOR vars ****/
+			?>
+
+			<div class="usa-grid">
+				<div class="usa-section bbg__article-author">
+
+					<div class="bbg-avatar__container">
 						<?php echo $avatar; ?>
 					</div>
 
 					<div class="bbg-staff__author__text">
-						<h1 class="bbg-staff__author-name"><?php echo $authorName; ?></h1>
+
+						<h2 class="bbg-staff__author-name">
+							<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
+						</h2><!-- .bbg-staff__author-name -->
 
 						<div class="bbg-staff__author-description">
-
-							<?php
-								echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>';
-
-								if ( $website && $website != '' ) {
-									$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-								}
-
-								if ( $twitterHandle && $twitterHandle != '' ) {
-									$twitterHandle=str_replace( "@", "", $twitterHandle );
-									$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
-								}
-							?>
-
-
-							<div class="bbg-staff__author-contact">
-								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
-								<?php echo $website; ?>
-							</div>
+							<?php echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>'; ?>
 
 							<div class="bbg-staff__author-bio">
 								<?php echo $description; ?>
 							</div>
 
-							<div class='clearAll'></div>
-						</div><!-- .author-description -->
-					</div><!-- .bbg-author-text -->
+						</div><!-- .bbg-staff__author-description -->
+
+						<div class="bbg-staff__author-contact">
+							<a href="mailto:<?php echo $authorEmail ?>" class="bbg-staff__author-contact__email"><?php echo $authorEmail; ?></a><br />
+							<?php
+								if ( $twitterHandle && $twitterHandle != '' ) {
+									$twitterHandle = str_replace( "@", "", $twitterHandle );
+									$twitterHandle = '<a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a><br />';
+								echo $twitterHandle;
+								}
+
+								if ( $website && $website != '' ) {
+								$website = '<a href="' . $website . '">' . $website . '</a>';
+								echo $website;
+								}
+							?>
+						</div> <!-- .bbg-staff__author-contact -->
+
+					</div><!-- .bbg-staff__author__text -->
 
 				</div><!-- .usa-grid -->
 			</div><!-- .usa-section -->
