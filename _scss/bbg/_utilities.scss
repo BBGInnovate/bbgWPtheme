@@ -16,6 +16,10 @@
 	}
 }
 
+.u--remove-margin-bottom {
+	margin-bottom: 1rem !important;
+}
+
 @mixin backgroundCover() {
 	background-size: cover;
 	background-repeat: no-repeat;

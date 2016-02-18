@@ -35,33 +35,38 @@ get_header(); ?>
 
 						$counter++;
 
-
+						$offset=0;
+						if (is_paged()) {
+							$offset=-1;
+						}
 						//Add a check here to only show featured if it's not paginated.
-						if ($counter==1 && ! is_paged()){
-							$includeMeta = FALSE;
+						if ( $counter == (1 + $offset) ){
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 						} else {
-							/*
-							 * Include the Post-Format-specific template for the content.
-							 * If you want to override this in a child theme, then include a file
-							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-							 */
-							$includeImage = TRUE;
-							$includeMeta = TRUE;
+							if( $counter == 2 ){
+								echo '<div class="bbg-grid--1-1-1-2 secondary-stories">';
+							} elseif( $counter == 4 ){
+								echo '</div><!-- left column -->';
+								echo '<div class="bbg-grid--1-1-1-2 tertiary-stories">';
+
+								//These values are used for every excerpt >=4
+								$includeImage = FALSE;
+								$includeMeta = FALSE;
+								$includeExcerpt=FALSE;
+							} 
 							get_template_part( 'template-parts/content-excerpt-list', get_post_format() );
 						}
-
 					?>
-
 				<?php endwhile; ?>
+					</div><!-- .bbg-grid right column -->
 
-				<?php the_posts_navigation(); ?>
 
 			<?php else : ?>
 
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
+
 			</div><!-- .usa-grid -->
 		</main><!-- #main -->
 	</div><!-- #primary -->

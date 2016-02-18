@@ -13,7 +13,6 @@ global $gridClass;
 if (! isset ($gridClass)) {
 	$gridClass="";
 }
-$classNames="bbg-blog__excerpt--list ".$gridClass;
 
 //The image is included by default 
 global $includeImage;
@@ -26,6 +25,23 @@ global $includeMeta;
 if (! isset ($includeMeta)) {
 	$includeMeta=TRUE;
 }
+
+//The article excerpt is displayed by default 
+global $includeExcerpt;
+if (! isset ($includeExcerpt)) {
+	$includeExcerpt=TRUE;
+}
+
+//Remove the space below headlines if there's no image, meta or excerpt
+//to create a list of headlines
+$removeSpace = "";
+if (!$includeImage && !$includeMeta && !$includeExcerpt){
+	$removeSpace = "u--remove-margin-bottom";
+}
+
+//Add misc. classes
+$classNames="bbg-blog__excerpt--list " . $gridClass . " ". $removeSpace;
+
 
 $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 ?>
@@ -70,6 +86,7 @@ $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		<?php } ?>
 
 		<?php endif; ?>
+		<?php if ($includeExcerpt) { ?>
 
 	<div class="entry-content bbg-blog__excerpt-content">
 		<?php
@@ -83,5 +100,6 @@ $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 			) );
 		?>
 	</div><!-- .bbg-blog__excerpt-content -->
+		<?php } ?>
 
 </article><!-- #post-## -->

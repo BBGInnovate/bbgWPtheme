@@ -2705,6 +2705,10 @@ fieldset {
   }
 }
 
+.u--remove-margin-bottom {
+  margin-bottom: 1rem !important;
+}
+
 .bbg-avatar__container {
   margin: 0 auto;
   max-width: 200px;
@@ -3182,7 +3186,7 @@ p + ol {
   color: #FFF;
   display: inline-block;
   font-size: 1.6rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 0;
   margin-right: 0;
   margin-left: -3rem;
@@ -3459,6 +3463,21 @@ body:not(.home) .menu-all-pages-container {
   margin-right: 1.5rem;
   max-width: 200px;
   width: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .secondary-stories .bbg-blog__excerpt-title--list {
+    font-size: 3rem;
+  }
+}
+
+.tertiary-stories .bbg-blog__excerpt-title--list {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 600px) {
+  .tertiary-stories .bbg-blog__excerpt-title--list {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
