@@ -12,7 +12,6 @@
 
 		//Disabling the website url for now
 		//$website = esc_html( $user->user_url );
-		$website = "";
 
 		$count = 0;
 		$number_of_posts = 3;
@@ -25,10 +24,6 @@
 		<?php 
 			if ($mode=="home") { 
 				//Not currently using this on the homepage.
-		?>
-
-		<?php 
-			//if you wanted a different view for staff
 			} elseif ($mode=="staff") { 
 		?>
 
@@ -61,19 +56,11 @@
 
 
 				<?php 
-
-					/*
-					//Disabling the website url for now
-					if ( $website && $website != '' ) {
-						$website='<span class="sep"> // </span><a href="' . $website . '">' . $website . '</a>';
-					}
-					*/
-
 					if ( $twitterHandle && $twitterHandle != '' ) {
 						$twitterHandle = str_replace("@", "", $twitterHandle);
 						$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
 					}
-					echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink . $website .'</div>';
+					echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink .'</div>';
 				?>
 				<div class="bbg-staff__author-description">
 					<div class="bbg-staff__author-bio">

@@ -3306,6 +3306,11 @@ section.usa-section {
 article {
   margin-bottom: 3rem;
 }
+@media screen and (min-width: 600px) {
+  article {
+    margin-bottom: 0;
+  }
+}
 
 .bbg-site-logo {
   background: #CCC url(img/logo-agency-square.png) no-repeat center center/cover;
@@ -3334,8 +3339,8 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-heading-site-title {
   border-bottom: 1px solid #CCC;
-  font-size: 2.5rem;
   font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
+  font-size: 2.5rem;
   line-height: 1;
   margin-bottom: 0;
 }
@@ -3422,6 +3427,7 @@ body:not(.home) .menu-all-pages-container {
 /*****************************/
 .bbg__excerpt-meta {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.4rem;
   font-style: italic;
 }
 
@@ -3429,13 +3435,17 @@ body:not(.home) .menu-all-pages-container {
   margin-bottom: 1.5rem;
 }
 
+.bbg-blog__excerpt--featured {
+  margin-bottom: 4.5rem;
+}
+
 .bbg-blog__excerpt-title--featured {
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 900px) {
   .bbg-blog__excerpt-title--featured {
     font-size: 4rem;
-    margin-top: 3rem;
   }
 }
 

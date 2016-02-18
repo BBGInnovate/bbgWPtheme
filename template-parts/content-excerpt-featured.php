@@ -10,7 +10,7 @@
 
 //The byline meta info is displayed by default 
 global $includeMetaFeatured;
-if (! isset ($includeMeta)) {
+if (! isset ($includeMetaFeatured)) {
 	$includeMetaFeatured=TRUE;
 }
 ?>
@@ -45,9 +45,7 @@ if (! isset ($includeMeta)) {
 
 	<div class="entry-content bbg-blog__excerpt-content--featured">
 		<h3 class="usa-font-lead">
-			<?php
-				echo get_the_excerpt();
-			?>
+			<?php echo get_the_excerpt(); ?>
 		</h3>
 		<?php
 			wp_link_pages( array(

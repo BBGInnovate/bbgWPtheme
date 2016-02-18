@@ -24,6 +24,15 @@ get_header();
 <div id="main" class="site-main">
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
+
+			<div class="use-grid-full">
+				<header class="page-header bbg-page__header">
+					<h1 class="bbg-page__header-title">Fuego</h1>
+					<div class="usa-intro bbg-page__header-description">
+						<h3 class="usa-font-lead">An auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h3>
+					</div>
+				</header><!-- .page-header -->
+			</div>
 			<div class="usa-grid">
 			<?php 
 
@@ -300,7 +309,7 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<footer class="entry-meta" style='border-top:none;'>
+						<footer class="entry-meta bbg-fuego__article__footer">
 							<span class="byline"><span class="author vcard"><span class='firstShared'>first shared by </span><a class="url fn n" href="http://twitter.com/<?php echo $author ?>" rel="author"><?php echo "<a href='http://twitter.com/$author'>@$author</a>"; ?></span></span>						
 							<span class="sep sep-byline"> | </span>
 							<time class="entry-date" itemprop="datePublished" pubdate="pubdate"><?php echo $agoTime ?></time>

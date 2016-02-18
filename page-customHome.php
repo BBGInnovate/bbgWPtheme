@@ -101,7 +101,7 @@ get_header();
 					?>
 					</div><!-- .usa-grid-full -->
 
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio >></a>
 
 				</div><!-- .usa-grid -->
 			</section><!-- .bbg-portfolio -->
@@ -210,7 +210,7 @@ get_header();
 
 
 						</div>
-						<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team</a>
+						<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team >></a>
 					</div>
 				</section><!-- Staff -->
 			<?php

@@ -31,7 +31,7 @@ get_header(); ?>
 						<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $teamCategory->category_nicename; ?>.png);"></div>
 					</div>
 					<div class="bbg-team__text">
-						<h1 style='' class="page-title bbg-team__name"><?php echo $teamCategory->name; ?> Team</h1>
+						<h1 class="page-title bbg-team__name"><?php echo $teamCategory->name; ?> Team</h1>
 						<h3 class="usa-font-lead bbg-team__text-description"><?php echo $ogDescription; ?></h3>
 					</div>
 				</header><!-- .page-header -->

@@ -606,7 +606,8 @@ if ( ! function_exists( 'bbg_first_sentence_excerpt' ) ):
 			$endIndex=strpos($text, "</p>")+4;
 			$strLength=$endIndex-$startIndex;
 			$text = substr($text, $startIndex, $strLength);
-			$text='<p>' . strip_tags($text) . '</p>';
+			//$text ='<p>' . strip_tags($text) . '</p>';
+			$text = strip_tags($text);
 			/*** ODDI CUSTOM - REMOVE ONE SENTENCE LOGIC
 			$text           = wp_trim_words( $text, $excerpt_length, $excerpt_more ); // See wp_trim_words() in wp-includes/formatting.php
 
