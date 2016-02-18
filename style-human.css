@@ -3621,6 +3621,7 @@ body:not(.home) .menu-all-pages-container {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   display: inline-block;
+  margin-top: 0;
   margin-bottom: 3rem;
   padding-top: 0;
   padding-right: 1rem;
@@ -3641,10 +3642,14 @@ body:not(.home) .menu-all-pages-container {
   border-top-color: #f1f1f1;
   border-top-style: solid;
   border-top-width: 1px;
-  margin-right: 2rem;
   margin-bottom: 0;
-  margin-left: 5.5rem;
-  padding: 0;
+  padding-top: 2.5rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 6rem;
+}
+.bbg__comments-list .comment .comment-body {
+  margin-bottom: 6rem;
 }
 .bbg__comments-list .comment .comment-author {
   font-size: 1.8rem;
@@ -3653,21 +3658,26 @@ body:not(.home) .menu-all-pages-container {
 .bbg__comments-list .comment .comment-author .bbg-avatar {
   float: left;
   height: 50px;
+  margin-right: 1.5rem;
   width: 50px;
-}
-.bbg__comments-list .comment .comment-author .fn, .bbg__comments-list .comment .comment-author .says {
-  padding-left: .5rem;
 }
 .bbg__comments-list .comment .comment-author .fn {
   color: #046b99;
 }
+.bbg__comments-list .comment .comment-metadata {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
 .bbg__comments-list .comment .comment-metadata a {
   color: #323a45;
   cursor: default;
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin-left: 5.5rem;
   pointer-events: none;
+}
+.bbg__comments-list .comment .comment-metadata .edit-link a {
+  color: #046b99;
+  cursor: pointer;
+  margin-left: 1rem;
+  pointer-events: auto;
 }
 .bbg__comments-list .comment .comment-content {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
@@ -3675,10 +3685,9 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg__comments-list .reply {
-  clear: left;
   float: right;
+  font-size: 1.4rem;
   padding: .25rem 1rem;
-  width: 6rem;
 }
 
 .page-content .wp-smiley,

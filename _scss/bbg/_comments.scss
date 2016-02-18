@@ -38,7 +38,10 @@
    		width: 1px;
    	}
     display: inline-block;
-    margin-bottom: 3rem;
+    margin: {
+    	top: 0;
+    	bottom: 3rem;
+    }
     padding: {
     	top: 0;
     	right: 1rem;
@@ -66,44 +69,53 @@
 	   		style: solid;
 	   		width: 1px;
 	   	}
-    	margin: {
-    		right: 2rem;
+	   	margin-bottom: 0;
+    	padding: {
+    		top: 2.5rem;
+    		right: 0;
     		bottom: 0;
-    		left: 5.5rem;
+    		left: 6rem;
     	}
-    	padding: 0;
+    }
+
+    .comment-body {
+		margin-bottom: $grid-margins * 2;
     }
 
     .comment-author {
-	    // display: table-row;
 	    font-size: 1.8rem;
 	    margin-bottom: 0;
 
 		.bbg-avatar {
 			float: left;
 			height: $bbg-avatar-width-small;
+			margin-right: 1.5rem;
 			width: $bbg-avatar-width-small;
 		}
-
-	    .fn, .says {
-	    	// display: table-cell;
-	    	padding-left: .5rem;
-	    }
 
 	    .fn {
 	    	color: $color-primary-alt-darkest;
 	    }
 	}
 
-	.comment-metadata a {
-	    color: $color-gray-dark;
-	    cursor: default;
+	.comment-metadata {
 		font: {
 			size: $small-font-size;
 			weight: $font-light;
 		}
-		margin-left: 5.5rem;
-		pointer-events: none;
+
+		a {
+		    color: $color-gray-dark;
+		    cursor: default;
+			pointer-events: none;
+		}
+
+		.edit-link a {
+		    color: $color-primary-alt-darkest;
+			cursor: pointer;
+			margin-left: 1rem;
+			pointer-events: auto;
+		}
 	}
 
 	.comment-content {
@@ -117,8 +129,7 @@
 .bbg__comments-list .reply {
 	@extend .usa-button.usa-button-outline;
 
-	clear: left;
 	float: right;
+	font-size: $small-font-size;
 	padding: .25rem 1rem;
-	width: 6rem;
 }
