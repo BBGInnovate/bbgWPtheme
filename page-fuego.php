@@ -36,7 +36,7 @@ get_header();
 					</div>
 				</header><!-- .page-header -->
 			</div>
-			<div class="usa-grid">
+			<div class="usa-grid multicolumn">
 			<?php 
 
 			//require('../../fuego/init.php');
@@ -214,11 +214,7 @@ get_header();
 				}
 
 			?>
-					<?php if ($counter<=2){ ?>
-				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article bbg-grid--1-2-2">
-					<?php } else { ?>
-				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article" style="clear: left;">
-					<?php } ?>
+				<article data-weighted-count='<?php echo $weightedCount ?>' data-id='<?php echo $linkID ?>' class="bbg-fuego__article">
 
 					<?php if (!$isTwitter){ ?>
 						<header class='bbg-fuego__article__header'>
