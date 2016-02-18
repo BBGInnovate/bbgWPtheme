@@ -3474,20 +3474,32 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__article {
   border: 1px solid #CCC;
   border-radius: 0.3rem;
-  margin-top: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   padding: 2.25rem;
-  -webkit-column-break-inside: avoid;
-  /* Chrome, Safari, Opera */
-  page-break-inside: avoid;
-  /* Firefox */
-  break-inside: avoid;
-  /* IE 10+ */
+}
+@media screen and (min-width: 900px) {
+  .bbg-fuego__article {
+    margin-bottom: 2.25rem;
+    -webkit-column-break-inside: avoid;
+    /* Chrome, Safari, Opera */
+    page-break-inside: avoid;
+    /* Firefox */
+    break-inside: avoid;
+    /* IE 10+ */
+  }
 }
 
 .bbg-fuego__article__header-source-link,
 .bbg-fuego__article__header-source-link:visited {
   color: #981b1e;
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
+}
+
+@media screen and (min-width: 900px) {
+  .bbg-fuego__article:first-of-type {
+    margin-top: 2.25rem;
+  }
 }
 
 .bbg-fuego__article__header-link,
@@ -3498,10 +3510,9 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__article__header-title--large {
   font-size: 3rem;
 }
-
 @media screen and (min-width: 1201px) {
-  .bbg-fuego__article__header-title {
-    font-size: 3rem;
+  .bbg-fuego__article__header-title--large {
+    font-size: 4rem;
   }
 }
 
@@ -3572,17 +3583,24 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__twitter__author-name {
   font-size: 17px;
   font-weight: bold;
+  padding-left: 80px;
 }
 
 .bbg-fuego__twitter__tweet {
   font-size: 2rem;
   font-weight: bold;
+  padding-left: 80px;
 }
 
 .bbg-fuego__twitter__quoted-tweet {
   background-color: #F7F7F7;
-  border: 1px solid #CCC;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.bbg-fuego__twitter__quote-text {
+  padding-left: 80px;
 }
 
 /*.bbg__comments {

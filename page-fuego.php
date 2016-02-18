@@ -275,14 +275,13 @@ get_header();
 								<p class='bbg-fuego__twitter__author-name'>
 									<?php echo $authorDisplayName; ?>
 								</p>
-								<p style='display: block; margin-bottom:0;'>
+								<p>
 									<a href='https://twitter.com/<?php echo $author; ?>' target='_blank'>@<?php echo $author; ?></a>
 								</p>
 							</div>
 							<div class='clearAll'></div>
 							<div class='bbg-fuego__twitter__tweet'>
 								<?php echo $desc; ?>
-								<?php /* echo preg_replace($pattern, $replacement, $desc);  */ ?>
 							</div>
 
 							<div class='clearAll'></div>
@@ -295,7 +294,7 @@ get_header();
 								<div class='bbg-fuego__twitter__quote'>
 									<p class='bbg-fuego__twitter__author-name'><?php echo $quoteMakerName; ?> </p>
 									<?php if ($quoteMakerHandle != ""): ?>
-									<p class="bbg-fuego__twitter__quote-text">
+									<p class="">
 										<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
 											@<?php echo $quoteMakerHandle; ?>
 										</a>
@@ -303,7 +302,7 @@ get_header();
 									<?php endif; ?>
 								</div>
 								<div class='clearAll'></div>
-								<div class='quotedTweetText'>
+								<div class='bbg-fuego__twitter__quote-text'>
 									<p><?php echo $quotedTweet; ?></p>
 								</div>
 							</div>

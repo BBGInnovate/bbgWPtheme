@@ -16,18 +16,28 @@
 .bbg-fuego__article {
 	border: 1px solid #CCC;
 	border-radius: $border-radius;
-	margin-top: $site-margins * .75;
+	margin: {
+		top: 0;
+		bottom: $site-margins * .5;
+	}
 	padding: $site-margins * .75;
-
-	-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-	          page-break-inside: avoid; /* Firefox */
-	               break-inside: avoid; /* IE 10+ */
+	@include media($medium-large-screen) {
+		margin-bottom: $site-margins * .75;
+		-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+		          page-break-inside: avoid; /* Firefox */
+		               break-inside: avoid; /* IE 10+ */
+	}
 }
 
 .bbg-fuego__article__header-source-link,
 .bbg-fuego__article__header-source-link:visited {
 	color: $color-secondary-darkest;
 	font-family: $font-sans;
+}
+.bbg-fuego__article:first-of-type {
+	@include media($medium-large-screen) {
+		margin-top: $site-margins * .75;
+	}
 }
 
 .bbg-fuego__article__header-link,
@@ -38,11 +48,8 @@
 
 .bbg-fuego__article__header-title--large {
 	font-size: $h2-font-size;
-}
-
-.bbg-fuego__article__header-title {
 	@include media($large-screen) {
-		font-size: $h2-font-size;
+		font-size: $h1-font-size;
 	}
 }
 
@@ -104,18 +111,29 @@
 }
 
 .bbg-fuego__twitter__author-name {
-	font-size: 17px;
-	font-weight: bold;
+	font: {
+		size: 17px;
+		weight: bold;
+	}
+	padding-left: $bbg-avatar-twitter + 10px;
 }
 
 .bbg-fuego__twitter__tweet {
-	font-size: 2rem;
-	font-weight: bold;
+	font: {
+		size: 2rem;
+		weight: bold;
+	}
+	padding-left: $bbg-avatar-twitter + 10px;
 }
 
 .bbg-fuego__twitter__quoted-tweet {
 	background-color: #F7F7F7;
-	border: 1px solid #CCC;
-	padding: 1rem;
+	//border: 1px solid #CCC;
+	margin-bottom: 1rem;
+	padding: $site-margins;
+	padding-bottom: $site-margins * .5;
 }
 
+.bbg-fuego__twitter__quote-text {
+	padding-left: $bbg-avatar-twitter + 10px;
+}
