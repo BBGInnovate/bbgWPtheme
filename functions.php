@@ -152,7 +152,7 @@ function bbginnovate_scripts() {
 
 	wp_enqueue_style( 'bbginnovate-style-fonts', get_template_directory_uri() . "/css/google-fonts.css" );
 
-    wp_enqueue_style( 'bbginnovate-style-fonts', get_template_directory_uri() . "/css/bbg-fonts.css" ); //Updating the default @font-face calls for new fonts :: GIGI
+    wp_enqueue_style( 'bbginnovate-style-fonts2', get_template_directory_uri() . "/css/bbg-fonts.css" ); //Updating the default @font-face calls for new fonts :: GIGI
 
 	wp_enqueue_script( 'bbginnovate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

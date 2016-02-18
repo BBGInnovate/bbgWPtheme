@@ -8,11 +8,17 @@ h1 a, h2 a, h3 a,h4 a {
 	color: $color-primary-darkest;
 }
 
+a:focus {
+    background-color: $color-gray-cool-light;
+    padding: 2px;
+    margin: -2px;
+  }
+
 .usa-font-lead {
 	color: #000;
 }
 
- 
+
 .bbg-site-branding {
 	margin-bottom: $site-margins;
 }
@@ -34,7 +40,7 @@ h1 a, h2 a, h3 a,h4 a {
 	};
 	padding: .5rem 1rem;
 	text-transform: uppercase;
-	
+
 	a {
 		color: #FFF;
 	}
@@ -166,7 +172,7 @@ body:not(.home) .menu-all-pages-container {
 
 
 /*****************************/
-// Responsive YouTube embeds 
+// Responsive YouTube embeds
 .embed-container {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -179,7 +185,7 @@ body:not(.home) .menu-all-pages-container {
 .embed-container embed {
 	height: 100%;
 	position: absolute;
-		top: 0; 
+		top: 0;
 		left: 0;
 	width: 100%;
 }
@@ -208,7 +214,7 @@ body:not(.home) .menu-all-pages-container {
 
 
 /*****************************/
-// Excerpt styles 
+// Excerpt styles
 .bbg__excerpt-meta {
 	font: {
 		family: $font-serif;
@@ -255,7 +261,7 @@ body:not(.home) .menu-all-pages-container {
 	display: block;
 	line-height: 0;
 }
- 
+
 .bbg-blog__excerpt--list {
 	@include clearfix();
 	margin-bottom: $site-margins * .8;

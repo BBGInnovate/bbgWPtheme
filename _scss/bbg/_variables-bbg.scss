@@ -1,20 +1,25 @@
 // Typography
+$font-sans: 'Lato', 'Helvetica', 'Arial', sans-serif;
+
 $base-font-size:      rem(16px);
 $base-line-height:    1.7;
 $small-line-height:   1.4;
-$text-shadow: 1px 1px 1px rgba(#000, .5);
+$text-shadow: 		  1px 1px 1px rgba(#000, .5);
 
-$font-light: 300;
-$font-normal: 400;
-$font-medium: 500;
-$font-bold: 700;
+$font-light:  	300;
+$font-normal: 	400;
+$font-medium:	500;
+$font-bold:  	700;
 
-$font-sans: 'Lato', 'Helvetica', 'Arial', sans-serif;
+$focus-shadow:	none;
 
 // Color
 $color-share-facebook:        #3d5a98;
 $color-share-twitter:         #55acee;
 $color-light-gray:            #ECECEC;
+
+$color-focus:                #3e94cf;
+$color-visited:              #4773aa;
 
 
 // Mobile First Breakpoints
