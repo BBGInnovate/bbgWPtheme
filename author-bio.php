@@ -32,7 +32,7 @@ if (isset($m['occupation'])) {
 }
 $description="";
 if (isset($m['description'])) {
-	$occupation=$m['description'][0];
+	$description=$m['description'][0];
 }
 /**** DONE PREPARING AUTHOR vars ****/
 
