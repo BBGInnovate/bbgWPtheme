@@ -3852,6 +3852,7 @@ object {
 }
 .main-navigation a:focus {
   box-shadow: none;
+  margin: 0;
 }
 
 /* Small menu. */
