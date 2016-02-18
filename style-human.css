@@ -3654,6 +3654,7 @@ body:not(.home) .menu-all-pages-container {
   margin-right: 0;
   margin-bottom: 0;
   padding: 0;
+  width: 100%;
 }
 .bbg__comments-list .comment > .children .comment {
   border-bottom: none;
