@@ -3136,6 +3136,7 @@ p + ol {
 }
 .bbg-banner a:focus {
   box-shadow: none;
+  background: none;
 }
 .bbg-banner .bbg-banner-site-logo-img {
   width: 100px;
@@ -3312,6 +3313,7 @@ body:not(.home) .menu-all-pages-container {
 }
 .bbg-heading-site-title a:focus {
   box-shadow: none;
+  background: none;
 }
 
 .bbg-heading-site-description {
