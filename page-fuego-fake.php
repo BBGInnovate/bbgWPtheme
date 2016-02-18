@@ -35,8 +35,8 @@ get_header();
 					</div>
 				</header><!-- .page-header -->
 			</div>
-			<div class="usa-grid">
-				<article data-weighted-count='107' data-id='2215439' class="bbg-fuego__article bbg-grid--1-2-2">
+			<div class="usa-grid multicolumn">
+				<article data-weighted-count='107' data-id='2215439' class="bbg-fuego__article xxbbg-grid--1-2-2">
 					<header class='bbg-fuego__article__header'>
 						<h5 class='bbg-fuego__article__header-source'><a href='http://www.fastcompany.com' class='bbg-fuego__article__header-source-link'>Fast Company</a></h5>
 						<h3 class='bbg-fuego__article__header-title--large'><a href='http://www.fastcompany.com/3056057/most-innovative-companies/buzzfeed-for-shaking-up-media-across-the-globe' class='bbg-fuego__article__header-link'>How BuzzFeed's Jonah Peretti Is Building A 100-Year Media Company</a></h3>
@@ -59,7 +59,7 @@ get_header();
 					</footer>
 					<a href='/trending?hideLink=2215439' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
-				<article data-weighted-count='73' data-id='2204264' class="bbg-fuego__article bbg-grid--1-2-2">
+				<article data-weighted-count='73' data-id='2204264' class="bbg-fuego__article xxbbg-grid--1-2-2">
 					<header class='bbg-fuego__article__header'>
 						<h5 class='bbg-fuego__article__header-source'><a href='https://cpj.org' class='bbg-fuego__article__header-source-link'>Cpj</a></h5>
 						<h3 class='bbg-fuego__article__header-title--large'><a href='https://cpj.org/2016/02/four-american-journalists-arrested-in-bahrain.php' class='bbg-fuego__article__header-link'>Four American journalists arrested in Bahrain</a></h3>

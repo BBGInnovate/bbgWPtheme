@@ -1,15 +1,32 @@
+.multicolumn {
+	@include media($medium-large-screen) {
+		-webkit-column-count: 2;
+		   -moz-column-count: 2;
+		        column-count: 2;
+		-webkit-column-gap: $site-margins; /* Chrome, Safari, Opera */
+		    -moz-column-gap: $site-margins; /* Firefox */
+		    column-gap: $site-margins;
+	}
+}
+
 .bbg-fuego__article.bbg-grid--1-2-2 {
 	border-top: none !important;
 	padding-top: 0;
 }
 .bbg-fuego__article {
-	border-top: 1px dotted #CCC;
-	padding-top: $site-margins;
+	border: 1px solid #CCC;
+	border-radius: $border-radius;
+	margin-top: $site-margins * .75;
+	padding: $site-margins * .75;
+
+	-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+	          page-break-inside: avoid; /* Firefox */
+	               break-inside: avoid; /* IE 10+ */
 }
 
 .bbg-fuego__article__header-source-link,
 .bbg-fuego__article__header-source-link:visited {
-	//color: $color-secondary-darkest;
+	color: $color-secondary-darkest;
 	font-family: $font-sans;
 }
 
@@ -45,7 +62,8 @@
 	float: left;
 	height: 120px;
 	margin: 0 1.5rem 1rem 0;
-	width: 200px;
+	max-width: $thumbnail-small-max-width;
+	width: 50%;
 }
 
 .bbg-fuego__article__thumbnail--large {
@@ -77,7 +95,6 @@
 }
 
 
-
 .bbg-fuego__twitter-photo {
 	@include backgroundCover(); 
 	border-radius: 50%;
@@ -98,8 +115,7 @@
 }
 
 .bbg-fuego__twitter__quoted-tweet {
-	background-color: #FFF;
-	border-radius: 1rem;
+	background-color: #F7F7F7;
 	border: 1px solid #CCC;
 	padding: 1rem;
 }
