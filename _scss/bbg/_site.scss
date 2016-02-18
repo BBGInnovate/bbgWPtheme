@@ -191,7 +191,9 @@ body:not(.home) .menu-all-pages-container {
 .bbg-page__header-title {
 	margin-bottom: 0;
 }
-
+.bbg-page__header-description {
+	max-width: $site-max-width;
+}
 
 /*****************************/
 // Excerpt styles 

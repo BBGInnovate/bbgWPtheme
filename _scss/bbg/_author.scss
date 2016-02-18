@@ -74,7 +74,7 @@
 
 
 .bbg-staff__author {
-	clear: left;
+	//clear: left;
 	margin-bottom: $site-margins;
 	@include media($medium-screen) {
 		margin-bottom: $site-margins*2;

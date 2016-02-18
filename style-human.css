@@ -2786,7 +2786,6 @@ fieldset {
 }
 
 .bbg-staff__author {
-  clear: left;
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 600px) {
@@ -3422,6 +3421,10 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-page__header-title {
   margin-bottom: 0;
+}
+
+.bbg-page__header-description {
+  max-width: 1040px;
 }
 
 /*****************************/
