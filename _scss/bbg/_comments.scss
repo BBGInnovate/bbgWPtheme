@@ -23,16 +23,10 @@
 
 .bbg__comments-list {
 	list-style-type: none;
-	/*padding: {
-    	right: 2em;
-    	left: 2em;
-    }*/
-	
 	width: 100%;
 }
 
 .bbg__comments-list .comment {
-   	/*background-color: $color-gray-lightest;*/
    	border-bottom:  {
    		color: $color-gray-lightest;
    		style: solid;
@@ -47,7 +41,7 @@
     }
     width: 100%;
 
-    &:before { 
+    &:before {
     	content: none; //remove bullets from all comments
     }
 
@@ -59,7 +53,7 @@
     	}
     	padding: 0;
     }
-    
+
     > .children .comment {
     	border-bottom: none;
     	border-top:  {
@@ -76,17 +70,18 @@
     }
 
     .comment-author {
-	    display: table-row;
+	    // display: table-row;
 	    font-size: 1.8rem;
 	    margin-bottom: 0;
 
 		.bbg-avatar {
-			width: $bbg-avatar-width-small;
+			float: left;
 			height: $bbg-avatar-width-small;
+			width: $bbg-avatar-width-small;
 		}
 
 	    .fn, .says {
-	    	display: table-cell;
+	    	// display: table-cell;
 	    	padding-left: .5rem;
 	    }
 
@@ -102,7 +97,7 @@
 			size: $small-font-size;
 			weight: $font-light;
 		}
-		margin-left: 5.5rem; 
+		margin-left: 5.5rem;
 		pointer-events: none;
 	}
 

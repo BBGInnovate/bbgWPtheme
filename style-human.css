@@ -3624,15 +3624,10 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg__comments-list {
   list-style-type: none;
-  	/*padding: {
-      	right: 2em;
-      	left: 2em;
-      }*/
   width: 100%;
 }
 
 .bbg__comments-list .comment {
-  /*background-color: $color-gray-lightest;*/
   border-bottom-color: #f1f1f1;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -3663,16 +3658,15 @@ body:not(.home) .menu-all-pages-container {
   padding: 0;
 }
 .bbg__comments-list .comment .comment-author {
-  display: table-row;
   font-size: 1.8rem;
   margin-bottom: 0;
 }
 .bbg__comments-list .comment .comment-author .bbg-avatar {
-  width: 50px;
+  float: left;
   height: 50px;
+  width: 50px;
 }
 .bbg__comments-list .comment .comment-author .fn, .bbg__comments-list .comment .comment-author .says {
-  display: table-cell;
   padding-left: .5rem;
 }
 .bbg__comments-list .comment .comment-author .fn {
