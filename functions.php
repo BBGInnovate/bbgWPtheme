@@ -594,7 +594,7 @@ if ( ! function_exists( 'bbg_first_sentence_excerpt' ) ):
 			$excerpt_length = 150; // Something long enough that we're likely to get a full sentence.
 			$excerpt_more   = ''; // Not used, but included here for clarity
 
-			$startIndex=0;
+			$startIndex = 0;
 
 			$firstP_openPosition = strpos( $text, "<p" );
 			if ( $firstP_openPosition !== false ) {
@@ -630,4 +630,61 @@ endif;
 
 add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 
+?>
+
+<?php
+	if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
+		/**
+		 * Outputs post author info for display on bottom of single posts
+		 *
+		 */
+		function bbg_post_author_bottom_card() {
+
+			do_action( 'bbg_post_author_bottom_card' ); ?>
+
+			<div class="usa-section">
+				<div class="usa-grid-full">
+
+					<div class="bbg-avatar__container bbg-team__icon">
+						<?php echo $avatar; ?>
+					</div>
+
+					<div class="bbg-staff__author__text">
+						<h1 class="bbg-staff__author-name"><?php echo $authorName; ?></h1>
+
+						<div class="bbg-staff__author-description">
+
+							<?php
+								echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>';
+
+								if ( $website && $website != '' ) {
+									$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
+								}
+
+								if ( $twitterHandle && $twitterHandle != '' ) {
+									$twitterHandle=str_replace( "@", "", $twitterHandle );
+									$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+								}
+							?>
+
+
+							<div class="bbg-staff__author-contact">
+								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
+								<?php echo $website; ?>
+							</div>
+
+							<div class="bbg-staff__author-bio">
+								<?php echo $description; ?>
+							</div>
+
+							<div class='clearAll'></div>
+						</div><!-- .author-description -->
+					</div><!-- .bbg-author-text -->
+
+				</div><!-- .usa-grid -->
+			</div><!-- .usa-section -->
+			<?php
+			do_action( 'bbg_post_author_bottom_card' );
+		}
+	endif;
 ?>

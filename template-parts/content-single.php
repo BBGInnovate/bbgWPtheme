@@ -9,44 +9,44 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( "bbg__article" ); ?>>
 
 <?php
 
-	//the title/headline field, followed by the URL and the author's twitter handle
-	$twitterText= "";
-	$twitterText .= html_entity_decode(get_the_title());
-	$twitterHandle = get_the_author_meta( 'twitterHandle' );
-	$twitterHandle=str_replace("@", "", $twitterHandle);
-	if ( $twitterHandle && $twitterHandle != '' ) {
-		$twitterText .= " by @" . $twitterHandle;
-	} else {
-		$authorDisplayName=get_the_author();
-		if ($authorDisplayName && $authorDisplayName!='') {
-			$twitterText .= " by " . $authorDisplayName;
-		}
+//the title/headline field, followed by the URL and the author's twitter handle
+$twitterText = "";
+$twitterText .= html_entity_decode( get_the_title() );
+$twitterHandle = get_the_author_meta( 'twitterHandle' );
+$twitterHandle = str_replace( "@", "", $twitterHandle );
+if ( $twitterHandle && $twitterHandle != '' ) {
+	$twitterText .= " by @" . $twitterHandle;
+} else {
+	$authorDisplayName = get_the_author();
+	if ( $authorDisplayName && $authorDisplayName!='' ) {
+		$twitterText .= " by " . $authorDisplayName;
 	}
-	$twitterText .= " " . get_permalink();
-	$hashtags="";
-	//$hashtags="testhashtag1,testhashtag2";
+}
+$twitterText .= " " . get_permalink();
+$hashtags="";
+//$hashtags="testhashtag1,testhashtag2";
 
-	///$twitterURL="//twitter.com/intent/tweet?url=" . urlencode(get_permalink()) . "&text=" . urlencode($ogDescription) . "&hashtags=" . urlencode($hashtags);
-	$twitterURL="//twitter.com/intent/tweet?text=" . rawurlencode($twitterText);
-	$fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode(get_permalink());
+///$twitterURL="//twitter.com/intent/tweet?url=" . urlencode(get_permalink()) . "&text=" . urlencode($ogDescription) . "&hashtags=" . urlencode($hashtags);
+$twitterURL="//twitter.com/intent/tweet?text=" . rawurlencode( $twitterText );
+$fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 ?>
 	<div class="usa-grid">
 
-
 		<header class="entry-header bbg__article-header">
 		<?php
-			$hideFeaturedImage=get_post_meta(get_the_ID(), "hide_featured_image", true);
-			if (has_post_thumbnail() && ($hideFeaturedImage != 1)) {
+			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
+			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
-				echo the_post_thumbnail('large-thumb');
+				echo the_post_thumbnail( 'large-thumb' );
 				echo '</div>';
 			}
 		?><!-- .bbg__article-header__thumbnail -->
+
 		<?php echo bbginnovate_post_categories( '', true ); ?>
 		<!-- .bbg-label -->
 
@@ -92,22 +92,23 @@
 			?>
 
 			<?php
-				$usersInProjectStr=get_post_meta( get_the_ID(), 'users_in_project', true );
-				if ( $usersInProjectStr != "") {
+				$usersInProjectStr = get_post_meta( get_the_ID(), 'users_in_project', true );
+
+				if ( $usersInProjectStr != "" ) {
 					//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
 					$userIDs = explode( ',', $usersInProjectStr );
 					array_walk( $userIDs, 'intval' );
-					$args = array( 'include' => $userIDs, 'orderby' => 'include');
+					$args = array( 'include' => $userIDs, 'orderby' => 'include' );
 
-					$blogusers = get_users($args);
+					$blogusers = get_users( $args );
 					// Loop through the users to create the staff profiles
-					if ($blogusers) {
+					if ( $blogusers ) {
 						echo "<h3>Users in Project:</h3> <ul>";
 						foreach ( $blogusers as $user ) {
-							$authorName = esc_html( $user->display_name );
+							$authorName = esc_html( $user -> display_name );
 							//$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
-							$authorUrl=get_author_posts_url( $user->ID,$user->user_nicename);
-							$authorOccupation = esc_html( $user->occupation );
+							$authorUrl = get_author_posts_url( $user -> ID, $user -> user_nicename );
+							$authorOccupation = esc_html( $user -> occupation );
 							echo "<li><a href='$authorUrl'>$authorName</a> - $authorOccupation</li>";
 						}
 						echo "</ul>";
@@ -116,6 +117,9 @@
 				}
 			?>
 		</div><!-- .entry-content -->
+
+		<?php bbg_post_author_bottom_card() ?>
+
 	</div><!-- .usa-grid -->
 
 	<!-- <footer class="entry-footer bbg__article-footer">

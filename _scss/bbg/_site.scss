@@ -282,3 +282,16 @@ body:not(.home) .menu-all-pages-container {
 	max-width: $thumbnail-small-max-width;
 	width: 50%;
 }
+
+.secondary-stories .bbg-blog__excerpt-title--list {
+	@include media($medium-screen) {
+		font-size: $h3-font-size * 1.5;
+	}
+}
+
+.tertiary-stories .bbg-blog__excerpt-title--list {
+	font-size: $h3-font-size * .9;
+	@include media($medium-screen) {
+		font-size: $h3-font-size;
+	}
+}
