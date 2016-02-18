@@ -257,9 +257,8 @@ body:not(.home) .menu-all-pages-container {
 }
  
 .bbg-blog__excerpt--list {
-	clear: both;
-	margin-bottom: $site-margins * 1.25;
-
+	@include clearfix();
+	margin-bottom: $site-margins * .8;
 	@include media($small-screen) {
 		margin-bottom: $site-margins;
 	}
@@ -272,7 +271,7 @@ body:not(.home) .menu-all-pages-container {
 .bbg__excerpt-header__thumbnail--small {
 	display: block;
 	float: left;
-	margin-right: 1rem;
-	max-width: 200px;
+	margin-right: 1.5rem;
+	max-width: $thumbnail-small-max-width;
 	width: 50%;
 }
