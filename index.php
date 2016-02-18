@@ -37,7 +37,7 @@ get_header(); ?>
 
 
 						//Add a check here to only show featured if it's not paginated.
-						if ($counter==1){
+						if ($counter==1 && ! is_paged()){
 							$includeMeta = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 						} else {
