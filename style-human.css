@@ -3419,12 +3419,18 @@ body:not(.home) .menu-all-pages-container {
   padding: 3rem;
 }
 
+.bbg-page__header-text {
+  clear: none;
+  max-width: 600px;
+}
+
 .bbg-page__header-title {
+  clear: none;
   margin-bottom: 0;
 }
 
 .bbg-page__header-description {
-  max-width: 1040px;
+  clear: none;
 }
 
 /*****************************/

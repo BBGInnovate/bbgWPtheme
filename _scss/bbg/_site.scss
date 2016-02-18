@@ -188,12 +188,19 @@ body:not(.home) .menu-all-pages-container {
 	padding: $site-margins;
 }
 
+.bbg-page__header-text {
+	clear: none;
+	max-width: $article-max-width;
+}
+
 .bbg-page__header-title {
+	clear: none;
 	margin-bottom: 0;
 }
 .bbg-page__header-description {
-	max-width: $site-max-width;
+	clear: none;
 }
+
 
 /*****************************/
 // Excerpt styles 
