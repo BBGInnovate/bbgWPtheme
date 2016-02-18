@@ -22,7 +22,8 @@ get_header(); ?>
 				<?php /* Start the Loop */ 
 					$counter=0;
 				?>
-				<div class="usa-grid">
+				<div>
+				<section class="usa-section usa-grid">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 
@@ -30,18 +31,23 @@ get_header(); ?>
 					<?php 
 						$counter=$counter+1;
 						$gridClass = "";
-						if ($counter <= 2) {
+						if ($counter < 2) {
 							$gridClass = "bbg-grid--1-2-2";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
+						} elseif ($counter == 2){
+							$gridClass = "bbg-grid--1-2-2";
+							get_template_part( 'template-parts/content-portfolio', get_post_format() );
+							echo '</section>';
+							echo '<section class="usa-section usa-grid">';
 						} else {
 							$gridClass = " ";
-							$includeImage = FALSE;
 							$includeMeta = FALSE;
-							get_template_part( 'template-parts/content-excerpt', get_post_format() );
+							get_template_part( 'template-parts/content-excerpt-list', get_post_format() );
 						}
 
 					?>
 				<?php endwhile; ?>
+					</section>
 				</div>
 
 
@@ -49,6 +55,9 @@ get_header(); ?>
 				<?php get_template_part( 'author-bio' ); ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif; ?>
+
+				<?php the_posts_navigation(); ?>
+
 			</div><!-- .usa-grid-full -->
 		</div>
 		<!-- #content -->
