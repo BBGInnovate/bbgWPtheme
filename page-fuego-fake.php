@@ -26,13 +26,15 @@ get_header();
 		<main id="content" class="site-content" role="main">
 			<div class="usa-grid-full">
 				<header class="page-header bbg-page__header">
-					<h1 class="bbg-page__header-title">Fuego</h1>
-					<div class="usa-intro bbg-page__header-description">
-						<h3 class="usa-font-lead">An auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h3>
+					<div class="bbg-avatar__container bbg-team__icon">
+						<div class="bbg-avatar bbg-team__icon__image" style="background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/trending-150x150.png);"></div>
+					</div>
+					<div class="usa-intro bbg-page__header-text bbg-team__text">
+						<h1 class="bbg-page__header-title">Fuego</h1>
+						<h3 class="usa-font-lead bbg-page__header-description">An auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h3>
 					</div>
 				</header><!-- .page-header -->
 			</div>
-
 			<div class="usa-grid">
 				<article data-weighted-count='107' data-id='2215439' class="bbg-fuego__article bbg-grid--1-2-2">
 					<header class='bbg-fuego__article__header'>
@@ -78,7 +80,6 @@ get_header();
 							<span class="sep sep-byline"> | </span>
 							<time class="bbg-fuego__article__footer-date" itemprop="datePublished" pubdate="pubdate">20 hours ago </time>
 					</footer>
-					<a href='/trending?hideLink=2204264' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
 				<article data-weighted-count='58' data-id='2217678' class="bbg-fuego__article" style="clear: left;">
 					<header class='bbg-fuego__article__header'>
@@ -101,7 +102,6 @@ get_header();
 							<span class="sep sep-byline"> | </span>
 							<time class="bbg-fuego__article__footer-date" itemprop="datePublished" pubdate="pubdate">3 hours ago </time>
 					</footer>
-					<a href='/trending?hideLink=2217678' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
 				<article data-weighted-count='33' data-id='2220878' class="bbg-fuego__article" style="clear: left;">
 					<header class='bbg-fuego__article__header'>
@@ -194,7 +194,6 @@ get_header();
 							<span class="sep sep-byline"> | </span>
 							<time class="bbg-fuego__article__footer-date" itemprop="datePublished" pubdate="pubdate">53 minutes ago </time>
 					</footer>
-					<a href='/trending?hideLink=2220867' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
 				<article data-weighted-count='21' data-id='2220303' class="bbg-fuego__article" style="clear: left;">
 					<header class='bbg-fuego__article__header'>
@@ -217,7 +216,6 @@ get_header();
 							<span class="sep sep-byline"> | </span>
 							<time class="bbg-fuego__article__footer-date" itemprop="datePublished" pubdate="pubdate">1 hour ago </time>
 					</footer>
-					<a href='/trending?hideLink=2220303' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
 				<article data-weighted-count='15' data-id='2217545' class="bbg-fuego__article" style="clear: left;">
 					<header class='bbg-fuego__article__header'>
@@ -264,7 +262,6 @@ get_header();
 						<span class="sep sep-byline"> | </span>
 						<time class="entry-date" itemprop="datePublished" pubdate="pubdate">3 hours ago </time>
 					</footer>
-					<a href='/trending?hideLink=2217545' class='bbg-fuego__button__hide-link usa-button'>Hide this link</a>
 					<BR> </article>
 				<script type="text/javascript">
 				jQuery(document).ready(function() {
@@ -285,17 +282,6 @@ get_header();
 		</div>
 		</div>
 		<!-- #main .site-main -->
-		<div class="post-author-bottom usa-grid">
-			<div class="post-author-card">
-				<a class="site-logo" href="https://africa2.rizing.org/trending/">
-					<img src="https://africa.rizing.org/wp-content/uploads/2015/10/trending-150x150.png" width="100" height="100" alt="Trending" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo"> </a>
-				<div class="post-author-info">
-					<h1 class="site-title">
-						<span class="byline"><span class="author vcard"><a class="url fn n" href="https://africa.rizing.org/trending/">Trending</a></span></span>					</h1>
-					<h2 class="site-description">an auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h2>
-				</div>
-			</div>
-		</div>
 		<?php 
 
 get_footer();

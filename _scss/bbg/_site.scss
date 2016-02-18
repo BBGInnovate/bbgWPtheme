@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a,h4 a {
 	color: $color-primary-darkest;
 }
+
+.usa-font-lead {
+	color: #000;
+}
+
  
 .bbg-site-branding {
 	margin-bottom: $site-margins;
@@ -209,6 +214,10 @@ body:not(.home) .menu-all-pages-container {
 		family: $font-serif;
 		size: 1.4rem;
 		style: italic;
+	}
+
+	a {
+		text-decoration: underline;
 	}
 }
 
