@@ -41,6 +41,8 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 						} else {
 							if( (!is_paged() && $counter == 2) || (is_paged() && $counter==1) ){
+								echo '</div>';
+								echo '<div class="usa-grid">';
 								echo '<div class="bbg-grid--1-1-1-2 secondary-stories">';
 							} elseif( (!is_paged() && $counter == 4) || (is_paged() && $counter==3)){
 								echo '</div><!-- left column -->';
@@ -65,6 +67,9 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- .usa-grid -->
+			<div class="usa-grid">
+				<?php the_posts_navigation(); ?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
