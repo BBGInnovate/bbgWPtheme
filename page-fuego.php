@@ -25,7 +25,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
 
-			<div class="use-grid-full">
+			<div class="usa-grid-full">
 				<header class="page-header bbg-page__header">
 					<h1 class="bbg-page__header-title">Fuego</h1>
 					<div class="usa-intro bbg-page__header-description">
