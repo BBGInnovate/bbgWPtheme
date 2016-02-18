@@ -1,4 +1,5 @@
-
+//Small profile photos or icons
+//Used for staff profiles, team icons and comment gravatars(?)
 .bbg-avatar__container {
 	margin: 0 auto;
 	max-width: $bbg-avatar-width;
@@ -8,14 +9,13 @@
 		width: $bbg-team__icon-width;
 	}
 }
+
 .bbg-avatar__container--small {
-	margin: 0 auto;
-	max-width: 50px;
-	@include media($small-screen) {
-		float: left;
-		margin: 0 1rem .5rem 0;
-		width: 20%;
-		max-width:50px;
+	float: left;
+	margin: 0 1rem .5rem 0;
+	max-width: $bbg-avatar-width-small;
+	@include media($medium-screen) {
+		max-width: $bbg-avatar-width-small * 1.5;
 	}
 }
 
@@ -72,7 +72,7 @@
 
 
 
-
+//staff page author profiles
 .bbg-staff__author {
 	//clear: left;
 	margin-bottom: $site-margins;
@@ -84,16 +84,6 @@
 .bbg-staff__author__text{
 	width: 100%;
 	max-width: $article-max-width;
-	@include media($small-screen) {
-		padding-left: $bbg-team__icon-width + 10px;
-	}
-}
-
-.bbg-staff__author__text > * {
-	text-align: center; 
-	@include media($small-screen) {
-		text-align: left; 
-	}
 }
 
 .bbg-staff__author-name{
@@ -108,25 +98,19 @@
 
 .bbg-staff__author-occupation {
 	text-transform: uppercase;
-	@include media($medium-screen) {
-		display: inline-block;
-	}
-	:after {
-		content: " // ";
-	}
 }
-
-.bbg-staff__author-occupation:after {
-	@include media($medium-screen) {
-		content: " // ";
-	}
-}
-
-
 
 .bbg-staff__author-contact {
+	@include clearfix();
 	margin-bottom: 1rem;
+	padding-left: $bbg-avatar-width-small + 10px;
 	@include media($medium-screen) {
-		display: inline-block;
+		padding-left: $bbg-avatar-width-small * 1.5 + 10px;
 	}
 }
+
+/*
+.bbg-staff__author-bio {
+	text-align: justify;
+}
+*/

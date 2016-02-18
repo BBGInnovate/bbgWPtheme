@@ -28,7 +28,7 @@
 		?>
 
 
-		<div class="bbg-avatar__container">
+		<div class="bbg-avatar__container--small">
 			<?php if ($mode != "staff" || $postCounts[$user->ID] > 0): ?>
 				<a href="<?php echo $authorPath ?>">
 					<?php echo get_avatar( $user->user_email , apply_filters( 'change_avatar_css', 150) ); ?>
@@ -69,15 +69,6 @@
 					<div class='clearAll'></div>
 				</div>
 
-
-				<?php query_posts( 'author=' . $theauthorid ); ?>
-					<?php if ( have_posts() ) { ?>
-						<!--<h3>Blog posts</h3>-->
-						<?php if ( have_posts() ) : while ( have_posts() && $count < $number_of_posts ) : the_post() ?>
-							<!--<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>-->
-							<?php $count++; ?>
-						<?php endwhile; endif; ?>
-					<?php } ?>
 				<?php
 					}
 				?>
