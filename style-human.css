@@ -2991,27 +2991,32 @@ fieldset {
   margin-top: 2em;
   text-transform: uppercase;
 }
-
 .bbg__article-content > h4 {
   clear: none;
 }
-
-h1 + ul,
-h1 + ol, h2 + ul,
-h2 + ol, h3 + ul,
-h3 + ol, h4 + ul,
-h4 + ol, h5 + ul,
-h5 + ol, h6 + ul,
-h6 + ol, p + ul,
-p + ol {
+.bbg__article-content h1 + ul,
+.bbg__article-content h1 + ol, .bbg__article-content h2 + ul,
+.bbg__article-content h2 + ol, .bbg__article-content h3 + ul,
+.bbg__article-content h3 + ol, .bbg__article-content h4 + ul,
+.bbg__article-content h4 + ol, .bbg__article-content h5 + ul,
+.bbg__article-content h5 + ol, .bbg__article-content h6 + ul,
+.bbg__article-content h6 + ol, .bbg__article-content p + ul,
+.bbg__article-content p + ol {
   margin-top: 0;
   margin-bottom: 1em;
 }
-
+.bbg__article-content .wp-caption-text {
+  color: #323a45;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: left;
+}
 .bbg__article-content li {
   margin-bottom: 3.5em;
 }
-
 .bbg__article-content blockquote {
   margin-top: 0;
   margin-right: auto;
