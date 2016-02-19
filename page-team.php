@@ -20,7 +20,28 @@ $ogDescription=$teamCategory->description;
 $numPortfolioPostsToShow=9;
 $numBlogPostsToShow=2;
 
+$blogusers = get_users();
+$teamLead=false;
+foreach($blogusers as $user) {
+	if ($user->headOfTeam== $teamCategoryID) {
+		$teamLead=$user;
+		break;
+	} 
+}
+
 get_header(); ?>
+
+	<?php 
+		if ($teamLead) {
+			bbg_post_author_bottom_card($teamLead->ID);
+			/*
+			var_dump($teamLead);
+			$avatar = get_avatar( $teamLead->ID , apply_filters( 'change_avatar_css', 150 ) );
+			echo $teamLead->display_name;
+			*/
+
+		}
+	?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -32,7 +53,7 @@ get_header(); ?>
 					</div>
 					<div class="bbg-team__text">
 						<h1 class="page-title bbg-team__name"><?php echo $teamCategory->name; ?> Team</h1>
-						<h3 class="usa-font-lead bbg-team__text-description"><?php echo $ogDescription; ?></h3>
+						<h3 class="bbg-team__text-description bbg-page__header-description"><?php echo $ogDescription; ?></h3>
 					</div>
 				</header><!-- .page-header -->
 
@@ -67,7 +88,7 @@ get_header(); ?>
 
 
 				<section class="usa-section usa-grid">
-					<h6 class="bbg-label small"><a href="<?php echo site_url(); ?>/portfolio"><?php echo $teamCategory->name; ?> projects</a></h6>
+					<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'portfolio' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
 					<div class="bbg-grid__container">
 					<?php 
 						$qParams=array(

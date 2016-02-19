@@ -2,6 +2,7 @@
 $font-sans: 'Lato', 'Helvetica', 'Arial', sans-serif;
 
 $base-font-size:      rem(16px);
+$read-in-font-size:   rem(20px);
 $base-line-height:    1.7;
 $small-line-height:   1.4;
 $text-shadow: 		  1px 1px 1px rgba(#000, .5);
@@ -29,6 +30,7 @@ $medium-large-screen:         900px;
 
 // Misc styles
 $border-dotted:               1px dotted #CCC;
+$border-solid:                1px solid #CCC;
 $box-transparent:             rgba(#000, .3);
 
 

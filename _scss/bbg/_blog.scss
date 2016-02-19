@@ -4,12 +4,10 @@
 	background-color: #F1F1F1;
 	line-height: 0;
 	text-align: center;
-	margin-bottom: $site-margins-small;
-	border: {
-		color: $color-gray-lightest;
-		style: solid;
-		width: 1px;
-	}
+	margin-bottom: $site-margins;
+	/*
+	border: $border-solid;
+	*/
 }
 
 /* Post title */
@@ -19,6 +17,10 @@
 	@include media($medium-screen) {
 		font-size: $h1-font-size;
 	}
+	@include media($medium-large-screen) {
+		font-size: $h1-font-size * 1.25;
+	}
+
 }
 
 /* Author byline */
@@ -70,12 +72,16 @@
 
 /* Article share links: icons */
 .bbg__article-share__icon {
+	background-color: $color-gray-lightest;
+	@include backgroundCover();
+	/*
 	background: {
-		color: #CCC;
+		color: $color-gray-lightest;
 		position: center center;
 		repeat: no-repeat;
 		size: cover;
 	}
+	*/
 	border-radius: $border-radius;
 	display: inline-block;
 	height: $share-icon-large;
@@ -92,7 +98,7 @@
 
 .bbg__article-share__icon.email {
 	background: {
-		color: #CCC;
+		color: $color-gray-lightest;
 		image: url(img/social-icons/png-white/social-icons_email.png);
 	}
 }
@@ -134,7 +140,7 @@
 .single-post .bbg__article-content > p:first-of-type {
 	font: {
 		family: $font-serif;
-		size: $base-font-size * 1.3;
+		size: $read-in-font-size;
 		weight: $font-light;
 	}
 	margin: {
