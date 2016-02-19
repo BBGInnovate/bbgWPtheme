@@ -30,11 +30,11 @@
 
 @mixin hide-text {
 	font: 0px/0 a;
-  	text-shadow: none;
-  	color: transparent;
-    overflow: hidden;
-    text-indent: -9000px;
-    display: block;
+	text-shadow: none;
+	color: transparent;
+	overflow: hidden;
+	text-indent: -9000px;
+	display: block;
 }
 
 // Center block
@@ -42,4 +42,22 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// Define the larger typed readin for first paragraphs and page headers
+@mixin readin() {
+	font: {
+		family: $font-serif;
+		size: $read-in-font-size * .8;
+		weight: $font-light;
+	}
+	margin: {
+		top: 1rem;
+		bottom: $site-margins;
+	}
+
+	@include media($medium-screen) {
+		font-size: $read-in-font-size;
+		line-height: $base-line-height * 1.2;
+	}
 }

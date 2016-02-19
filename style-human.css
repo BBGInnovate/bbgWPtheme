@@ -2784,7 +2784,6 @@ fieldset {
 
 .bbg-team__text-description {
   clear: none;
-  margin-top: 0;
   max-width: 600px;
 }
 
@@ -2980,14 +2979,13 @@ fieldset {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.6rem;
   font-weight: 300;
-  margin-top: 0;
-  margin-right: auto;
+  margin-top: 1rem;
   margin-bottom: 3rem;
-  margin-left: auto;
 }
 @media screen and (min-width: 600px) {
   .single-post .bbg__article-content > p:first-of-type {
     font-size: 2rem;
+    line-height: 2.04;
   }
 }
 
@@ -3514,12 +3512,19 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-page__header-description {
-  clear: none;
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 1.7;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  clear: none;
   max-width: 600px;
+}
+@media screen and (min-width: 600px) {
+  .bbg-page__header-description {
+    font-size: 2rem;
+    line-height: 2.04;
+  }
 }
 
 /*****************************/

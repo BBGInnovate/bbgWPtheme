@@ -238,11 +238,8 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-page__header-description {
+	@include readin();
 	clear: none;
-	font-family: $font-serif;
-	font-size: $read-in-font-size;
-	font-weight: $font-light;
-	line-height: $base-line-height;
 	max-width: $article-max-width;
 }
 
