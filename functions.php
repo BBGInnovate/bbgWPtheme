@@ -562,7 +562,7 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 		$output     = '';
 		if ( $categories ) {
 			foreach ( $categories as $category ) {
-				$output .= '<h5 class="entry-category bbg-label small"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
+				$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
 				if ( $single )
 				break;
 			}

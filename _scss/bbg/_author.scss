@@ -3,6 +3,7 @@
 .bbg-avatar__container {
 	margin: 0 auto;
 	max-width: $bbg-avatar-width;
+
 	@include media($small-screen) {
 		float: left;
 		margin: 0 1rem .5rem 0;
@@ -14,6 +15,7 @@
 	float: left;
 	margin: 0 1rem .5rem 0;
 	max-width: $bbg-avatar-width-small;
+
 	@include media($medium-screen) {
 		max-width: $bbg-avatar-width-small * 1.5;
 	}
@@ -23,6 +25,7 @@
 	border-radius: 50%;
 	display: block;
 	margin: 0 auto;
+
 	@include media($small-screen) {
 		height: 100%;
 		width: 100%;
@@ -39,6 +42,7 @@
 	clear: none;
 	margin-bottom: 0;
 	text-align: center;
+
 	@include media($small-screen) {
 		text-align: left;
 	}
@@ -74,8 +78,8 @@
 
 //staff page author profiles
 .bbg-staff__author {
-	//clear: left;
 	margin-bottom: $site-margins;
+
 	@include media($medium-screen) {
 		margin-bottom: $site-margins*2;
 	}
@@ -89,28 +93,34 @@
 .bbg-staff__author-name{
 	clear: none;
 	line-height: 1;
-	margin-bottom: .1rem;
-	margin-top: 1rem;
+	margin: {
+		top: 1rem;
+		bottom: .1rem;
+	}
+
 	@include media($medium-large-screen) {
 		font-size: $h2-font-size;
 	}
 }
 
 .bbg-staff__author-occupation {
+	font-weight: $font-light;
 	text-transform: uppercase;
 }
 
 .bbg-staff__author-contact {
 	@include clearfix();
+	font-weight: $font-light;
 	margin-bottom: 1rem;
 	padding-left: $bbg-avatar-width-small + 10px;
+
 	@include media($medium-screen) {
 		padding-left: $bbg-avatar-width-small * 1.5 + 10px;
 	}
 }
 
-/*
 .bbg-staff__author-bio {
-	text-align: justify;
+	font-family: "Merriweather","Georgia","Times New Roman",serif;
+	font-size: 14px;
+	line-height: 1.5;
 }
-*/

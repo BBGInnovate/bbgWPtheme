@@ -2805,8 +2805,8 @@ fieldset {
 .bbg-staff__author-name {
   clear: none;
   line-height: 1;
-  margin-bottom: .1rem;
   margin-top: 1rem;
+  margin-bottom: .1rem;
 }
 @media screen and (min-width: 900px) {
   .bbg-staff__author-name {
@@ -2815,10 +2815,12 @@ fieldset {
 }
 
 .bbg-staff__author-occupation {
+  font-weight: 300;
   text-transform: uppercase;
 }
 
 .bbg-staff__author-contact {
+  font-weight: 300;
   margin-bottom: 1rem;
   padding-left: 60px;
 }
@@ -2835,11 +2837,12 @@ fieldset {
   }
 }
 
-/*
 .bbg-staff__author-bio {
-	text-align: justify;
+  font-family: "Merriweather","Georgia","Times New Roman",serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
-*/
+
 /** HEADER AREA */
 /* Featured image */
 .bbg__article-header__thumbnail--large {
