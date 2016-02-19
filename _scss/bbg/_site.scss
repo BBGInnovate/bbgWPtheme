@@ -72,6 +72,17 @@ a:focus {
 			font-size: 2rem;
 		}
 	}
+
+	&.large {
+		margin: {
+			top: $site-margins;
+			bottom: 0;
+		}
+		@include media($small-screen) {
+			font-size: 3rem;
+		}
+	}
+
 }
 
 section.usa-section {

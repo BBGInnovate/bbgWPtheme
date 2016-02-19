@@ -3314,6 +3314,15 @@ a:focus {
     font-size: 2rem;
   }
 }
+.bbg-label.large {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 481px) {
+  .bbg-label.large {
+    font-size: 3rem;
+  }
+}
 
 section.usa-section {
   margin-bottom: 6rem;

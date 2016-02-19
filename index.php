@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<?php if ( is_home() && ! is_front_page() ) : ?>
 					<header class="page-header">
-						<h6 class="page-title screen-reader-text bbg-label small"><?php single_post_title(); ?></h6>
+						<h6 class="page-title screen-reader-text bbg-label large"><?php single_post_title(); ?></h6>
 					</header>
 				<?php endif; ?>
 
