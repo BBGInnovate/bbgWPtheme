@@ -327,34 +327,35 @@ body:not(.home) .menu-all-pages-container {
 	width: 50%;
 }
 
-.tertiary-stories {
-	@include media($medium-large-screen) {
-		border-left: $border-dotted;
-		padding-left: 3%;
-	}
-}
-
 .secondary-stories .bbg-blog__excerpt-title--list {
 	@include media($medium-screen) {
 		font-size: $h3-font-size * 1.5;
 	}
 }
 
-.tertiary-stories .bbg-blog__excerpt-title--list {
-	font-size: $h3-font-size * .9;
-
-	@include media($medium-screen) {
-		font-size: $h3-font-size;
+.tertiary-stories {
+	@include media($medium-large-screen) {
+		border-left: $border-dotted;
+		padding-left: 3%;
 	}
-}
 
-.tertiary-stories .bbg-blog__excerpt--list {
-	margin-bottom: 1rem;
+	.bbg-blog__excerpt-title--list {
+		font-size: $h3-font-size * .9;
 
-	@include media($medium-screen) {
-		margin-bottom: 2rem;
+		@include media($medium-screen) {
+			font-size: $h3-font-size;
+		}
 	}
-}
-.tertiary-stories .bbg-blog__excerpt--list:last-of-type {
-	margin-bottom: 0rem;
+
+	.bbg-blog__excerpt--list {
+		margin-bottom: 1rem;
+
+		@include media($medium-screen) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.bbg-blog__excerpt--list:last-of-type {
+		margin-bottom: 0rem;
+	}
 }

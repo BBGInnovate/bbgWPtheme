@@ -3566,19 +3566,18 @@ body:not(.home) .menu-all-pages-container {
   width: 50%;
 }
 
-@media screen and (min-width: 900px) {
-  .tertiary-stories {
-    border-left: 1px dotted #CCC;
-    padding-left: 3%;
-  }
-}
-
 @media screen and (min-width: 600px) {
   .secondary-stories .bbg-blog__excerpt-title--list {
     font-size: 3rem;
   }
 }
 
+@media screen and (min-width: 900px) {
+  .tertiary-stories {
+    border-left: 1px dotted #CCC;
+    padding-left: 3%;
+  }
+}
 .tertiary-stories .bbg-blog__excerpt-title--list {
   font-size: 1.8rem;
 }
@@ -3587,7 +3586,6 @@ body:not(.home) .menu-all-pages-container {
     font-size: 2rem;
   }
 }
-
 .tertiary-stories .bbg-blog__excerpt--list {
   margin-bottom: 1rem;
 }
@@ -3596,7 +3594,6 @@ body:not(.home) .menu-all-pages-container {
     margin-bottom: 2rem;
   }
 }
-
 .tertiary-stories .bbg-blog__excerpt--list:last-of-type {
   margin-bottom: 0rem;
 }
