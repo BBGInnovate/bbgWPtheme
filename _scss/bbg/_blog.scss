@@ -199,21 +199,23 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 }
 
+/** POST AUTHOR */
 .bbg__article-author {
 	background: {
 		color: $color-gray-lightest;
 	}
 	margin: {
 		right: auto;
-		bottom: 4rem;
 		left: auto;
 	}
 	max-width: $article-max-width;
 	overflow: hidden;
 	padding: 2rem;
+	text-align: center;
 
-	.bbg-avatar__container {
-		margin-right: 1rem;
+	@include media($small-medium-screen) {
+		bottom: 4rem;
+		text-align: left;
 	}
 
 	.bbg-staff__author-name {
@@ -222,32 +224,49 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 
 	.bbg-staff__author-description {
-		float: left;
-		width: 50%;
+		margin-bottom: 1rem;
+
+		@include media($small-medium-screen) {
+			margin-left: 110px;
+		}
 
 		.bbg-staff__author-occupation {
-			margin-bottom: .75rem;
+			font-weight: $font-normal;
+			margin-bottom: 1.3rem;
 		}
 
 		.bbg-staff__author-bio {
 			font: {
 				family: $font-serif;
 				size: $small-font-size;
+				weight: $font-light;
 			}
+			line-height: $lead-line-height;
 		}
 	}
 
 	.bbg-staff__author-contact {
-		text-align: right;
 		font: {
 			size: $small-font-size;
 			weight: $font-light;
 		}
 		line-height: $lead-line-height;
+		margin-bottom: 0;
+		padding-left: 0;
+
+		@include media($small-medium-screen) {
+			margin-left: 110px;
+		}
+
+		@include media($medium-screen) {
+			float: right;
+			text-align: right;
+		}
 
 		.bbg-staff__author-contact__email {
 			font: {
 				size: $base-font-size;
+				weight: 500;
 			}
 			margin-bottom: .5rem;
 		}

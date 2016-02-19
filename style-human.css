@@ -3023,41 +3023,65 @@ p + ol {
   }
 }
 
+/** POST AUTHOR */
 .bbg__article-author {
   background-color: #f1f1f1;
   margin-right: auto;
-  margin-bottom: 4rem;
   margin-left: auto;
   max-width: 600px;
   overflow: hidden;
   padding: 2rem;
+  text-align: center;
 }
-.bbg__article-author .bbg-avatar__container {
-  margin-right: 1rem;
+@media screen and (min-width: 481px) {
+  .bbg__article-author {
+    bottom: 4rem;
+    text-align: left;
+  }
 }
 .bbg__article-author .bbg-staff__author-name {
   font-weight: 700;
   margin-bottom: .5rem;
 }
 .bbg__article-author .bbg-staff__author-description {
-  float: left;
-  width: 50%;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg__article-author .bbg-staff__author-description {
+    margin-left: 110px;
+  }
 }
 .bbg__article-author .bbg-staff__author-description .bbg-staff__author-occupation {
-  margin-bottom: .75rem;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
 }
 .bbg__article-author .bbg-staff__author-description .bbg-staff__author-bio {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.4rem;
-}
-.bbg__article-author .bbg-staff__author-contact {
-  text-align: right;
-  font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.7;
 }
+.bbg__article-author .bbg-staff__author-contact {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+@media screen and (min-width: 481px) {
+  .bbg__article-author .bbg-staff__author-contact {
+    margin-left: 110px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-author .bbg-staff__author-contact {
+    float: right;
+    text-align: right;
+  }
+}
 .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__email {
   font-size: 1.6rem;
+  font-weight: 500;
   margin-bottom: .5rem;
 }
 
