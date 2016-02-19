@@ -195,6 +195,10 @@ body:not(.home) .menu-all-pages-container {
 /*****************************/
 
 // Responsive YouTube embeds
+.bbg-embed-shell {
+	max-width: $article-max-width;
+	margin: 0 auto;
+}
 .embed-container {
 	height: 0;
 	max-width: 100%;
@@ -316,7 +320,7 @@ body:not(.home) .menu-all-pages-container {
 
 .tertiary-stories {
 	@include media($medium-large-screen) {
-		border-left: 1px solid #CCC;
+		border-left: $border-dotted;
 		padding-left: 3%;
 	}
 }

@@ -3422,6 +3422,11 @@ body:not(.home) .menu-all-pages-container {
 }
 
 /*****************************/
+.bbg-embed-shell {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .embed-container {
   height: 0;
   max-width: 100%;
@@ -3538,7 +3543,7 @@ body:not(.home) .menu-all-pages-container {
 
 @media screen and (min-width: 900px) {
   .tertiary-stories {
-    border-left: 1px solid #CCC;
+    border-left: 1px dotted #CCC;
     padding-left: 3%;
   }
 }

@@ -533,7 +533,7 @@ function custom_youtube_settings($code){
 				array('',''),
 			$code);
 		//wrap in a responsive div
-		$return="<div class='embed-container'>" . $return . "</div>";
+		$return="<div class='bbg-embed-shell'><div class='embed-container'>" . $return . "</div></div>";
 	} else {
 		$return = $code;
 	}
