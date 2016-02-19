@@ -197,7 +197,7 @@ body:not(.home) .menu-all-pages-container {
 // Responsive YouTube embeds
 .bbg-embed-shell {
 	max-width: $article-max-width;
-	margin: 0 auto;
+	margin: $site-margins auto;
 }
 .embed-container {
 	height: 0;
