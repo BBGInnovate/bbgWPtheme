@@ -4,7 +4,10 @@
 	background-color: #F1F1F1;
 	line-height: 0;
 	text-align: center;
-	margin-bottom: $site-margins;
+	margin: {
+		top: $site-margins;
+		bottom: $site-margins;
+	}
 	/*
 	border: $border-solid;
 	*/
@@ -138,23 +141,8 @@
 }
 
 .single-post .bbg__article-content > p:first-of-type {
-	font: {
-		family: $font-serif;
-		size: $read-in-font-size * .8;
-		weight: $font-light;
-	}
-	margin: {
-		top: 0;
-		right: auto;
-		bottom: $site-margins;
-		left: auto;
-	}
-
-	@include media($medium-screen) {
-		font: {
-			size: $read-in-font-size;
-		}
-	}
+	//@include readin();
+	@extend .readin;
 }
 
 .bbg__article-content {

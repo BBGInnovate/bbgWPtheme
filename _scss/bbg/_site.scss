@@ -238,11 +238,8 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-page__header-description {
+	@extend .readin;
 	clear: none;
-	font-family: $font-serif;
-	font-size: $read-in-font-size;
-	font-weight: $font-light;
-	line-height: $base-line-height;
 	max-width: $article-max-width;
 }
 
@@ -341,6 +338,7 @@ body:not(.home) .menu-all-pages-container {
 
 	.bbg-blog__excerpt-title--list {
 		font-size: $h3-font-size * .9;
+		font-weight: 500;
 
 		@include media($medium-screen) {
 			font-size: $h3-font-size;

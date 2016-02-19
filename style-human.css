@@ -2705,11 +2705,20 @@ fieldset {
   }
 }
 
-/*
-.u--remove-margin-bottom {
-	//margin-bottom: 2rem !important;
+.readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2.04;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
-*/
+@media screen and (min-width: 600px) {
+  .readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
+    font-size: 2rem;
+  }
+}
+
 .bbg-avatar__container {
   margin: 0 auto;
   max-width: 200px;
@@ -2784,7 +2793,6 @@ fieldset {
 
 .bbg-team__text-description {
   clear: none;
-  margin-top: 0;
   max-width: 600px;
 }
 
@@ -2839,9 +2847,11 @@ fieldset {
 }
 
 .bbg-staff__author-bio {
-  font-family: "Merriweather","Georgia","Times New Roman",serif;
-  font-size: 14px;
-  line-height: 1.5;
+  /*
+  	font-family: "Merriweather","Georgia","Times New Roman",serif;
+  	font-size: 14px;
+  	line-height: 1.5;
+  	*/
 }
 
 /** HEADER AREA */
@@ -2850,6 +2860,7 @@ fieldset {
   background-color: #F1F1F1;
   line-height: 0;
   text-align: center;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   /*
   border: $border-solid;
@@ -2974,21 +2985,6 @@ fieldset {
   margin-right: auto;
   margin-left: auto;
   max-width: 600px;
-}
-
-.single-post .bbg__article-content > p:first-of-type {
-  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 3rem;
-  margin-left: auto;
-}
-@media screen and (min-width: 600px) {
-  .single-post .bbg__article-content > p:first-of-type {
-    font-size: 2rem;
-  }
 }
 
 .bbg__article-content > h3 {
@@ -3545,10 +3541,6 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-page__header-description {
   clear: none;
-  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.7;
   max-width: 600px;
 }
 
@@ -3644,6 +3636,7 @@ body:not(.home) .menu-all-pages-container {
 }
 .tertiary-stories .bbg-blog__excerpt-title--list {
   font-size: 1.8rem;
+  font-weight: 500;
 }
 @media screen and (min-width: 600px) {
   .tertiary-stories .bbg-blog__excerpt-title--list {
