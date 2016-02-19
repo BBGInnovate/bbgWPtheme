@@ -132,6 +132,7 @@
 		weight: bold;
 	}
 	padding-left: $bbg-avatar-twitter + 10px;
+	word-wrap: break-word;
 }
 
 .bbg-fuego__twitter__quoted-tweet {
@@ -144,4 +145,5 @@
 
 .bbg-fuego__twitter__quote-text {
 	padding-left: $bbg-avatar-twitter + 10px;
+	word-wrap: break-word;
 }

@@ -3799,6 +3799,7 @@ body:not(.home) .menu-all-pages-container {
   font-size: 2rem;
   font-weight: bold;
   padding-left: 80px;
+  word-wrap: break-word;
 }
 
 .bbg-fuego__twitter__quoted-tweet {
@@ -3811,6 +3812,7 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-fuego__twitter__quote-text {
   padding-left: 80px;
+  word-wrap: break-word;
 }
 
 .comments-area {
