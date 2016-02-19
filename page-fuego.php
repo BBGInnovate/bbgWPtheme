@@ -294,7 +294,7 @@ get_header();
 								<div class='bbg-fuego__twitter__quote'>
 									<p class='bbg-fuego__twitter__author-name'><?php echo $quoteMakerName; ?> </p>
 									<?php if ($quoteMakerHandle != ""): ?>
-									<p class="">
+									<p class="bbg-fuego__twitter__author-handle ">
 										<a href='https://twitter.com/<?php echo $quoteMakerHandle; ?>' target='_blank'>
 											@<?php echo $quoteMakerHandle; ?>
 										</a>
