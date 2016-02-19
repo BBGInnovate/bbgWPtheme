@@ -3321,6 +3321,7 @@ a:focus {
 @media screen and (min-width: 481px) {
   .bbg-label.large {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 
