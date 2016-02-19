@@ -20,7 +20,28 @@ $ogDescription=$teamCategory->description;
 $numPortfolioPostsToShow=9;
 $numBlogPostsToShow=2;
 
+$blogusers = get_users();
+$teamLead=false;
+foreach($blogusers as $user) {
+	if ($user->headOfTeam== $teamCategoryID) {
+		$teamLead=$user;
+		break;
+	} 
+}
+
 get_header(); ?>
+
+	<?php 
+		if ($teamLead) {
+			bbg_post_author_bottom_card($teamLead->ID);
+			/*
+			var_dump($teamLead);
+			$avatar = get_avatar( $teamLead->ID , apply_filters( 'change_avatar_css', 150 ) );
+			echo $teamLead->display_name;
+			*/
+
+		}
+	?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
