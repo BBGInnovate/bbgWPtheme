@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying excerpts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -39,10 +39,10 @@ if (!$includeImage && !$includeMeta && !$includeExcerpt){
 	$removeSpace = "u--remove-margin-bottom";
 }
 
-//Add misc. classes
+//Concatenate misc. classes
 $classNames="bbg-blog__excerpt--list " . $gridClass . " ". $removeSpace;
 
-
+//Define the link to the post
 $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 ?>
 
@@ -59,18 +59,11 @@ $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 	</header><!-- .bbg-blog__excerpt-header -->
 
 
-		<?php if ($includeImage) { ?>
+		<?php if ($includeImage && has_post_thumbnail()) { ?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--small ">
 			<?php
 				echo $link;
-
-				/* Set a default thumbnail image in case one isn't set */
-				$thumbnail = '<img src="' . get_template_directory_uri() . '/img/portfolio-project-default.png" alt="This is a default image." />';
-
-				if (has_post_thumbnail()) {
-					$thumbnail = the_post_thumbnail('small-thumb');
-				}
-				echo $thumbnail;
+				echo the_post_thumbnail('small-thumb');
 			?>
 			</a>
 		</div>

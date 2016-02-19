@@ -44,7 +44,7 @@
 		}
 	}
 	li {
-		border-bottom: 1px solid #CCC;
+		border-bottom: $border-dotted;
 		display: block;
 		margin: 0;
 		text-transform: uppercase;
@@ -109,10 +109,14 @@
 		li {
 			background-color: #FFF;
 			border-bottom: none;
-			border-right: 1px dotted #CCC;
+			border-right: $border-dotted;
 			float: left;
 			margin: 0;
 			padding: 0;
+		}
+
+		li:first-of-type {
+			border-left: $border-dotted;
 		}
 
 		li:first-of-type,
@@ -126,7 +130,7 @@
 		}
 
 		a {
-			padding: 1.5rem 1.5rem .5rem 1.5rem;
+			padding: 1rem 1.5rem .5rem 1.5rem;
 		}
 	}
 }

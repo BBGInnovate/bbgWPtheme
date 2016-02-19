@@ -18,27 +18,28 @@ $color-share-facebook:        #3d5a98;
 $color-share-twitter:         #55acee;
 $color-light-gray:            #ECECEC;
 
-$color-focus:                #3e94cf;
-$color-visited:              #4773aa;
+$color-focus:                 #3e94cf;
+$color-visited:               #4773aa;
 
 
 // Mobile First Breakpoints
 $medium-large-screen:         900px;
 
 
-// Magic Numbers
+// Misc styles
+$border-dotted:               1px dotted #CCC;
 $box-transparent:             rgba(#000, .3);
+
+
+// Magic Numbers
 $banner-image-height:         400px;
-$share-icon-small:            20px;
-$share-icon-large:            40px;
 $bbg-avatar-width:            200px;
-$bbg-avatar-width-small:      50px;
-$bbg-avatar-width-percentage: 20%;
-$bbg-avatar-twitter:          70px;
-$site-margins-small:		  1rem;
-
+$bbg-avatar-width-small:       50px;
+$bbg-avatar-width-percentage:  20%;
+$bbg-avatar-twitter:           70px;
 $bbg-team__icon-width:        100px;
-
+$share-icon-small:             20px;
+$share-icon-large:             40px;
+$site-margins-small:           10px;
 $thumbnail-small-max-width:   200px;
-$ratio-16-9:                  .5626;
-// WordPress
+
