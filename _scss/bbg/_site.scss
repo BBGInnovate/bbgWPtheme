@@ -100,7 +100,7 @@ article {
 }
 
 .bbg-site-logo {
-	background: #CCC url(img/logo-agency-square.png) no-repeat center center / cover;
+	background: $color-gray-warm-light url(img/logo-agency-square.png) no-repeat center center / cover;
 	display: inline-block;
 	height: 2.5rem * 1.2;
 	margin-right: 1rem;
@@ -124,7 +124,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-heading-site-title {
-	border-bottom: 1px solid #CCC;
+	border-bottom: $border-solid;
 	font: {
 		family: $font-sans !important;
 		size: 2.5rem;
@@ -222,7 +222,7 @@ body:not(.home) .menu-all-pages-container {
 
 //page header styles
 .bbg-page__header {
-	border-bottom: 1px solid #CCC;
+	border-bottom: $border-solid;
 	margin: 0 0 $site-margins 0;
 	padding: $site-margins;
 }
@@ -278,6 +278,15 @@ body:not(.home) .menu-all-pages-container {
 
 	@include media($medium-large-screen) {
 		font-size: $h1-font-size;
+	}
+}
+
+
+.bbg__excerpt-header__thumbnail--large {
+	background-color: $color-gray-warm-light;
+	img {
+		display: block;
+		margin: 0 auto;
 	}
 }
 

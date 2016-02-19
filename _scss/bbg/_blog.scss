@@ -70,12 +70,16 @@
 
 /* Article share links: icons */
 .bbg__article-share__icon {
+	background-color: $color-gray-warm-light;
+	@include backgroundCover();
+	/*
 	background: {
-		color: #CCC;
+		color: $color-gray-warm-light;
 		position: center center;
 		repeat: no-repeat;
 		size: cover;
 	}
+	*/
 	border-radius: $border-radius;
 	display: inline-block;
 	height: $share-icon-large;
@@ -92,7 +96,7 @@
 
 .bbg__article-share__icon.email {
 	background: {
-		color: #CCC;
+		color: $color-gray-warm-light;
 		image: url(img/social-icons/png-white/social-icons_email.png);
 	}
 }
