@@ -2784,10 +2784,6 @@ fieldset {
 
 .bbg-team__text-description {
   clear: none;
-  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.7;
   margin-top: 0;
   max-width: 600px;
 }
@@ -3463,6 +3459,11 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-page__header-description {
   clear: none;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 600px;
 }
 
 /*****************************/

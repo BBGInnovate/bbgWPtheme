@@ -17,9 +17,7 @@ get_header();
 			<section class="usa-section usa-grid-full">
 				<header class="bbg-page__header usa-grid">
 					<h1 class="bbg-page__header-title">STAFF</h1>
-					<div class="usa-intro bbg-page__header-description">
-						<h3 class="usa-font-lead">ODDI's designers, developers and storytellers help drive USIM digital projects.</h3>
-					</div>
+					<h3 class="bbg-page__header-description">ODDI's designers, developers and storytellers help drive USIM digital projects.</h3>
 				</header>
 				<div class="usa-grid">
 					<?php
