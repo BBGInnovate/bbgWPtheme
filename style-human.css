@@ -2804,11 +2804,12 @@ fieldset {
 
 .bbg-staff__author-name {
   clear: none;
+  font-size: 2.4rem;
   line-height: 1;
   margin-top: 1rem;
   margin-bottom: .1rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 481px) {
   .bbg-staff__author-name {
     font-size: 3rem;
   }
@@ -2833,7 +2834,7 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-staff__author-contact {
-    padding-left: 85px;
+    padding-left: 0;
   }
 }
 

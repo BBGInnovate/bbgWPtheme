@@ -92,13 +92,14 @@
 
 .bbg-staff__author-name{
 	clear: none;
+	font-size: $h2-font-size * .8;
 	line-height: 1;
 	margin: {
 		top: 1rem;
 		bottom: .1rem;
 	}
 
-	@include media($medium-large-screen) {
+	@include media($small-screen) {
 		font-size: $h2-font-size;
 	}
 }
@@ -115,7 +116,7 @@
 	padding-left: $bbg-avatar-width-small + 10px;
 
 	@include media($medium-screen) {
-		padding-left: $bbg-avatar-width-small * 1.5 + 10px;
+		padding-left:0;
 	}
 }
 
