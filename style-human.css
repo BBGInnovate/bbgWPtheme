@@ -2709,13 +2709,13 @@ fieldset {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.6rem;
   font-weight: 300;
+  line-height: 2.04;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 600px) {
   .readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
     font-size: 2rem;
-    line-height: 2.04;
   }
 }
 

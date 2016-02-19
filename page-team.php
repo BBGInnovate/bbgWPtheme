@@ -48,7 +48,7 @@ get_header(); ?>
 								//bbg_post_author_bottom_card($teamLead->ID);
 								//var_dump($teamLead);
 								$authorPath = get_author_posts_url($teamLead -> ID);
-								echo 'Contact: <a href="' . $authorPath . '">' . $teamLead->display_name . '</a>';
+								echo '<p>Contact: <a href="' . $authorPath . '">' . $teamLead->display_name . '</a></p>';
 							}
 						?>
 					</div>

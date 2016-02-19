@@ -45,6 +45,7 @@
 		size: $read-in-font-size * .8;
 		weight: $font-light;
 	}
+	line-height: $base-line-height * 1.2;
 	margin: {
 		top: 1rem;
 		bottom: $site-margins;
@@ -52,7 +53,6 @@
 
 	@include media($medium-screen) {
 		font-size: $read-in-font-size;
-		line-height: $base-line-height * 1.2;
 	}
 }
 
