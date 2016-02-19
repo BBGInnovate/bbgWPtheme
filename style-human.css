@@ -3099,13 +3099,43 @@ fieldset {
 @media screen and (min-width: 600px) {
   .bbg__article-author .bbg-staff__author-contact {
     float: right;
+    margin-left: 0;
     text-align: right;
   }
 }
 .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__email {
+  display: block;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: .5rem;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__email {
+    display: inline-block;
+  }
+}
+.bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__twitter {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__twitter {
+    display: inline-block;
+    margin-right: .25rem;
+  }
+  .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__twitter:before {
+    content: " | ";
+  }
+}
+.bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__website {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__website {
+    display: inline-block;
+  }
+  .bbg__article-author .bbg-staff__author-contact .bbg-staff__author-contact__website:before {
+    content: " | ";
+  }
 }
 
 @media screen and (min-width: 600px) {

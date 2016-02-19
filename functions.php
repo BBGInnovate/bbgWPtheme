@@ -692,16 +692,16 @@ add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 						</div><!-- .bbg-staff__author-description -->
 
 						<div class="bbg-staff__author-contact">
-							<a href="mailto:<?php echo $authorEmail ?>" class="bbg-staff__author-contact__email"><?php echo $authorEmail; ?></a><br />
+							<span class="bbg-staff__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
 							<?php
 								if ( $twitterHandle && $twitterHandle != '' ) {
 									$twitterHandle = str_replace( "@", "", $twitterHandle );
-									$twitterHandle = '<a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a><br />';
+									$twitterHandle = '<span class="bbg-staff__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
 								echo $twitterHandle;
 								}
 
 								if ( $website && $website != '' ) {
-								$website = '<a href="' . $website . '">' . $website . '</a>';
+								$website = '<span class="bbg-staff__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
 								echo $website;
 								}
 							?>
