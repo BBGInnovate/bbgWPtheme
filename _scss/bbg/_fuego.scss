@@ -14,7 +14,7 @@
 	padding-top: 0;
 }
 .bbg-fuego__article {
-	border: 1px solid $color-gray-warm-light;
+	border: 1px solid $color-gray-lightest;
 	border-radius: $border-radius;
 	margin: {
 		top: 0;
@@ -64,7 +64,7 @@
 }
 
 .bbg-fuego__article__thumbnail {
-	background-color: $color-gray-warm-light;
+	background-color: $color-gray-lightest;
 	@include backgroundCover();
 	float: left;
 	height: 120px;
@@ -74,7 +74,7 @@
 }
 
 .bbg-fuego__article__thumbnail--large {
-	background-color: $color-gray-warm-light;
+	background-color: $color-gray-lightest;
 	@include backgroundCover();
 	height: 240px;
 	margin: 0 0 1rem 0;

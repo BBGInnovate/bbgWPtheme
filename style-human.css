@@ -2850,10 +2850,10 @@ fieldset {
   background-color: #F1F1F1;
   line-height: 0;
   text-align: center;
-  margin-bottom: 10px;
-  border-color: #f1f1f1;
-  border-style: solid;
-  border-width: 1px;
+  margin-bottom: 3rem;
+  /*
+  border: $border-solid;
+  */
 }
 
 /* Post title */
@@ -2863,6 +2863,11 @@ fieldset {
 @media screen and (min-width: 600px) {
   .bbg__article-header__title {
     font-size: 4rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg__article-header__title {
+    font-size: 5rem;
   }
 }
 
@@ -2912,13 +2917,13 @@ fieldset {
 
 /* Article share links: icons */
 .bbg__article-share__icon {
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   /*
   background: {
-  	color: $color-gray-warm-light;
+  	color: $color-gray-lightest;
   	position: center center;
   	repeat: no-repeat;
   	size: cover;
@@ -2940,7 +2945,7 @@ fieldset {
 }
 
 .bbg__article-share__icon.email {
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
   background-image: url(img/social-icons/png-white/social-icons_email.png);
 }
 
@@ -3172,7 +3177,7 @@ p + ol {
 }
 .bbg-banner {
   /*background: #CCC no-repeat center center / cover;*/
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3512,7 +3517,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg__excerpt-header__thumbnail--large {
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
 }
 .bbg__excerpt-header__thumbnail--large img {
   display: block;
@@ -3615,7 +3620,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-fuego__article {
-  border: 1px solid #e4e2e0;
+  border: 1px solid #f1f1f1;
   border-radius: 0.3rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -3670,7 +3675,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-fuego__article__thumbnail {
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3682,7 +3687,7 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-fuego__article__thumbnail--large {
-  background-color: #e4e2e0;
+  background-color: #f1f1f1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

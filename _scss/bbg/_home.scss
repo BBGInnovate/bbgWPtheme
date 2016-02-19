@@ -1,6 +1,6 @@
 .bbg-banner{
 	/*background: #CCC no-repeat center center / cover;*/
-	background-color: $color-gray-warm-light;
+	background-color: $color-gray-lightest;
 	@include backgroundCover();
 	height: $banner-image-height;
 	max-width: 9999px;

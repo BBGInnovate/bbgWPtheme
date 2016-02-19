@@ -35,9 +35,8 @@ $twitterURL="//twitter.com/intent/tweet?text=" . rawurlencode( $twitterText );
 $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 ?>
-	<div class="usa-grid">
+	<div class="usa-grid-full">
 
-		<header class="entry-header bbg__article-header">
 		<?php
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
@@ -46,6 +45,10 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				echo '</div>';
 			}
 		?><!-- .bbg__article-header__thumbnail -->
+	</div>
+
+	<div class="usa-grid">
+		<header class="entry-header bbg__article-header">
 
 		<?php echo bbginnovate_post_categories( '', true ); ?>
 		<!-- .bbg-label -->
