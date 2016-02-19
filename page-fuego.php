@@ -26,7 +26,7 @@ get_header();
 		<main id="content" class="site-content" role="main">
 
 			<div class="usa-grid-full">
-				<header class="page-header bbg-page__header">
+				<header class="page-header bbg-page__header" style="margin-bottom: 1.5rem;">
 					<div class="bbg-avatar__container bbg-team__icon">
 						<div class="bbg-avatar bbg-team__icon__image" style="background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/trending-150x150.png);"></div>
 					</div>
@@ -275,7 +275,7 @@ get_header();
 								<p class='bbg-fuego__twitter__author-name'>
 									<?php echo $authorDisplayName; ?>
 								</p>
-								<p>
+								<p class='bbg-fuego__twitter__author-handle'>
 									<a href='https://twitter.com/<?php echo $author; ?>' target='_blank'>@<?php echo $author; ?></a>
 								</p>
 							</div>
@@ -340,19 +340,6 @@ get_header();
 		</div><!-- #secondary .widget-area -->
 </div>
 </div><!-- #main .site-main -->
-<!--
-		<div class="post-author-bottom usa-grid">
-			<div class="post-author-card">
-				<a class="site-logo" href="https://africa2.rizing.org/trending/">
-					<img src="https://africa.rizing.org/wp-content/uploads/2015/10/trending-150x150.png" width="100" height="100" alt="Trending" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo"> </a>
-				<div class="post-author-info">
-					<h1 class="site-title">
-						<span class="byline"><span class="author vcard"><a class="url fn n" href="https://africa.rizing.org/trending/">Trending</a></span></span>					</h1>
-					<h2 class="site-description">an auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h2>
-				</div>
-			</div>
-		</div>
--->
 
 <?php 
 

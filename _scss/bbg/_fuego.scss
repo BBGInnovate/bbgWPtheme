@@ -115,6 +115,14 @@
 		size: 17px;
 		weight: bold;
 	}
+	margin-bottom: 0;
+	padding-left: $bbg-avatar-twitter + 10px;
+}
+.bbg-fuego__twitter__author-handle {
+	margin: {
+		top: 0;
+		bottom: 0;
+	};
 	padding-left: $bbg-avatar-twitter + 10px;
 }
 
@@ -128,7 +136,7 @@
 
 .bbg-fuego__twitter__quoted-tweet {
 	background-color: #F7F7F7;
-	//border: 1px solid #CCC;
+	border: 1px solid #EFEFEF;
 	margin-bottom: 1rem;
 	padding: $site-margins;
 	padding-bottom: $site-margins * .5;

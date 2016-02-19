@@ -3682,6 +3682,13 @@ body:not(.home) .menu-all-pages-container {
 .bbg-fuego__twitter__author-name {
   font-size: 17px;
   font-weight: bold;
+  margin-bottom: 0;
+  padding-left: 80px;
+}
+
+.bbg-fuego__twitter__author-handle {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 80px;
 }
 
@@ -3693,6 +3700,7 @@ body:not(.home) .menu-all-pages-container {
 
 .bbg-fuego__twitter__quoted-tweet {
   background-color: #F7F7F7;
+  border: 1px solid #EFEFEF;
   margin-bottom: 1rem;
   padding: 3rem;
   padding-bottom: 1.5rem;
