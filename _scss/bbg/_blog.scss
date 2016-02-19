@@ -140,7 +140,7 @@
 .single-post .bbg__article-content > p:first-of-type {
 	font: {
 		family: $font-serif;
-		size: $read-in-font-size;
+		size: $read-in-font-size * .8;
 		weight: $font-light;
 	}
 	margin: {
@@ -148,6 +148,12 @@
 		right: auto;
 		bottom: $site-margins;
 		left: auto;
+	}
+
+	@include media($medium-screen) {
+		font: {
+			size: $read-in-font-size;
+		}
 	}
 }
 
