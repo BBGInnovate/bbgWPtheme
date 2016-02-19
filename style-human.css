@@ -2784,6 +2784,10 @@ fieldset {
 
 .bbg-team__text-description {
   clear: none;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.7;
   margin-top: 0;
   max-width: 600px;
 }
@@ -2965,7 +2969,7 @@ fieldset {
 
 .single-post .bbg__article-content > p:first-of-type {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 2.08rem;
+  font-size: 2rem;
   font-weight: 300;
   margin-top: 0;
   margin-right: auto;

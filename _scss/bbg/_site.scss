@@ -78,6 +78,7 @@ a:focus {
 			top: $site-margins;
 			bottom: 0;
 		}
+
 		@include media($small-screen) {
 			font-size: 3rem;
 			margin-bottom: 1.5rem;

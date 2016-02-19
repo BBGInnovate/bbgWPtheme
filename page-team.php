@@ -32,7 +32,7 @@ get_header(); ?>
 					</div>
 					<div class="bbg-team__text">
 						<h1 class="page-title bbg-team__name"><?php echo $teamCategory->name; ?> Team</h1>
-						<h3 class="usa-font-lead bbg-team__text-description"><?php echo $ogDescription; ?></h3>
+						<h3 class="bbg-team__text-description"><?php echo $ogDescription; ?></h3>
 					</div>
 				</header><!-- .page-header -->
 

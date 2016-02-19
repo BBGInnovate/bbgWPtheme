@@ -70,6 +70,10 @@
 
 .bbg-team__text-description {
 	clear: none;
+	font-family: $font-serif;
+	font-size: $read-in-font-size;
+	font-weight: $font-light;
+	line-height: $base-line-height;
 	margin-top: 0;
 	max-width: $article-max-width;
 }
