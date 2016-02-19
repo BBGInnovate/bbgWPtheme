@@ -120,7 +120,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 	</div><!-- .usa-grid -->
 
-	<?php bbg_post_author_bottom_card(get_the_author_id()); ?>
+	<?php bbg_post_author_bottom_card(get_the_author_meta('ID')); ?>
 
 	<!-- <footer class="entry-footer bbg__article-footer">
 		<?php bbginnovate_entry_footer(); ?>
