@@ -2705,11 +2705,20 @@ fieldset {
   }
 }
 
-/*
-.u--remove-margin-bottom {
-	//margin-bottom: 2rem !important;
+.readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
-*/
+@media screen and (min-width: 600px) {
+  .readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
+    font-size: 2rem;
+    line-height: 2.04;
+  }
+}
+
 .bbg-avatar__container {
   margin: 0 auto;
   max-width: 200px;
@@ -2838,9 +2847,11 @@ fieldset {
 }
 
 .bbg-staff__author-bio {
-  font-family: "Merriweather","Georgia","Times New Roman",serif;
-  font-size: 14px;
-  line-height: 1.5;
+  /*
+  	font-family: "Merriweather","Georgia","Times New Roman",serif;
+  	font-size: 14px;
+  	line-height: 1.5;
+  	*/
 }
 
 /** HEADER AREA */
@@ -2974,20 +2985,6 @@ fieldset {
   margin-right: auto;
   margin-left: auto;
   max-width: 600px;
-}
-
-.single-post .bbg__article-content > p:first-of-type {
-  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-}
-@media screen and (min-width: 600px) {
-  .single-post .bbg__article-content > p:first-of-type {
-    font-size: 2rem;
-    line-height: 2.04;
-  }
 }
 
 .bbg__article-content > h3 {
@@ -3513,19 +3510,8 @@ body:not(.home) .menu-all-pages-container {
 }
 
 .bbg-page__header-description {
-  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
   clear: none;
   max-width: 600px;
-}
-@media screen and (min-width: 600px) {
-  .bbg-page__header-description {
-    font-size: 2rem;
-    line-height: 2.04;
-  }
 }
 
 /*****************************/
@@ -3620,6 +3606,7 @@ body:not(.home) .menu-all-pages-container {
 }
 .tertiary-stories .bbg-blog__excerpt-title--list {
   font-size: 1.8rem;
+  font-weight: 500;
 }
 @media screen and (min-width: 600px) {
   .tertiary-stories .bbg-blog__excerpt-title--list {

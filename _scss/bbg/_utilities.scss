@@ -16,12 +16,6 @@
 	}
 }
 
-/*
-.u--remove-margin-bottom {
-	//margin-bottom: 2rem !important;
-}
-*/
-
 @mixin backgroundCover() {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -45,7 +39,7 @@
 }
 
 // Define the larger typed readin for first paragraphs and page headers
-@mixin readin() {
+.readin {
 	font: {
 		family: $font-serif;
 		size: $read-in-font-size * .8;
@@ -61,3 +55,6 @@
 		line-height: $base-line-height * 1.2;
 	}
 }
+
+
+

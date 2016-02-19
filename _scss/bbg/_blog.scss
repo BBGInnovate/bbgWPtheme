@@ -141,7 +141,8 @@
 }
 
 .single-post .bbg__article-content > p:first-of-type {
-	@include readin();
+	//@include readin();
+	@extend .readin;
 }
 
 .bbg__article-content {
