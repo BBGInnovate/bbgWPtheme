@@ -31,17 +31,6 @@ foreach($blogusers as $user) {
 
 get_header(); ?>
 
-	<?php 
-		if ($teamLead) {
-			bbg_post_author_bottom_card($teamLead->ID);
-			/*
-			var_dump($teamLead);
-			$avatar = get_avatar( $teamLead->ID , apply_filters( 'change_avatar_css', 150 ) );
-			echo $teamLead->display_name;
-			*/
-
-		}
-	?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -54,6 +43,14 @@ get_header(); ?>
 					<div class="bbg-team__text">
 						<h1 class="page-title bbg-team__name"><?php echo $teamCategory->name; ?> Team</h1>
 						<h3 class="bbg-team__text-description bbg-page__header-description"><?php echo $ogDescription; ?></h3>
+						<?php 
+							if ($teamLead) {
+\								//bbg_post_author_bottom_card($teamLead->ID);
+								//var_dump($teamLead);
+								$authorPath = get_author_posts_url($teamLead -> ID);
+								echo 'Contact: <a href="' . $authorPath . '">' . $teamLead->display_name . '</a>';
+							}
+						?>
 					</div>
 				</header><!-- .page-header -->
 
