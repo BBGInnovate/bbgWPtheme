@@ -4,7 +4,10 @@
 	background-color: #F1F1F1;
 	line-height: 0;
 	text-align: center;
-	margin-bottom: $site-margins;
+	margin: {
+		top: $site-margins;
+		bottom: $site-margins;
+	}
 	/*
 	border: $border-solid;
 	*/

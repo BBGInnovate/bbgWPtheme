@@ -2849,6 +2849,7 @@ fieldset {
   background-color: #F1F1F1;
   line-height: 0;
   text-align: center;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   /*
   border: $border-solid;
