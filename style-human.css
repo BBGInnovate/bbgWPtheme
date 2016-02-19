@@ -2705,10 +2705,11 @@ fieldset {
   }
 }
 
+/*
 .u--remove-margin-bottom {
-  margin-bottom: 1rem !important;
+	//margin-bottom: 2rem !important;
 }
-
+*/
 .bbg-avatar__container {
   margin: 0 auto;
   max-width: 200px;
@@ -3531,12 +3532,24 @@ body:not(.home) .menu-all-pages-container {
 
 .tertiary-stories .bbg-blog__excerpt-title--list {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
 }
 @media screen and (min-width: 600px) {
   .tertiary-stories .bbg-blog__excerpt-title--list {
     font-size: 2rem;
   }
+}
+
+.tertiary-stories .bbg-blog__excerpt--list {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .tertiary-stories .bbg-blog__excerpt--list {
+    margin-bottom: 2rem;
+  }
+}
+
+.tertiary-stories .bbg-blog__excerpt--list:last-of-type {
+  margin-bottom: 0rem;
 }
 
 @media screen and (min-width: 900px) {

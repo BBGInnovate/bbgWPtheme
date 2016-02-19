@@ -32,15 +32,17 @@ if (! isset ($includeExcerpt)) {
 	$includeExcerpt=TRUE;
 }
 
+/*
 //Remove the space below headlines if there's no image, meta or excerpt
 //to create a list of headlines
-$removeSpace = "";
 if (!$includeImage && !$includeMeta && !$includeExcerpt){
 	$removeSpace = "u--remove-margin-bottom";
 }
+$classNames="bbg-blog__excerpt--list " . $gridClass . " ". $removeSpace;
+*/
 
 //Concatenate misc. classes
-$classNames="bbg-blog__excerpt--list " . $gridClass . " ". $removeSpace;
+$classNames="bbg-blog__excerpt--list " . $gridClass . " ";
 
 //Define the link to the post
 $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );

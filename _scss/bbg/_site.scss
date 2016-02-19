@@ -311,9 +311,19 @@ body:not(.home) .menu-all-pages-container {
 
 .tertiary-stories .bbg-blog__excerpt-title--list {
 	font-size: $h3-font-size * .9;
-	margin-bottom: 2rem;
 
 	@include media($medium-screen) {
 		font-size: $h3-font-size;
 	}
+}
+
+.tertiary-stories .bbg-blog__excerpt--list {
+	margin-bottom: 1rem;
+
+	@include media($medium-screen) {
+		margin-bottom: 2rem;
+	}
+}
+.tertiary-stories .bbg-blog__excerpt--list:last-of-type {
+	margin-bottom: 0rem;
 }
