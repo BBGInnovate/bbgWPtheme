@@ -55,12 +55,10 @@
 						<li><a href="#">Secondary link</a></li>
 					</ul>
 				</nav>
-				<div class="usa-grid">
-					<div class="usa-width-one-third">
+					<div class="usa-width-one-third usa-sign_up-block">
 						<h3 class="usa-sign_up-header">Search</h3>
 						<?php get_search_form ( $echo = true ) ?>
 					</div>
-				</div>
 			</div>
 		</div>
 
