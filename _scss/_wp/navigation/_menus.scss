@@ -2,6 +2,14 @@
 	clear: both;
 	display: inline;
 	width: 100%;
+		.menu-item-has-children > a {
+			background-image: url('img/arrow-down.png');
+			background-image: url('img/arrow-down.svg');
+			background-position: right 3rem center;
+			background-repeat: no-repeat;
+			background-size: 1.3rem;
+			padding-right: 3.5rem;
+		}
 
 	ul {
 		display: none;
@@ -18,6 +26,8 @@
 			}
 
 			li {
+				border-top: $border-dotted;
+				border-bottom: none;
 
 				padding-left: $site-margins;
 
@@ -64,7 +74,6 @@
 		text-decoration: none;
 	}
 	a:hover {
-		//background-color: $color-gold-lighter;
 		background-color: $color-light-gray;
 	}
 	a:focus {
@@ -86,13 +95,17 @@
 	position: absolute;
 	width: auto;
 }
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
 	display: block;
-	/*position: absolute;*/
 	right: 0;
 	z-index: 9999;
 }
+
+.main-navigation.toggled ul {
+	display: block;
+	z-index: 9999;
+}
+
 
 @include media($medium-screen) {
 /*@media screen and (min-width: 37.5em) {*/
@@ -138,12 +151,7 @@
 		}
 
 		.menu-item-has-children > a {
-			background-image: url('img/arrow-down.png');
-			background-image: url('img/arrow-down.svg');
-			background-position: 1.5rem 1.5rem;
-			background-repeat: no-repeat;
-			background-size: 1.3rem;
-			padding-left: 3.5rem;
+			background-position: right 1rem center;
 		}
 
 		.menu-item-has-children > ul {

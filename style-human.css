@@ -4009,6 +4009,14 @@ object {
   display: inline;
   width: 100%;
 }
+.main-navigation .menu-item-has-children > a {
+  background-image: url("img/arrow-down.png");
+  background-image: url("img/arrow-down.svg");
+  background-position: right 3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+  padding-right: 3.5rem;
+}
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -4019,6 +4027,8 @@ object {
   z-index: 99999;
 }
 .main-navigation ul ul li {
+  border-top: 1px dotted #CCC;
+  border-bottom: none;
   padding-left: 3rem;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
@@ -4062,11 +4072,14 @@ object {
   width: auto;
 }
 
-.menu-toggle,
+.menu-toggle {
+  display: block;
+  right: 0;
+  z-index: 9999;
+}
+
 .main-navigation.toggled ul {
   display: block;
-  /*position: absolute;*/
-  right: 0;
   z-index: 9999;
 }
 
@@ -4110,12 +4123,7 @@ object {
     padding: 0;
   }
   .main-navigation .menu-item-has-children > a {
-    background-image: url("img/arrow-down.png");
-    background-image: url("img/arrow-down.svg");
-    background-position: 1.5rem 1.5rem;
-    background-repeat: no-repeat;
-    background-size: 1.3rem;
-    padding-left: 3.5rem;
+    background-position: right 1rem center;
   }
   .main-navigation .menu-item-has-children > ul {
     display: none;
