@@ -13,8 +13,8 @@
 			z-index: 99999;
 
 			ul {
-				left: -999em;
-				top: 0;
+				//left: -999em;
+				//top: 0;
 			}
 
 			li {
@@ -39,6 +39,7 @@
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			display: block;
 		}
 	}
 	li {
@@ -136,10 +137,6 @@
 			padding: 0;
 		}
 
-		.menu-item-has-children {
-			//padding-left: 3.5rem;
-		}
-
 		.menu-item-has-children > a {
 			background-image: url('img/arrow-down.png');
 			background-image: url('img/arrow-down.svg');
@@ -149,7 +146,7 @@
 			padding-left: 3.5rem;
 		}
 
-		.menu-item-has-children.hideDropdown > ul {
+		.menu-item-has-children > ul {
 			display: none;
 		}
 
