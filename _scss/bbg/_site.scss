@@ -123,6 +123,16 @@ body:not(.home) .menu-all-pages-container {
 	min-height: 5rem;
 }
 
+.main-navigation .menu-item-has-children > a {
+	background-image: url('img/arrow-down.png');
+	background-image: url('img/arrow-down.svg');
+	background-position: 1.5rem 1.5rem;
+	background-repeat: no-repeat;
+	background-size: 1.3rem;
+	padding-left: 3.5rem;
+}
+
+
 .bbg-heading-site-title {
 	border-bottom: $border-solid;
 	font: {

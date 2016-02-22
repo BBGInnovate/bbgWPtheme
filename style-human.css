@@ -1,4 +1,24 @@
 @charset "UTF-8";
+/*!
+Theme Name: bbginnovate
+Theme URI: http://oddi.bbg.gov/
+Author: ODDI / Broadcasting Board of Governors
+Author URI: http://oddi.bbg.gov/
+Description: A WP theme based on 18f and USID's US Web Design Standard recommendations
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bbginnovate
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+bbginnovate is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
 html {
   box-sizing: border-box;
 }
@@ -3410,6 +3430,15 @@ body:not(.home) .menu-all-pages-container {
   min-height: 5rem;
 }
 
+.main-navigation .menu-item-has-children > a {
+  background-image: url("img/arrow-down.png");
+  background-image: url("img/arrow-down.svg");
+  background-position: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+  padding-left: 3.5rem;
+}
+
 .bbg-heading-site-title {
   border-bottom: 1px solid #CCC;
   font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
@@ -4068,7 +4097,8 @@ object {
     right: auto;
   }
   .main-navigation ul ul li {
-    border-bottom: 1px dotted #CCC;
+    border-top: 1px dotted #CCC;
+    border-left: 1px dotted #CCC;
     float: none;
   }
   .main-navigation ul ul li:first-of-type {
