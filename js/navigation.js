@@ -50,15 +50,21 @@
 	for ( var i = 0, len = subMenus.length; i < len; i++ ) {
 		var s = subMenus[i];
 		s.parentNode.setAttribute( 'aria-haspopup', 'true' );
-		s.parentNode.onclick=function(e) {
-			if (s.className.indexOf('showChildren') != -1) {
-				s.className=s.className.replace('showChildren','');
-			} else {
-				s.className += ' showChildren';
-			}
-			e.preventDefault();
-		}
 	}
+
+	/* second level nav at desktop */
+	jQuery("li.menu-item-has-children ul a").click(function(e) {
+		e.stopPropagation();
+	});
+	jQuery("li.menu-item-has-children").click(function(e) {
+		jQuery("li.menu-item-has-children ul").toggleClass('showChildren');
+		e.stopPropagation();
+		e.preventDefault();
+	});
+	
+	jQuery(document).click(function(e){
+		jQuery('.showChildren').toggleClass('showChildren');
+	});
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
