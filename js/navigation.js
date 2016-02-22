@@ -52,19 +52,34 @@
 		s.parentNode.setAttribute( 'aria-haspopup', 'true' );
 	}
 
-	/* second level nav at desktop */
+	/**
+	 * BEGIN BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+	 */
+
 	jQuery("li.menu-item-has-children ul a").click(function(e) {
 		e.stopPropagation();
 	});
+
+	/* clicking any top level nav item with children should show its children and hide all others */
 	jQuery("li.menu-item-has-children").click(function(e) {
-		jQuery("li.menu-item-has-children ul").toggleClass('showChildren');
+		if (jQuery(this).find("ul").hasClass('showChildren')) {
+			jQuery(this).find("ul").removeClass('showChildren');
+		} else {
+			/* hide any open menus before showing the newly clicked one */
+			jQuery('.showChildren').removeClass('showChildren');
+			jQuery(this).find("ul").addClass('showChildren');
+		}
 		e.stopPropagation();
 		e.preventDefault();
 	});
 	
+	/* clicking on the body should hide all subnav items */
 	jQuery(document).click(function(e){
 		jQuery('.showChildren').toggleClass('showChildren');
 	});
+	/**
+	 * END BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+	 */
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
