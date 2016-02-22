@@ -4036,8 +4036,9 @@ object {
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  /* left: auto;
   display: block;
+  */
 }
 .main-navigation li {
   border-bottom: 1px dotted #CCC;
@@ -4124,6 +4125,10 @@ object {
   }
   .main-navigation .menu-item-has-children > a {
     background-position: right 1rem center;
+  }
+  .main-navigation .showChildren {
+    left: auto !important;
+    display: block !important;
   }
   .main-navigation .menu-item-has-children > ul {
     display: none;
