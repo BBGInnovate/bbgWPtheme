@@ -1,0 +1,9 @@
+// Temporary patch for gaps in CSS as they update their styles
+
+img {
+	height: auto;
+}
+
+// fix relative img links for background-images in the footer
+// from: ../img/ 
+// to: img/

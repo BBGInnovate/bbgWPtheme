@@ -9,7 +9,6 @@
     }
     .usa-width-one-half {
       @include span-columns(3);
-      @include omega(2n);
     }
     .usa-width-one-third {
       @include span-columns(2);

@@ -1,26 +1,3 @@
-/*!
-Theme Name: bbginnovate
-Theme URI: http://oddi.bbg.gov/
-Author: ODDI / Broadcasting Board of Governors
-Author URI: http://oddi.bbg.gov/
-Description: A WP theme based on 18f and USID's US Web Design Standard recommendations
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: bbginnovate
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-
-bbginnovate is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/
-
-
-
 // Vendor -------------- //
 
 @import 'lib/bourbon/bourbon';
@@ -30,10 +7,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 // Core -------------- //
 
-@import 'core/grid-settings';
 @import 'core/defaults';
 @import 'core/variables';
+@import 'core/fonts';
 @import 'core/base';
+@import 'core/grid-settings';
 @import 'core/grid';
 @import 'core/utilities';
 
@@ -41,26 +19,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 
 // Elements -------------- //
-// Styles basic html elements
+// Styles basic HTML elements
 
-@import 'elements/typography';
-@import 'elements/list';
-@import 'elements/inputs';
 @import 'elements/buttons';
-@import 'elements/table';
 @import 'elements/figure';
+@import 'elements/inputs';
 @import 'elements/labels';
+@import 'elements/list';
+@import 'elements/table';
+@import 'elements/typography';
 
 
 // Components -------------- //
-@import 'components/skipnav';
+
+@import 'components/accordions';
+@import 'components/alerts';
 @import 'components/disclaimer';
-@import 'components/sidenav';
 @import 'components/footer';
 @import 'components/forms';
 @import 'components/search';
-@import 'components/alerts';
-@import 'components/accordions';
+@import 'components/sidenav';
+@import 'components/skipnav';
 
 
 // BBG -------------- //
@@ -73,6 +52,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'bbg/site';
 @import 'bbg/fuego';
 @import 'bbg/comments';
+@import 'bbg/patch';
 
 
 // WordPress -------------- //

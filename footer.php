@@ -17,10 +17,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer usa-footer usa-footer-big usa-bbg-footer-big usa-sans" role="contentinfo">
-		<div class="usa-grid">
-			<div class="usa-grid-full usa-bbg-footer-big-top">
+		<div class="usa-grid usa-footer-return-to-top">
+			<a href="#">Return to top</a>
+		</div>
+		<div class="usa-footer-primary-section">
+			<div class="usa-grid-full">
 				<nav class="usa-footer-nav usa-width-two-thirds">
-					<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
 						<h4 class="usa-footer-primary-link">Broadcasters</h4>
 						<li><a href="http://www.voanews.com/" title="Voice of America">VOA</a></li>
 						<li><a href="http://www.rferl.org/" title="Radio Free Europe / Radio Liberty">RFERL</a></li>
@@ -28,7 +31,7 @@
 						<li><a href="http://www.rfa.org/english/" title="Radio Free Asia">RFA</a></li>
 						<li><a href="http://www.alhurra.com/" title="Middle East Broadcasting Networks">MBN</a></li>
 					</ul>
-					<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
 						<h4 class="usa-footer-primary-link">Footer links</h4>
 						<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/contact-us">Contact Us</a></li>
 						<li><a href="http://www.bbg.gov/about-the-agency/history/faqs/">FAQs</a></li>
@@ -37,18 +40,26 @@
 						<li><a href="http://www.bbg.gov/sitemap">Sitemap</a></li>
 						<li><a href="http://www.bbg.gov/open">Open Gov</a></li>
 					</ul>
-					<ul class="usa-unstyled-list usa-width-one-third usa-footer-primary-content">
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
 						<h4 class="usa-footer-primary-link">Topic</h4>
 						<li><a href="#">About the BBG</a></li>
-						<li><a href="http://www.bbgstrategy.com/">Office of Strategy and Development</a></li>
-						<li><a href="http://oddi.bbg.gov">Office of Digital & Design Innovation</a></li>
+						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
+						<li><a href="http://oddi.bbg.gov">Innovation</a></li>
+						<li><a href="#">Secondary link</a></li>
+					</ul>
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
+						<h4 class="usa-footer-primary-link">Topic</h4>
+						<li><a href="#">About the BBG</a></li>
+						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
+						<li><a href="http://oddi.bbg.gov">ODDI</a></li>
 						<li><a href="#">Secondary link</a></li>
 					</ul>
 				</nav>
-
-				<div class="usa-width-one-third">
-					<h3 class="usa-sign_up-header">Search</h3>
-					<?php get_search_form ( $echo = true ) ?>
+				<div class="usa-grid">
+					<div class="usa-width-one-third">
+						<h3 class="usa-sign_up-header">Search</h3>
+						<?php get_search_form ( $echo = true ) ?>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -70,6 +70,7 @@
 
 .bbg-team__text-description {
 	clear: none;
+	margin-top: 0;
 	max-width: $article-max-width;
 }
 
@@ -120,10 +121,5 @@
 }
 
 .bbg-staff__author-bio {
-/*
-	font-family: "Merriweather","Georgia","Times New Roman",serif;
-	font-size: 14px;
-	line-height: 1.5;
-	*/
-		@extend .readin;
+	@extend .readin;
 }
