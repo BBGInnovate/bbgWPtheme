@@ -2819,6 +2819,11 @@ fieldset {
   }
 }
 
+.bbg-staff__roster .bbg-staff__author-bio {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
 /** HEADER AREA */
 /* Featured image */
 .bbg__article-header__thumbnail--large {
@@ -4000,9 +4005,6 @@ object {
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
-.main-navigation ul ul a {
-  width: 200px;
-}
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
@@ -4059,6 +4061,22 @@ object {
     position: absolute;
     right: 0;
     z-index: 9999;
+    /* drop down navigation */
+  }
+  .main-navigation ul ul {
+    position: absolute;
+    right: auto;
+  }
+  .main-navigation ul ul li {
+    border-bottom: 1px dotted #CCC;
+    float: none;
+  }
+  .main-navigation ul ul li:first-of-type {
+    border-radius: 0px;
+  }
+  .main-navigation ul ul li:last-of-type {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0 0 0.3rem 0.3rem;
   }
 
   .main-navigation li {

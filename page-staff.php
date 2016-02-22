@@ -14,7 +14,7 @@ get_header();
 <div id="main" class="site-main">
 	<div id="primary" class="content-area">
 		<main id="content" class="site-content" role="main">
-			<section class="usa-section usa-grid-full">
+			<section class="usa-section usa-grid-full bbg-staff__roster">
 				<header class="bbg-page__header usa-grid">
 					<h1 class="bbg-page__header-title">STAFF</h1>
 					<h3 class="bbg-page__header-description">ODDI's designers, developers and storytellers help drive USIM digital projects.</h3>

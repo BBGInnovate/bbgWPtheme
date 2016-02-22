@@ -26,7 +26,7 @@
 			}
 
 			a {
-				width: 200px;
+				//width: 200px;
 			}
 
 			:hover > a,
@@ -105,6 +105,25 @@
 		position: absolute;
 		right: 0;
 		z-index: 9999;
+
+		/* drop down navigation */
+		ul {
+			position: absolute;
+			right: auto;
+
+			li {
+				border-bottom: $border-dotted;
+				float: none;
+			}
+			li:first-of-type {
+				border-radius: 0px;
+			}
+			li:last-of-type {
+				border-bottom: $border-solid;
+				border-radius: 0 0 $border-radius $border-radius;
+			}
+
+		}
 	}
 	.main-navigation {
 		li {
