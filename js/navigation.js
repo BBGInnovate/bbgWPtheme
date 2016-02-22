@@ -48,7 +48,16 @@
 
 	// Set menu items with submenus to aria-haspopup="true".
 	for ( var i = 0, len = subMenus.length; i < len; i++ ) {
-		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
+		var s = subMenus[i];
+		s.parentNode.setAttribute( 'aria-haspopup', 'true' );
+		s.parentNode.onclick=function(e) {
+			if (s.className.indexOf('showChildren') != -1) {
+				s.className=s.className.replace('showChildren','');
+			} else {
+				s.className += ' showChildren';
+			}
+			e.preventDefault();
+		}
 	}
 
 	// Each time a menu link is focused or blurred, toggle focus.

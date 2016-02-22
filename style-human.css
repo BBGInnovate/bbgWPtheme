@@ -1,4 +1,24 @@
 @charset "UTF-8";
+/*!
+Theme Name: bbginnovate
+Theme URI: http://oddi.bbg.gov/
+Author: ODDI / Broadcasting Board of Governors
+Author URI: http://oddi.bbg.gov/
+Description: A WP theme based on 18f and USID's US Web Design Standard recommendations
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bbginnovate
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+bbginnovate is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
 html {
   box-sizing: border-box;
 }
@@ -4065,6 +4085,14 @@ object {
   display: inline;
   width: 100%;
 }
+.main-navigation .menu-item-has-children > a {
+  background-image: url("img/arrow-down.png");
+  background-image: url("img/arrow-down.svg");
+  background-position: right 3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+  padding-right: 3.5rem;
+}
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -4074,16 +4102,19 @@ object {
 .main-navigation ul ul {
   z-index: 99999;
 }
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
+.main-navigation ul ul li {
+  border-top: 1px dotted #CCC;
+  border-bottom: none;
+  padding-left: 3rem;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  /* left: auto;
+  display: block;
+  */
 }
 .main-navigation li {
   border-bottom: 1px dotted #CCC;
@@ -4118,11 +4149,14 @@ object {
   width: auto;
 }
 
-.menu-toggle,
+.menu-toggle {
+  display: block;
+  right: 0;
+  z-index: 9999;
+}
+
 .main-navigation.toggled ul {
   display: block;
-  /*position: absolute;*/
-  right: 0;
   z-index: 9999;
 }
 
@@ -4144,8 +4178,10 @@ object {
     right: auto;
   }
   .main-navigation ul ul li {
-    border-bottom: 1px dotted #CCC;
+    border-top: 1px dotted #CCC;
+    border-left: 1px dotted #CCC;
     float: none;
+    padding-left: 0;
   }
   .main-navigation ul ul li:first-of-type {
     border-radius: 0px;
@@ -4162,6 +4198,16 @@ object {
     float: left;
     margin: 0;
     padding: 0;
+  }
+  .main-navigation .menu-item-has-children > a {
+    background-position: right 1rem center;
+  }
+  .main-navigation .showChildren {
+    left: auto !important;
+    display: block !important;
+  }
+  .main-navigation .menu-item-has-children > ul {
+    display: none;
   }
   .main-navigation li:first-of-type {
     border-left: 1px dotted #CCC;
