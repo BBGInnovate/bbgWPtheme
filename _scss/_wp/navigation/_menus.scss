@@ -19,6 +19,8 @@
 
 			li {
 
+				padding-left: $site-margins;
+
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -111,6 +113,7 @@
 				border-top: $border-dotted;
 				border-left: $border-dotted;
 				float: none;
+				padding-left: 0;
 			}
 			li:first-of-type {
 				border-radius: 0px;
@@ -122,6 +125,7 @@
 
 		}
 	}
+
 	.main-navigation {
 		li {
 			background-color: #FFF;
@@ -131,10 +135,23 @@
 			margin: 0;
 			padding: 0;
 		}
+
 		.menu-item-has-children {
 			//padding-left: 3.5rem;
 		}
 
+		.menu-item-has-children > a {
+			background-image: url('img/arrow-down.png');
+			background-image: url('img/arrow-down.svg');
+			background-position: 1.5rem 1.5rem;
+			background-repeat: no-repeat;
+			background-size: 1.3rem;
+			padding-left: 3.5rem;
+		}
+
+		.menu-item-has-children.hideDropdown > ul {
+			display: none;
+		}
 
 		li:first-of-type {
 			border-left: $border-dotted;
