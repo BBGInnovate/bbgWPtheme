@@ -2872,6 +2872,13 @@ fieldset {
 /** ARTICLE SHARE AREA */
 .bbg__article-share {
   margin-top: 0;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-share {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 900px) {
   .bbg__article-share {
@@ -2902,14 +2909,6 @@ fieldset {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  /*
-  background: {
-  	color: $color-gray-lightest;
-  	position: center center;
-  	repeat: no-repeat;
-  	size: cover;
-  }
-  */
   border-radius: 0.3rem;
   display: inline-block;
   height: 40px;
@@ -2917,7 +2916,7 @@ fieldset {
   vertical-align: middle;
   width: 40px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .bbg__article-share__icon {
     border-radius: 0;
     height: 20px;
@@ -2944,7 +2943,7 @@ fieldset {
 .bbg__article-share__text {
   display: none;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .bbg__article-share__text {
     display: inline-block;
   }
@@ -3049,6 +3048,7 @@ fieldset {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.7;
+  margin-bottom: 1rem;
 }
 .bbg__article-author .bbg-staff__author-contact {
   font-size: 1.4rem;
@@ -3790,15 +3790,13 @@ body:not(.home) .menu-all-pages-container {
   margin: 0 auto;
 }
 
-.bbg__comments-title {
-  border-bottom-color: #981b1e;
-  border-bottom-style: dotted;
-  border-bottom-width: 1px;
+.bbg__comments-title, .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
+  border-bottom: 1px dotted #981b1e;
   color: #981b1e;
   font-size: 2rem;
 }
 @media screen and (min-width: 600px) {
-  .bbg__comments-title {
+  .bbg__comments-title, .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
     font-size: 3rem;
   }
 }
@@ -3885,6 +3883,84 @@ body:not(.home) .menu-all-pages-container {
 
 img {
   height: auto;
+}
+
+/**
+ *  Changing styles on content-single for portfolio posts
+ *
+ */
+.category-portfolio {
+  /* Hide article meta (author and date) */
+  	/**
+   	 * Style content of section listing project team members
+   	 */
+  /**
+   * Change layout of main elements for different breakpoints
+   */
+}
+.category-portfolio .bbg__article-meta {
+  display: none;
+}
+.category-portfolio .bbg__portfolio-members {
+  margin-top: 4rem;
+}
+@media screen and (min-width: 600px) {
+  .category-portfolio .bbg__portfolio-members {
+    margin-top: 1.5rem;
+  }
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list {
+  list-style-type: none;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
+  font-weight: 700;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name:before {
+  content: '';
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
+  color: #323a45;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+}
+@media screen and (min-width: 600px) {
+  .category-portfolio .bbg__article-content {
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .category-portfolio .bbg__article-share {
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+    margin-right: 3rem;
+  }
+  .category-portfolio .bbg__article-content {
+    display: inline-block;
+    float: left;
+    margin-right: 4rem;
+    max-width: 540px;
+  }
+  .category-portfolio .bbg__article-sidebar {
+    display: inline-block;
+    float: left;
+    max-width: 15rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .category-portfolio .bbg__article-share {
+    margin-right: 5rem;
+  }
+  .category-portfolio .bbg__article-content {
+    margin-right: 6rem;
+    max-width: 600px;
+  }
 }
 
 .page-content .wp-smiley,

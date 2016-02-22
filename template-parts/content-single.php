@@ -94,11 +94,13 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				) );
 			?>
 
+		</div><!-- .entry-content -->
+
+		<div class="bbg__article-sidebar">
 			<?php
 				$usersInProjectStr = get_post_meta( get_the_ID(), 'users_in_project', true );
 
 				if ( $usersInProjectStr != "" ) {
-					//$args = array( 'include' => [11,10,19,13,24,9,3,1]); prod
 					$userIDs = explode( ',', $usersInProjectStr );
 					array_walk( $userIDs, 'intval' );
 					$args = array( 'include' => $userIDs, 'orderby' => 'include' );
@@ -106,24 +108,23 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 					$blogusers = get_users( $args );
 					// Loop through the users to create the staff profiles
 					if ( $blogusers ) {
-						echo "<h3>Users in Project:</h3> <ul>";
+						echo "<div class='bbg__portfolio-members'><h3 class='bbg__portfolio-members__title'>Project Team</h3> <ul class='bbg__portfolio-members__list'>";
 						foreach ( $blogusers as $user ) {
 							$authorName = esc_html( $user -> display_name );
-							//$authorUrl = site_url() .'/blog/author/' . esc_html( $user->user_nicename );
 							$authorUrl = get_author_posts_url( $user -> ID, $user -> user_nicename );
 							$authorOccupation = esc_html( $user -> occupation );
-							echo "<li><a href='$authorUrl'>$authorName</a> - $authorOccupation</li>";
+							echo "<li class='bbg__portfolio-members__member-name'><a href='$authorUrl'>$authorName</a>, <span class='bbg__portfolio-members__member-job'>$authorOccupation</span></li>";
 						}
-						echo "</ul>";
+						echo "</ul></div>";
 					}
 
+				} else {
+					bbg_post_author_bottom_card(get_the_author_meta('ID'));
 				}
 			?>
-		</div><!-- .entry-content -->
+		</div> <!-- .bbg__article-sidebar -->
 
 	</div><!-- .usa-grid -->
-
-	<?php bbg_post_author_bottom_card(get_the_author_meta('ID')); ?>
 
 	<!-- <footer class="entry-footer bbg__article-footer">
 		<?php bbginnovate_entry_footer(); ?>

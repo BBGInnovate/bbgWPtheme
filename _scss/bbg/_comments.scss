@@ -4,11 +4,7 @@
 }
 
 .bbg__comments-title {
-	border-bottom: {
-		color: $color-secondary-darkest;
-		style: dotted;
-		width: 1px;
-	}
+	border-bottom: $border-dotted-section;
 	color: $color-secondary-darkest;
 	font-size: $h3-font-size;
 

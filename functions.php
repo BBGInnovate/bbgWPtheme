@@ -669,7 +669,7 @@ add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 			/**** DONE PREPARING AUTHOR vars ****/
 			?>
 
-			<div class="usa-grid">
+			<!-- <div class="usa-grid"> -->
 				<div class="usa-section bbg__article-author">
 
 					<div class="bbg-avatar__container">
@@ -709,8 +709,8 @@ add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 
 					</div><!-- .bbg-staff__author__text -->
 
-				</div><!-- .usa-grid -->
-			</div><!-- .usa-section -->
+				<!-- </div> --><!-- .usa-section -->
+			</div><!-- .usa-grid -->
 			<?php
 			do_action( 'bbg_post_author_bottom_card' );
 		}
