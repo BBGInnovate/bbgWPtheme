@@ -552,6 +552,9 @@ add_filter('embed_oembed_html', 'custom_youtube_settings');
 	}
 	*/
 
+/*===================================================================================
+ * CUSTOM POST CATEGORY LIST LOGIC
+ * =================================================================================*/
 if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 	/**
 	 * Returns categories for current post with separator.
@@ -574,7 +577,9 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 	}
 endif;
 
-
+/*===================================================================================
+ * CUSTOM POST EXCERPTS LOGIC
+ * =================================================================================*/
 if ( ! function_exists( 'bbg_first_sentence_excerpt' ) ):
 	/**
 	 * Return the post excerpt. If no excerpt set, generates an excerpt using the first sentence.
@@ -632,89 +637,136 @@ endif;
 
 add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 
-?>
+/*===================================================================================
+ * CUSTOM AUTHOR BOX CONTENT LOGIC
+ * =================================================================================*/
+if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
+	/**
+	 * Outputs post author info for display on bottom of single posts
+	 *
+	 */
+	//$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
 
-<?php
-	if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
-		/**
-		 * Outputs post author info for display on bottom of single posts
-		 *
-		 */
-		//$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
+	function bbg_post_author_bottom_card($theAuthorID) {
+		$curauth = get_userdata( $theAuthorID );
 
-		function bbg_post_author_bottom_card($theAuthorID) {
-			$curauth = get_userdata( $theAuthorID );
-
-			/**** BEGIN PREPARING AUTHOR vars ****/
-			$authorPath = get_author_posts_url($curauth -> ID);
-			$authorName = $curauth -> display_name;
-			$authorEmail = $curauth -> user_email;
-			$avatar = get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 150 ) );
-			$website = $curauth -> user_url;
-			$website = str_replace('http://', '', $website);
+		/**** BEGIN PREPARING AUTHOR vars ****/
+		$authorPath = get_author_posts_url($curauth -> ID);
+		$authorName = $curauth -> display_name;
+		$authorEmail = $curauth -> user_email;
+		$avatar = get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 150 ) );
+		$website = $curauth -> user_url;
+		$website = str_replace('http://', '', $website);
 
 
-			$m = get_user_meta( $theAuthorID );
-			$twitterHandle = "";
-			if ( isset( $m['twitterHandle'] ) ) {
-				$twitterHandle = $m['twitterHandle'][0];
-			}
-
-			$occupation = "";
-			if ( isset( $m['occupation'] ) ) {
-				$occupation = $m['occupation'][0];
-			}
-			$description = "";
-			if ( isset( $m['description'] ) ) {
-				$description = $m['description'][0];
-			}
-			/**** DONE PREPARING AUTHOR vars ****/
-			?>
-
-			<!-- <div class="usa-grid"> -->
-				<div class="usa-section bbg__article-author">
-
-					<div class="bbg-avatar__container">
-						<?php echo $avatar; ?>
-					</div>
-
-					<div class="bbg__author__text">
-
-						<h2 class="bbg-staff__author-name">
-							<a href="<?php echo $authorPath ?>" class="bbg__author-link"><?php echo $authorName; ?></a>
-						</h2><!-- .bbg-staff__author-name -->
-
-						<div class="bbg__author-description">
-							<?php echo '<div class="bbg__author-occupation">' . $occupation . '</div>'; ?>
-
-							<div class="bbg__author-bio">
-								<?php echo $description; ?>
-							</div>
-
-						</div><!-- .bbg-staff__author-description -->
-
-						<div class="bbg__author-contact">
-							<span class="bbg__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
-							<?php
-								if ( $twitterHandle && $twitterHandle != '' ) {
-									$twitterHandle = str_replace( "@", "", $twitterHandle );
-									$twitterHandle = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
-								echo $twitterHandle;
-								}
-
-								if ( $website && $website != '' ) {
-								$website = '<span class="bbg__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
-								echo $website;
-								}
-							?>
-						</div> <!-- .bbg-staff__author-contact -->
-
-					</div><!-- .bbg-staff__author__text -->
-
-				<!-- </div> --><!-- .usa-section -->
-			</div><!-- .usa-grid -->
-			<?php
-			do_action( 'bbg_post_author_bottom_card' );
+		$m = get_user_meta( $theAuthorID );
+		$twitterHandle = "";
+		if ( isset( $m['twitterHandle'] ) ) {
+			$twitterHandle = $m['twitterHandle'][0];
 		}
-	endif;
+
+		$occupation = "";
+		if ( isset( $m['occupation'] ) ) {
+			$occupation = $m['occupation'][0];
+		}
+		$description = "";
+		if ( isset( $m['description'] ) ) {
+			$description = $m['description'][0];
+		}
+		/**** DONE PREPARING AUTHOR vars ****/
+		?>
+
+		<!-- <div class="usa-grid"> -->
+			<div class="usa-section bbg__article-author">
+
+				<div class="bbg-avatar__container">
+					<?php echo $avatar; ?>
+				</div>
+
+				<div class="bbg__author__text">
+
+					<h2 class="bbg-staff__author-name">
+						<a href="<?php echo $authorPath ?>" class="bbg__author-link"><?php echo $authorName; ?></a>
+					</h2><!-- .bbg-staff__author-name -->
+
+					<div class="bbg__author-description">
+						<?php echo '<div class="bbg__author-occupation">' . $occupation . '</div>'; ?>
+
+						<div class="bbg__author-bio">
+							<?php echo $description; ?>
+						</div>
+
+					</div><!-- .bbg-staff__author-description -->
+
+					<div class="bbg__author-contact">
+						<span class="bbg__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
+						<?php
+							if ( $twitterHandle && $twitterHandle != '' ) {
+								$twitterHandle = str_replace( "@", "", $twitterHandle );
+								$twitterHandle = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
+							echo $twitterHandle;
+							}
+
+							if ( $website && $website != '' ) {
+							$website = '<span class="bbg__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
+							echo $website;
+							}
+						?>
+					</div> <!-- .bbg-staff__author-contact -->
+
+				</div><!-- .bbg-staff__author__text -->
+
+			<!-- </div> --><!-- .usa-section -->
+		</div><!-- .usa-grid -->
+		<?php
+		do_action( 'bbg_post_author_bottom_card' );
+	}
+endif;
+
+/*===================================================================================
+ * Manually Adding Custom Styles to WordPress Visual Editor
+ * based on http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor
+ * =================================================================================*/
+
+// Add 'styleselect' drop-down menu on the second row of the buttons
+function wpb_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+// Attach callback to 'wpb_mce_buttons_2'
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+
+ // Callback function to filter the MCE settings
+function my_mce_before_init_insert_formats( $init_array ) {
+
+// Define the style_formats array
+	$style_formats = array(
+		// Each array child is a style with it's own settings
+		array(
+			'title' => 'Related Links',
+			'block' => 'span', // Block- or inline-block element to wrap highlighted content
+			'classes' => 'bbg__portfolio-links', // Name(s) of classes to add to the element
+			'wrapper' => true,
+
+		),
+	);
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );
+
+	return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+/**
+ * Add function to include additional editor stylesheets (if needed)
+ * only needed if different from default: 'editor-style.css'
+ * stylesheet location is relative to the theme root
+ */
+   /* function my_theme_add_editor_styles() {
+	    add_editor_style( 'custom-editor-style.css' );
+	}
+	add_action( 'init', 'my_theme_add_editor_styles' );*/
 ?>

@@ -3976,6 +3976,7 @@ img {
  */
 .category-portfolio {
   /* Hide article meta (author and date) */
+  /* Style related links for portfolio projects */
   	/**
    	 * Style content of section listing project team members
    	 */
@@ -3985,6 +3986,10 @@ img {
 }
 .category-portfolio .bbg__article-meta {
   display: none;
+}
+.category-portfolio .bbg__portfolio-links {
+  font-weight: 700;
+  text-decoration: overline;
 }
 .category-portfolio .bbg__portfolio-members {
   margin-top: 4rem;
@@ -4030,7 +4035,7 @@ img {
     display: inline-block;
     float: left;
     margin-right: 4rem;
-    max-width: 540px;
+    max-width: 510px;
   }
   .category-portfolio .bbg__article-sidebar {
     display: inline-block;
