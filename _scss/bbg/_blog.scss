@@ -240,19 +240,19 @@
 		margin-bottom: .5rem;
 	}
 
-	.bbg-staff__author-description {
+	.bbg__author-description {
 		margin-bottom: 1rem;
 
 		@include media($small-medium-screen) {
 			margin-left: 110px;
 		}
 
-		.bbg-staff__author-occupation {
+		.bbg__author-occupation {
 			font-weight: $font-normal;
 			margin-bottom: 1.3rem;
 		}
 
-		.bbg-staff__author-bio {
+		.bbg__author-bio {
 			font: {
 				family: $font-serif;
 				size: $small-font-size;
@@ -263,7 +263,7 @@
 		}
 	}
 
-	.bbg-staff__author-contact {
+	.bbg__author-contact {
 		font: {
 			size: $small-font-size;
 			weight: $font-light;
@@ -282,7 +282,7 @@
 			text-align: right;
 		}
 
-		.bbg-staff__author-contact__email {
+		.bbg__author-contact__email {
 			display: block;
 			font: {
 				size: $base-font-size;
@@ -296,7 +296,7 @@
 			}
 		}
 
-		.bbg-staff__author-contact__twitter {
+		.bbg__author-contact__twitter {
 			display: block;
 
 			@include media($medium-screen) {
@@ -309,7 +309,7 @@
 			}
 		}
 
-		.bbg-staff__author-contact__website {
+		.bbg__author-contact__website {
 			display: block;
 
 			@include media($medium-screen) {

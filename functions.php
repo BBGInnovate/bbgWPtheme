@@ -678,32 +678,32 @@ add_filter( 'get_the_excerpt', 'bbg_first_sentence_excerpt' );
 						<?php echo $avatar; ?>
 					</div>
 
-					<div class="bbg-staff__author__text">
+					<div class="bbg__author__text">
 
 						<h2 class="bbg-staff__author-name">
-							<a href="<?php echo $authorPath ?>" class="bbg-staff__author-link"><?php echo $authorName; ?></a>
+							<a href="<?php echo $authorPath ?>" class="bbg__author-link"><?php echo $authorName; ?></a>
 						</h2><!-- .bbg-staff__author-name -->
 
-						<div class="bbg-staff__author-description">
-							<?php echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>'; ?>
+						<div class="bbg__author-description">
+							<?php echo '<div class="bbg__author-occupation">' . $occupation . '</div>'; ?>
 
-							<div class="bbg-staff__author-bio">
+							<div class="bbg__author-bio">
 								<?php echo $description; ?>
 							</div>
 
 						</div><!-- .bbg-staff__author-description -->
 
-						<div class="bbg-staff__author-contact">
-							<span class="bbg-staff__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
+						<div class="bbg__author-contact">
+							<span class="bbg__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
 							<?php
 								if ( $twitterHandle && $twitterHandle != '' ) {
 									$twitterHandle = str_replace( "@", "", $twitterHandle );
-									$twitterHandle = '<span class="bbg-staff__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
+									$twitterHandle = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
 								echo $twitterHandle;
 								}
 
 								if ( $website && $website != '' ) {
-								$website = '<span class="bbg-staff__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
+								$website = '<span class="bbg__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
 								echo $website;
 								}
 							?>

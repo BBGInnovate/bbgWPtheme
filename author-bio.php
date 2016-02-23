@@ -75,12 +75,12 @@ wp_reset_query();
 			</div>
 
 			<div class="bbg-staff__author__text">
-				<h1 class="bbg-staff__author-name"><?php echo $authorName; ?></h1>
+				<h1 class="bbg-author-name"><?php echo $authorName; ?></h1>
 
 				<div class="bbg-staff__author-description">
 
 						<?php
-echo '<div class="bbg-staff__author-occupation">' . $occupation . '</div>';
+echo '<div class="bbg-author-occupation">' . $occupation . '</div>';
 
 if ( $website && $website != '' ) {
 	$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
@@ -93,12 +93,12 @@ if ( $twitterHandle && $twitterHandle != '' ) {
 ?>
 
 
-							<div class="bbg-staff__author-contact">
+							<div class="bbg-author-contact">
 								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
 								<?php echo $website; ?>
 							</div>
 
-						<div class="bbg-staff__author-bio">
+						<div class="bbg-author-bio">
 							<?php echo $description; ?>
 						</div>
 

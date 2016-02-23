@@ -34,6 +34,13 @@ a:focus {
 .bbg-site-branding {
 	margin-bottom: $site-margins;
 }
+.usa-disclaimer {
+	text-align: center;
+
+	@include media($large-screen) {
+		text-align: left;
+	}
+}
 
 .bbg-label {
 	background-color: $color-secondary-darkest;
