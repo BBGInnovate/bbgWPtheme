@@ -3987,9 +3987,18 @@ img {
 .category-portfolio .bbg__article-meta {
   display: none;
 }
-.category-portfolio .bbg__portfolio-links {
+.category-portfolio .bbg__portfolio-links a {
+  border-top: 3px solid #02bfe7;
+  border-bottom: 3px solid #02bfe7;
+  color: #02bfe7;
+  font-size: 1.4rem;
   font-weight: 700;
-  text-decoration: overline;
+  padding: 5px;
+  text-decoration: none;
+}
+.category-portfolio .bbg__portfolio-links a:hover {
+  border-color: #046b99;
+  color: #046b99;
 }
 .category-portfolio .bbg__portfolio-members {
   margin-top: 4rem;

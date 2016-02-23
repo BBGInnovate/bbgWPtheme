@@ -1,4 +1,19 @@
-.bbg__portfolio-links  {
-	font-weight: 700;
-	text-decoration: overline;
+/* Style related links for portfolio projects */
+.bbg__portfolio-links  a {
+	border: {
+		top: $border-solid-links;
+		bottom: $border-solid-links;
+	}
+	color: $color-primary-alt;
+	font: {
+		size: $small-font-size;
+		weight: $font-bold;
+	}
+	padding: 5px;
+	text-decoration: none;
+
+	&:hover {
+		border-color: $color-primary-alt-darkest;
+		color: $color-primary-alt-darkest;
+	}
 }

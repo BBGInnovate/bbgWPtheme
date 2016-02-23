@@ -745,7 +745,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		// Each array child is a style with it's own settings
 		array(
 			'title' => 'Related Links',
-			'block' => 'span', // Block- or inline-block element to wrap highlighted content
+			'block' => 'span', // Block or inline-block element to wrap highlighted content
 			'classes' => 'bbg__portfolio-links', // Name(s) of classes to add to the element
 			'wrapper' => true,
 
