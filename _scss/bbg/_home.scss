@@ -3,6 +3,7 @@
 	background-color: $color-gray-lightest;
 	@include backgroundCover();
 	height: $banner-image-height;
+	margin-bottom: $site-margins;
 	max-width: 9999px;
 	position: relative;
 	width: 100%;

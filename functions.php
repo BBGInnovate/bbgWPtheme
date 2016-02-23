@@ -677,7 +677,7 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 		?>
 
 		<!-- <div class="usa-grid"> -->
-			<div class="usa-section bbg__article-author">
+			<div class="bbg__article-author">
 
 				<div class="bbg-avatar__container">
 					<?php echo $avatar; ?>
@@ -715,9 +715,7 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 					</div> <!-- .bbg-staff__author-contact -->
 
 				</div><!-- .bbg-staff__author__text -->
-
-			<!-- </div> --><!-- .usa-section -->
-		</div><!-- .usa-grid -->
+		</div><!-- .bbg__article-author -->
 		<?php
 		do_action( 'bbg_post_author_bottom_card' );
 	}
