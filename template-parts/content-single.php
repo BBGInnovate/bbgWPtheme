@@ -60,7 +60,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				<?php bbginnovate_posted_on(); ?>
 			</div><!-- .bbg__article-meta -->
 		</header><!-- .bbg__article-header -->
-
+		<div class="container" style="position: relative;">
 		<ul class="bbg__article-share">
 			<!--
 			<li class="bbg__article-share__link email">
@@ -93,7 +93,6 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 					'after'  => '</div>',
 				) );
 			?>
-
 		</div><!-- .entry-content -->
 
 		<div class="bbg__article-sidebar">
@@ -123,7 +122,8 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				}
 			?>
 		</div> <!-- .bbg__article-sidebar -->
-
+		
+		</div><!-- container -->
 	</div><!-- .usa-grid -->
 
 	<!-- <footer class="entry-footer bbg__article-footer">
