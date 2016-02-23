@@ -765,8 +765,8 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
  * only needed if different from default: 'editor-style.css'
  * stylesheet location is relative to the theme root
  */
-   /* function my_theme_add_editor_styles() {
-	    add_editor_style( 'custom-editor-style.css' );
+   function my_theme_add_editor_styles() {
+	    add_editor_style( 'editor-styles.css' );
 	}
-	add_action( 'init', 'my_theme_add_editor_styles' );*/
+	add_action( 'init', 'my_theme_add_editor_styles' );
 ?>
