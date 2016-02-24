@@ -103,6 +103,10 @@ if ( $twitterHandle && $twitterHandle != '' ) {
 						</div>
 
 
+
+				</div><!-- .author-description -->
+			</div><!-- .bbg-author-text -->
+		</header><!-- .bbg-page__header -->
 							<?php
 
 if ( count( $projects ) ) {
@@ -119,11 +123,6 @@ if ( count( $projects ) ) {
 }
 
 ?>
-
-					<div class='clearAll'></div>
-				</div><!-- .author-description -->
-			</div><!-- .bbg-author-text -->
-		</header><!-- .bbg-page__header -->
 
 
 	</div><!-- .usa-grid -->
