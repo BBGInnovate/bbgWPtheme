@@ -4076,41 +4076,26 @@ li.usa-footer-primary-content:last-child {
 .category-portfolio .bbg__portfolio-links a[href] {
   background-image: url(img/social-icons/png/link-icon.png);
   background-image: url(img/social-icons/svg/link-icon.svg);
-  /*position: left top;
-  size: contain;
-  repeat: no-repeat;*/
   padding-left: 2.3rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://play.google.com/store"] {
+.category-portfolio .bbg__portfolio-links a[href*="https://play.google.com"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
-  /*position: left top;
-  size: contain;
-  repeat: no-repeat;*/
   padding-left: 6.5rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://itunes.apple.com"] {
   background-image: url(img/social-icons/png/apple-app-store-badge.png);
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
-  /*position: left top;
-  size: contain;
-  repeat: no-repeat;*/
   padding-left: 6.3rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://www.youtube.com/watch"] {
+.category-portfolio .bbg__portfolio-links a[href*="https://www.youtube.com"] {
   background-image: url(img/social-icons/png/youtube-icon-full_color.png);
   background-image: url(img/social-icons/svg/youtube-icon-full_color.svg);
-  /*position: left top;
-  size: contain;
-  repeat: no-repeat;*/
   padding-left: 3rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://github.com"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
-  /*position: left top;
-  size: contain;
-  repeat: no-repeat;*/
   padding-left: 2.3rem;
 }
 .category-portfolio .bbg__portfolio-members {

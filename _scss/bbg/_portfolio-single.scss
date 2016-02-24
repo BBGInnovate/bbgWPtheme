@@ -35,20 +35,14 @@
 				background: {
 					image: url(img/social-icons/png/link-icon.png);
 					image: url(img/social-icons/svg/link-icon.svg);
-					/*position: left top;
-					size: contain;
-					repeat: no-repeat;*/
 				}
 				padding-left: 2.3rem;
 			}
 			// Android apps on GooglePlay
-			&[href*="https://play.google.com/store"] {
+			&[href*="https://play.google.com"] {
 				background: {
 					image: url(img/social-icons/png/google-play-badge.png);
 					image: url(img/social-icons/svg/google-play-badge.svg);
-					/*position: left top;
-					size: contain;
-					repeat: no-repeat;*/
 				}
 				padding-left: 6.5rem;
 			}
@@ -57,20 +51,14 @@
 				background: {
 					image: url(img/social-icons/png/apple-app-store-badge.png);
 					image: url(img/social-icons/svg/apple-app-store-badge.svg);
-					/*position: left top;
-					size: contain;
-					repeat: no-repeat;*/
 				}
 				padding-left: 6.3rem;
 			}
 			//YouTube links
-			&[href*="https://www.youtube.com/watch"] {
+			&[href*="https://www.youtube.com"] {
 				background: {
 					image: url(img/social-icons/png/youtube-icon-full_color.png);
 					image: url(img/social-icons/svg/youtube-icon-full_color.svg);
-					/*position: left top;
-					size: contain;
-					repeat: no-repeat;*/
 				}
 				padding-left: 3rem;
 			}
@@ -79,9 +67,6 @@
 				background: {
 					image: url(img/social-icons/png/github-mark.png);
 					image: url(img/social-icons/svg/github-mark.svg);
-					/*position: left top;
-					size: contain;
-					repeat: no-repeat;*/
 				}
 				padding-left: 2.3rem;
 			}
