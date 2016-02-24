@@ -3322,27 +3322,31 @@ fieldset {
     margin-bottom: 6rem;
   }
 }
+@media screen and (min-width: 600px) {
+  .bbg-banner .bbg-banner__container.usa-grid {
+    padding-right: 0;
+  }
+}
 @media screen and (min-width: 900px) {
   .bbg-banner .bbg-banner__container {
     border-left: 1px solid rgba(240, 240, 240, 0.4);
     border-right: 1px solid rgba(240, 240, 240, 0.4);
     height: 100%;
-    padding-right: 0;
   }
 }
 .bbg-banner a:focus {
   box-shadow: none;
   background: none;
 }
-.bbg-banner .bbg-banner-site-logo-img {
-  width: 100px;
+.bbg-banner .bbg-banner__site-logo {
+  width: 150px;
 }
 @media screen and (min-width: 600px) {
-  .bbg-banner .bbg-banner-site-logo-img {
+  .bbg-banner .bbg-banner__site-logo {
     width: 150px;
   }
 }
-.bbg-banner .bbg-banner-site-logo-img :focus {
+.bbg-banner .bbg-banner__site-logo :focus {
   box-shadow: none;
 }
 .bbg-banner .bbg-banner-box {
@@ -3401,12 +3405,12 @@ fieldset {
   max-width: 100%;
   position: absolute;
   right: 0;
-  top: 3rem;
+  top: 6rem;
   padding: 0;
 }
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-social {
-    right: -47px;
+    right: -44px;
   }
 }
 .bbg-banner .bbg-social__list {
@@ -3419,7 +3423,6 @@ fieldset {
     margin: 0;
     padding: 0;
     display: block;
-    text-align: right;
   }
   .bbg-banner .bbg-social__list li {
     display: list-item;
@@ -3432,11 +3435,13 @@ fieldset {
     display: none;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link {
-    background-color: #FFF;
-    border-radius: 3px;
-    border: 3px solid #FFF;
+    background-color: #91C7DC;
+    border-radius: 0;
     margin-bottom: 1px;
-    padding: 0;
+    padding: 2px;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link :hover {
+    background-color: #FFF;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link a {
     background-position: center center;
@@ -3457,6 +3462,23 @@ fieldset {
   .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://twitter.com/"] {
     background-image: url(img/social-icons/png/twitter16.png);
     background-image: url(img/social-icons/svg/twitter16.svg);
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
+    border-radius: 0.3rem 0 0 0;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link:last-of-type {
+    border-radius: 0 0 0 0.3rem;
+  }
+}
+@media screen and (min-width: 600px) and (min-width: 1201px) {
+  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
+    border-radius: 0;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
+    border-radius: 0 0.3rem 0 0;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link:last-of-type {
+    border-radius: 0 0 0.3rem 0;
   }
 }
 
@@ -3487,10 +3509,6 @@ a:focus {
   background-color: #dce4ef;
   padding: 2px;
   margin: -2px;
-}
-a:focus .bbg-fuego__article__thumbnail, a:focus .bbg-fuego__article__thumbnail--large {
-  padding: 0;
-  margin: 0;
 }
 
 .usa-font-lead {
