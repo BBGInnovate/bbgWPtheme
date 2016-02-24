@@ -2821,8 +2821,15 @@ fieldset {
   }
 }
 
+.bbg-author-bio {
+  font-family: "Merriweather","Georgia","Times New Roman",serif;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
 @media screen and (min-width: 481px) {
   .bbg-author-bio {
+    font-size: 1.8rem;
+    font-weight: 300;
     margin-left: 110px;
     max-width: 600px;
   }

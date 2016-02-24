@@ -118,7 +118,14 @@
 
 
 .bbg-author-bio {
+	font-family: "Merriweather","Georgia","Times New Roman",serif;
+	line-height: 1.8;
+	margin-top: 1rem;
+
 	@include media($small-screen) {
+		font-size: 1.8rem;
+		font-weight: 300;
+
 		margin-left: $bbg-team__icon-width + 10px;
 		max-width: $article-max-width;
 	}

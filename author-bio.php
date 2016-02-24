@@ -112,7 +112,7 @@ if ( $twitterHandle && $twitterHandle != '' ) {
 if ( count( $projects ) ) {
 	$maxProjectsToShow=5;
 	echo '<div class="usa-width-one-third">';
-	echo '<h6 class="bbg-label">Projects:</h2>';
+	echo '<h6 class="bbg-label small">Projects:</h2>';
 	echo '<ul>';
 	for ( $i=0; $i<min( $maxProjectsToShow, count( $projects ) ); $i++ ) {
 		$p=$projects[$i];
