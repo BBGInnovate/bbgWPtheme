@@ -9,16 +9,14 @@
 		display: none;
 	}
 
+	/* & li:before > .bbg__portfolio-links {
+		list-style: none;
+
+			content: '';
+	} */
+
 	/* Style related links for portfolio projects */
 	.bbg__portfolio-links  {
-		/* li &: {
-			display: inline-block;
-			list-style-type:  none;
-
-			&:before {
-				content: '';
-			}
-		} */
 
 		a {
 			color: $color-primary-darkest;
@@ -31,6 +29,61 @@
 			&:hover {
 				color: black;
 				text-decoration: underline;
+			}
+			// Generic website URL
+			&[href] {
+				background: {
+					image: url(img/social-icons/png/link-icon.png);
+					image: url(img/social-icons/svg/link-icon.svg);
+					position: left top;
+					size: contain;
+					repeat: no-repeat;
+				}
+				padding-left: 2.3rem;
+			}
+			// Android apps on GooglePlay
+			&[href*="https://play.google.com/store"] {
+				background: {
+					image: url(img/social-icons/png/google-play-badge.png);
+					image: url(img/social-icons/svg/google-play-badge.svg);
+					position: left top;
+					size: contain;
+					repeat: no-repeat;
+				}
+				padding-left: 6.5rem;
+			}
+			// iOS apps on App Store
+			&[href*="https://itunes.apple.com"] {
+				background: {
+					image: url(img/social-icons/png/apple-app-store-badge.png);
+					image: url(img/social-icons/svg/apple-app-store-badge.svg);
+					position: left top;
+					size: contain;
+					repeat: no-repeat;
+				}
+				padding-left: 6.3rem;
+			}
+			//YouTube links
+			&[href*="https://www.youtube.com/watch"] {
+				background: {
+					image: url(img/social-icons/png/youtube-icon-full_color.png);
+					image: url(img/social-icons/svg/youtube-icon-full_color.svg);
+					position: left top;
+					size: contain;
+					repeat: no-repeat;
+				}
+				padding-left: 3rem;
+			}
+			// GitHub links
+			&[href*="https://github.com"] {
+				background: {
+					image: url(img/social-icons/png/github-mark.png);
+					image: url(img/social-icons/svg/github-mark.svg);
+					position: left top;
+					size: contain;
+					repeat: no-repeat;
+				}
+				padding-left: 2.3rem;
 			}
 		}
 	}
@@ -101,26 +154,11 @@
 		}
 
 		.bbg__article-sidebar {
-			//display: inline-block;
-			//float: left;
 			max-width: 17rem;
 			position: absolute;
 				top: 0;
 				right: 0;
 			width: 14%;
-		}
-	}
-
-	@include media($large-screen) {
-		/*
-		.bbg__article-share {
-			margin-right: 5rem;
-		}
-		*/
-
-		.bbg__article-content {
-			//margin-right: 6rem;
-    		//max-width: $article-max-width;
 		}
 	}
 }
