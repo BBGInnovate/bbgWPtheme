@@ -4118,18 +4118,40 @@ li.usa-footer-primary-content:last-child {
     margin-top: 1.5rem;
   }
 }
+@media screen and (min-width: 900px) {
+  .category-portfolio .bbg__portfolio-members {
+    margin-top: 0;
+  }
+}
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
   font-size: 1.7rem;
   text-transform: uppercase;
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list {
   list-style-type: none;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li {
+  display: list-item;
+  margin: 0;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li:before {
+  display: none;
+}
+.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li:after {
+  display: none;
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
   font-weight: 700;
-}
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name:before {
-  content: '';
+  /*
+  &:before {
+  	content: '';
+  	padding-right: 0;
+  }
+  */
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
   color: #323a45;

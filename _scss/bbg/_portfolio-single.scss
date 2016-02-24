@@ -92,6 +92,10 @@
 			margin-top: 1.5rem;
 		}
 
+		@include media($medium-large-screen) {
+			margin-top: 0;
+		}
+
 		.bbg__portfolio-members__title {
 			@extend .bbg__comments-title;
 			font-size: $h4-font-size;
@@ -101,12 +105,16 @@
 		.bbg__portfolio-members__list {
 			list-style-type: none;
 
+			@include unstyled-list;
+
 			.bbg__portfolio-members__member-name {
 				font-weight: $font-bold;
-
+				/*
 				&:before {
 					content: '';
+					padding-right: 0;
 				}
+				*/
 			}
 
 			.bbg__portfolio-members__member-job {
