@@ -27,6 +27,15 @@ a:focus {
 	margin: -2px;
 }
 
+img, *[class*="avatar"], *[class*="image"], *[class*="thumbnail"] {
+	:focus { // removes background color and spacing when images are part of links
+		background: none;
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+}
+
 .usa-font-lead {
 	color: #000;
 }

@@ -3511,6 +3511,13 @@ a:focus {
   margin: -2px;
 }
 
+img :focus, *[class*="avatar"] :focus, *[class*="image"] :focus, *[class*="thumbnail"] :focus {
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 .usa-font-lead {
   color: #000;
 }
