@@ -63,6 +63,23 @@
 	color: #333;
 }
 
+
+.bbg-fuego__article__description:focus { // removes background color and spacing on links for descriptions
+	background: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+
+	.bbg-fuego__article__thumbnail {
+		margin: 0 1.5rem 1rem 0;
+	}
+
+	.bbg-fuego__article__thumbnail--large {
+		margin: 0 0 1rem 0;
+	}
+}
+
+
 .bbg-fuego__article__thumbnail {
 	background-color: $color-gray-lightest;
 	@include backgroundCover();
@@ -102,7 +119,7 @@
 }
 
 .bbg-fuego__twitter-photo {
-	@include backgroundCover(); 
+	@include backgroundCover();
 	border-radius: 50%;
 	float: left;
 	height: $bbg-avatar-twitter;

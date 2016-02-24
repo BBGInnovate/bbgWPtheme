@@ -3,22 +3,14 @@
  * The Template for displaying all single posts.
  *
  * @package Independent Publisher
- * @since   Independent Publisher 1.0 
+ * @since   Independent Publisher 1.0
   template name: TrendingFake
 
  */
 
 $pageBodyID = "trending";
-require(dirname(__FILE__).'/../../fuego/init.php');
-use OpenFuego\app\Getter as Getter;
-$fuego = new Getter();
-		
-if (  isset( $_GET['hideLink'] ) && current_user_can('publish_posts') ) {
-	$fuego -> hideLink( $_GET['hideLink'] );
-}
 
-
-get_header(); 
+get_header();
 
 ?>
 <div id="main" class="site-main">
@@ -282,7 +274,7 @@ get_header();
 		</div>
 		</div>
 		<!-- #main .site-main -->
-		<?php 
+		<?php
 
 get_footer();
 

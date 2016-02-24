@@ -25,6 +25,11 @@ a:focus {
 	background-color: $color-gray-cool-light;
 	padding: 2px;
 	margin: -2px;
+
+	& .bbg-fuego__article__thumbnail, & .bbg-fuego__article__thumbnail--large  {
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .usa-font-lead {
