@@ -26,10 +26,10 @@ get_header();
 <div id="main" class="site-main">
 
 	<div id="primary" class="content-area">
-		<main id="content" class="site-content bbg-home-main" role="main">
+		<main id="bbg-home" class="site-content bbg-home-main" role="main">
 
 			<?php
-				if ( get_header_image() != "") { 
+				if ( get_header_image() != "") {
 					/* Check if there's an image set. Ideally we'd tweak the design accorgingly. */
 				}
 			?>
@@ -74,7 +74,7 @@ get_header();
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 						$siteIntroTitle=get_the_title();
-						echo '<h3 id="content" class="usa-font-lead">';
+						echo '<h3 id="site-intro" class="usa-font-lead">';
 						/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
 						echo get_the_content();
 						echo '</h3>';
@@ -146,7 +146,7 @@ get_header();
 							if ($counter == 1) {
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 								echo '<div class="usa-grid">';
-							} 
+							}
 							else if ($counter <= $maxPostsToShow) {
 								$gridClass = "bbg-grid--1-2-2";
 								$includeImage = FALSE;
@@ -160,7 +160,7 @@ get_header();
 			</section><!-- Recent posts -->
 
 
-			<?php 
+			<?php
 				/** in general settings we've entered featured categoryIDs as a comma separated list which should be ones that are specified as teams and have users that are specified as their heads */
 				$featuredCategoryIDsStr=get_option( 'featuredCategoryIDs' );
 				if ($featuredCategoryIDsStr != "") {
@@ -177,9 +177,9 @@ get_header();
 						<div class="usa-grid-full">
 
 							<?php
-								/* 
+								/*
 								   we need a way to know which categories are owned by which user - create a quick data structure.
-								   there is likely a more efficient way to do that but with <100 users, no harm 
+								   there is likely a more efficient way to do that but with <100 users, no harm
 								*/
 
 								$categoryHeads=array();
@@ -187,16 +187,16 @@ get_header();
 								foreach ( $blogusers as $user ) {
 									if ($user->headOfTeam != "") {
 										$categoryHeads[$user->headOfTeam]=$user;
-									} 
+									}
 								}
 
-								
+
 								$featuredCategoryIDs = explode( ',', $featuredCategoryIDsStr );
 								array_walk( $featuredCategoryIDs, 'intval' );
 								$args = array( 'include' => $featuredCategoryIDs, 'orderby' => 'include', 'hide_empty' => false);
 
-								$categories = get_categories($args ); 
-								foreach ( $categories as $category ) { 
+								$categories = get_categories($args );
+								foreach ( $categories as $category ) {
 									$iconName = "bbg-team__icon__".$category->category_nicename;
 									//$categoryLink=get_category_link( $category->term_id );
 									$categoryLink= add_query_arg('cat', $category->term_id, get_permalink( get_page_by_path( 'team' ) ));

@@ -2237,6 +2237,9 @@ li.usa-footer-primary-content:last-child {
     text-align: right;
   }
 }
+.usa-footer-contact-links .usa-social-links a:hover {
+  text-decoration: none;
+}
 
 @media screen and (min-width: 600px) {
   .usa-footer-big .usa-footer-primary-section {
