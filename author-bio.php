@@ -66,7 +66,7 @@ wp_reset_query();
 ?>
 
 <div class="usa-section">
-	<div class="usa-grid-full">
+	<div class="usa-grid clearAll" >
 
 
 		<header class="page-header usa-width-two-thirds">
