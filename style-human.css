@@ -2859,6 +2859,19 @@ fieldset {
   }
 }
 
+@media screen and (min-width: 481px) {
+  .bbg-author-projects {
+    padding-left: 110px;
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-author-projects {
+    padding-left: 0;
+    margin-top: 0;
+  }
+}
+
 .bbg-staff__author-name {
   clear: none;
   font-size: 2.4rem;

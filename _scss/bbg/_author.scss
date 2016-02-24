@@ -153,6 +153,18 @@
 	}
 }
 
+.bbg-author-projects {
+	@include media($small-screen) {
+		padding-left: $bbg-team__icon-width + 10px;
+		margin-top: 2rem;
+	}
+
+	@include media($medium-large-screen) {
+		padding-left: 0;
+		margin-top: 0;
+	}
+}
+
 
 .bbg-staff__author-bio {
 	@extend .readin;
