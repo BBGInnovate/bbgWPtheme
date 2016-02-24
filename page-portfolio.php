@@ -37,7 +37,9 @@ get_header(); ?>
 				<header class="page-header">
 					<h6 class="bbg-label large">Portfolio</h6>
 				</header><!-- .page-header -->
+			</div>
 
+			<div class="usa-grid-full">
 				<?php 
 					$counter=0;
 					while ( have_posts() )  {
@@ -46,7 +48,7 @@ get_header(); ?>
 						if ($counter == 1) {
 							$includeMetaFeatured = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
-							echo '<div class="usa-grid-full">';
+							echo '<div class="usa-grid">';
 						} 
 						else if ($counter <= $maxPostsToShow) {
 							$gridClass = "bbg-grid--1-2-3";
