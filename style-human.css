@@ -2830,6 +2830,7 @@ fieldset {
   .bbg-author-bio {
     font-size: 1.8rem;
     font-weight: 300;
+    margin-top: 2rem;
     margin-left: 110px;
     max-width: 600px;
   }

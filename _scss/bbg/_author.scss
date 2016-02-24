@@ -126,7 +126,10 @@
 		font-size: 1.8rem;
 		font-weight: 300;
 
-		margin-left: $bbg-team__icon-width + 10px;
+		margin: {
+			top: 2rem;
+			left: $bbg-team__icon-width + 10px;
+		}
 		max-width: $article-max-width;
 	}
 }
