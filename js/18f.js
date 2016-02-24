@@ -7,8 +7,12 @@ jQuery(document).ready(function() {
       jQuery('.usa-footer-big nav .usa-footer-primary-link').unbind('click');
 
       jQuery('.usa-footer-big nav .usa-footer-primary-link').bind('click', function() {
-        jQuery(this).parent().removeClass('hidden')
-        .siblings().addClass('hidden');
+        if (! jQuery(this).parent().hasClass('hidden')) {
+          jQuery(this).parent().addClass('hidden');
+        } else {
+          jQuery(this).parent().removeClass('hidden')
+          .siblings().addClass('hidden');  
+        }
       });
     } else {
 
