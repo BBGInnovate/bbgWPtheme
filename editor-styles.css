@@ -1,17 +1,47 @@
 @charset "UTF-8";
 
 /* Style related links for portfolio projects */
-span.bbg__portfolio-links a {
-	border-top: 3px solid #02bfe7;
-	border-bottom: 3px solid #02bfe7;
-	color: #02bfe7;
-	font-size: rem(14px);
-	font-weight: 700;
-	padding: 5px;
-	text-decoration: none;
+.bbg__portfolio-links a {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #112e51;
+    font-size: .85rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-span.bbg__portfolio-links a:hover {
-	border-color: #046b99;
-	color: #046b99;
+.bbg__portfolio-links a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.bbg__portfolio-links a[href] {
+    background-image: url(img/social-icons/png/link-icon.png);
+    background-image: url(img/social-icons/svg/link-icon.svg);
+    padding-left: 2.3rem;
+}
+
+.bbg__portfolio-links a[href*="https://play.google.com"] {
+    background-image: url(img/social-icons/png/google-play-badge.png);
+    background-image: url(img/social-icons/svg/google-play-badge.svg);
+    padding-left: 6.5rem;
+}
+
+.bbg__portfolio-links a[href*="https://itunes.apple.com"] {
+    background-image: url(img/social-icons/png/apple-app-store-badge.png);
+    background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
+    padding-left: 6.3rem;
+}
+
+.bbg__portfolio-links a[href*="https://www.youtube.com"] {
+    background-image: url(img/social-icons/png/youtube-icon-full_color.png);
+    background-image: url(img/social-icons/svg/youtube-icon-full_color.svg);
+    padding-left: 3rem;
+}
+
+.bbg__portfolio-links a[href*="https://github.com"] {
+    background-image: url(img/social-icons/png/github-mark.png);
+    background-image: url(img/social-icons/svg/github-mark.svg);
+    padding-left: 2.3rem;
 }
