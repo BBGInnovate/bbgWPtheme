@@ -4061,6 +4061,9 @@ li.usa-footer-primary-content:last-child {
   display: none;
 }
 .category-portfolio .bbg__portfolio-links a {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #112e51;
   font-size: 1.4rem;
   font-weight: 700;
@@ -4073,41 +4076,41 @@ li.usa-footer-primary-content:last-child {
 .category-portfolio .bbg__portfolio-links a[href] {
   background-image: url(img/social-icons/png/link-icon.png);
   background-image: url(img/social-icons/svg/link-icon.svg);
-  background-position: left top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /*position: left top;
+  size: contain;
+  repeat: no-repeat;*/
   padding-left: 2.3rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://play.google.com/store"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
-  background-position: left top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /*position: left top;
+  size: contain;
+  repeat: no-repeat;*/
   padding-left: 6.5rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://itunes.apple.com"] {
   background-image: url(img/social-icons/png/apple-app-store-badge.png);
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
-  background-position: left top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /*position: left top;
+  size: contain;
+  repeat: no-repeat;*/
   padding-left: 6.3rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://www.youtube.com/watch"] {
   background-image: url(img/social-icons/png/youtube-icon-full_color.png);
   background-image: url(img/social-icons/svg/youtube-icon-full_color.svg);
-  background-position: left top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /*position: left top;
+  size: contain;
+  repeat: no-repeat;*/
   padding-left: 3rem;
 }
 .category-portfolio .bbg__portfolio-links a[href*="https://github.com"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
-  background-position: left top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /*position: left top;
+  size: contain;
+  repeat: no-repeat;*/
   padding-left: 2.3rem;
 }
 .category-portfolio .bbg__portfolio-members {
@@ -4128,7 +4131,6 @@ li.usa-footer-primary-content:last-child {
   text-transform: uppercase;
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list {
-  list-style-type: none;
   display: block;
   list-style-type: none;
   margin: 0;
@@ -4146,12 +4148,6 @@ li.usa-footer-primary-content:last-child {
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
   font-weight: 700;
-  /*
-  &:before {
-  	content: '';
-  	padding-right: 0;
-  }
-  */
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
   color: #323a45;

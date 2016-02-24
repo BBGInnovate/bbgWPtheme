@@ -13,6 +13,12 @@
 	.bbg__portfolio-links  {
 
 		a {
+			background: {
+				position: left top;
+				repeat: no-repeat;
+				size: contain;
+			}
+
 			color: $color-primary-darkest;
 			font: {
 				size: $small-font-size;
@@ -29,9 +35,9 @@
 				background: {
 					image: url(img/social-icons/png/link-icon.png);
 					image: url(img/social-icons/svg/link-icon.svg);
-					position: left top;
+					/*position: left top;
 					size: contain;
-					repeat: no-repeat;
+					repeat: no-repeat;*/
 				}
 				padding-left: 2.3rem;
 			}
@@ -40,9 +46,9 @@
 				background: {
 					image: url(img/social-icons/png/google-play-badge.png);
 					image: url(img/social-icons/svg/google-play-badge.svg);
-					position: left top;
+					/*position: left top;
 					size: contain;
-					repeat: no-repeat;
+					repeat: no-repeat;*/
 				}
 				padding-left: 6.5rem;
 			}
@@ -51,9 +57,9 @@
 				background: {
 					image: url(img/social-icons/png/apple-app-store-badge.png);
 					image: url(img/social-icons/svg/apple-app-store-badge.svg);
-					position: left top;
+					/*position: left top;
 					size: contain;
-					repeat: no-repeat;
+					repeat: no-repeat;*/
 				}
 				padding-left: 6.3rem;
 			}
@@ -62,9 +68,9 @@
 				background: {
 					image: url(img/social-icons/png/youtube-icon-full_color.png);
 					image: url(img/social-icons/svg/youtube-icon-full_color.svg);
-					position: left top;
+					/*position: left top;
 					size: contain;
-					repeat: no-repeat;
+					repeat: no-repeat;*/
 				}
 				padding-left: 3rem;
 			}
@@ -73,9 +79,9 @@
 				background: {
 					image: url(img/social-icons/png/github-mark.png);
 					image: url(img/social-icons/svg/github-mark.svg);
-					position: left top;
+					/*position: left top;
 					size: contain;
-					repeat: no-repeat;
+					repeat: no-repeat;*/
 				}
 				padding-left: 2.3rem;
 			}
@@ -103,18 +109,10 @@
 		}
 
 		.bbg__portfolio-members__list {
-			list-style-type: none;
-
 			@include unstyled-list;
 
 			.bbg__portfolio-members__member-name {
 				font-weight: $font-bold;
-				/*
-				&:before {
-					content: '';
-					padding-right: 0;
-				}
-				*/
 			}
 
 			.bbg__portfolio-members__member-job {
