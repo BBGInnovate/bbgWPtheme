@@ -563,14 +563,16 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 	 *
 	 * @since bbginnovate 1.0
 	 */
-	function bbginnovate_post_categories( $separator = ',', $single = true ) {
+	function bbginnovate_post_categories( $separator = ',', $single = true , $ignorePortfolio = false) {
 		$categories = get_the_category();
 		$output     = '';
 		if ( $categories ) {
 			foreach ( $categories as $category ) {
-				$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
-				if ( $single )
-				break;
+				if (!$ignorePortfolio || $category->name!="Portfolio") {
+					$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
+					if ( $single )
+					break;
+				}
 			}
 		}
 
