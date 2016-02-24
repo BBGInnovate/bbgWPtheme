@@ -154,12 +154,13 @@
 }
 
 .bbg-author-projects {
+	margin-top: 2rem;
+
 	@include media($small-screen) {
 		padding-left: $bbg-team__icon-width + 10px;
-		margin-top: 2rem;
 	}
 
-	@include media($medium-large-screen) {
+	@include media($medium-screen) {
 		padding-left: 0;
 		margin-top: 0;
 	}
