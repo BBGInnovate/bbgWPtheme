@@ -99,7 +99,9 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 			<?php
 				$usersInProjectStr = get_post_meta( get_the_ID(), 'users_in_project', true );
 
-				if ( $usersInProjectStr != "" ) {
+				if(!in_category('portfolio')) {
+					bbg_post_author_bottom_card(get_the_author_meta('ID'));
+				} elseif ( $usersInProjectStr != "" ) {
 					$userIDs = explode( ',', $usersInProjectStr );
 					array_walk( $userIDs, 'intval' );
 					$args = array( 'include' => $userIDs, 'orderby' => 'include' );
@@ -117,8 +119,6 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 						echo "</ul></div>";
 					}
 
-				} else {
-					bbg_post_author_bottom_card(get_the_author_meta('ID'));
 				}
 			?>
 		</div> <!-- .bbg__article-sidebar -->

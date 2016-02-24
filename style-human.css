@@ -3711,6 +3711,29 @@ body:not(.home) .menu-all-pages-container {
   margin-bottom: 0rem;
 }
 
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="file"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea,
+select {
+  border: 1px solid #CCC;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
 @media screen and (min-width: 900px) {
   .multicolumn {
     -webkit-column-count: 2;
@@ -3971,17 +3994,37 @@ img {
   height: auto;
 }
 
+ul.usa-footer-primary-content,
+li.usa-footer-primary-content,
+li.usa-footer-primary-content {
+  border-top: 1px solid #CCC;
+}
+@media screen and (min-width: 600px) {
+  ul.usa-footer-primary-content,
+  li.usa-footer-primary-content,
+  li.usa-footer-primary-content {
+    border: none;
+  }
+}
+ul.usa-footer-primary-content:last-child,
+li.usa-footer-primary-content:last-child,
+li.usa-footer-primary-content:last-child {
+  border-bottom: 1px solid #CCC;
+}
+@media screen and (min-width: 600px) {
+  ul.usa-footer-primary-content:last-child,
+  li.usa-footer-primary-content:last-child,
+  li.usa-footer-primary-content:last-child {
+    border-bottom: none;
+  }
+}
+
 /**
  *  Changing styles on content-single for portfolio posts
  *
  */
 .category-portfolio {
   /* Hide article meta (author and date) */
-  	/* & li:before > .bbg__portfolio-links {
-  		list-style: none;
-  
-  			content: '';
-  	} */
   /* Style related links for portfolio projects */
   	/**
    	 * Style content of section listing project team members

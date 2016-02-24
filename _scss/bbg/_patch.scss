@@ -7,3 +7,22 @@ img {
 // fix relative img links for background-images in the footer
 // from: ../img/ 
 // to: img/
+
+
+ul.usa-footer-primary-content,
+li.usa-footer-primary-content,
+li.usa-footer-primary-content {
+	border-top: 1px solid #CCC;
+
+	@include media($medium-screen) {
+		border: none;
+	}
+
+	&:last-child {
+		border-bottom: 1px solid #CCC;
+
+		@include media($medium-screen) {
+			border-bottom: none;
+		}
+	}
+}
