@@ -34,7 +34,7 @@ get_header();
 				}
 			?>
 			<section class="bbg-banner" style="background-image:url(<?php echo get_header_image(); ?>)">
-				<div class="usa-grid bbg-banner__box">
+				<div class="usa-grid bbg-banner__container">
 					<a href="<?php echo site_url(); ?>">
 						<img class="bbg-banner__site-logo" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="BBG logo">
 					</a>
@@ -44,6 +44,17 @@ get_header();
 						if ( $description || is_customize_preview() ) : ?>
 							<h3 class="bbg-banner-site-description usa-heading-site-description"><?php echo $description; ?></h3>
 						<?php endif; ?>
+
+					</div>
+
+					<div class="bbg-social__container">
+						<div class="bbg-social">
+							<ul class="bbg-social__list">
+								<li class="bbg-social__list__link"><a href="https://github.com/bbgvisualjournalist"></a></li>
+								<li class="bbg-social__list__link"><a href="https://www.youtube.com/channel/UCtDMNCM2Vt_w2M3Irzb-1PQ"></a></li>
+								<li class="bbg-social__list__link"><a href="https://twitter.com/BBGinnovate"></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>

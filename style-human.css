@@ -3323,10 +3323,11 @@ fieldset {
   }
 }
 @media screen and (min-width: 900px) {
-  .bbg-banner .bbg-banner__box {
+  .bbg-banner .bbg-banner__container {
     border-left: 1px solid rgba(240, 240, 240, 0.4);
     border-right: 1px solid rgba(240, 240, 240, 0.4);
     height: 100%;
+    padding-right: 0;
   }
 }
 .bbg-banner a:focus {
@@ -3347,9 +3348,11 @@ fieldset {
 .bbg-banner .bbg-banner-box {
   margin: 0 auto;
   max-width: 1040px;
+  padding-right: 3rem;
   padding-bottom: 1.5rem;
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-title {
   color: #FFF;
@@ -3387,6 +3390,73 @@ fieldset {
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-description {
     font-size: 2rem;
+  }
+}
+.bbg-banner .bbg-social__container {
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+.bbg-banner .bbg-social {
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  padding: 0;
+}
+@media screen and (min-width: 1201px) {
+  .bbg-banner .bbg-social {
+    right: -47px;
+  }
+}
+.bbg-banner .bbg-social__list {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .bbg-banner .bbg-social__list {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: right;
+  }
+  .bbg-banner .bbg-social__list li {
+    display: list-item;
+    margin: 0;
+  }
+  .bbg-banner .bbg-social__list li:before {
+    display: none;
+  }
+  .bbg-banner .bbg-social__list li:after {
+    display: none;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link {
+    background-color: #FFF;
+    border-radius: 3px;
+    border: 3px solid #FFF;
+    margin-bottom: 1px;
+    padding: 0;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    display: block;
+    width: 40px;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://github.com"] {
+    background-image: url(img/social-icons/png/github-mark.png);
+    background-image: url(img/social-icons/svg/github-mark.svg);
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://www.youtube.com/"] {
+    background-image: url(img/social-icons/png/youtube15.png);
+    background-image: url(img/social-icons/svg/youtube15.svg);
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://twitter.com/"] {
+    background-image: url(img/social-icons/png/twitter16.png);
+    background-image: url(img/social-icons/svg/twitter16.svg);
   }
 }
 
@@ -4277,10 +4347,21 @@ object {
   padding-right: 3.5rem;
 }
 .main-navigation ul {
-  display: none;
-  list-style: none;
+  display: block;
+  list-style-type: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
+  display: none;
+}
+.main-navigation ul li {
+  display: list-item;
+  margin: 0;
+}
+.main-navigation ul li:before {
+  display: none;
+}
+.main-navigation ul li:after {
+  display: none;
 }
 .main-navigation ul ul {
   z-index: 99999;
