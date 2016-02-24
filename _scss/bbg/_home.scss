@@ -12,11 +12,13 @@
 		margin-bottom: $site-margins * 2;
 	}
 
-	.bbg-banner__box {
+	.bbg-banner__container {
 		@include media($medium-large-screen) {
 			border-left: 1px solid rgba(240, 240, 240, .4);
 			border-right: 1px solid rgba(240, 240, 240, .4);
 			height: 100%;
+
+			padding-right: 0;
 		}
 	}
 
@@ -41,9 +43,13 @@
 	.bbg-banner-box{
 		margin: 0 auto;
 		max-width: $site-max-width;
-		padding-bottom: $site-margins/2;
+		padding: {
+			right: $site-margins;
+			bottom: $site-margins/2;
+		}
 		position: absolute;
 			bottom:0;
+		width: 100%;
 
 		.bbg-banner-site-title{
 			color: #FFF;
@@ -85,5 +91,82 @@
 				font-size: $h3-font-size;
 			}
 		}
+
 	}
+
+	.bbg-social__container {
+		max-width: 1200px;
+		position: relative;
+		width: 100%;
+	}
+
+	.bbg-social {
+		max-width: 100%;
+		position: absolute;
+			right: 0;
+			top: 3rem;
+		padding:0;
+
+		@include media($large-screen) {
+			right: -47px;
+		}
+	}
+
+
+	.bbg-social__list {
+		display: none;
+
+		@include media($medium-screen) {
+			@include unstyled-list;
+			display: block;
+			text-align: right;
+
+			.bbg-social__list__link {
+				background-color: #FFF;
+				border-radius: 3px;
+				border: 3px solid #FFF;
+				margin-bottom: 1px;
+				padding: 0;
+
+				a {
+					background: {
+						position: center center;
+						repeat: no-repeat;
+						size: cover;
+					}
+					height: 40px;
+					display: block;
+					width: 40px;
+
+					// GitHub link
+					&[href*="https://github.com"] {
+						background: {
+							image: url(img/social-icons/png/github-mark.png);
+							image: url(img/social-icons/svg/github-mark.svg);
+						}
+					}
+
+					//YouTube link
+					&[href*="https://www.youtube.com/"] {
+						background: {
+							image: url(img/social-icons/png/youtube15.png);
+							image: url(img/social-icons/svg/youtube15.svg);
+						}
+					}
+
+					//Twitter link
+					&[href*="https://twitter.com/"] {
+						background: {
+							image: url(img/social-icons/png/twitter16.png);
+							image: url(img/social-icons/svg/twitter16.svg);
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+
+
 }
