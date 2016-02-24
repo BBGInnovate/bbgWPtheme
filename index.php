@@ -48,7 +48,7 @@ get_header(); ?>
 								echo '</div><!-- left column -->';
 								echo '<div class="bbg-grid--1-1-1-2 tertiary-stories">';
 								echo '<header class="page-header">';
-								echo '<h6 class="page-title screen-reader-text bbg-label small">MORe news</h6>';
+								echo '<h6 class="page-title bbg-label small">More news</h6>';
 								echo '</header>';
 
 								//These values are used for every excerpt >=4

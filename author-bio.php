@@ -69,7 +69,7 @@ wp_reset_query();
 	<div class="usa-grid-full">
 
 
-		<header class="page-header bbg-page__header">
+		<header class="page-header usa-width-two-thirds">
 			<div class="bbg-avatar__container bbg-team__icon">
 				<?php echo $avatar; ?>
 			</div>
@@ -107,6 +107,7 @@ if ( $twitterHandle && $twitterHandle != '' ) {
 
 if ( count( $projects ) ) {
 	$maxProjectsToShow=5;
+	echo '<div class="usa-width-one-third">';
 	echo '<h6 class="bbg-label">Projects:</h2>';
 	echo '<ul>';
 	for ( $i=0; $i<min( $maxProjectsToShow, count( $projects ) ); $i++ ) {
@@ -114,6 +115,7 @@ if ( count( $projects ) ) {
 		echo '<li><a href="' . get_permalink( $p ) . '">' . $p->post_title . '</a></li>';
 	}
 	echo '</ul>';
+	echo '</div>';
 }
 
 ?>
