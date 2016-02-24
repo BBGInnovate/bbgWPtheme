@@ -203,11 +203,14 @@
 				style: solid;
 				width: 6px;
 			}
+			font: {
+				family: $font-serif;
+				size: 2rem;
+			}
 			margin-bottom: $site-margins;
 
 			@include media($medium-large-screen) {
 				float: left;
-				font-family: $font-serif;
 				margin-right: $grid-margins;
 				max-width: 50%;
 				padding: 0;

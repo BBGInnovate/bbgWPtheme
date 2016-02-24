@@ -31,7 +31,7 @@ get_header();
 					</div>
 					<div class="usa-intro bbg-page__header-text bbg-team__text">
 						<h1 class="bbg-page__header-title">Fuego</h1>
-						<h3 class="usa-font-lead bbg-page__header-description">An auto-generated stream of links and conversations from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a></h3>
+						<h3 class="usa-font-lead bbg-page__header-description">An auto-generated stream of conversations and links from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a>.</h3>
 					</div>
 				</header><!-- .page-header -->
 			</div>

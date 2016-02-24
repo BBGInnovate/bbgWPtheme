@@ -111,6 +111,9 @@ get_header();
 			<section id="recent-posts" class="usa-section">
 				<div class="usa-grid">
 					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ) ?>">Recent posts</a></h6>
+				</div>
+
+				<div class="usa-grid-full">
 
 				<?php
 					/* NOTE: if there is a sticky post, we may wind up with an extra item.
@@ -131,7 +134,7 @@ get_header();
 							$counter++;
 							if ($counter == 1) {
 								get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
-								echo '<div class="usa-grid-full">';
+								echo '<div class="usa-grid">';
 							} 
 							else if ($counter <= $maxPostsToShow) {
 								$gridClass = "bbg-grid--1-2-2";

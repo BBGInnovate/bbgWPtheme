@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="usa-grid">
+			<div class="usa-grid-full">
 
 			<?php if ( have_posts() ) : ?>
 

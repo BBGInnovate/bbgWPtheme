@@ -15,8 +15,8 @@ if (! isset ($includeMetaFeatured)) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__excerpt--featured"); ?>>
-	<header class="entry-header bbg-blog__excerpt-header--featured">
+<article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__excerpt--featured usa-grid-full"); ?>>
+	<header class="entry-header bbg-blog__excerpt-header--featured usa-grid-full">
 
 		<?php 
 			$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
@@ -30,7 +30,7 @@ if (! isset ($includeMetaFeatured)) {
 			}
 		?>
 		</a>
-
+<div class="usa-grid">
 		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 
@@ -39,11 +39,11 @@ if (! isset ($includeMetaFeatured)) {
 			<?php bbginnovate_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php }?>
-
+</div>
 
 	</header><!-- .bbg-blog__excerpt-header--featured -->
 
-	<div class="entry-content bbg-blog__excerpt-content--featured">
+	<div class="entry-content bbg-blog__excerpt-content--featured usa-grid">
 		<h3 class="usa-font-lead">
 			<?php echo get_the_excerpt(); ?>
 		</h3>

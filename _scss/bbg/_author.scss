@@ -92,6 +92,59 @@
 .bbg-staff__author-bio {
 }
 
+
+
+.bbg-staff__author-bio {
+	@extend .readin;
+}
+
+
+.bbg-staff__author-name{
+	clear: none;
+	font-size: $h2-font-size * .8;
+	line-height: 1;
+	margin: {
+		top: 1rem;
+		bottom: .1rem;
+	}
+
+	@include media($small-screen) {
+		font-size: $h2-font-size;
+		margin: {
+			top: 0;
+			bottom: .5rem;
+		}
+	}
+}
+
+.bbg-staff__author-occupation {
+	font-weight: $font-light;
+	text-transform: uppercase;
+
+	@include media($small-screen) {
+		padding-left: $bbg-avatar-width-small + 10px;
+		text-align: left;
+	}
+}
+
+.bbg-staff__author-contact {
+	@include clearfix();
+	font-weight: $font-light;
+	margin-bottom: 1rem;
+
+	@include media($medium-screen) {
+		padding-left: $bbg-avatar-width-small + 10px;
+	}
+}
+
+
+
+.bbg-staff__roster .bbg-staff__author-bio {
+	font-size: $read-in-font-size * .8;
+	line-height: $base-line-height;
+}
+
+
 /* Individual author page */
 
 .bbg-author-name{
@@ -114,8 +167,6 @@
 		text-align: left;
 	}
 }
-
-
 
 .bbg-author-bio {
 	font-family: "Merriweather","Georgia","Times New Roman",serif;
@@ -167,55 +218,4 @@
 		padding-left: 0;
 		margin-top: 0;
 	}
-}
-
-
-.bbg-staff__author-bio {
-	@extend .readin;
-}
-
-
-.bbg-staff__author-name{
-	clear: none;
-	font-size: $h2-font-size * .8;
-	line-height: 1;
-	margin: {
-		top: 1rem;
-		bottom: .1rem;
-	}
-
-	@include media($small-screen) {
-		font-size: $h2-font-size;
-		margin: {
-			top: 0;
-			bottom: .5rem;
-		}
-	}
-}
-
-.bbg-staff__author-occupation {
-	font-weight: $font-light;
-	text-transform: uppercase;
-
-	@include media($small-screen) {
-		padding-left: $bbg-avatar-width-small + 10px;
-		text-align: left;
-	}
-}
-
-.bbg-staff__author-contact {
-	@include clearfix();
-	font-weight: $font-light;
-	margin-bottom: 1rem;
-
-	@include media($medium-screen) {
-		padding-left: $bbg-avatar-width-small + 10px;
-	}
-}
-
-
-
-.bbg-staff__roster .bbg-staff__author-bio {
-	font-size: $read-in-font-size * .8;
-	line-height: $base-line-height;
 }

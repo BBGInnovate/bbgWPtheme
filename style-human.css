@@ -2802,6 +2802,54 @@ fieldset {
   width: 100%;
 }
 
+.bbg-staff__author-name {
+  clear: none;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-top: 1rem;
+  margin-bottom: .1rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg-staff__author-name {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+}
+
+.bbg-staff__author-occupation {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 481px) {
+  .bbg-staff__author-occupation {
+    padding-left: 60px;
+    text-align: left;
+  }
+}
+
+.bbg-staff__author-contact {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.bbg-staff__author-contact:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media screen and (min-width: 600px) {
+  .bbg-staff__author-contact {
+    padding-left: 60px;
+  }
+}
+
+.bbg-staff__roster .bbg-staff__author-bio {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
 /* Individual author page */
 .bbg-author-name {
   clear: none;
@@ -2873,54 +2921,6 @@ fieldset {
     padding-left: 0;
     margin-top: 0;
   }
-}
-
-.bbg-staff__author-name {
-  clear: none;
-  font-size: 2.4rem;
-  line-height: 1;
-  margin-top: 1rem;
-  margin-bottom: .1rem;
-}
-@media screen and (min-width: 481px) {
-  .bbg-staff__author-name {
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: .5rem;
-  }
-}
-
-.bbg-staff__author-occupation {
-  font-weight: 300;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 481px) {
-  .bbg-staff__author-occupation {
-    padding-left: 60px;
-    text-align: left;
-  }
-}
-
-.bbg-staff__author-contact {
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-.bbg-staff__author-contact:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-@media screen and (min-width: 600px) {
-  .bbg-staff__author-contact {
-    padding-left: 60px;
-  }
-}
-
-.bbg-staff__roster .bbg-staff__author-bio {
-  font-size: 1.6rem;
-  line-height: 1.7;
 }
 
 /** HEADER AREA */
@@ -3098,12 +3098,13 @@ fieldset {
   border-bottom-color: #0071bc;
   border-bottom-style: solid;
   border-bottom-width: 6px;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-size: 2rem;
   margin-bottom: 3rem;
 }
 @media screen and (min-width: 900px) {
   .bbg__article-content blockquote.pullquote {
     float: left;
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
     margin-right: 3rem;
     max-width: 50%;
     padding: 0;
