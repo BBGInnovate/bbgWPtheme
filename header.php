@@ -169,17 +169,13 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 
 			<div id="header" class="usa-grid-full">
 
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<div class="bbg-header__container">
+				<div class="bbg-header__container">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="bbg-header__link">
 						<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="" class="bbg-header__logo">
 						<h1 class="bbg-header__site-title">Office of Digital <span class="u__breakline--mobile">& Design Innovation</span></h1>
 					</a>
-					</div>
-					<!--<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>-->
-				<?php endif; ?>
+				</div>
+
 			</div>
 
 

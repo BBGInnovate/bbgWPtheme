@@ -1,3 +1,18 @@
+/*****************************/
+// top nav menu
+.menu-all-pages-container {
+	margin: 0 auto;
+	max-width: $site-max-width;
+	position: relative;
+}
+
+body:not(.home) .menu-all-pages-container {
+	@include media($medium-screen) {
+		min-height: 5rem;
+	}
+}
+
+
 .main-navigation {
 	clear: both;
 	display: inline;
@@ -41,9 +56,6 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			/* left: auto;
-			display: block;
-			*/
 		}
 	}
 	li {
