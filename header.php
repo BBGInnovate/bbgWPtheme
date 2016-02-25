@@ -145,7 +145,7 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 <div id="page" class="site main-content" role="main">
 	<a class="skipnav skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bbginnovate' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header bbg-header" role="banner">
 
 		<div class="usa-disclaimer">
 			<div class="usa-grid">
@@ -167,30 +167,21 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 			if ($templateName!="customHome"){
 		?>
 
-		<div class="usa-bbg-site-branding">
 			<div id="header" class="usa-grid-full">
 
 				<?php if ( is_front_page() && is_home() ) : ?>
 					<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
-					<!--
-					<div class="">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Broadcasting Board of Governors logo" class="bbg-site-logo-image"/>
-							<h1 class="usa-heading usa-heading-site-title site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
-						</a>
+					<div class="bbg-header__container">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="" class="bbg-header__logo">
+						<h1 class="bbg-header__site-title">Office of Digital <span class="u__breakline--mobile">& Design Innovation</span></h1>
+					</a>
 					</div>
-					-->
-
-					<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>
-				<?php endif;
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<!--<h3 class="usa-heading usa-heading-site-description bbg-heading-site-description site-description"><?php echo $description; /* WPCS: xss ok. */ ?></h3>-->
+					<!--<h1 class="usa-heading usa-heading-site-title bbg-heading-site-title site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="bbg-site-logo"></span><?php echo bbginnovate_site_name_html(); ?></a></h1>-->
 				<?php endif; ?>
 			</div>
 
-		</div><!-- .site-branding -->
 
 		<?php 
 			}

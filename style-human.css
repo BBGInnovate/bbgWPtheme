@@ -2700,6 +2700,15 @@ fieldset {
   }
 }
 
+.u__breakline--mobile {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .u__breakline--mobile {
+    display: inline-block;
+  }
+}
+
 .readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.6rem;
@@ -3424,7 +3433,7 @@ fieldset {
 }
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-social {
-    right: -44px;
+    right: -40px;
   }
 }
 .bbg-banner .bbg-social__list {
@@ -3536,10 +3545,6 @@ img :focus, *[class*="avatar"] :focus, *[class*="image"] :focus, *[class*="thumb
   color: #000;
 }
 
-.bbg-site-branding {
-  margin-bottom: 3rem;
-}
-
 .usa-disclaimer {
   text-align: center;
 }
@@ -3608,67 +3613,129 @@ article {
   }
 }
 
-.bbg-site-logo {
-  background: #e4e2e0 url(img/logo-agency-square.png) no-repeat center center/cover;
-  display: inline-block;
-  height: 3rem;
+/*************************/
+/* Site title and header */
+.bbg-header__container {
+  border-bottom: 1px solid #CCC;
+}
+.bbg-header__container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.bbg-header__logo {
+  float: left;
+  height: 4.8rem;
   margin-right: 1rem;
-  vertical-align: middle;
-  width: 3rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg-header__logo {
+    height: 7rem;
+  }
 }
 @media screen and (min-width: 600px) {
-  .bbg-site-logo {
+  .bbg-header__logo {
+    height: 8.8rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-header__logo {
     height: 4.8rem;
-    width: 4.8rem;
   }
 }
 
+.bbg-header__site-title {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0;
+  clear: none;
+}
+@media screen and (min-width: 481px) {
+  .bbg-header__site-title {
+    padding-top: .5rem;
+    font-size: 2.66667rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bbg-header__site-title {
+    font-size: 4rem;
+  }
+}
+
+/*
+.bbg-site-logo {
+	background: $color-gray-warm-light url(img/logo-agency-square.png) no-repeat center center / cover;
+	display: inline-block;
+	height: 2.5rem * 1.2;
+	margin-right: 1rem;
+	vertical-align: middle;
+	width: 2.5rem * 1.2;
+
+	@include media($medium-screen) {
+		height: 4rem * 1.2;
+		width: 4rem * 1.2;
+	}
+}
+*/
 .menu-all-pages-container {
   margin: 0 auto;
   max-width: 1040px;
   position: relative;
 }
 
-body:not(.home) .menu-all-pages-container {
-  min-height: 5rem;
+@media screen and (min-width: 600px) {
+  body:not(.home) .menu-all-pages-container {
+    min-height: 5rem;
+  }
 }
 
+/*
 .bbg-heading-site-title {
-  border-bottom: 1px solid #CCC;
-  font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
-  font-size: 2.5rem;
-  line-height: 1;
-  margin-bottom: 0;
-}
-@media screen and (min-width: 600px) {
-  .bbg-heading-site-title {
-    font-size: 4rem;
-  }
-}
-.bbg-heading-site-title a {
-  color: #212121;
-}
-.bbg-heading-site-title a:hover {
-  text-decoration: none;
-}
-.bbg-heading-site-title a:focus {
-  box-shadow: none;
-  background: none;
-}
+	//border-bottom: $border-solid;
+	font: {
+		family: $font-sans !important;
+		//size: 2.5rem;
+	}
+	line-height: 1;
+	margin-bottom: 0;
 
+	@include media($medium-screen) {
+		//font-size: 4rem;
+	}
+
+	a {
+		color: $color-base;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	a:focus {
+		box-shadow: none;
+		background: none;
+	}
+}
+*/
+/*
 .bbg-heading-site-description {
-  font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 600px) {
-  .bbg-heading-site-description {
-    font-size: 2rem;
-  }
-}
+	font: {
+		family: $font-sans;
+		size: 1.5rem;
+		weight: $font-normal;
+	}
+	margin-top: 0;
+	text-transform: uppercase;
 
+	@include media($medium-screen) {
+		font-size: 2rem;
+	}
+}
+*/
 .bbg-footer-big-top {
   padding: 0 3rem;
 }
@@ -4139,7 +4206,7 @@ select {
 }
 .bbg__comments-list .comment .comment-content {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .bbg__comments-list .reply {
@@ -4274,6 +4341,7 @@ li.usa-footer-primary-content:last-child {
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
   color: #323a45;

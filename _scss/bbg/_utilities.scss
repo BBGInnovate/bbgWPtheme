@@ -16,6 +16,14 @@
 	}
 }
 
+.u__breakline--mobile {
+	display: block;
+	@include media($medium-large-screen) {
+		display: inline-block;
+	}
+}
+
+
 @mixin backgroundCover() {
 	background-size: cover;
 	background-repeat: no-repeat;
