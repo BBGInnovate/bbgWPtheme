@@ -73,6 +73,11 @@
 	display: inline-block;
 	margin-right: 1rem;
 
+	a:hover, a:focus {
+		background: none;
+		text-decoration: none;
+	}
+
 	@include media($medium-large-screen) {
 		display: block;
 	}
@@ -127,6 +132,11 @@
 /* Article share links: text */
 .bbg__article-share__text {
 	display: none;
+
+	&:hover, &:focus {
+		background: none;
+		text-decoration: underline;
+	}
 
 	@include media($medium-screen) {
 		display: inline-block;

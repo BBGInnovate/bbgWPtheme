@@ -56,36 +56,22 @@
 
 .bbg-fuego__article__header-title--large {
 	font-size: $h2-font-size;
+
 	@include media($large-screen) {
 		font-size: $h1-font-size;
 	}
 }
 
-.bbg-fuego__article__description:hover,
-.bbg-fuego__article__description:hover p {
-	color: #333;
-	text-decoration: none;
-}
-
+.bbg-fuego__article__description,
 .bbg-fuego__article__description p {
 	color: #333;
-}
-
-.bbg-fuego__article__description:focus { // removes background color and spacing on links for descriptions
-	background: none;
-	margin: 0;
 	padding: 0;
-	text-decoration: none;
 
-	.bbg-fuego__article__thumbnail {
-		margin: 0 1.5rem 1rem 0;
-	}
-
-	.bbg-fuego__article__thumbnail--large {
-		margin: 0 0 1rem 0;
+	&:hover, &:focus {
+		background: none;
+		text-decoration: none;
 	}
 }
-
 
 .bbg-fuego__article__thumbnail {
 	background-color: $color-gray-lightest;
