@@ -52,34 +52,45 @@
 		s.parentNode.setAttribute( 'aria-haspopup', 'true' );
 	}
 
-	/**
-	 * BEGIN BBG CUSTOM SECOND LEVEL NAVIGATION CODE
-	 */
-
-	jQuery("li.menu-item-has-children ul a").click(function(e) {
-		e.stopPropagation();
-	});
-
-	/* clicking any top level nav item with children should show its children and hide all others */
-	jQuery("li.menu-item-has-children").click(function(e) {
-		if (jQuery(this).find("ul").hasClass('showChildren')) {
-			jQuery(this).find("ul").removeClass('showChildren');
+	function levelTwoNav() {
+		/**
+		 * BEGIN BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+		 */
+		if (false && window.innerWidth < 600) {
+			
 		} else {
-			/* hide any open menus before showing the newly clicked one */
-			jQuery('.showChildren').removeClass('showChildren');
-			jQuery(this).find("ul").addClass('showChildren');
+			jQuery("li.menu-item-has-children ul a").click(function(e) {
+				e.stopPropagation(); //we do this so that the preventDefault() below doesn't affect subnav items
+			});
+
+			/* clicking any top level nav item with children should show its children and hide all others */
+			jQuery("li.menu-item-has-children").click(function(e) {
+				if (window.innerWidth >=600) {
+					if (jQuery(this).find("ul").hasClass('showChildren')) {
+						jQuery(this).find("ul").removeClass('showChildren');
+					} else {
+						/* hide any open menus before showing the newly clicked one */
+						jQuery('.showChildren').removeClass('showChildren');
+						jQuery(this).find("ul").addClass('showChildren');
+					}
+					e.stopPropagation();
+					e.preventDefault();
+				}
+			});
+			
+			/* clicking on the body should hide all subnav items */
+			jQuery(document).click(function(e){
+				jQuery('.showChildren').toggleClass('showChildren');
+			});
+			/**
+			 * END BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+			 */
 		}
-		e.stopPropagation();
-		e.preventDefault();
-	});
+	}
+	levelTwoNav();
+
+
 	
-	/* clicking on the body should hide all subnav items */
-	jQuery(document).click(function(e){
-		jQuery('.showChildren').toggleClass('showChildren');
-	});
-	/**
-	 * END BBG CUSTOM SECOND LEVEL NAVIGATION CODE
-	 */
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
