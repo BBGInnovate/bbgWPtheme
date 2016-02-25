@@ -3747,9 +3747,14 @@ body:not(.home) .menu-all-pages-container {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .bbg-blog__excerpt-title--featured {
     font-size: 4rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-blog__excerpt-title--featured {
+    font-size: 5rem;
   }
 }
 
