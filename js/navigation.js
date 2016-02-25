@@ -57,6 +57,10 @@
 	 */
 	function levelTwoNav() {
 		
+		//allow jQuery click events to bubble up - fixes body nav click issue on iOS
+		//TODO: check if Android works by default
+		/iP/i.test(navigator.userAgent) && jQuery('*').css('cursor', 'pointer');
+		
 		jQuery("li.menu-item-has-children ul a").click(function(e) {
 			e.stopPropagation(); //we do this so that the preventDefault() below doesn't affect subnav items
 		});
@@ -77,7 +81,7 @@
 		});
 		
 		/* clicking on the body should hide all subnav items */
-		jQuery(document).on('click touchstart', function(e){
+		jQuery(document).on('click', function(e){
 			jQuery('.showChildren').toggleClass('showChildren');
 		});
 	}
