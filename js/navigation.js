@@ -67,7 +67,7 @@
 		});
 
 		/* clicking any top level nav item with children should show its children and hide all others */
-		jQuery("li.menu-item-has-children").on('click touchstart', function(e) {
+		jQuery("li.menu-item-has-children").on('click', function(e) {
 			console.log('level 1 with children click');
 			if (window.innerWidth >=600) {
 				if (jQuery(this).find("ul").hasClass('showChildren')) {
