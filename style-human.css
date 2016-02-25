@@ -3643,9 +3643,6 @@ article {
   visibility: hidden;
 }
 
-.bbg-header__link {
-  padding: 0;
-}
 .bbg-header__link:hover {
   text-decoration: none;
 }
