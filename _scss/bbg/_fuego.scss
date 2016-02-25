@@ -118,6 +118,10 @@
 	height: $bbg-avatar-twitter;
 	vertical-align: middle;
 	width: $bbg-avatar-twitter;
+
+	&:focus {
+		background-color: transparent;
+	}
 }
 
 .bbg-fuego__twitter__author-name {

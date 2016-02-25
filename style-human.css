@@ -3543,21 +3543,20 @@ a:focus {
   background-color: #dce4ef;
 }
 
-img:focus,
-*[class*="avatar"]:focus,
-*[class*="image"]:focus,
-*[class*="photo"]:focus,
-*[class*="thumbnail"]:focus,
-*[style*="background-image"]:focus {
-  background: none;
-  text-decoration: none;
-}
-img:hover,
+img:hover, img:focus,
 *[class*="avatar"]:hover,
+*[class*="avatar"]:focus,
+*[class*="fuego"]:hover,
+*[class*="fuego"]:focus,
 *[class*="image"]:hover,
+*[class*="image"]:focus,
 *[class*="photo"]:hover,
+*[class*="photo"]:focus,
 *[class*="thumbnail"]:hover,
-*[style*="background-image"]:hover {
+*[class*="thumbnail"]:focus,
+*[style*="background-image"]:hover,
+*[style*="background-image"]:focus {
+  background-color: none;
   text-decoration: none;
 }
 
@@ -3643,6 +3642,9 @@ article {
   visibility: hidden;
 }
 
+.bbg-header__link {
+  padding: 0;
+}
 .bbg-header__link:hover {
   text-decoration: none;
 }
@@ -3993,6 +3995,9 @@ article {
   height: 70px;
   vertical-align: middle;
   width: 70px;
+}
+.bbg-fuego__twitter-photo:focus {
+  background-color: transparent;
 }
 
 .bbg-fuego__twitter__author-name {
