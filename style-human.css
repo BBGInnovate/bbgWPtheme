@@ -2922,7 +2922,7 @@ fieldset {
 @media screen and (min-width: 600px) {
   .bbg-author-projects {
     padding-left: 0;
-    margin-top: 0;
+    margin-top: 3.5rem;
   }
 }
 
