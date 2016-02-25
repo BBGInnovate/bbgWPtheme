@@ -2776,8 +2776,13 @@ fieldset {
 .bbg-team__icon {
   border-radius: 50%;
   height: 100px;
-  margin: 0 auto;
+  margin: 0 auto 2.5rem;
   width: 100px;
+}
+@media screen and (min-width: 481px) {
+  .bbg-team__icon {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -3544,19 +3549,33 @@ a:focus {
 }
 
 img:hover, img:focus,
+img > a:hover,
+img > a:focus,
 *[class*="avatar"]:hover,
 *[class*="avatar"]:focus,
-*[class*="fuego"]:hover,
-*[class*="fuego"]:focus,
+*[class*="avatar"] > a:hover,
+*[class*="avatar"] > a:focus,
+*[class*="icon"]:hover,
+*[class*="icon"]:focus,
+*[class*="icon"] > a:hover,
+*[class*="icon"] > a:focus,
 *[class*="image"]:hover,
 *[class*="image"]:focus,
+*[class*="image"] > a:hover,
+*[class*="image"] > a:focus,
 *[class*="photo"]:hover,
 *[class*="photo"]:focus,
+*[class*="photo"] > a:hover,
+*[class*="photo"] > a:focus,
 *[class*="thumbnail"]:hover,
 *[class*="thumbnail"]:focus,
+*[class*="thumbnail"] > a:hover,
+*[class*="thumbnail"] > a:focus,
 *[style*="background-image"]:hover,
-*[style*="background-image"]:focus {
-  background-color: none;
+*[style*="background-image"]:focus,
+*[style*="background-image"] > a:hover,
+*[style*="background-image"] > a:focus {
+  background-color: transparent;
   text-decoration: none;
 }
 

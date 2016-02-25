@@ -51,8 +51,12 @@
 .bbg-team__icon {
 	border-radius: 50%;
 	height: $bbg-team__icon-width;
-	margin: 0 auto;
+	margin: 0 auto 2.5rem;
 	width: $bbg-team__icon-width;
+
+	@include media($small-medium-screen)  {
+		margin-bottom: 0;
+	}
 }
 
 .bbg-team__text {
@@ -63,9 +67,9 @@
 
 .bbg-team__icon__image {
 	@include backgroundCover;
-	display: block; 
+	display: block;
 	height: 100%;
-	width: 100%; 
+	width: 100%;
 }
 
 .bbg-team__text-description {

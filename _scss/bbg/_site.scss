@@ -30,15 +30,17 @@ a {
 
 img,
 *[class*="avatar"],
-*[class*="fuego"],
+//*[class*="fuego"],
+*[class*="icon"],
 *[class*="image"],
 *[class*="photo"],
 *[class*="thumbnail"],
 *[style*="background-image"] {
     &:hover,
-    &:focus {
-        // removes background color and underline for linked images
-        background-color: none;
+    &:focus,
+    > a:hover,
+    > a:focus  { // removes background color and underline for linked images
+        background-color: transparent;
         text-decoration: none;
     }
 }
