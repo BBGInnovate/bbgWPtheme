@@ -52,43 +52,39 @@
 		s.parentNode.setAttribute( 'aria-haspopup', 'true' );
 	}
 
+	/**
+	 * BEGIN BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+	 */
 	function levelTwoNav() {
-		/**
-		 * BEGIN BBG CUSTOM SECOND LEVEL NAVIGATION CODE
-		 */
-		if (false && window.innerWidth < 600) {
-			
-		} else {
-			jQuery("li.menu-item-has-children ul a").click(function(e) {
-				e.stopPropagation(); //we do this so that the preventDefault() below doesn't affect subnav items
-			});
+		
+		jQuery("li.menu-item-has-children ul a").click(function(e) {
+			e.stopPropagation(); //we do this so that the preventDefault() below doesn't affect subnav items
+		});
 
-			/* clicking any top level nav item with children should show its children and hide all others */
-			jQuery("li.menu-item-has-children").click(function(e) {
-				if (window.innerWidth >=600) {
-					if (jQuery(this).find("ul").hasClass('showChildren')) {
-						jQuery(this).find("ul").removeClass('showChildren');
-					} else {
-						/* hide any open menus before showing the newly clicked one */
-						jQuery('.showChildren').removeClass('showChildren');
-						jQuery(this).find("ul").addClass('showChildren');
-					}
-					e.stopPropagation();
-					e.preventDefault();
+		/* clicking any top level nav item with children should show its children and hide all others */
+		jQuery("li.menu-item-has-children").click(function(e) {
+			if (window.innerWidth >=600) {
+				if (jQuery(this).find("ul").hasClass('showChildren')) {
+					jQuery(this).find("ul").removeClass('showChildren');
+				} else {
+					/* hide any open menus before showing the newly clicked one */
+					jQuery('.showChildren').removeClass('showChildren');
+					jQuery(this).find("ul").addClass('showChildren');
 				}
-			});
-			
-			/* clicking on the body should hide all subnav items */
-			jQuery(document).click(function(e){
-				jQuery('.showChildren').toggleClass('showChildren');
-			});
-			/**
-			 * END BBG CUSTOM SECOND LEVEL NAVIGATION CODE
-			 */
-		}
+				e.stopPropagation();
+				e.preventDefault();
+			}
+		});
+		
+		/* clicking on the body should hide all subnav items */
+		jQuery(document).on('click touchstart', function(e){
+			jQuery('.showChildren').toggleClass('showChildren');
+		});
 	}
 	levelTwoNav();
-
+	/**
+	 * END BBG CUSTOM SECOND LEVEL NAVIGATION CODE
+	 */
 
 	
 
