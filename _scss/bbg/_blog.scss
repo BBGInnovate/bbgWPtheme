@@ -224,6 +224,7 @@
 	background: {
 		color: $color-gray-lightest;
 	}
+	border-radius: $border-radius;
 	margin: {
 		right: auto;
 		left: auto;
@@ -325,4 +326,10 @@
 		}
 	}
 
+}
+
+
+
+.bbg__article-footer {
+	margin-top: $site-margins * 2;
 }

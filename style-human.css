@@ -2826,7 +2826,7 @@ fieldset {
 }
 @media screen and (min-width: 481px) {
   .bbg-staff__author-occupation {
-    padding-left: 60px;
+    padding-left: 85px;
     text-align: left;
   }
 }
@@ -2844,7 +2844,7 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-staff__author-contact {
-    padding-left: 60px;
+    padding-left: 85px;
   }
 }
 
@@ -3117,6 +3117,7 @@ fieldset {
 /** POST AUTHOR */
 .bbg__article-author {
   background-color: #f1f1f1;
+  border-radius: 0.3rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 600px;
@@ -3205,6 +3206,10 @@ fieldset {
   .bbg__article-author .bbg__author-contact .bbg__author-contact__website:before {
     content: " | ";
   }
+}
+
+.bbg__article-footer {
+  margin-top: 6rem;
 }
 
 @media screen and (min-width: 600px) {

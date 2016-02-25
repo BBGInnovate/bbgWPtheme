@@ -122,7 +122,7 @@
 	text-transform: uppercase;
 
 	@include media($small-screen) {
-		padding-left: $bbg-avatar-width-small + 10px;
+		padding-left: $bbg-avatar-width-small * 1.5 + 10px;
 		text-align: left;
 	}
 }
@@ -133,7 +133,7 @@
 	margin-bottom: 1rem;
 
 	@include media($medium-screen) {
-		padding-left: $bbg-avatar-width-small + 10px;
+		padding-left: $bbg-avatar-width-small * 1.5 + 10px;
 	}
 }
 
