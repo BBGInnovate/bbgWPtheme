@@ -171,7 +171,7 @@ get_header();
 						<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'teams' ) ) ?>" title="A directory of the current ODDI staff.">Our teams</a></h6>
 
 						<div class="usa-intro">
-							<h3 class="usa-font-lead">ODDI's teams of designers, developers and storytellers help drive USIM digital projects.</h3>
+							<h3 class="usa-font-lead">ODDI’s teams of designers, developers and storytellers help drive USIM digital projects.</h3>
 						</div>
 
 						<div class="usa-grid-full">
