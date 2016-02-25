@@ -3119,11 +3119,18 @@ fieldset {
   background-color: #f1f1f1;
   border-radius: 0.3rem;
   margin-right: auto;
+  margin-bottom: 3rem;
   margin-left: auto;
   max-width: 600px;
-  overflow: hidden;
   padding: 2rem;
   text-align: center;
+}
+.bbg__article-author:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 @media screen and (min-width: 481px) {
   .bbg__article-author {
@@ -3445,7 +3452,6 @@ fieldset {
     background-color: #91C7DC;
     border-radius: 0;
     margin-bottom: 1px;
-    padding: 2px;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link :hover {
     background-color: #FFF;
@@ -3453,7 +3459,7 @@ fieldset {
   .bbg-banner .bbg-social__list .bbg-social__list__link a {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 45px;
     height: 40px;
     display: block;
     width: 40px;
@@ -3461,6 +3467,7 @@ fieldset {
   .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://github.com"] {
     background-image: url(img/social-icons/png/github-mark.png);
     background-image: url(img/social-icons/svg/github-mark.svg);
+    background-size: 30px;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://www.youtube.com/"] {
     background-image: url(img/social-icons/png/youtube15.png);
@@ -3888,7 +3895,10 @@ select {
 }
 
 .bbg-fuego__article {
-  border: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #f1f1f1;
   border-radius: 0.3rem;
   margin-top: 0;
   margin-bottom: 1.5rem;

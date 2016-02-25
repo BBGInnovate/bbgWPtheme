@@ -227,12 +227,13 @@
 	border-radius: $border-radius;
 	margin: {
 		right: auto;
+		bottom: $site-margins;
 		left: auto;
 	}
 	max-width: $article-max-width;
-	overflow: hidden;
 	padding: 2rem;
 	text-align: center;
+	@include clearfix();
 
 	@include media($small-medium-screen) {
 		bottom: 4rem;

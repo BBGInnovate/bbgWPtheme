@@ -127,7 +127,6 @@
 				background-color: #91C7DC;
 				border-radius: 0;
 				margin-bottom: 1px;
-				padding: 2px;
 
 				:hover {
 					background-color: #FFF;
@@ -137,7 +136,7 @@
 					background: {
 						position: center center;
 						repeat: no-repeat;
-						size: cover;
+						size: 45px;
 					}
 					height: 40px;
 					display: block;
@@ -148,6 +147,7 @@
 						background: {
 							image: url(img/social-icons/png/github-mark.png);
 							image: url(img/social-icons/svg/github-mark.svg);
+							size: 30px;
 						}
 					}
 

@@ -13,14 +13,21 @@
 	border-top: none !important;
 	padding-top: 0;
 }
+
 .bbg-fuego__article {
-	border: 1px solid $color-gray-lightest;
+	border: {
+		top: 1px solid $color-gray-lightest;
+		right: 1px solid #CCC;
+		bottom: 1px solid #CCC;
+		left: 1px solid $color-gray-lightest;
+	}
 	border-radius: $border-radius;
 	margin: {
 		top: 0;
 		bottom: $site-margins * .5;
 	}
 	padding: $site-margins * .75;
+
 	@include media($medium-large-screen) {
 		margin-bottom: $site-margins * .75;
 		-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -34,6 +41,7 @@
 	color: $color-secondary-darkest;
 	font-family: $font-sans;
 }
+
 .bbg-fuego__article:first-of-type {
 	@include media($medium-large-screen) {
 		margin-top: $site-margins * .75;
@@ -62,7 +70,6 @@
 .bbg-fuego__article__description p {
 	color: #333;
 }
-
 
 .bbg-fuego__article__description:focus { // removes background color and spacing on links for descriptions
 	background: none;
