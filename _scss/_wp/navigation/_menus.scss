@@ -96,6 +96,13 @@ body:not(.home) .menu-all-pages-container {
 
 /* Small menu. */
 .menu-toggle{
+	background: {
+		image: url(img/social-icons/png/github-mark.png);
+		position: left center;
+		repeat: no-repeat;
+		size: 45px;
+	}
+
 	border-radius: 0 0 $border-radius $border-radius;
 	margin-top: 0;
 	position: absolute;
