@@ -8,7 +8,6 @@
   template name: Teams Landing Page
  */
 
-$templateName = "customHome";
 include_once("helperFunctions.php");
 
 
