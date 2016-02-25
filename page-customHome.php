@@ -50,7 +50,7 @@ get_header();
 					<div class="bbg-social__container">
 						<div class="bbg-social">
 							<ul class="bbg-social__list">
-								<li class="bbg-social__list__link"><a href="https://github.com/bbgvisualjournalist"></a></li>
+								<li class="bbg-social__list__link"><a href="https://github.com/BBGInnovate"></a></li>
 								<li class="bbg-social__list__link"><a href="https://www.youtube.com/channel/UCtDMNCM2Vt_w2M3Irzb-1PQ"></a></li>
 								<li class="bbg-social__list__link"><a href="https://twitter.com/BBGinnovate"></a></li>
 							</ul>

@@ -77,7 +77,12 @@
  	 * Style content of section listing project team members
  	 */
 	.bbg__portfolio-members {
-		margin-top: 4rem;
+		margin: {
+			top: 4rem;
+			right: auto;
+			left: auto;
+		}
+		max-width: $article-max-width;
 
 		@include media($medium-screen) {
 			margin-top: 1.5rem;

@@ -4157,6 +4157,10 @@ li.usa-footer-primary-content:last-child {
   }
 }
 
+.usa-footer-big nav .usa-footer-primary-link {
+  cursor: pointer;
+}
+
 /**
  *  Changing styles on content-single for portfolio posts
  *
@@ -4214,6 +4218,9 @@ li.usa-footer-primary-content:last-child {
 }
 .category-portfolio .bbg__portfolio-members {
   margin-top: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
 }
 @media screen and (min-width: 600px) {
   .category-portfolio .bbg__portfolio-members {

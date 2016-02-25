@@ -15,9 +15,6 @@
 	ul {
 		@include unstyled-list;
 		display: none;
-		//list-style: none;
-		//margin: 0;
-		//padding-left: 0;
 
 		ul {
 			z-index: 99999;
