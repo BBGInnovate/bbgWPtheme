@@ -40,9 +40,19 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		<?php
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
+				$featuredImageCredit="";
+				$thumbnail_image = get_posts(array('p' => get_post_thumbnail_id(get_the_ID()), 'post_type' => 'attachment'));
+				if ($thumbnail_image && isset($thumbnail_image[0])) {
+					$featuredImageCredit=$thumbnail_image[0]->post_excerpt;
+				}
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				echo the_post_thumbnail( 'large-thumb' );
+				if ($featuredImageCredit != "") {
+					echo "<h4>$featuredImageCredit</h4>";
+				}
 				echo '</div>';
+
+				
 			}
 		?><!-- .bbg__article-header__thumbnail -->
 	</div>
