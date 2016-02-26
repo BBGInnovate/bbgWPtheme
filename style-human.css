@@ -3389,10 +3389,14 @@ fieldset {
 .bbg-banner .bbg-banner-box {
   margin: 0 auto;
   max-width: 1040px;
-  padding-right: 3rem;
   padding-bottom: 1.5rem;
   position: absolute;
   bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  .bbg-banner .bbg-banner-box {
+    padding-right: 3rem;
+  }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-title {
   color: #FFF;
