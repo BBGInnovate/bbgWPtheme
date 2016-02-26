@@ -18,13 +18,23 @@ body:not(.home) .menu-all-pages-container {
 	display: inline;
 	width: 100%;
 
-	.menu-item-has-children > a {
-		background-image: url('img/arrow-down.png');
-		background-image: url('img/arrow-down.svg');
-		background-position: right 3rem center;
-		background-repeat: no-repeat;
-		background-size: 1.3rem;
-		padding-right: 3.5rem;
+	.menu-item-has-children {
+
+		&.hidden > a { // add arrow direction change to top navigation with sub-menus
+            background-image: url('img/arrow-right.png');
+        	background-image: url('img/arrow-right.svg');
+			background-position: right 3rem center;
+			background-repeat: no-repeat;
+			background-size: 1.3rem;
+			cursor: pointer;
+        	margin: 0;
+			padding-right: 3.5rem;
+    	}
+
+	 	> a {
+			background-image: url('img/arrow-down.png');
+			background-image: url('img/arrow-down.svg');
+		}
 	}
 
 	ul {
@@ -190,7 +200,7 @@ body:not(.home) .menu-all-pages-container {
 		.showChildren {
 			left: auto !important;
 			display: block !important;
-		} 
+		}
 
 		.menu-item-has-children > ul {
 			display: none;

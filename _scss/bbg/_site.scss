@@ -22,10 +22,28 @@ h4 a {
 }
 
 a {
-    padding: 1px;
     &:focus {
         background-color: $color-gray-cool-light;
+
+        img,
+		*[class*="avatar"],
+		//*[class*="fuego"],
+		*[class*="icon"],
+		*[class*="image"],
+		*[class*="photo"],
+		*[class*="thumbnail"],
+		*[style*="background-image"] {
+			background-color: transparent;
+		    text-decoration: none;
+
+		    > a:hover,
+		    > a:focus  { // removes background color and underline for linked images
+		        background-color: transparent;
+		        text-decoration: none;
+		    }
+		}
     }
+
 }
 
 img,
@@ -36,8 +54,6 @@ img,
 *[class*="photo"],
 *[class*="thumbnail"],
 *[style*="background-image"] {
-    &:hover,
-    &:focus,
     > a:hover,
     > a:focus  { // removes background color and underline for linked images
         background-color: transparent;
