@@ -41,6 +41,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
+				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
 				echo '</div>';
 			}
