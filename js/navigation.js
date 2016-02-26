@@ -71,6 +71,11 @@
 			console.log('level 1 with children click');
 			if (window.innerWidth >=600) {
 				if (jQuery(this).find("ul").hasClass('showChildren')) {
+					/* 
+					TODO: http://stackoverflow.com/questions/7394796/jquery-click-event-how-to-tell-if-mouse-was-clicked-or-enter-key-was-pressed
+					this removes focus, but does so on keyboard too ... 
+					jQuery(this).find("a").blur(); 
+					*/
 					jQuery(this).find("ul").removeClass('showChildren');
 				} else {
 					/* hide any open menus before showing the newly clicked one */
