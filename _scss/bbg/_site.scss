@@ -19,7 +19,6 @@ h2 a,
 h3 a,
 h4 a {
 	color: $color-primary-darkest;
-	text-transform: uppercase;
 }
 
 a {
@@ -28,7 +27,6 @@ a {
 
 		img,
 		*[class*="avatar"],
-		//*[class*="fuego"],
 		*[class*="icon"],
 		*[class*="image"],
 		*[class*="photo"],
@@ -49,7 +47,6 @@ a {
 
 img,
 *[class*="avatar"],
-// *[class*="fuego"],
 *[class*="icon"],
 *[class*="image"],
 *[class*="photo"],
