@@ -3545,6 +3545,7 @@ h2 a,
 h3 a,
 h4 a {
   color: #112e51;
+  text-transform: uppercase;
 }
 
 a:focus {
