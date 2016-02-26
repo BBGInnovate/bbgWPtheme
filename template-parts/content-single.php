@@ -112,7 +112,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 					$blogusers = get_users( $args );
 					// Loop through the users to create the staff profiles
 					if ( $blogusers ) {
-						echo "<div class='bbg__portfolio-members'><h3 class='bbg__portfolio-members__title'>Project Team</h3> <ul class='bbg__portfolio-members__list'>";
+						echo "<div class='bbg__portfolio-members'><h3 class='bbg__portfolio-members__title'>ODDI Team</h3> <ul class='bbg__portfolio-members__list'>";
 						foreach ( $blogusers as $user ) {
 							$authorName = esc_html( $user -> display_name );
 							$authorUrl = get_author_posts_url( $user -> ID, $user -> user_nicename );
