@@ -2950,9 +2950,7 @@ fieldset {
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  /*
-  border: $border-solid;
-  */
+  position: relative;
 }
 
 /* Post title */

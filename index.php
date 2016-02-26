@@ -16,15 +16,18 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="usa-grid-full">
+			<div class="usa-grid-full" style="margin-top: 3rem;">
 
 			<?php if ( have_posts() ) : ?>
 
 				<?php if ( is_home() && ! is_front_page() ) : ?>
+					<!--
 					<header class="page-header">
 						<h6 class="page-title screen-reader-text bbg-label large"><?php single_post_title(); ?></h6>
 					</header>
+					-->
 				<?php endif; ?>
+
 
 				<?php /* Start the Loop */ 
 					$counter = 0;

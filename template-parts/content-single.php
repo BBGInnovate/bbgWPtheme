@@ -46,6 +46,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 					$featuredImageCredit=$thumbnail_image[0]->post_excerpt;
 				}
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
+				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
 				if ($featuredImageCredit != "") {
 					echo "<h4>$featuredImageCredit</h4>";
