@@ -110,7 +110,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 			<?php
 				$usersInProjectStr = get_post_meta( get_the_ID(), 'users_in_project', true );
 
-				if(!in_category('portfolio')) {
+				if(!in_category('project')) {
 					bbg_post_author_bottom_card(get_the_author_meta('ID'));
 				} elseif ( $usersInProjectStr != "" ) {
 					$userIDs = explode( ',', $usersInProjectStr );

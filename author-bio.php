@@ -42,7 +42,7 @@ $qParams=array(
 	'post_type' => array( 'post' ),
 	'orderby' => 'post_date',
 	'order' => 'desc',
-	'cat' => get_cat_id( 'Portfolio' )
+	'cat' => get_cat_id( 'Project' )
 );
 query_posts( $qParams );
 $projects= array();

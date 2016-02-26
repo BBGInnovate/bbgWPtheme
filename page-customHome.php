@@ -89,7 +89,7 @@ get_header();
 			<!-- Portfolio -->
 			<section id="projects" class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Portfolio</a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Projects</a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -98,7 +98,7 @@ get_header();
 							'posts_per_page' => 3,
 							'orderby' => 'post_date',
 							'order' => 'desc',
-							'cat' => get_cat_id('Portfolio')
+							'cat' => get_cat_id('Project')
 						);
 						query_posts($qParams);
 
@@ -113,7 +113,7 @@ get_header();
 					?>
 					</div><!-- .usa-grid-full -->
 
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>">Explore entire portfolio »</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>">Explore entire portfolio »</a>
 
 				</div><!-- .usa-grid -->
 			</section><!-- .bbg-portfolio -->
@@ -136,7 +136,7 @@ get_header();
 						'posts_per_page' => $maxPostsToShow,
 						'orderby' => 'post_date',
 						'order' => 'desc',
-						'category__not_in' => (array(get_cat_id('Portfolio'),get_cat_id('Site Introduction')))
+						'category__not_in' => (array(get_cat_id('Project'),get_cat_id('Site Introduction')))
 					);
 					query_posts($qParams);
 

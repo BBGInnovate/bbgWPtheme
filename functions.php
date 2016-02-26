@@ -504,7 +504,7 @@ add_action('pre_get_posts', 'bbginnovate_query_offset', 1 );
 function bbginnovate_query_offset(&$query) {
 	/* don't show in focus posts on homepage */
 	if ($query -> is_home()) {
-		$portfolio_cat_id=get_cat_id('Portfolio');
+		$portfolio_cat_id=get_cat_id('Project');
 		$siteintro_cat_id=get_cat_id('Site Introduction');
 		$tax_query = array(
 			array(
@@ -568,7 +568,7 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 		$output     = '';
 		if ( $categories ) {
 			foreach ( $categories as $category ) {
-				if (!$ignorePortfolio || $category->name!="Portfolio") {
+				if (!$ignorePortfolio || $category->name!="Project") {
 					$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
 					if ( $single )
 					break;

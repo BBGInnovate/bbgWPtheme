@@ -66,7 +66,7 @@ get_header(); ?>
 								'post_type' => array('post'),
 								'posts_per_page' => $numBlogPostsToShow,
 								'category__in' => [$teamCategoryID],
-								'category__not_in' => [get_cat_id('Portfolio')]
+								'category__not_in' => [get_cat_id('Project')]
 							);
 							query_posts($qParams);
 
@@ -85,13 +85,13 @@ get_header(); ?>
 
 
 				<section class="usa-section usa-grid">
-					<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'portfolio' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
+					<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'projects' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
 					<div class="bbg-grid__container">
 					<?php 
 						$qParams=array(
 							'post_type' => array('post'),
 							'posts_per_page' => $numPortfolioPostsToShow,
-							'category__and' => [$teamCategoryID, get_cat_id('Portfolio')]
+							'category__and' => [$teamCategoryID, get_cat_id('Project')]
 						);
 						query_posts($qParams);
 
@@ -104,7 +104,7 @@ get_header(); ?>
 						}
 					?>
 					</div><!--.bbg-grid__containter -->
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
+					<a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
 				</section>
 
 			</div><!-- .usa-grid -->

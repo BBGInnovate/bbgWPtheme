@@ -43,7 +43,7 @@ get_header(); ?>
 			<div class="bbg__article-footer usa-grid">
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
-					if ( !in_category('Portfolio') &&(comments_open() || get_comments_number())):
+					if ( !in_category('Project') &&(comments_open() || get_comments_number())):
 						comments_template();
 					endif;
 				?>
