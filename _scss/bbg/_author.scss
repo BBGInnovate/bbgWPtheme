@@ -40,8 +40,10 @@
 
 .bbg-team__name {
 	clear: none;
+	font-size: 3rem;
 	margin-bottom: 0;
 	text-align: center;
+	text-transform: uppercase;
 
 	@include media($small-screen) {
 		text-align: left;
