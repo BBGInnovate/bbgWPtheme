@@ -3493,16 +3493,16 @@ fieldset {
     display: block;
     width: 40px;
   }
-  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://github.com"] {
+  .bbg-banner .bbg-social__list .bbg-social__list__link a.bbg-icon-github {
     background-image: url(img/social-icons/png/github-mark.png);
     background-image: url(img/social-icons/svg/github-mark.svg);
     background-size: 30px;
   }
-  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://www.youtube.com/"] {
+  .bbg-banner .bbg-social__list .bbg-social__list__link a.bbg-icon-youtube {
     background-image: url(img/social-icons/png/youtube15.png);
     background-image: url(img/social-icons/svg/youtube15.svg);
   }
-  .bbg-banner .bbg-social__list .bbg-social__list__link a[href*="https://twitter.com/"] {
+  .bbg-banner .bbg-social__list .bbg-social__list__link a.bbg-icon-twitter {
     background-image: url(img/social-icons/png/twitter16.png);
     background-image: url(img/social-icons/svg/twitter16.svg);
   }
@@ -4463,14 +4463,15 @@ object {
   clear: both;
   display: inline;
   width: 100%;
-}
-.main-navigation .menu-item-has-children > a {
-  background-image: url("img/arrow-down.png");
-  background-image: url("img/arrow-down.svg");
-  background-position: right 3rem center;
-  background-repeat: no-repeat;
-  background-size: 1.3rem;
-  padding-right: 3.5rem;
+  /*
+  .menu-item-has-children > a {
+  	background-image: url('img/arrow-down.png');
+  	background-image: url('img/arrow-down.svg');
+  	background-position: right 3rem center;
+  	background-repeat: no-repeat;
+  	background-size: 1.3rem;
+  }
+  */
 }
 .main-navigation ul {
   display: block;
@@ -4495,10 +4496,15 @@ object {
 .main-navigation ul ul li {
   border-top: 1px dotted #CCC;
   border-bottom: none;
-  padding-left: 3rem;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
+}
+.main-navigation ul ul li a {
+  padding-left: 6rem;
+}
+.main-navigation ul ul li a:before {
+  content: "• ";
 }
 .main-navigation li {
   border-bottom: 1px dotted #CCC;
@@ -4590,6 +4596,12 @@ object {
     float: none;
     padding-left: 0;
   }
+  .main-navigation ul ul li a {
+    padding-left: 1.5rem;
+  }
+  .main-navigation ul ul li a:before {
+    content: "";
+  }
   .main-navigation ul ul li:first-of-type {
     border-radius: 0px;
   }
@@ -4607,7 +4619,17 @@ object {
     padding: 0;
   }
   .main-navigation .menu-item-has-children > a {
-    background-position: right 1rem center;
+    background-image: url("img/arrow-right.png");
+    background-image: url("img/arrow-right.svg");
+    background-position: 1rem center;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    padding-right: site-margins / 2;
+    padding-left: 3rem;
+  }
+  .main-navigation .menu-item-has-children.focus > a {
+    background-image: url("img/arrow-down.png");
+    background-image: url("img/arrow-down.svg");
   }
   .main-navigation .showChildren {
     left: auto !important;
