@@ -5,13 +5,13 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package bbginnovate
-  template name: Portfolio
+  template name: Project
  */
 $maxPostsToShow=10;
 $qParams=array(
 	'post_type' => array('post'),
 	'posts_per_page' => $maxPostsToShow,
-	'cat' => get_cat_id('Portfolio')
+	'cat' => get_cat_id('Project')
 );
 query_posts($qParams);
 
@@ -35,7 +35,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label--mobile large">Portfolio</h6>
+					<h6 class="bbg-label--mobile large">Projects</h6>
 				</header><!-- .page-header -->
 			</div>
 
