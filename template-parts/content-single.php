@@ -73,14 +73,6 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		</header><!-- .bbg__article-header -->
 		<div class="container" style="position: relative;">
 		<ul class="bbg__article-share">
-			<!--
-			<li class="bbg__article-share__link email">
-				<a href="#">
-					<span class="bbg__article-share__icon email"></span>
-					<span class="bbg__article-share__text">Email</span>
-				</a>
-			</li>
-			-->
 			<li class="bbg__article-share__link facebook">
 				<a href="<?php echo $fbUrl; ?>">
 					<span class="bbg__article-share__icon facebook"></span>

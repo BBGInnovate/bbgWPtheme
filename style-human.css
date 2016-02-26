@@ -4091,13 +4091,13 @@ article {
   margin: 0 auto;
 }
 
-.bbg__comments-title, .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
+.bbg__comments-title, .category-project .bbg__portfolio-members .bbg__portfolio-members__title {
   border-bottom: 1px dotted #981b1e;
   color: #981b1e;
   font-size: 2rem;
 }
 @media screen and (min-width: 600px) {
-  .bbg__comments-title, .category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
+  .bbg__comments-title, .category-project .bbg__portfolio-members .bbg__portfolio-members__title {
     font-size: 3rem;
   }
 }
@@ -4253,7 +4253,7 @@ select {
  *  Changing styles on content-single for portfolio posts
  *
  */
-.category-portfolio {
+.category-project {
   /* Hide article meta (author and date) */
   /* Style related links for portfolio projects */
   	/**
@@ -4263,10 +4263,10 @@ select {
    * Change layout of main elements for different breakpoints
    */
 }
-.category-portfolio .bbg__article-meta {
+.category-project .bbg__article-meta {
   display: none;
 }
-.category-portfolio .bbg__portfolio-links a {
+.category-project .bbg__portfolio-links a {
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -4275,76 +4275,76 @@ select {
   font-weight: 700;
   text-decoration: none;
 }
-.category-portfolio .bbg__portfolio-links a:hover {
+.category-project .bbg__portfolio-links a:hover {
   color: black;
   text-decoration: underline;
 }
-.category-portfolio .bbg__portfolio-links a[href] {
+.category-project .bbg__portfolio-links a[href] {
   background-image: url(img/social-icons/png/link-icon.png);
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.3rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://play.google.com"] {
+.category-project .bbg__portfolio-links a[href*="https://play.google.com"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
   padding-left: 6.5rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://itunes.apple.com"] {
+.category-project .bbg__portfolio-links a[href*="https://itunes.apple.com"] {
   background-image: url(img/social-icons/png/apple-app-store-badge.png);
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
   padding-left: 6.3rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://www.youtube.com"] {
+.category-project .bbg__portfolio-links a[href*="https://www.youtube.com"] {
   background-image: url(img/social-icons/png/youtube-icon-full_color.png);
   background-image: url(img/social-icons/svg/youtube-icon-full_color.svg);
   padding-left: 3rem;
 }
-.category-portfolio .bbg__portfolio-links a[href*="https://github.com"] {
+.category-project .bbg__portfolio-links a[href*="https://github.com"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
   padding-left: 2.3rem;
 }
-.category-portfolio .bbg__portfolio-members {
+.category-project .bbg__portfolio-members {
   margin-top: 4rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 600px;
 }
 @media screen and (min-width: 600px) {
-  .category-portfolio .bbg__portfolio-members {
+  .category-project .bbg__portfolio-members {
     margin-top: 1.5rem;
   }
 }
 @media screen and (min-width: 900px) {
-  .category-portfolio .bbg__portfolio-members {
+  .category-project .bbg__portfolio-members {
     margin-top: 0;
   }
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__title {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__title {
   font-size: 1.7rem;
   text-transform: uppercase;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list {
   display: block;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list li {
   display: list-item;
   margin: 0;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li:before {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list li:before {
   display: none;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list li:after {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list li:after {
   display: none;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.category-portfolio .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
+.category-project .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
   color: #323a45;
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.4rem;
@@ -4352,7 +4352,7 @@ select {
   font-weight: 300;
 }
 @media screen and (min-width: 600px) {
-  .category-portfolio .bbg__article-content {
+  .category-project .bbg__article-content {
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 3rem;
@@ -4361,13 +4361,13 @@ select {
   }
 }
 @media screen and (min-width: 900px) {
-  .category-portfolio .bbg__article-share {
+  .category-project .bbg__article-share {
     display: inline-block;
     float: left;
     margin-top: 0;
     margin-right: 3rem;
   }
-  .category-portfolio .bbg__article-sidebar {
+  .category-project .bbg__article-sidebar {
     max-width: 17rem;
     position: absolute;
     top: 0;
