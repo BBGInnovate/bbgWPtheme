@@ -66,14 +66,16 @@
 		});
 
 		/* clicking any top level nav item with children should show its children and hide all others */
-		jQuery("li.menu-item-has-children").on('click', function(e) {
+		// see http://stackoverflow.com/questions/7394796/jquery-click-event-how-to-tell-if-mouse-was-clicked-or-enter-key-was-pressed
+		jQuery("li.menu-item-has-children").on('click', function(e, enterKeyPressed) {
 			if (window.innerWidth >=600) {
 				if (jQuery(this).find("ul").hasClass('showChildren')) {
-					/* 
-					TODO: http://stackoverflow.com/questions/7394796/jquery-click-event-how-to-tell-if-mouse-was-clicked-or-enter-key-was-pressed
-					this removes focus, but does so on keyboard too ... 
-					jQuery(this).find("a").blur(); 
-					*/
+					
+					//without this line, if you click a parent nav item 2x, it stays focused.
+					if (!enterKeyPressed) {
+						jQuery(this).find("a").blur();  
+					}
+					
 					jQuery(this).addClass("hidden");
 					jQuery(this).find("ul").removeClass('showChildren');
 				} else {
@@ -86,6 +88,13 @@
 				e.preventDefault();
 			}
 		});
+		jQuery("li.menu-item-has-children").keydown(function(e) {
+		  if(e.keyCode == 13) {
+		    jQuery(this).trigger("click", true);
+		    e.preventDefault();
+		  }
+		});
+
 		
 		/* clicking on the body should hide all subnav items */
 		jQuery(document).on('click', function(e){
