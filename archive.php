@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="usa-grid-full">
+			<div class="usa-grid">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -34,11 +34,8 @@ get_header(); ?>
 					<?php
 						$counter++;
 
-
-
-
 							if( $counter == 1 ) {
-								echo '<div class="usa-grid">';
+								echo '<div class="usa-grid-full">';
 								echo '<div class="bbg-grid--1-1-1-2 secondary-stories">';
 							} elseif( $counter==3 ){
 								echo '</div><!-- left column -->';
@@ -51,7 +48,8 @@ get_header(); ?>
 								$includeImage = FALSE;
 								$includeMeta = FALSE;
 								$includeExcerpt=FALSE;
-							} 
+							}
+
 							get_template_part( 'template-parts/content-excerpt-list', get_post_format() );
 
 						/*
@@ -59,7 +57,6 @@ get_header(); ?>
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						//get_template_part( 'template-parts/content-excerpt-list', get_post_format() );
 					?>
 
 				<?php endwhile; ?>

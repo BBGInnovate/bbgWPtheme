@@ -62,20 +62,25 @@
 		/iP/i.test(navigator.userAgent) && jQuery('*').css('cursor', 'pointer');
 		
 		jQuery("li.menu-item-has-children ul a").click(function(e) {
-			console.log('level 2 link click');
 			e.stopPropagation(); //we do this so that the preventDefault() below doesn't affect subnav items
 		});
 
 		/* clicking any top level nav item with children should show its children and hide all others */
 		jQuery("li.menu-item-has-children").on('click', function(e) {
-			console.log('level 1 with children click');
 			if (window.innerWidth >=600) {
 				if (jQuery(this).find("ul").hasClass('showChildren')) {
+					/* 
+					TODO: http://stackoverflow.com/questions/7394796/jquery-click-event-how-to-tell-if-mouse-was-clicked-or-enter-key-was-pressed
+					this removes focus, but does so on keyboard too ... 
+					jQuery(this).find("a").blur(); 
+					*/
+					jQuery(this).addClass("hidden");
 					jQuery(this).find("ul").removeClass('showChildren');
 				} else {
 					/* hide any open menus before showing the newly clicked one */
 					jQuery('.showChildren').removeClass('showChildren');
 					jQuery(this).find("ul").addClass('showChildren');
+					jQuery(this).removeClass("hidden");
 				}
 				e.stopPropagation();
 				e.preventDefault();
@@ -85,6 +90,10 @@
 		/* clicking on the body should hide all subnav items */
 		jQuery(document).on('click', function(e){
 			jQuery('.showChildren').toggleClass('showChildren');
+		});
+		/* clicking on the body should hide all subnav items */
+		jQuery(document).ready(function(e){
+			jQuery("li.menu-item-has-children").addClass('hidden');
 		});
 	}
 	levelTwoNav();
