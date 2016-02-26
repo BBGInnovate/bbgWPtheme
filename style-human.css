@@ -3746,6 +3746,7 @@ article {
 
 .bbg-header__site-title {
   clear: none;
+  display: inline-block;
   font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
   font-size: 2rem;
   line-height: 1;

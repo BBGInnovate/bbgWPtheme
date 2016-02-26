@@ -201,6 +201,7 @@ article {
 
 .bbg-header__site-title {
 	clear: none;
+	display: inline-block;
 	font: {
 		family: $font-sans !important;
 		size: $site-title-font-size /2;
