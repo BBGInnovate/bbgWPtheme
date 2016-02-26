@@ -32,27 +32,24 @@
 						<li><a href="http://www.alhurra.com/" title="Middle East Broadcasting Networks">MBN</a></li>
 					</ul>
 					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
-						<h4 class="usa-footer-primary-link">Footer links</h4>
-						<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/contact-us">Contact Us</a></li>
+						<h4 class="usa-footer-primary-link">About</h4>
+						<li><a href="http://www.bbg.gov/about-the-agency/">About the BBG</a></li>
 						<li><a href="http://www.bbg.gov/about-the-agency/history/faqs/">FAQs</a></li>
+						<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/contact-us">Contact Us</a></li>
+					</ul>
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
+						<h4 class="usa-footer-primary-link">Departments</h4>
+						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
+						<li><a href="http://oddi.bbg.gov">Innovation</a></li>
+						<li><a href="#">Research</a></li>
+						<li><a href="#">CEO's office</a></li>
+					</ul>
+					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
+						<h4 class="usa-footer-primary-link">Resources</h4>
 						<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/privacy-policy">Privacy Policy</a></li>
 						<li><a href="http://www.bbg.gov/about-the-agency/research-reports/foia/">FOIA</a></li>
 						<li><a href="http://www.bbg.gov/sitemap">Sitemap</a></li>
 						<li><a href="http://www.bbg.gov/open">Open Gov</a></li>
-					</ul>
-					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
-						<h4 class="usa-footer-primary-link">Topic</h4>
-						<li><a href="#">About the BBG</a></li>
-						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
-						<li><a href="http://oddi.bbg.gov">Innovation</a></li>
-						<li><a href="#">Secondary link</a></li>
-					</ul>
-					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
-						<h4 class="usa-footer-primary-link">Topic</h4>
-						<li><a href="#">About the BBG</a></li>
-						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
-						<li><a href="http://oddi.bbg.gov">ODDI</a></li>
-						<li><a href="#">Secondary link</a></li>
 					</ul>
 				</nav>
 					<div class="usa-width-one-third usa-sign_up-block">
