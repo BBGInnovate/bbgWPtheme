@@ -18,24 +18,15 @@ body:not(.home) .menu-all-pages-container {
 	display: inline;
 	width: 100%;
 
-	.menu-item-has-children {
-
-		&.hidden > a { // add arrow direction change to top navigation with sub-menus
-            background-image: url('img/arrow-right.png');
-        	background-image: url('img/arrow-right.svg');
-			background-position: right 3rem center;
-			background-repeat: no-repeat;
-			background-size: 1.3rem;
-			cursor: pointer;
-        	margin: 0;
-			padding-right: 3.5rem;
-    	}
-
-	 	> a {
-			background-image: url('img/arrow-down.png');
-			background-image: url('img/arrow-down.svg');
-		}
+	/*
+	.menu-item-has-children > a {
+		background-image: url('img/arrow-down.png');
+		background-image: url('img/arrow-down.svg');
+		background-position: right 3rem center;
+		background-repeat: no-repeat;
+		background-size: 1.3rem;
 	}
+	*/
 
 	ul {
 		@include unstyled-list;
@@ -47,25 +38,19 @@ body:not(.home) .menu-all-pages-container {
 			li {
 				border-top: $border-dotted;
 				border-bottom: none;
-				padding-left: $site-margins;
 
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
 				}
-			}
 
-			:hover > a,
-			.focus > a {
+				a {
+					padding-left: $site-margins * 2;
+				}
+				a:before {
+					content: "• ";
+				}
 			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
 		}
 	}
 	li {
@@ -172,6 +157,15 @@ body:not(.home) .menu-all-pages-container {
 				border-left: $border-dotted;
 				float: none;
 				padding-left: 0;
+
+				a {
+					padding-left: $site-margins / 2;
+				}
+
+				a:before {
+					content: "";
+				}
+
 			}
 			li:first-of-type {
 				border-radius: 0px;
@@ -194,9 +188,26 @@ body:not(.home) .menu-all-pages-container {
 			padding: 0;
 		}
 
-		.menu-item-has-children > a {
-			background-position: right 1rem center;
+		.menu-item-has-children.hidden > a {
+			background: {
+				image: url('img/arrow-right.png');
+				image: url('img/arrow-right.svg');
+			}
 		}
+
+		.menu-item-has-children > a {
+			background: {
+				image: url('img/arrow-down.png');
+				image: url('img/arrow-down.svg');
+				position: 1rem center;
+				repeat: no-repeat;
+				size: 1.3rem;
+			}
+
+			padding-right: site-margins / 2;
+			padding-left: $site-margins;
+		}
+
 		.showChildren {
 			left: auto !important;
 			display: block !important;
