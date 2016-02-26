@@ -20,9 +20,9 @@ query_posts($qParams);
 /*
 $teamCategoryID=$_GET["cat"];
 $teamCategory=get_category($teamCategoryID);
-$portfolioDescription=$teamCategory->description; 
+$portfolioDescription=$teamCategory->description;
 */
-$portfolioDescription="some portfolio description could go here based on the category description?"; 
+$portfolioDescription="some portfolio description could go here based on the category description?";
 
 
 
@@ -35,12 +35,12 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label large">Portfolio</h6>
+					<h6 class="bbg-label--mobile large">Portfolio</h6>
 				</header><!-- .page-header -->
 			</div>
 
 			<div class="usa-grid-full">
-				<?php 
+				<?php
 					$counter=0;
 					while ( have_posts() )  {
 						the_post();
@@ -49,14 +49,14 @@ get_header(); ?>
 							$includeMetaFeatured = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							echo '<div class="usa-grid">';
-						} 
+						}
 						else if ($counter <= $maxPostsToShow) {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
 					echo '</div><!-- .usa-grid-full -->';
-					the_posts_navigation(); 
+					the_posts_navigation();
 				?>
 
 			<?php else : ?>

@@ -88,8 +88,25 @@ img,
 	}
 	padding: .5rem 1rem;
 	text-transform: uppercase;
+
 	a {
 		color: #FFF;
+	}
+
+	&--mobile {
+		background-color: transparent;
+		color: $color-secondary-darkest;
+		display: block;
+		font: {
+			size: 2.5rem;
+			weight: $font-bold;
+		}
+		margin-bottom: 1.5rem;
+		padding: 0;
+
+		a {
+			color: $color-secondary-darkest;
+		}
 	}
 
 	@include media($small-screen) {
@@ -98,18 +115,26 @@ img,
 		display: block;
 		font-size: 2.5rem;
 		padding: 0;
+
+		&--mobile {
+			font-size: 3rem;
+		}
+
 		a {
 			color: $color-secondary-darkest;
 		}
-	}
+}
 
+	&--mobile.small,
 	&.small {
 		font-size: 1.3rem;
+
 		@include media($small-screen) {
 			font-size: 2rem;
 		}
 	}
 
+	&--mobile.large,
 	&.large {
 		margin: {
 			top: $site-margins;
@@ -120,6 +145,10 @@ img,
 			font-size: 3rem;
 			margin-bottom: 1.5rem;
 		}
+	}
+
+	&--mobile.large {
+		margin-bottom: 1.5rem;
 	}
 }
 

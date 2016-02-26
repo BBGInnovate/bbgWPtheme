@@ -3625,6 +3625,18 @@ img > a:focus,
 .bbg-label a {
   color: #FFF;
 }
+.bbg-label--mobile {
+  background-color: transparent;
+  color: #981b1e;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+.bbg-label--mobile a {
+  color: #981b1e;
+}
 @media screen and (min-width: 481px) {
   .bbg-label {
     background-color: transparent;
@@ -3633,27 +3645,33 @@ img > a:focus,
     font-size: 2.5rem;
     padding: 0;
   }
+  .bbg-label--mobile {
+    font-size: 3rem;
+  }
   .bbg-label a {
     color: #981b1e;
   }
 }
-.bbg-label.small {
+.bbg-label--mobile.small, .bbg-label.small {
   font-size: 1.3rem;
 }
 @media screen and (min-width: 481px) {
-  .bbg-label.small {
+  .bbg-label--mobile.small, .bbg-label.small {
     font-size: 2rem;
   }
 }
-.bbg-label.large {
+.bbg-label--mobile.large, .bbg-label.large {
   margin-top: 3rem;
   margin-bottom: 0;
 }
 @media screen and (min-width: 481px) {
-  .bbg-label.large {
+  .bbg-label--mobile.large, .bbg-label.large {
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
+}
+.bbg-label--mobile.large {
+  margin-bottom: 1.5rem;
 }
 
 section.usa-section {
