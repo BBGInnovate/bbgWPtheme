@@ -155,8 +155,15 @@ section.usa-section {
 
 article {
 	margin-bottom: $site-margins;
+
 	@include media($medium-screen) {
 		margin-bottom: 0;
+	}
+
+	&.bbg-grid--1-2-3 {
+		@include media($medium-screen) {
+			margin-bottom: $site-margins;
+		}
 	}
 }
 
