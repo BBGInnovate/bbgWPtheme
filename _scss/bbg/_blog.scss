@@ -177,6 +177,30 @@
 		}
 	}
 
+	.bbg__article-content__subhead {
+		color: $color-gray-medium;
+		font: {
+			family: $font-serif;
+			style: italic;
+			weight: $font-normal;
+		}
+  		line-height: $heading-line-height;
+  		margin-top: 1.5rem;
+	}
+
+	.bbg__article-content__section-title {
+		color: $color-gray-dark;
+		line-height: $heading-line-height;
+  		margin: {
+  			top: 5rem;
+  			bottom: 0;
+  		}
+
+  		+ p {
+  			margin-top: 0;
+  		}
+	}
+
 	.wp-caption-text {
 		color: $color-gray-dark;
 		font: {

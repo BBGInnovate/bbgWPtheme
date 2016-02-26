@@ -165,7 +165,7 @@ function bbginnovate_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_enqueue_script( 'bbginnovate-18f', get_template_directory_uri() . '/js/18f.js', array(), '20160223', true );	
+	wp_enqueue_script( 'bbginnovate-18f', get_template_directory_uri() . '/js/18f.js', array(), '20160223', true );
 }
 add_action( 'wp_enqueue_scripts', 'bbginnovate_scripts' );
 
@@ -745,12 +745,31 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	$style_formats = array(
 		// Each array child is a style with it's own settings
 		array(
+			'title' => 'Subheads',
+			'block' => 'h2',
+			'classes' => 'bbg__article-content__subhead',
+			'wrapper' => false,
+		),
+		array(
+			'title' => 'Section Title',
+			'block' => 'h3',
+			'classes' => 'bbg__article-content__section-title',
+			'wrapper' => false,
+		),
+		array(
 			'title' => 'Related Links',
 			'block' => 'span', // Block or inline-block element to wrap highlighted content
 			'classes' => 'bbg__portfolio-links', // Name(s) of classes to add to the element
 			'wrapper' => true,
 
 		),
+		array(
+			'title' => 'Pullquotes',
+			'block' => 'blockquote',
+			'classes' => 'pullquote',
+			'wrapper' => false,
+		),
+
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );
