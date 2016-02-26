@@ -90,6 +90,7 @@
 		/* clicking on the body should hide all subnav items */
 		jQuery(document).on('click', function(e){
 			jQuery('.showChildren').toggleClass('showChildren');
+			jQuery("li.menu-item-has-children").addClass('hidden');
 		});
 		/* clicking on the body should hide all subnav items */
 		jQuery(document).ready(function(e){
