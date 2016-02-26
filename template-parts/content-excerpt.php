@@ -28,6 +28,7 @@ if (! isset ($includeMeta)) {
 }
 
 $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', esc_url( get_permalink() ) );
 ?>
 
 
@@ -38,7 +39,7 @@ $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		<?php if ($includeImage) { ?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--medium">
 			<?php
-				echo $link;
+				echo $linkImage;
 
 				/* Set a default thumbnail image in case one isn't set */
 				$thumbnail = '<img src="' . get_template_directory_uri() . '/img/portfolio-project-default.png" alt="This is a default image." />';

@@ -46,6 +46,7 @@ $classNames="bbg-blog__excerpt--list " . $gridClass . " ";
 
 //Define the link to the post
 $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', esc_url( get_permalink() ) );
 ?>
 
 
@@ -64,7 +65,7 @@ $link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
 		<?php if ($includeImage && has_post_thumbnail()) { ?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--small ">
 			<?php
-				echo $link;
+				echo $linkImage;
 				echo the_post_thumbnail('small-thumb');
 			?>
 			</a>

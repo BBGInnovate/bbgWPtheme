@@ -20,8 +20,9 @@ if (! isset ($includeMetaFeatured)) {
 
 		<?php 
 			$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
+			$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', esc_url( get_permalink() ) );
 			$linkH2 = '<h2 class="entry-title bbg-blog__excerpt-title--featured">'.$link;
-			echo $link;
+			echo $linkImage;
 
 			if (has_post_thumbnail()) {
 				echo '<div class="single-post-thumbnail clear usa-single_post_thumbnail bbg__excerpt-header__thumbnail--large">';
