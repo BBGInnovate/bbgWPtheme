@@ -28,7 +28,7 @@ get_header();
 			<div class="usa-grid-full">
 				<header class="page-header bbg-page__header" style="margin-bottom: 1.5rem;">
 					<div class="bbg-avatar__container bbg-team__icon">
-						<div class="bbg-avatar bbg-team__icon__image" style="background-image: url(https://africa.rizing.org/wp-content/uploads/2015/10/trending-150x150.png);"></div>
+						<div class="bbg-avatar bbg-team__icon__image" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_trending.png);"></div>
 					</div>
 					<div class="usa-intro bbg-page__header-text bbg-team__text">
 						<h1 class="bbg-page__header-title">Trending</h1>
