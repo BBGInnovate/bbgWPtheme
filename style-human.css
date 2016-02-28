@@ -2955,18 +2955,14 @@ fieldset {
 }
 .bbg__article-header__thumbnail--large img {
   width: 100%;
-  /*
-  position: absolute;
-  top:-100%; left:0; right: 0; bottom:-100%;
-  margin: auto;
-  */
 }
 
 .bbg__article-header__caption {
   background-color: rgba(0, 0, 0, 0.4);
   color: #FFF;
+  font-size: 80%;
   line-height: 1.2;
-  padding: 2.25rem;
+  padding: 1.5rem 3rem;
   position: absolute;
   bottom: 0;
   text-align: left;
@@ -2974,6 +2970,8 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg__article-header__caption {
+    font-size: 90%;
+    padding: 1.5rem;
     right: 0;
     max-width: 50%;
   }

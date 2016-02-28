@@ -40,16 +40,16 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		<?php
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
-				$featuredImageCredit="";
+				$featuredImageCutline="";
 				$thumbnail_image = get_posts(array('p' => get_post_thumbnail_id(get_the_ID()), 'post_type' => 'attachment'));
 				if ($thumbnail_image && isset($thumbnail_image[0])) {
-					$featuredImageCredit=$thumbnail_image[0]->post_excerpt;
+					$featuredImageCutline=$thumbnail_image[0]->post_excerpt;
 				}
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
-				if ($featuredImageCredit != "") {
-					echo "<div class='bbg__article-header__caption'>Each session was videotaped with one camera attached to the phone to record the user’s taps and gestures while a second one was focused on the user’s facial expressions. Observers in a separate room watched the live video feed and took notes.</div>";
+				if ($featuredImageCutline != "") {
+					echo "<div class='bbg__article-header__caption'>$featuredImageCutline</div>";
 				}
 				echo '</div>';
 
