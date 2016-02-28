@@ -3,12 +3,38 @@
 .bbg__article-header__thumbnail--large {
 	background-color: #F1F1F1;
 	line-height: 0;
-	text-align: center;
 	margin: {
 		top: $site-margins;
 		bottom: $site-margins;
 	}
+	max-height: 624px;
+	overflow: hidden;
 	position: relative;
+
+	img {
+		width: 100%;
+		/*
+		position: absolute;
+		top:-100%; left:0; right: 0; bottom:-100%;
+		margin: auto;
+		*/
+	}
+}
+
+.bbg__article-header__caption {
+	background-color: $box-transparent;
+	color: #FFF;
+	line-height: 1.2;
+	padding: $site-margins * .75;
+	position: absolute;
+		bottom: 0;
+	text-align: left;
+	width: 100%;
+
+	@include media($medium-screen) {
+		right: 0;
+		max-width: 50%;
+	}
 }
 
 /* Post title */

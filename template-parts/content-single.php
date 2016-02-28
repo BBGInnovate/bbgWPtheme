@@ -49,7 +49,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
 				if ($featuredImageCredit != "") {
-					echo "<h4>$featuredImageCredit</h4>";
+					echo "<div class='bbg__article-header__caption'>Each session was videotaped with one camera attached to the phone to record the user’s taps and gestures while a second one was focused on the user’s facial expressions. Observers in a separate room watched the live video feed and took notes.</div>";
 				}
 				echo '</div>';
 

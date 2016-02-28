@@ -2947,10 +2947,36 @@ fieldset {
 .bbg__article-header__thumbnail--large {
   background-color: #F1F1F1;
   line-height: 0;
-  text-align: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  max-height: 624px;
+  overflow: hidden;
   position: relative;
+}
+.bbg__article-header__thumbnail--large img {
+  width: 100%;
+  /*
+  position: absolute;
+  top:-100%; left:0; right: 0; bottom:-100%;
+  margin: auto;
+  */
+}
+
+.bbg__article-header__caption {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  line-height: 1.2;
+  padding: 2.25rem;
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-header__caption {
+    right: 0;
+    max-width: 50%;
+  }
 }
 
 /* Post title */
@@ -3436,7 +3462,7 @@ fieldset {
   }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
   display: inline-block;
