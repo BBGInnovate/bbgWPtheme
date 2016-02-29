@@ -4378,6 +4378,11 @@ li.usa-footer-primary-content:last-child {
 .usa-footer-big nav .usa-footer-primary-link {
   cursor: pointer;
 }
+@media screen and (min-width: 600px) {
+  .usa-footer-big nav .usa-footer-primary-link {
+    cursor: default;
+  }
+}
 
 .usa-font-lead {
   font-size: 1.6rem;

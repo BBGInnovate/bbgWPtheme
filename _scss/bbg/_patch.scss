@@ -31,6 +31,10 @@ li.usa-footer-primary-content {
 //Primary footer category links should have a hand cursor on hover
 .usa-footer-big nav .usa-footer-primary-link {
 	cursor: pointer;
+
+	@include media($medium-screen) {
+		cursor: default;
+	}
 }
 
 
