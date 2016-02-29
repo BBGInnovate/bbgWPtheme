@@ -115,7 +115,7 @@ if ( count( $projects ) ) {
 	$maxProjectsToShow=4;
 	echo '<div class="usa-width-one-third bbg-author-projects">';
 	echo '<h6 class="bbg-label small">Projects:</h2>';
-	echo '<ul>';
+	echo '<ul class="bbg-author-projects__list">';
 	for ( $i=0; $i<min( $maxProjectsToShow, count( $projects ) ); $i++ ) {
 		$p=$projects[$i];
 		echo '<li><a href="' . get_permalink( $p ) . '">' . $p->post_title . '</a></li>';

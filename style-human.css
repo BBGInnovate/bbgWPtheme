@@ -2935,6 +2935,28 @@ fieldset {
   }
 }
 
+.bbg-author-projects__list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+.bbg-author-projects__list li {
+  display: list-item;
+  margin: 0;
+}
+.bbg-author-projects__list li:before {
+  display: none;
+}
+.bbg-author-projects__list li:after {
+  display: none;
+}
+.bbg-author-projects__list li {
+  list-style: disc;
+}
+
 /** HEADER AREA */
 /* Featured image */
 .bbg__article-header__thumbnail--large {

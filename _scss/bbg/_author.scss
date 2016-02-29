@@ -225,3 +225,13 @@
 		margin-top: 3.5rem;
 	}
 }
+
+.bbg-author-projects__list {
+	@include unstyled-list();
+
+	li {
+		list-style: disc;
+	}
+	margin-bottom: 0;
+	padding-left: 2rem;
+}
