@@ -79,7 +79,7 @@ The landing page for a single team that includes:
 
 **Assigning Users to Projects - **there is a users_in_project custom field attached to a given post that contains userIDs that contributed.  The right side will show the user and their occupation
 
-![image alt text](image_0.png)![image alt text](image_1.png)
+![image alt text](documentation/img/image_0.png)![image alt text](documentation/img/image_1.png)
 
 Plugins
 
@@ -93,7 +93,7 @@ The advanced custom fields plugin makes it easy to attach custom fields to posts
 
 * "Hide Featured Image" - Hides the featured image in the post detail page but it still gets used in listing pages
 
-![image alt text](image_2.png)
+![image alt text](documentation/img/image_2.png)
 
 # WP User Avatar
 
