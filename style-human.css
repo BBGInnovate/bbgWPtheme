@@ -3835,12 +3835,18 @@ article {
   clear: both;
   visibility: hidden;
 }
+.bbg-header__container:focus {
+  background: none;
+}
 
 .bbg-header__link {
   padding: 0;
 }
 .bbg-header__link:hover {
   text-decoration: none;
+}
+.bbg-header__link:focus {
+  background: none;
 }
 
 .bbg-header__logo {
