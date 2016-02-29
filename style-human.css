@@ -3920,6 +3920,7 @@ article {
 .bbg__excerpt-header__thumbnail--large img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 .bbg-portfolio__excerpt-title {
