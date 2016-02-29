@@ -117,7 +117,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 							$authorName = esc_html( $user -> display_name );
 							$authorUrl = get_author_posts_url( $user -> ID, $user -> user_nicename );
 							$authorOccupation = esc_html( $user -> occupation );
-							echo "<li class='bbg__portfolio-members__member-name'><a href='$authorUrl'>$authorName</a>, <span class='bbg__portfolio-members__member-job'>$authorOccupation</span></li>";
+							echo "<li class='bbg__portfolio-members__member-name'><a href='$authorUrl'>$authorName</a><br/><span class='bbg__portfolio-members__member-job'>$authorOccupation</span></li>";
 						}
 						echo "</ul></div>";
 					}
