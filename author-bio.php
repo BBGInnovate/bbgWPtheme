@@ -13,7 +13,10 @@ $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name
 $theAuthorID=$curauth->ID;
 $website = $curauth->user_url;
 $authorName=$curauth->display_name;
-$authorEmail = $curauth->user_email;
+$authorEmail = "";
+if ( $curauth->isActive=="on" ) {
+	$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
+}
 $avatar=get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 100 ) );
 
 
@@ -80,22 +83,21 @@ wp_reset_query();
 				<div class="bbg-staff__author-description">
 
 						<?php
-echo '<div class="bbg-author-occupation">' . $occupation . '</div>';
+						echo '<div class="bbg-author-occupation">' . $occupation . '</div>';
 
-if ( $website && $website != '' ) {
-	$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
-}
+						if ( $website && $website != '' ) {
+							$website='<span class="sep"> | </span><a href="' . $website . '">' . $website . '</a>';
+						}
 
-if ( $twitterHandle && $twitterHandle != '' ) {
-	$twitterHandle=str_replace( "@", "", $twitterHandle );
-	$twitterHandle='</span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
-}
-?>
+						if ( $twitterHandle && $twitterHandle != '' ) {
+							$twitterHandle=str_replace( "@", "", $twitterHandle );
+							$twitterHandle='<span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+						}
+						?>
 
 
 							<div class="bbg-author-contact">
-								<a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a>
-								<?php echo $website; ?>
+							<?php echo $authorEmail . $twitterHandle; ?>
 							</div>
 
 						<div class="bbg-author-bio">
@@ -110,7 +112,7 @@ if ( $twitterHandle && $twitterHandle != '' ) {
 							<?php
 
 if ( count( $projects ) ) {
-	$maxProjectsToShow=5;
+	$maxProjectsToShow=4;
 	echo '<div class="usa-width-one-third bbg-author-projects">';
 	echo '<h6 class="bbg-label small">Projects:</h2>';
 	echo '<ul>';
