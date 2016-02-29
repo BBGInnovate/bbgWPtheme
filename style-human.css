@@ -2681,8 +2681,10 @@ fieldset {
 }
 
 /*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
-.u--no-wrap {
-  white-space: nowrap;
+@media screen and (min-width: 481px) {
+  .u--no-wrap {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -2697,15 +2699,6 @@ fieldset {
 @media screen and (min-width: 481px) {
   .u--hide-mobile {
     display: inline;
-  }
-}
-
-.u__breakline--mobile {
-  display: block;
-}
-@media screen and (min-width: 900px) {
-  .u__breakline--mobile {
-    display: inline-block;
   }
 }
 
@@ -3123,22 +3116,24 @@ fieldset {
   margin-top: 0;
   margin-bottom: 1em;
 }
+.bbg__article-content a, .bbg__article-content p {
+  word-wrap: break-word;
+}
 .bbg__article-content .bbg__article-content__subhead {
-  color: #757575;
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-style: italic;
   font-weight: 400;
   line-height: 1.3;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 .bbg__article-content .bbg__article-content__section-title {
   color: #323a45;
   line-height: 1.3;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 0;
 }
 .bbg__article-content .bbg__article-content__section-title + p {
-  margin-top: 0;
+  margin-top: .5rem;
 }
 .bbg__article-content .wp-caption-text {
   color: #323a45;
@@ -3448,6 +3443,18 @@ fieldset {
   max-width: 1040px;
   padding-right: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /*
+  .u__breakline--mobile:before {
+  	@include media($small-screen) {
+  		content:"\a";
+  		white-space: pre;
+  	}
+  	@include media($medium-large-screen) {
+  		content:"";
+  		white-space: normal;
+  	}
+  }
+  */
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
@@ -3457,6 +3464,19 @@ fieldset {
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
     font-size: 6rem;
+  }
+}
+.bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+  display: inline-block;
+}
+@media screen and (min-width: 481px) {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+    display: block;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+    display: inline-block;
   }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
@@ -3732,6 +3752,9 @@ article {
 
 /*************************/
 /* Site title and header */
+.bbg-header__container {
+  padding-right: 6rem;
+}
 .bbg-header__container:after {
   content: ".";
   display: block;
@@ -3787,6 +3810,15 @@ article {
   .bbg-header__site-title {
     font-size: 4rem;
     padding-top: .2rem;
+  }
+}
+
+.bbg-header__site-title--breakline {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .bbg-header__site-title--breakline {
+    display: inline-block;
   }
 }
 

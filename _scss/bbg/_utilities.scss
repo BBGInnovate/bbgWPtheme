@@ -1,5 +1,7 @@
 .u--no-wrap {
-	white-space: nowrap;
+	@include media($small-screen) {
+		white-space: nowrap;
+	}
 }
 
 .u--show-mobile {
@@ -13,13 +15,6 @@
 
 	@include media($small-screen) {
 		display: inline;
-	}
-}
-
-.u__breakline--mobile {
-	display: block;
-	@include media($medium-large-screen) {
-		display: inline-block;
 	}
 }
 

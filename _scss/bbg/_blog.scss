@@ -176,7 +176,6 @@
 }
 
 .single-post .bbg__article-content > p:first-of-type {
-	//@include readin();
 	@extend .readin;
 }
 
@@ -201,27 +200,31 @@
 		}
 	}
 
+	a, p {
+		word-wrap: break-word;
+	}
+
 	.bbg__article-content__subhead {
-		color: $color-gray-medium;
+		//color: $color-gray-medium;
 		font: {
 			family: $font-serif;
 			style: italic;
 			weight: $font-normal;
 		}
   		line-height: $heading-line-height;
-  		margin-top: 1.5rem;
+  		margin-top: $site-margins;
 	}
 
 	.bbg__article-content__section-title {
 		color: $color-gray-dark;
 		line-height: $heading-line-height;
   		margin: {
-  			top: 5rem;
+  			top: $site-margins;
   			bottom: 0;
   		}
 
   		+ p {
-  			margin-top: 0;
+  			margin-top: .5rem;
   		}
 	}
 
@@ -240,6 +243,7 @@
 	li {
 		margin-bottom: 3.5em;
 	}
+
 
 	blockquote {
 		margin: {
