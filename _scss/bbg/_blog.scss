@@ -205,12 +205,7 @@
 	}
 
 	.bbg__article-content__subhead {
-		//color: $color-gray-medium;
-		font: {
-			family: $font-serif;
-			style: italic;
-			weight: $font-normal;
-		}
+		color: $color-gray-medium;
   		line-height: $heading-line-height;
   		margin-top: $site-margins;
 	}
@@ -278,6 +273,121 @@
 		}
 	}
 }
+
+/** RELATED LINKS */
+/* Style related links for portfolio projects */
+	.bbg__related-links  {
+		a {
+			background: {
+				position: left top;
+				repeat: no-repeat;
+				size: contain;
+			}
+
+			color: $color-primary-darkest;
+			font: {
+				size: $small-font-size;
+				weight: $font-bold;
+			}
+			text-decoration: none;
+
+			&:hover {
+				color: black;
+				text-decoration: underline;
+			}
+
+			// Generic external website URL
+			&[href] {
+				background: {
+					image: url(img/social-icons/png/link-icon.png);
+					image: url(img/social-icons/svg/link-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			// Facebook links
+			&[href*="facebook.com"] {
+				background: {
+					image: url(img/social-icons/png/facebook-icon.png);
+					image: url(img/social-icons/svg/facebook-icon.svg);
+				}
+				/*margin-left: -1rem;*/
+				padding-left: 2.5rem;
+			}
+			// Twitter links
+			&[href*="twitter.com"] {
+				background: {
+					image: url(img/social-icons/png/twitter-icon.png);
+					image: url(img/social-icons/svg/twitter-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			// LinkedIn links
+			&[href*="linkedin.com"] {
+				background: {
+					image: url(img/social-icons/png/linkedin-icon.png);
+					image: url(img/social-icons/svg/linkedin-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			//YouTube links
+			&[href*="www.youtube.com"]  {
+				background: {
+					image: url(img/social-icons/png/youtube-icon.png);
+					image: url(img/social-icons/svg/youtube-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			//Video links
+			&[href*="video"], 
+			&[href*="vimeo.com"] {
+				background: {
+					image: url(img/social-icons/png/video-icon.png);
+					image: url(img/social-icons/svg/video-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			// GitHub links
+			&[href*="github.com"] {
+				background: {
+					image: url(img/social-icons/png/github-mark.png);
+					image: url(img/social-icons/svg/github-mark.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			//PDF links
+			&[href*=".pdf"]  {
+				background: {
+					image: url(img/social-icons/png/pdf-icon.png);
+					image: url(img/social-icons/svg/pdf-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			// ePub links
+			&[href*=".epub"] {
+				background: {
+					image: url(img/social-icons/png/epub-icon.png);
+					image: url(img/social-icons/svg/epub-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
+			// Android apps on GooglePlay
+			&[href*="play.google.com"] {
+				background: {
+					image: url(img/social-icons/png/google-play-badge.png);
+					image: url(img/social-icons/svg/google-play-badge.svg);
+				}
+				padding-left: 6.7rem;
+			}
+			// iOS apps on App Store
+			&[href*="itunes.apple.com"] {
+				background: {
+					image: url(img/social-icons/png/apple-app-store-badge.png);
+					image: url(img/social-icons/svg/apple-app-store-badge.svg);
+				}
+				padding-left: 6.7rem;
+			}
+		}
+	}
 
 /** POST AUTHOR */
 .bbg__article-author {
@@ -388,8 +498,6 @@
 	}
 
 }
-
-
 
 .bbg__article-footer {
 	margin-top: $site-margins * 2;
