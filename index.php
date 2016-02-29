@@ -20,6 +20,16 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
+
+			<div class="usa-grid">
+				<header class="page-header">
+					<h6 class="bbg-label--mobile large">Blog</h6>
+				</header><!-- .page-header -->
+			</div>
+
+
+
+
 				<?php if ( is_home() && ! is_front_page() ) : ?>
 					<!--
 					<header class="page-header">

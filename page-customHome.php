@@ -89,7 +89,7 @@ get_header();
 			<!-- Portfolio -->
 			<section id="projects" class="usa-section bbg-portfolio">
 				<div class="usa-grid">
-					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'project' ) ) ?>">Projects</a></h6>
+					<h6 class="bbg-label"><a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>">Projects</a></h6>
 
 					<div class="usa-grid-full">
 					<?php
@@ -205,7 +205,7 @@ get_header();
 								<article class="bbg-team bbg-grid--1-1-1-2">
 
 									<div class="bbg-avatar__container bbg-team__icon">
-										<a href='<?php echo $categoryLink; ?>'>
+										<a href="<?php echo $categoryLink; ?>" tabindex="-1">
 										<div class="bbg-avatar bbg-team__icon__image <?php echo $iconName ?>" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/icon_team_<?php echo $category->category_nicename; ?>.png);"></div>
 										</a>
 									</div>
@@ -214,7 +214,7 @@ get_header();
 										<?php
 											$user=$categoryHeads[$category->term_id];
 											$authorPath = get_author_posts_url($user->ID);
-											echo "<h2 class='bbg-team__name'><a href='$categoryLink'>".$category->name."</a></h2>";
+											echo "<h2 class='bbg-team__name'><a href='$categoryLink'>" . $category->name . "</a></h2>";
 											echo "<p class='bbg-team__text-description'>" . $category->description . "</p>";
 										?>
 									</div><!-- .bbg-team__text -->

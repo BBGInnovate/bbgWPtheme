@@ -66,12 +66,37 @@
 			max-width: $site-max-width;
 			padding-right: $site-margins;
 			text-shadow: $text-shadow;
+
 			@include media($medium-screen) {
 				font-size: $h1-font-size * 1.2;
 			}
+
 			@include media($large-screen) {
 				font-size: $h1-font-size * 1.5;
 			}
+
+			//Keeping it inline at smaller widths so that it doesn't break the screen.
+			.bbg-home__site-title--breakline {
+				display: inline-block;
+				@include media($small-screen) {
+					display: block;
+				}
+				@include media($medium-large-screen) {
+					display: inline-block;
+				}
+			}
+			/*
+			.u__breakline--mobile:before {
+				@include media($small-screen) {
+					content:"\a";
+					white-space: pre;
+				}
+				@include media($medium-large-screen) {
+					content:"";
+					white-space: normal;
+				}
+			}
+			*/
 		}
 
 		.bbg-banner-site-description{

@@ -40,16 +40,16 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		<?php
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
-				$featuredImageCredit="";
+				$featuredImageCutline="";
 				$thumbnail_image = get_posts(array('p' => get_post_thumbnail_id(get_the_ID()), 'post_type' => 'attachment'));
 				if ($thumbnail_image && isset($thumbnail_image[0])) {
-					$featuredImageCredit=$thumbnail_image[0]->post_excerpt;
+					$featuredImageCutline=$thumbnail_image[0]->post_excerpt;
 				}
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
-				if ($featuredImageCredit != "") {
-					echo "<h4>$featuredImageCredit</h4>";
+				if ($featuredImageCutline != "") {
+					echo "<div class='bbg__article-header__caption'>$featuredImageCutline</div>";
 				}
 				echo '</div>';
 
@@ -112,7 +112,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 					$blogusers = get_users( $args );
 					// Loop through the users to create the staff profiles
 					if ( $blogusers ) {
-						echo "<div class='bbg__portfolio-members'><h3 class='bbg__portfolio-members__title'>Project Team</h3> <ul class='bbg__portfolio-members__list'>";
+						echo "<div class='bbg__portfolio-members'><h3 class='bbg__portfolio-members__title'>ODDI Team</h3> <ul class='bbg__portfolio-members__list'>";
 						foreach ( $blogusers as $user ) {
 							$authorName = esc_html( $user -> display_name );
 							$authorUrl = get_author_posts_url( $user -> ID, $user -> user_nicename );
