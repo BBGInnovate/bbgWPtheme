@@ -24,6 +24,7 @@ get_header();
 					<div class="usa-intro bbg-page__header-text bbg-team__text">
 						<h1 class="bbg-page__header-title">Fuego</h1>
 						<h3 class="usa-font-lead bbg-page__header-description">An auto-generated stream of conversations and links from our community — powered by <a href='https://github.com/niemanlab/openfuego' target='_blank'>Fuego</a>.</h3>
+						<p>Powered by <a href="#">Fuego</a></p>
 					</div>
 				</header><!-- .page-header -->
 			</div>
