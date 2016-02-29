@@ -1,4 +1,4 @@
-Innovation.bbg.gov - How It Works
+The following notes summarize the majority of the behavioral customizations we made to WordPress in the process of developing our theme.
 
 ## Custom Pages
 
