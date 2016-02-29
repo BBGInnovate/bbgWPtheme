@@ -45,7 +45,8 @@ $qParams=array(
 	'post_type' => array( 'post' ),
 	'orderby' => 'post_date',
 	'order' => 'desc',
-	'cat' => get_cat_id( 'Project' )
+	'cat' => get_cat_id( 'Project' ),
+	'posts_per_page' => -1
 );
 query_posts( $qParams );
 $projects= array();
