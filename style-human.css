@@ -2681,8 +2681,10 @@ fieldset {
 }
 
 /*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
-.u--no-wrap {
-  white-space: nowrap;
+@media screen and (min-width: 481px) {
+  .u--no-wrap {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -2697,15 +2699,6 @@ fieldset {
 @media screen and (min-width: 481px) {
   .u--hide-mobile {
     display: inline;
-  }
-}
-
-.u__breakline--mobile {
-  display: block;
-}
-@media screen and (min-width: 900px) {
-  .u__breakline--mobile {
-    display: inline-block;
   }
 }
 
@@ -2947,10 +2940,34 @@ fieldset {
 .bbg__article-header__thumbnail--large {
   background-color: #F1F1F1;
   line-height: 0;
-  text-align: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  max-height: 624px;
+  overflow: hidden;
   position: relative;
+}
+.bbg__article-header__thumbnail--large img {
+  width: 100%;
+}
+
+.bbg__article-header__caption {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  font-size: 80%;
+  line-height: 1.2;
+  padding: 1.5rem 3rem;
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .bbg__article-header__caption {
+    font-size: 90%;
+    padding: 1.5rem;
+    right: 0;
+    max-width: 50%;
+  }
 }
 
 /* Post title */
@@ -3099,21 +3116,15 @@ fieldset {
   margin-top: 0;
   margin-bottom: 1em;
 }
+.bbg__article-content a, .bbg__article-content p {
+  word-wrap: break-word;
+}
 .bbg__article-content .bbg__article-content__subhead {
-  color: #757575;
-  font-size: 2rem;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
   line-height: 1.3;
-  margin-top: 3.5rem;
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-@media screen and (min-width: 481px) {
-  .bbg__article-content .bbg__article-content__subhead {
-    font-size: 3rem;
-  }
-}
-.bbg__article-content .bbg__article-content__subhead + p {
-  margin-top: .5em;
+  margin-top: 3rem;
 }
 .bbg__article-content .bbg__article-content__section-title {
   color: #323a45;
@@ -3123,7 +3134,7 @@ fieldset {
   text-transform: uppercase;
 }
 .bbg__article-content .bbg__article-content__section-title + p {
-  margin-top: 0;
+  margin-top: .5rem;
 }
 .bbg__article-content .wp-caption-text {
   color: #323a45;
@@ -3433,6 +3444,18 @@ fieldset {
   max-width: 1040px;
   padding-right: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /*
+  .u__breakline--mobile:before {
+  	@include media($small-screen) {
+  		content:"\a";
+  		white-space: pre;
+  	}
+  	@include media($medium-large-screen) {
+  		content:"";
+  		white-space: normal;
+  	}
+  }
+  */
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
@@ -3444,8 +3467,21 @@ fieldset {
     font-size: 6rem;
   }
 }
+.bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+  display: inline-block;
+}
+@media screen and (min-width: 481px) {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+    display: block;
+  }
+}
+@media screen and (min-width: 900px) {
+  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
+    display: inline-block;
+  }
+}
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 0 0.3rem 0.3rem 0;
   color: #FFF;
   display: inline-block;
@@ -3717,6 +3753,9 @@ article {
 
 /*************************/
 /* Site title and header */
+.bbg-header__container {
+  padding-right: 6rem;
+}
 .bbg-header__container:after {
   content: ".";
   display: block;
@@ -3755,6 +3794,7 @@ article {
 
 .bbg-header__site-title {
   clear: none;
+  display: inline-block;
   font-family: "Lato", "Helvetica", "Arial", sans-serif !important;
   font-size: 2rem;
   line-height: 1;
@@ -3771,6 +3811,15 @@ article {
   .bbg-header__site-title {
     font-size: 4rem;
     padding-top: .2rem;
+  }
+}
+
+.bbg-header__site-title--breakline {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .bbg-header__site-title--breakline {
+    display: inline-block;
   }
 }
 
@@ -3872,6 +3921,7 @@ article {
 .bbg__excerpt-header__thumbnail--large img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 .bbg-portfolio__excerpt-title {
