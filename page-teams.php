@@ -91,8 +91,8 @@ get_header();
 							<?php } ?>
 
 
+							<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team »</a>
 						</div>
-						<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team »</a>
 					</div>
 				</section><!-- Staff -->
 			<?php
