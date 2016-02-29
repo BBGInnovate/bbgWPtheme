@@ -330,16 +330,23 @@
 				padding-left: 2.5rem;
 			}
 			//YouTube links
-			&[href*="www.youtube.com"]  {
+			&[href*="youtube.com"]  {
 				background: {
 					image: url(img/social-icons/png/youtube-icon.png);
 					image: url(img/social-icons/svg/youtube-icon.svg);
 				}
 				padding-left: 2.5rem;
 			}
+			//Vimeo links
+			&[href*="vimeo.com"]  {
+				background: {
+					image: url(img/social-icons/png/vimeo-icon.png);
+					image: url(img/social-icons/svg/vimeo-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
 			//Video links
-			&[href*="video"], 
-			&[href*="vimeo.com"] {
+			&[href*="video"] {
 				background: {
 					image: url(img/social-icons/png/video-icon.png);
 					image: url(img/social-icons/svg/video-icon.svg);

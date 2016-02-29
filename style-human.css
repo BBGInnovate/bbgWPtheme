@@ -3229,12 +3229,17 @@ fieldset {
   background-image: url(img/social-icons/svg/linkedin-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="www.youtube.com"] {
+.bbg__related-links a[href*="youtube.com"] {
   background-image: url(img/social-icons/png/youtube-icon.png);
   background-image: url(img/social-icons/svg/youtube-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="video"], .bbg__related-links a[href*="vimeo.com"] {
+.bbg__related-links a[href*="vimeo.com"] {
+  background-image: url(img/social-icons/png/vimeo-icon.png);
+  background-image: url(img/social-icons/svg/vimeo-icon.svg);
+  padding-left: 2.5rem;
+}
+.bbg__related-links a[href*="video"] {
   background-image: url(img/social-icons/png/video-icon.png);
   background-image: url(img/social-icons/svg/video-icon.svg);
   padding-left: 2.5rem;
