@@ -179,22 +179,31 @@
 
 	.bbg__article-content__subhead {
 		color: $color-gray-medium;
-		font: {
-			family: $font-serif;
-			style: italic;
-			weight: $font-normal;
-		}
+		font-size: 2rem;
   		line-height: $heading-line-height;
-  		margin-top: 1.5rem;
+  		margin: {
+  			top: 3.5rem;
+  			bottom: 0;
+  		}
+  		text-transform: capitalize;
+
+  		@include media($small-screen) {
+  			font-size: $h2-font-size;
+  		}
+
+  		+ p {
+  			margin-top: .5em;
+  		}
 	}
 
 	.bbg__article-content__section-title {
 		color: $color-gray-dark;
 		line-height: $heading-line-height;
   		margin: {
-  			top: 5rem;
+  			top: 3rem;
   			bottom: 0;
   		}
+  		text-transform: uppercase;
 
   		+ p {
   			margin-top: 0;

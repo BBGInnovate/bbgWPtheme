@@ -746,13 +746,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		// Each array child is a style with it's own settings
 		array(
 			'title' => 'Subheads',
-			'block' => 'h2',
+			'block' => 'h3',
 			'classes' => 'bbg__article-content__subhead',
 			'wrapper' => false,
 		),
 		array(
 			'title' => 'Section Title',
-			'block' => 'h3',
+			'block' => 'h4',
 			'classes' => 'bbg__article-content__section-title',
 			'wrapper' => false,
 		),
