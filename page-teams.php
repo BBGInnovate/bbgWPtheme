@@ -36,7 +36,7 @@ get_header();
 					<div class="usa-grid-full">
 						<header class="page-header bbg-page__header">
 							<div class="usa-intro">
-								<h1 class="page-title bbg-team__name"><a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>" title="A directory of the current ODDI staff.">Our Teams</a></h1>
+								<h1 class="bbg-page__header-title">Our Teams</h1>
 								<h3 class="usa-font-lead">ODDI’s teams of designers, developers and storytellers help drive USIM digital projects.</h3>
 							</div>
 						</header><!-- .page-header -->
