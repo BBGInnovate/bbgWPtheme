@@ -14,24 +14,15 @@ This drives the homepage which has:
 
 * Teams - 5 categories whose IDs are entered into "*Featured Category IDs"* in General Settings.  Their description comes from the category description.
 
-<table>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Enter category IDs to control the teams on the homepage</td>
-    <td>Author bio includes "additional profile information" 
-Occupation - shows up on project detail page
-Active - determines whether the show on staff page
-Head of Team - select one head for each team</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+![image alt text](documentation/img/teams.png)
 
+Enter category IDs to control the teams on the homepage
+    
+![image alt text](documentation/img/usermeta.png)    
+Author bio includes additional profile information:
+*   Occupation - shows up on project detail page
+*   Active - determines whether the show on staff page
+*   Head of Team - select one head for each team
 
 
 
@@ -71,13 +62,13 @@ The landing page for a single team that includes:
 
 ## Custom Data
 
-**Selected Teams on Homepage - **These are driven by a general site setting called Featured Category IDs
+**Selected Teams on Homepage** - These are driven by a general site setting called Featured Category IDs
 
 **Team Description** - The description for a team comes from the category description
 
 **Team Head** - The head of a team is selected by navigating to a user’s page and selecting a value from the ‘is head of team’ dropdown
 
-**Assigning Users to Projects - **there is a users_in_project custom field attached to a given post that contains userIDs that contributed.  The right side will show the user and their occupation
+**Assigning Users to Projects** - There is a users_in_project custom field attached to a given post that contains userIDs that contributed.  The right side will show the user and their occupation
 
 ![image alt text](documentation/img/image_0.png)![image alt text](documentation/img/image_1.png)
 
