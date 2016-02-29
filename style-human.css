@@ -3466,18 +3466,6 @@ fieldset {
   max-width: 1040px;
   padding-right: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  /*
-  .u__breakline--mobile:before {
-  	@include media($small-screen) {
-  		content:"\a";
-  		white-space: pre;
-  	}
-  	@include media($medium-large-screen) {
-  		content:"";
-  		white-space: normal;
-  	}
-  }
-  */
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
@@ -3489,17 +3477,9 @@ fieldset {
     font-size: 6rem;
   }
 }
-.bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
-  display: inline-block;
-}
 @media screen and (min-width: 481px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
     display: block;
-  }
-}
-@media screen and (min-width: 900px) {
-  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
-    display: inline-block;
   }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
