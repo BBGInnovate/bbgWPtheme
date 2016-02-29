@@ -89,8 +89,9 @@ get_header();
 							</article>
 
 							<?php } ?>
+						</div>
 
-
+					<div class="usa-grid">
 							<a href="<?php echo get_permalink( get_page_by_path( 'staff' ) ) ?>">Meet the full ODDI team »</a>
 						</div>
 					</div>
