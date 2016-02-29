@@ -83,29 +83,37 @@ get_header(); ?>
 				</section>
 
 
+				<?php 
+					$qParams=array(
+						'post_type' => array('post'),
+						'posts_per_page' => $numPortfolioPostsToShow,
+						'category__and' => [$teamCategoryID, get_cat_id('Project')]
+					);
+					query_posts($qParams);
+				
+					if (have_posts()) :
+ 				?>
 
-				<section class="usa-section usa-grid">
-					<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'projects' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
-					<div class="bbg-grid__container">
-					<?php 
-						$qParams=array(
-							'post_type' => array('post'),
-							'posts_per_page' => $numPortfolioPostsToShow,
-							'category__and' => [$teamCategoryID, get_cat_id('Project')]
-						);
-						query_posts($qParams);
 
-						$counter=0;
-						while ( have_posts() )  {
-							the_post();
+						<section class="usa-section usa-grid">
+							<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'projects' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
+							<div class="bbg-grid__container">
+							
+							<?php
+								$counter=0;
+								while ( have_posts() )  {
+									the_post();
 
-							$gridClass = "bbg-grid--1-2-3";
-							get_template_part( 'template-parts/content-portfolio', get_post_format() );
-						}
-					?>
-					</div><!--.bbg-grid__containter -->
-					<a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
-				</section>
+									$gridClass = "bbg-grid--1-2-3";
+									get_template_part( 'template-parts/content-portfolio', get_post_format() );
+								}
+							?>
+							</div><!--.bbg-grid__containter -->
+							<a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
+						</section>
+				<?php
+					endif;
+				?>
 
 			</div><!-- .usa-grid -->
 		</main><!-- #main -->
