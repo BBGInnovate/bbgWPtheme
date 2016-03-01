@@ -13,6 +13,50 @@
 
 <?php
 
+/**** BEGIN: get next post link for project links ****/
+$projectCategoryID= get_cat_id('Project');
+$isProject=false;
+$categories=get_the_category();
+foreach ($categories as $cat) {
+	if ($cat->cat_ID == $projectCategoryID) {
+		$isProject=true;
+	}
+}
+if ($isProject) {
+	echo "it's a project!<BR>";
+	$post_id = $post->ID; // current post ID
+	$args = array( 
+		'category' => $projectCategoryID,
+		'orderby'  => 'post_date',
+		'order'    => 'DESC',
+		'posts_per_page' => -1
+	);
+	$posts = get_posts( $args );
+	// get IDs of posts retrieved from get_posts
+	$ids = array();
+	foreach ( $posts as $thepost ) {
+	    $ids[] = $thepost->ID;
+	}
+	// get and echo previous and next post in the same category
+	$thisindex = array_search( $post_id, $ids );
+
+	$prevLink="";
+	$nextLink="";
+	if ($thisindex > 0) {
+		$previd = $ids[ $thisindex - 1 ];
+		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '">Previous</a>';
+	}
+	if ($thisindex < (count($ids)-1)) {
+		$nextid = $ids[ $thisindex + 1 ];	
+	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '">Next</a>';
+	}
+}
+
+
+
+
+
+
 //the title/headline field, followed by the URL and the author's twitter handle
 $twitterText = "";
 $twitterText .= html_entity_decode( get_the_title() );
@@ -91,10 +135,9 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 			<?php the_content(); ?>
 
 			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bbginnovate' ),
-					'after'  => '</div>',
-				) );
+				echo $prevLink;
+				echo "<BR>"; 
+				echo $nextLink;
 			?>
 		</div><!-- .entry-content -->
 
