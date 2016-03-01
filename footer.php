@@ -17,8 +17,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer usa-footer usa-footer-big usa-bbg-footer-big usa-sans" role="contentinfo">
-		<div class="usa-grid usa-footer-return-to-top">
-			<a href="#">Return to top</a>
+		<div class="usa-grid">
+			<div class="usa-footer-return-to-top bbg-footer__return-to-top">
+				<a href="#">Return to top</a>
+			</div>
 		</div>
 		<div class="usa-footer-primary-section">
 			<div class="usa-grid-full">

@@ -3925,6 +3925,18 @@ article {
   }
 }
 
+.usa-footer-return-to-top {
+  border: 1px solid #CCC;
+  border-bottom: none;
+  border-radius: 0.3rem 0.3rem 0 0;
+  display: inline-block;
+  padding: 0;
+}
+.usa-footer-return-to-top a {
+  display: block;
+  padding: 1.5rem 2rem;
+}
+
 /*****************************/
 .bbg-embed-shell {
   max-width: 600px;

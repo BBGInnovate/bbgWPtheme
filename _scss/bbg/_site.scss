@@ -267,6 +267,18 @@ article {
 	}
 }
 
+.usa-footer-return-to-top {
+    border: 1px solid #CCC;
+    border-bottom: none;
+    border-radius: $border-radius $border-radius 0 0;
+    display: inline-block;
+    padding: 0;
+
+    a {
+    	display: block;
+    	padding: 1.5rem 2rem;
+    }
+}
 
 
 /*****************************/
