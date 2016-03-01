@@ -18,8 +18,12 @@ if ($paged > 1) {
 	$postsPerPage=$numPostsSubsequentPages;
 }
 
-
+$hasTeamFilter=false;
 if (get_query_var('cat',false)) {
+	$hasTeamFilter=true;
+	$teamCategoryID= get_query_var('cat',false);
+	$teamCategory=get_category($teamCategoryID);
+
 	$qParams=array(
 		'post_type' => array('post')
 		,'category__and' => array(get_cat_id('Project'),get_query_var('cat',false))
@@ -58,7 +62,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label--mobile large">Projects</h6>
+					<h6 class="bbg-label--mobile large">Projects <?php if ($hasTeamFilter) { echo "(" . $teamCategory->cat_name. ")"; }?></h6>
 				</header><!-- .page-header -->
 			</div>
 
