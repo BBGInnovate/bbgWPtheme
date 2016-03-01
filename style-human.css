@@ -2194,26 +2194,26 @@ li.usa-footer-primary-content:last-child {
   }
 }
 
-.usa-sign_up-block {
+.usa-sign_up-block, .bbg-footer__search {
   padding-bottom: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 @media screen and (min-width: 600px) {
-  .usa-sign_up-block {
+  .usa-sign_up-block, .bbg-footer__search {
     float: right;
     padding: 0;
   }
 }
-.usa-sign_up-block label:first-of-type {
+.usa-sign_up-block label:first-of-type, .bbg-footer__search label:first-of-type {
   margin-top: 0;
 }
-.usa-sign_up-block button {
+.usa-sign_up-block button, .bbg-footer__search button {
   float: none;
   margin-right: 0;
   margin-top: 1.5rem;
 }
-.usa-sign_up-block input {
+.usa-sign_up-block input, .bbg-footer__search input {
   width: 100%;
 }
 
@@ -3916,6 +3916,10 @@ article {
   font-size: .9em;
 }
 
+.bbg-footer__search {
+  padding: 2rem 3rem;
+}
+
 /*****************************/
 .bbg-embed-shell {
   max-width: 600px;
@@ -3938,16 +3942,6 @@ article {
   top: 0;
   left: 0;
   width: 100%;
-}
-
-/*****************************/
-.bbg-footer__search {
-  padding-top: 3rem;
-}
-@media screen and (min-width: 481px) {
-  .bbg-footer__search {
-    padding-top: 5.4rem;
-  }
 }
 
 /*****************************/
@@ -4628,15 +4622,6 @@ object {
   clear: both;
   display: inline;
   width: 100%;
-  /*
-  .menu-item-has-children > a {
-  	background-image: url('img/arrow-down.png');
-  	background-image: url('img/arrow-down.svg');
-  	background-position: right 3rem center;
-  	background-repeat: no-repeat;
-  	background-size: 1.3rem;
-  }
-  */
 }
 .main-navigation ul {
   display: block;
@@ -4822,7 +4807,6 @@ object {
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
-  overflow: hidden;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,

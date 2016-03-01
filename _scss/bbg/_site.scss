@@ -242,7 +242,7 @@ article {
 
 /*****************************/
 
-// Responsive YouTube embeds
+// footer styles
 .bbg-footer-big-top {
 	padding: 0 $site-margins;
 }
@@ -257,6 +257,12 @@ article {
 		font-size: .9em;
 	}
 }
+
+.bbg-footer__search {
+	@extend .usa-sign_up-block;
+	padding: 2rem $site-margins;
+}
+
 
 
 /*****************************/
@@ -288,16 +294,6 @@ article {
 
 
 
-/*****************************/
-
-// footer styles
-.bbg-footer__search {
-	padding-top: $site-margins;
-
-	@include media($small-screen) {
-		padding-top: $site-margins * 1.8;
-	}
-}
 
 
 
