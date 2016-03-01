@@ -57,12 +57,15 @@ get_header(); ?>
 					while ( have_posts() )  {
 						the_post();
 						$counter=$counter+1;
-						if ($counter == 1 && $currentPage==1) {
+						if ( $counter == 1 && $currentPage==1 ) {
 							$includeMetaFeatured = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							echo '<div class="usa-grid">';
-						}
-						else  {
+						} elseif ( $counter == 1 && $currentPage != 1 ) {
+							echo '<div class="usa-grid">';
+							$gridClass = "bbg-grid--1-2-3";
+							get_template_part( 'template-parts/content-portfolio', get_post_format() );
+						} else {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}

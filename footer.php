@@ -51,8 +51,7 @@
 						<li><a href="http://www.bbg.gov/open">Open Gov</a></li>
 					</ul>
 				</nav>
-					<div class="usa-width-one-third usa-sign_up-block">
-						<h3 class="usa-sign_up-header">Search</h3>
+					<div class="usa-width-one-third usa-sign_up-block bbg-footer__search">
 						<?php get_search_form ( $echo = true ) ?>
 					</div>
 			</div>

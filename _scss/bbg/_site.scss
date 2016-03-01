@@ -286,6 +286,21 @@ article {
 }
 
 
+
+
+/*****************************/
+
+// footer styles
+.bbg-footer__search {
+	padding-top: $site-margins;
+
+	@include media($small-screen) {
+		padding-top: $site-margins * 1.8;
+	}
+}
+
+
+
 /*****************************/
 
 //page header styles
