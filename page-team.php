@@ -109,7 +109,7 @@ get_header(); ?>
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
-							<a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ) ?>" style="display:block; clear: left;">Explore entire portfolio</a>
+							<a href="<?php echo add_query_arg('cat', get_query_var('cat'), get_permalink( get_page_by_path( 'projects' )))?>" style="display:block; clear: left;">Explore entire portfolio</a>
 						</section>
 				<?php
 					endif;

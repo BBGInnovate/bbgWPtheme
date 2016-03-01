@@ -18,13 +18,24 @@ if ($paged > 1) {
 	$postsPerPage=$numPostsSubsequentPages;
 }
 
-$qParams=array(
-	'post_type' => array('post')
-	,'cat' => get_cat_id('Project')
-	,'posts_per_page' => $postsPerPage
-	,'paged' => $currentPage
 
-);
+if (get_query_var('cat',false)) {
+	$qParams=array(
+		'post_type' => array('post')
+		,'category__and' => array(get_cat_id('Project'),get_query_var('cat',false))
+		,'posts_per_page' => $postsPerPage
+		,'paged' => $currentPage
+	);
+} else {
+	$qParams=array(
+		'post_type' => array('post')
+		,'cat' => get_cat_id('Project')
+		,'posts_per_page' => $postsPerPage
+		,'paged' => $currentPage
+	);
+}
+
+
 query_posts($qParams);
 
 
