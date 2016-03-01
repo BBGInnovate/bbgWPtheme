@@ -261,6 +261,10 @@ article {
 .bbg-footer__search {
 	@extend .usa-sign_up-block;
 	padding: 2rem $site-margins;
+
+	@include media($small-screen) {
+		padding-top: $site-margins * 1.8;
+	}
 }
 
 

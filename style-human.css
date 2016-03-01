@@ -3919,6 +3919,11 @@ article {
 .bbg-footer__search {
   padding: 2rem 3rem;
 }
+@media screen and (min-width: 481px) {
+  .bbg-footer__search {
+    padding-top: 5.4rem;
+  }
+}
 
 /*****************************/
 .bbg-embed-shell {
