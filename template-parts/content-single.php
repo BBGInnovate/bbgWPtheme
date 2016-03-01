@@ -7,22 +7,14 @@
  * @package bbginnovate
  */
 
-?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( "bbg__article" ); ?>>
-
-<?php
-
 /**** BEGIN: get next post link for project links ****/
 $projectCategoryID= get_cat_id('Project');
-$isProject=false;
-$categories=get_the_category();
-foreach ($categories as $cat) {
-	if ($cat->cat_ID == $projectCategoryID) {
-		$isProject=true;
-	}
-}
+$isProject=has_category($projectCategoryID);
+$prevLink="";
+$nextLink="";
+	
 if ($isProject) {
+	//$categories=get_the_category();
 	$post_id = $post->ID; // current post ID
 	$args = array( 
 		'category' => $projectCategoryID,
@@ -39,8 +31,6 @@ if ($isProject) {
 	// get and echo previous and next post in the same category
 	$thisindex = array_search( $post_id, $ids );
 
-	$prevLink="";
-	$nextLink="";
 	if ($thisindex > 0) {
 		$previd = $ids[ $thisindex - 1 ];
 		$prevPost=get_post($previd);
@@ -55,11 +45,6 @@ if ($isProject) {
 	}
 }
 /**** END CREATING NEXT/PREV LINKS ****/
-
-
-
-
-
 
 //the title/headline field, followed by the URL and the author's twitter handle
 $twitterText = "";
@@ -83,6 +68,8 @@ $twitterURL="//twitter.com/intent/tweet?text=" . rawurlencode( $twitterText );
 $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 ?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( "bbg__article" ); ?>>
 	<div class="usa-grid-full">
 
 		<?php
