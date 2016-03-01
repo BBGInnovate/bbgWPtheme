@@ -29,6 +29,9 @@ foreach($blogusers as $user) {
 	} 
 }
 
+$teamPorfolioLink=add_query_arg('cat', get_query_var('cat'), get_permalink( get_page_by_path( 'projects' )));
+
+
 get_header(); ?>
 
 
@@ -96,7 +99,7 @@ get_header(); ?>
 
 
 						<section class="usa-section usa-grid">
-							<h6 class="bbg-label small"><a href="<?php get_page_by_path( 'projects' ); ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
+							<h6 class="bbg-label small"><a href="<?php echo $teamPorfolioLink; ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
 							<div class="bbg-grid__container">
 							
 							<?php
@@ -109,7 +112,7 @@ get_header(); ?>
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
-							<a href="<?php echo add_query_arg('cat', get_query_var('cat'), get_permalink( get_page_by_path( 'projects' )))?>" style="display:block; clear: left;">Explore entire portfolio</a>
+							<a href="<?php echo $teamPorfolioLink; ?>" style="display:block; clear: left;">Explore entire portfolio</a>
 						</section>
 				<?php
 					endif;
