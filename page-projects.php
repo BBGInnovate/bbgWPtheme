@@ -70,8 +70,8 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
-					echo '</div><!-- .usa-grid-full -->';
 					the_posts_navigation();
+					echo '</div><!-- .usa-grid -->';
 				?>
 
 			<?php else : ?>
@@ -79,7 +79,7 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
-			</div><!-- .usa-grid -->
+			</div><!-- .usa-grid-full -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
