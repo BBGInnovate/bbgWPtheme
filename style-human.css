@@ -3171,8 +3171,8 @@ fieldset {
   margin-right: auto;
   margin-left: auto;
   padding-top: 0;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 .bbg__article-content blockquote.pullquote {
   border-bottom-color: #0071bc;
@@ -4470,7 +4470,8 @@ select {
 }
 .category-project .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-name {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 2.2rem;
 }
 .category-project .bbg__portfolio-members .bbg__portfolio-members__list .bbg__portfolio-members__member-job {
   color: #323a45;
