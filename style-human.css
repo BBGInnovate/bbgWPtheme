@@ -2681,10 +2681,8 @@ fieldset {
 }
 
 /*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
-@media screen and (min-width: 481px) {
-  .u--no-wrap {
-    white-space: nowrap;
-  }
+.u--no-wrap {
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 481px) {

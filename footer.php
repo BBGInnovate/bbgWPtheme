@@ -41,7 +41,6 @@
 						<h4 class="usa-footer-primary-link">Departments</h4>
 						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
 						<li><a href="http://oddi.bbg.gov">Innovation</a></li>
-						<li><a href="#">Research</a></li>
 						<li><a href="http://www.bbg.gov/blog/ceo_blog_post/">CEO's office</a></li>
 					</ul>
 					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">

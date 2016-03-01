@@ -1,7 +1,5 @@
 .u--no-wrap {
-	@include media($small-screen) {
-		white-space: nowrap;
-	}
+	white-space: nowrap;
 }
 
 .u--show-mobile {
