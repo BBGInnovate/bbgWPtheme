@@ -23,7 +23,6 @@ foreach ($categories as $cat) {
 	}
 }
 if ($isProject) {
-	echo "it's a project!<BR>";
 	$post_id = $post->ID; // current post ID
 	$args = array( 
 		'category' => $projectCategoryID,
@@ -44,13 +43,18 @@ if ($isProject) {
 	$nextLink="";
 	if ($thisindex > 0) {
 		$previd = $ids[ $thisindex - 1 ];
-		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '">Previous</a>';
+		$prevPost=get_post($previd);
+		$prevPostTitle=$prevPost->post_title;
+		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '">Previous: ' . $prevPostTitle . '</a>';
 	}
 	if ($thisindex < (count($ids)-1)) {
-		$nextid = $ids[ $thisindex + 1 ];	
-	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '">Next</a>';
+		$nextid = $ids[ $thisindex + 1 ];
+		$nextPost=get_post($nextid);
+		$nextPostTitle=$nextPost->post_title;
+	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '">Next: ' . $nextPostTitle . '</a>';
 	}
 }
+/**** END CREATING NEXT/PREV LINKS ****/
 
 
 
