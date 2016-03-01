@@ -17,8 +17,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer usa-footer usa-footer-big usa-bbg-footer-big usa-sans" role="contentinfo">
-		<div class="usa-grid usa-footer-return-to-top">
-			<a href="#">Return to top</a>
+		<div class="usa-grid">
+			<div class="usa-footer-return-to-top bbg-footer__return-to-top">
+				<a href="#">Return to top</a>
+			</div>
 		</div>
 		<div class="usa-footer-primary-section">
 			<div class="usa-grid-full">
@@ -51,8 +53,7 @@
 						<li><a href="http://www.bbg.gov/open">Open Gov</a></li>
 					</ul>
 				</nav>
-					<div class="usa-width-one-third usa-sign_up-block">
-						<h3 class="usa-sign_up-header">Search</h3>
+					<div class="usa-width-one-third usa-sign_up-block bbg-footer__search">
 						<?php get_search_form ( $echo = true ) ?>
 					</div>
 			</div>

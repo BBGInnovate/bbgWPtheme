@@ -2194,26 +2194,26 @@ li.usa-footer-primary-content:last-child {
   }
 }
 
-.usa-sign_up-block {
+.usa-sign_up-block, .bbg-footer__search {
   padding-bottom: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 @media screen and (min-width: 600px) {
-  .usa-sign_up-block {
+  .usa-sign_up-block, .bbg-footer__search {
     float: right;
     padding: 0;
   }
 }
-.usa-sign_up-block label:first-of-type {
+.usa-sign_up-block label:first-of-type, .bbg-footer__search label:first-of-type {
   margin-top: 0;
 }
-.usa-sign_up-block button {
+.usa-sign_up-block button, .bbg-footer__search button {
   float: none;
   margin-right: 0;
   margin-top: 1.5rem;
 }
-.usa-sign_up-block input {
+.usa-sign_up-block input, .bbg-footer__search input {
   width: 100%;
 }
 
@@ -2534,8 +2534,8 @@ fieldset {
 }
 .usa-search [type="submit"],
 .usa-search .usa-search-submit {
-  background-image: url("../img/search.png");
-  background-image: url("../img/search.svg");
+  background-image: url("img/search.png");
+  background-image: url("img/search.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   border-bottom-left-radius: 0;
@@ -2580,8 +2580,8 @@ fieldset {
   }
   .usa-search.usa-search-small [type="submit"],
   .usa-search.usa-search-small .usa-search-submit {
-    background-image: url("../img/search.png");
-    background-image: url("../img/search.svg");
+    background-image: url("img/search.png");
+    background-image: url("img/search.svg");
     background-position: 50%;
     background-repeat: no-repeat;
     width: 4.5rem;
@@ -3916,6 +3916,27 @@ article {
   font-size: .9em;
 }
 
+.bbg-footer__search {
+  padding: 2rem 3rem;
+}
+@media screen and (min-width: 481px) {
+  .bbg-footer__search {
+    padding-top: 5.4rem;
+  }
+}
+
+.usa-footer-return-to-top {
+  border: 1px solid #CCC;
+  border-bottom: none;
+  border-radius: 0.3rem 0.3rem 0 0;
+  display: inline-block;
+  padding: 0;
+}
+.usa-footer-return-to-top a {
+  display: block;
+  padding: 1.5rem 2rem;
+}
+
 /*****************************/
 .bbg-embed-shell {
   max-width: 600px;
@@ -4619,15 +4640,6 @@ object {
   clear: both;
   display: inline;
   width: 100%;
-  /*
-  .menu-item-has-children > a {
-  	background-image: url('img/arrow-down.png');
-  	background-image: url('img/arrow-down.svg');
-  	background-position: right 3rem center;
-  	background-repeat: no-repeat;
-  	background-size: 1.3rem;
-  }
-  */
 }
 .main-navigation ul {
   display: block;
@@ -4813,7 +4825,6 @@ object {
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
-  overflow: hidden;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,

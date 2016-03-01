@@ -7,11 +7,23 @@
  * @package bbginnovate
   template name: Project
  */
-$maxPostsToShow=10;
+
+$currentPage = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+$numPostsFirstPage=7;
+$numPostsSubsequentPages=6;
+
+$postsPerPage=$numPostsFirstPage;
+if ($paged > 1) {
+	$postsPerPage=$numPostsSubsequentPages;
+}
+
 $qParams=array(
-	'post_type' => array('post'),
-	'posts_per_page' => $maxPostsToShow,
-	'cat' => get_cat_id('Project')
+	'post_type' => array('post')
+	,'cat' => get_cat_id('Project')
+	,'posts_per_page' => $postsPerPage
+	,'paged' => $currentPage
+
 );
 query_posts($qParams);
 
@@ -45,18 +57,21 @@ get_header(); ?>
 					while ( have_posts() )  {
 						the_post();
 						$counter=$counter+1;
-						if ($counter == 1) {
+						if ( $counter == 1 && $currentPage==1 ) {
 							$includeMetaFeatured = FALSE;
 							get_template_part( 'template-parts/content-excerpt-featured', get_post_format() );
 							echo '<div class="usa-grid">';
-						}
-						else if ($counter <= $maxPostsToShow) {
+						} elseif ( $counter == 1 && $currentPage != 1 ) {
+							echo '<div class="usa-grid">';
+							$gridClass = "bbg-grid--1-2-3";
+							get_template_part( 'template-parts/content-portfolio', get_post_format() );
+						} else {
 							$gridClass = "bbg-grid--1-2-3";
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
-					echo '</div><!-- .usa-grid-full -->';
 					the_posts_navigation();
+					echo '</div><!-- .usa-grid -->';
 				?>
 
 			<?php else : ?>
@@ -64,7 +79,7 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
-			</div><!-- .usa-grid -->
+			</div><!-- .usa-grid-full -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
