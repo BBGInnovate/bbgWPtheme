@@ -656,10 +656,20 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 		/**** BEGIN PREPARING AUTHOR vars ****/
 		$authorPath = get_author_posts_url($curauth -> ID);
 		$authorName = $curauth -> display_name;
-		$authorEmail = $curauth -> user_email;
 		$avatar = get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 150 ) );
-		$website = $curauth -> user_url;
-		$website = str_replace('http://', '', $website);
+		//$website = $curauth -> user_url;
+		//$website = str_replace('http://', '', $website);
+		$website = '';
+		//$authorEmail = $curauth -> user_email;
+		$authorEmail = "";
+
+		$teamLeader = $curauth->headOfTeam;
+		$addSeparator = FALSE;
+		if ( isset($teamLeader) && $teamLeader!="" ){
+			$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
+			$addSeparator = TRUE;
+		}
+
 
 
 		$m = get_user_meta( $theAuthorID );
@@ -702,18 +712,16 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 					</div><!-- .bbg-staff__author-description -->
 
 					<div class="bbg__author-contact">
-						<span class="bbg__author-contact__email"><a href="mailto:<?php echo $authorEmail ?>"><?php echo $authorEmail; ?></a></span>
 						<?php
 							if ( $twitterHandle && $twitterHandle != '' ) {
 								$twitterHandle = str_replace( "@", "", $twitterHandle );
-								$twitterHandle = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
-							echo $twitterHandle;
+								$twitterLink = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
+								
+								if ( $addSeparator ) {
+									$twitterLink = '<span class="u--seperator"></span> ' . $twitterLink;
+								}
 							}
-
-							if ( $website && $website != '' ) {
-							$website = '<span class="bbg__author-contact__website"><a href="' . $website . '">' . $website . '</a></span>';
-							echo $website;
-							}
+							echo $authorEmail . $twitterLink;
 						?>
 					</div> <!-- .bbg-staff__author-contact -->
 

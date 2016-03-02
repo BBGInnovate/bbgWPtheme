@@ -484,10 +484,13 @@
 			@include media($medium-screen) {
 				display: inline-block;
 				margin-right: .25rem;
-
+				/*
+				//Temporarily removing this because most profiles don't include an email.
+				//You could move this to the .email if you needed to...
 				&:before {
 					content: " | ";
 				}
+				*/
 			}
 		}
 

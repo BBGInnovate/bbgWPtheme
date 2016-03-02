@@ -3356,9 +3356,13 @@ fieldset {
   .bbg__article-author .bbg__author-contact .bbg__author-contact__twitter {
     display: inline-block;
     margin-right: .25rem;
-  }
-  .bbg__article-author .bbg__author-contact .bbg__author-contact__twitter:before {
-    content: " | ";
+    /*
+    //Temporarily removing this because most profiles don't include an email.
+    //You could move this to the .email if you needed to...
+    &:before {
+    	content: " | ";
+    }
+    */
   }
 }
 .bbg__article-author .bbg__author-contact .bbg__author-contact__website {
