@@ -8,6 +8,11 @@
   template name: Project
  */
 
+/***** BEGIN PROJECT PAGINATION LOGIC 
+There are some nuances to this.  Note that we're not using the paged parameter because we don't have the same number of posts on every page.  Instead we use the offset parameter.  The 'posts_per_page' limits the number displayed on the current page and is used to calculate offset.
+http://codex.wordpress.org/Making_Custom_Queries_using_Offset_and_Pagination
+****/
+
 $currentPage = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 $numPostsFirstPage=7;
