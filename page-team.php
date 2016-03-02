@@ -108,12 +108,12 @@ get_header(); ?>
 								while ( have_posts() )  {
 									the_post();
 
-									$gridClass = "bbg-grid--1-2-3";
+									$gridClass = "bbg-grid--1-3-3";
 									get_template_part( 'template-parts/content-portfolio', get_post_format() );
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
-							<a href="<?php echo $fullOddiPorfolioLink; ?>" style="display:block; clear: left;">Explore entire portfolio</a>
+							<a href="<?php echo $teamPorfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio</a>
 						</section>
 				<?php
 					endif;
