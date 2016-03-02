@@ -62,7 +62,15 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h6 class="bbg-label--mobile large">Projects <?php if ($hasTeamFilter) { echo "(" . $teamCategory->cat_name. ")"; }?></h6>
+					<h6 class="bbg-label--mobile large">
+						<?php if ($hasTeamFilter) {
+							echo "" . $teamCategory->cat_name. " projects";
+						} else {
+							echo 'Projects';
+						}
+
+						?>
+					</h6>
 				</header><!-- .page-header -->
 			</div>
 
