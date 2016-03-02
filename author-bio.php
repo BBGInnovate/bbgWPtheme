@@ -11,16 +11,21 @@ $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name
 
 /**** BEGIN PREPARING AUTHOR vars ****/
 $theAuthorID=$curauth->ID;
-$website = $curauth->user_url;
 $authorName=$curauth->display_name;
+$website = "";//$website = $curauth->user_url;
+
 $authorEmail = "";
 if ( $curauth->isActive=="on" ) {
-	$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
+	//$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
 }
+$teamLeader = $curauth->headOfTeam;
+if ( isset($teamLeader) && $teamLeader!="" ){
+	$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a> // ';
+}
+
+
 $avatar=get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 100 ) );
 
-
-$website = "";
 
 
 $m=get_user_meta( $theAuthorID );
@@ -92,7 +97,7 @@ wp_reset_query();
 
 						if ( $twitterHandle && $twitterHandle != '' ) {
 							$twitterHandle=str_replace( "@", "", $twitterHandle );
-							$twitterHandle='<span class="sep"> | </span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+							$twitterHandle='<span class="sep"></span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
 						}
 						?>
 

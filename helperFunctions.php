@@ -9,6 +9,7 @@
 		$authorDescription = esc_html( $user->description );
 		$theauthorid = esc_html( $user->ID );
 		$twitterLink = "";
+		$teamLeader = $user->headOfTeam;
 
 		//Disabling the website url for now
 		//$website = esc_html( $user->user_url );
@@ -58,9 +59,15 @@
 				<?php 
 					if ( $twitterHandle && $twitterHandle != '' ) {
 						$twitterHandle = str_replace("@", "", $twitterHandle);
-						$twitterLink = '</a><span class="sep"> // </span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
+						$twitterLink = '</a><span class="sep"></span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
 					}
-					echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink .'</div>';
+
+					$authorEmailLink = '';
+					if ( isset($teamLeader) && $teamLeader!="" ){
+						$authorEmailLink = '<a href="mailto:' . $authorEmail . '" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a> // ';
+					}
+					//echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink .'</div>';
+					echo '<div class="bbg-staff__author-contact">' . $authorEmailLink . $twitterLink . '</div>';
 				?>
 				<div class="bbg-staff__author-description">
 					<div class="bbg-staff__author-bio">
