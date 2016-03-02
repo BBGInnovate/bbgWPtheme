@@ -26,12 +26,13 @@ if ( isset($teamLeader) && $teamLeader!="" ){
 }
 
 
-$avatar=get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 100 ) );
+$avatar = get_avatar( $theAuthorID , apply_filters( 'change_avatar_css', 100 ) );
 
 
 
-$m=get_user_meta( $theAuthorID );
+$m = get_user_meta( $theAuthorID );
 $twitterHandle ="";
+$twitterLink = "";
 if ( isset( $m['twitterHandle'] ) ) {
 	$twitterHandle=$m['twitterHandle'][0];
 }
@@ -40,7 +41,8 @@ $occupation = "";
 if ( isset( $m['occupation'] ) ) {
 	$occupation=$m['occupation'][0];
 }
-$description="";
+
+$description = "";
 if ( isset( $m['description'] ) ) {
 	$description=$m['description'][0];
 }
