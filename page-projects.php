@@ -14,12 +14,17 @@ $numPostsFirstPage=7;
 $numPostsSubsequentPages=6;
 
 $postsPerPage=$numPostsFirstPage;
-if ($paged > 1) {
+$offset=0;
+if ($currentPage > 1) {
 	$postsPerPage=$numPostsSubsequentPages;
+	$offset=$numPostsFirstPage + ($currentPage-2)*$numPostsSubsequentPages;
 }
+
+
 
 $hasTeamFilter=false;
 if (get_query_var('cat',false)) {
+	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
 	$teamCategoryID= get_query_var('cat',false);
 	$teamCategory=get_category($teamCategoryID);
@@ -28,14 +33,14 @@ if (get_query_var('cat',false)) {
 		'post_type' => array('post')
 		,'category__and' => array(get_cat_id('Project'),get_query_var('cat',false))
 		,'posts_per_page' => $postsPerPage
-		,'paged' => $currentPage
+		,'offset' => $offset
 	);
 } else {
 	$qParams=array(
 		'post_type' => array('post')
 		,'cat' => get_cat_id('Project')
 		,'posts_per_page' => $postsPerPage
-		,'paged' => $currentPage
+		,'offset' => $offset
 	);
 }
 
