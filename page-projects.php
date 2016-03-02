@@ -85,8 +85,12 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-portfolio', get_post_format() );
 						}
 					}
-					the_posts_navigation();
 					echo '</div><!-- .usa-grid -->';
+
+					echo '<div class="usa-grid">';
+						the_posts_navigation();
+					echo '</div><!-- .usa-grid -->';
+
 				?>
 
 			<?php else : ?>
