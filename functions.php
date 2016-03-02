@@ -674,6 +674,7 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 
 		$m = get_user_meta( $theAuthorID );
 		$twitterHandle = "";
+		$twitterLink = "";
 		if ( isset( $m['twitterHandle'] ) ) {
 			$twitterHandle = $m['twitterHandle'][0];
 		}
