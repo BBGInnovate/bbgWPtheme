@@ -3990,6 +3990,9 @@ article {
 
 .bbg-footer__return-to-top__container {
   text-align: right;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
 }
 
 .bbg-footer__return-to-top {
