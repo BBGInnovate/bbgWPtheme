@@ -70,41 +70,6 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 ?>
 
 <style>
-	.bbg__article__nav {
-		display: block;
-		position: fixed;
-		bottom: 100px;
-		max-width: 1024px;
-		width: 100%;
-		margin: 0 auto;
-		text-align: center;
-		z-index: 1;
-	}
-
-	.bbg__article__nav-link {
-		width: 30px;
-		height: 30px;
-		background-color: #900;
-	}
-
-	.bbg__article__nav-icon {
-		padding: 0;
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
-
-	.bbg__article__nav-text {
-		display: none;
-	}
-
-	.bbg__article__nav-previous {
-		float: left;
-	}
-
-	.bbg__article__nav-next {
-		float: right;
-	} 
 
 </style>
 
