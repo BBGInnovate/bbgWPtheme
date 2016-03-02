@@ -227,88 +227,12 @@ article {
 	}
 }
 
-
-
-
 .bbg-header__site-title--breakline {
 	display: block;
 	@include media($medium-large-screen) {
 		display: inline-block;
 	}
 }
-
-
-
-
-/*****************************/
-
-// footer styles
-.bbg-footer-big-top {
-	padding: 0 $site-margins;
-}
-
-.bbg-continue {
-	a {
-		font: {
-			family: $font-sans;
-			weight: 700;
-		}
-		text-transform: uppercase;
-		font-size: .9em;
-	}
-}
-
-.bbg-footer__search {
-	@extend .usa-sign_up-block;
-	padding: 2rem $site-margins;
-
-	@include media($small-screen) {
-		padding-top: $site-margins * 1.8;
-	}
-}
-
-.usa-footer-return-to-top {
-    border: 1px solid #CCC;
-    border-bottom: none;
-    border-radius: $border-radius $border-radius 0 0;
-    display: inline-block;
-    padding: 0;
-
-    a {
-    	display: block;
-    	padding: 1.5rem 2rem;
-    }
-}
-
-
-/*****************************/
-
-// Responsive YouTube embeds
-.bbg-embed-shell {
-	max-width: $article-max-width;
-	margin: $site-margins auto;
-}
-
-.embed-container {
-	height: 0;
-	max-width: 100%;
-	position: relative;
-	padding-bottom: 56.25%;
-	overflow: hidden;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-
-
 
 
 
@@ -342,6 +266,88 @@ article {
 }
 
 
+
+
+/*****************************/
+
+// footer styles
+.bbg-footer-big-top {
+	padding: 0 $site-margins;
+}
+
+.bbg-continue {
+	a {
+		font: {
+			family: $font-sans;
+			weight: 700;
+		}
+		text-transform: uppercase;
+		font-size: .9em;
+	}
+}
+
+.bbg-footer__search {
+	@extend .usa-sign_up-block;
+	padding: 2rem $site-margins;
+
+	@include media($medium-screen) {
+		padding: {
+			top: $site-margins * 1.8;
+			right: 0;
+			bottom: 2rem;
+			left: 0;
+		}
+	}
+}
+
+.bbg-footer__return-to-top__container {
+	text-align: right;
+}
+
+.bbg-footer__return-to-top {
+	border: 1px solid #CCC;
+	border-bottom: none;
+	border-radius: $border-radius $border-radius 0 0;
+	display: inline-block;
+	padding: 0;
+
+	a {
+		display: block;
+		padding: 1.5rem 2rem;
+	}
+}
+
+
+/*****************************/
+
+// Responsive YouTube embeds
+.bbg-embed-shell {
+	max-width: $article-max-width;
+	margin: $site-margins auto;
+}
+
+.embed-container {
+	height: 0;
+	max-width: 100%;
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+
+
+
+
 /*****************************/
 
 // Excerpt styles
@@ -369,9 +375,11 @@ article {
 		top: $site-margins / 2;
 		bottom: 1rem;
 	}
+
 	@include media($medium-screen) {
 		font-size: $h1-font-size;
 	}
+
 	@include media($medium-large-screen) {
 		font-size: $h1-font-size * 1.25;
 	}
@@ -405,6 +413,7 @@ article {
 .bbg-blog__excerpt--list {
 	@include clearfix();
 	margin-bottom: $site-margins * .8;
+
 	@include media($small-screen) {
 		margin-bottom: $site-margins;
 	}
@@ -433,6 +442,7 @@ article {
 		border-left: $border-dotted;
 		padding-left: 3%;
 	}
+
 	.bbg-blog__excerpt-title--list {
 		font-size: $h3-font-size * .9;
 		font-weight: 500;
@@ -440,12 +450,14 @@ article {
 			font-size: $h3-font-size;
 		}
 	}
+
 	.bbg-blog__excerpt--list {
 		margin-bottom: 1rem;
 		@include media($medium-screen) {
 			margin-bottom: 2rem;
 		}
 	}
+
 	.bbg-blog__excerpt--list:last-of-type {
 		margin-bottom: 0rem;
 	}
