@@ -137,3 +137,11 @@ blockquote.pullquote {
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
   padding-left: 4.5rem;
 }
+
+/**
+ * BBG Taglines
+ */
+.bbg-tagline {
+  color: #757575;
+  font-size: .85rem;
+}

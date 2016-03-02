@@ -717,7 +717,7 @@ if ( ! function_exists( 'bbg_post_author_bottom_card' ) ) :
 							if ( $twitterHandle && $twitterHandle != '' ) {
 								$twitterHandle = str_replace( "@", "", $twitterHandle );
 								$twitterLink = '<span class="bbg__author-contact__twitter"><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a></span>';
-								
+
 								if ( $addSeparator ) {
 									$twitterLink = '<span class="u--seperator"></span> ' . $twitterLink;
 								}
@@ -778,6 +778,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'pullquote',
 			'wrapper' => false,
 		),
+		array(
+			'title' => 'Innovation Series tag',
+			'block' => 'span',
+			'classes' => 'bbg-tagline',
+			'wrapper' => true,
+		)
 
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
