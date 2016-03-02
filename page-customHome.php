@@ -9,8 +9,6 @@
  */
 
 $templateName = "customHome";
-include_once("helperFunctions.php");
-
 
 /*
 require(dirname(__FILE__).'/../../fuego/init.php');

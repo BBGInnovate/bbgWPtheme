@@ -8,16 +8,6 @@
   template name: Teams Landing Page
  */
 
-include_once("helperFunctions.php");
-
-
-/*
-require(dirname(__FILE__).'/../../fuego/init.php');
-use OpenFuego\app\Getter as Getter;
-$fuego = new Getter();
-siteintroduction
-*/
-
 get_header();
 
 ?>
