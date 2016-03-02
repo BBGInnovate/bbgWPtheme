@@ -271,6 +271,11 @@ article {
 /*****************************/
 
 // footer styles
+.bbg-footer {
+	position: relative;
+	z-index: 9999;
+}
+
 .bbg-footer-big-top {
 	padding: 0 $site-margins;
 }

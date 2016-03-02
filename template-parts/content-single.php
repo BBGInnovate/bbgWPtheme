@@ -35,13 +35,13 @@ if ($isProject) {
 		$previd = $ids[ $thisindex - 1 ];
 		$prevPost=get_post($previd);
 		$prevPostTitle=$prevPost->post_title;
-		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '">Previous: ' . $prevPostTitle . '</a>';
+		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '"><span class="bbg__article__nav-icon"></span><span class="bbg__article__nav-text">Previous: ' . $prevPostTitle . '</span></a>';
 	}
 	if ($thisindex < (count($ids)-1)) {
 		$nextid = $ids[ $thisindex + 1 ];
 		$nextPost=get_post($nextid);
 		$nextPostTitle=$nextPost->post_title;
-	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '">Next: ' . $nextPostTitle . '</a>';
+	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '"><span class="bbg__article__nav-icon"></span><span class="bbg__article__nav-text">Next: ' . $nextPostTitle . '</span></a>';
 	}
 }
 /**** END CREATING NEXT/PREV LINKS ****/
@@ -69,6 +69,45 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 ?>
 
+<style>
+	.bbg__article__nav {
+		display: block;
+		position: fixed;
+		bottom: 100px;
+		max-width: 1024px;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.bbg__article__nav-link {
+		width: 30px;
+		height: 30px;
+		background-color: #900;
+	}
+
+	.bbg__article__nav-icon {
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.bbg__article__nav-text {
+		display: none;
+	}
+
+	.bbg__article__nav-previous {
+		float: left;
+	}
+
+	.bbg__article__nav-next {
+		float: right;
+	} 
+
+</style>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( "bbg__article" ); ?>>
 	<div class="usa-grid-full">
 
@@ -86,6 +125,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				if ($featuredImageCutline != "") {
 					echo "<div class='bbg__article-header__caption'>$featuredImageCutline</div>";
 				}
+
 				echo '</div>';
 
 				
@@ -93,7 +133,18 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		?><!-- .bbg__article-header__thumbnail -->
 	</div>
 
+				<div class="bbg__article__nav">
+					<div class="bbg__article__nav-link bbg__article__nav-previous">
+						<?php echo $prevLink; ?>
+					</div>
+					<div class="bbg__article__nav-link bbg__article__nav-next">
+						<?php echo $nextLink; ?>
+					</div>
+				</div><!-- .bbg__article__nav -->
+
+
 	<div class="usa-grid">
+
 		<header class="entry-header bbg__article-header">
 
 		<?php echo bbginnovate_post_categories( '', true, true ); ?>
@@ -125,11 +176,12 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		<div class="entry-content bbg__article-content">
 			<?php the_content(); ?>
 
-			<?php
-				echo $prevLink;
-				echo "<BR>"; 
-				echo $nextLink;
-			?>
+
+
+		<!-- old nav location -->
+
+
+
 		</div><!-- .entry-content -->
 
 		<div class="bbg__article-sidebar">

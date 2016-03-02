@@ -3377,6 +3377,11 @@ fieldset {
   }
 }
 
+.bbg-tagline {
+  color: #757575;
+  font-size: 1.4rem;
+}
+
 .bbg__article-footer {
   margin-top: 6rem;
 }
@@ -3920,6 +3925,11 @@ article {
 }
 
 /*****************************/
+.bbg-footer {
+  position: relative;
+  z-index: 9999;
+}
+
 .bbg-footer-big-top {
   padding: 0 3rem;
 }
@@ -4434,6 +4444,10 @@ select {
 
 .screen-reader-text {
   display: none;
+}
+
+.usa-social-links a {
+  display: inline-block;
 }
 
 /**
