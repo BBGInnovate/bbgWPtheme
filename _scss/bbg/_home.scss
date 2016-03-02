@@ -116,12 +116,12 @@
 	.bbg-social {
 		max-width: 100%;
 		position: absolute;
-			right: 0;
+			right: 1.5rem;
 			top: 6rem;
 		padding:0;
 
 		@include media($large-screen) {
-			right: -40px;
+			right: -$social-icon-home - 10px;
 		}
 	}
 
@@ -135,11 +135,12 @@
 
 			.bbg-social__list__link {
 				background-color: #91C7DC;
-				border-radius: 0;
-				margin-bottom: 1px;
+				border-radius: 50%;
+				margin-bottom: 1rem;
 
 				:hover {
 					background-color: #FFF;
+					border-radius: 50%;
 				};
 
 				a {
@@ -148,9 +149,9 @@
 						repeat: no-repeat;
 						size: 45px;
 					}
-					height: 40px;
+					height: $social-icon-home;
 					display: block;
-					width: 40px;
+					width: $social-icon-home;
 
 					// GitHub link
 					&.bbg-icon-github {
@@ -179,28 +180,30 @@
 
 				}
 			}
+
 			.bbg-social__list__link:first-of-type {
-				border-radius: $border-radius 0 0 0;
+				//border-radius: $border-radius 0 0 0;
+			}
+
+			.bbg-social__list__link:last-of-type {
+				//border-radius: 0 0 0 $border-radius;
+			}
+		}
+
+		@include media($large-screen) {
+			.bbg-social__list__link:first-of-type {
+				//border-radius: 0;
+			}
+
+			.bbg-social__list__link:first-of-type {
+				//border-radius: 0 $border-radius 0 0;
 			}
 			.bbg-social__list__link:last-of-type {
-				border-radius: 0 0 0 $border-radius;
-			}
-
-			@include media($large-screen) {
-				.bbg-social__list__link:first-of-type {
-					border-radius: 0;
-				}
-
-				.bbg-social__list__link:first-of-type {
-					border-radius: 0 $border-radius 0 0;
-				}
-				.bbg-social__list__link:last-of-type {
-					border-radius: 0 0 $border-radius 0;
-				}
-
+				//border-radius: 0 0 $border-radius 0;
 			}
 
 		}
+
 
 	}
 

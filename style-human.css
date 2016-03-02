@@ -3589,13 +3589,13 @@ fieldset {
 .bbg-banner .bbg-social {
   max-width: 100%;
   position: absolute;
-  right: 0;
+  right: 1.5rem;
   top: 6rem;
   padding: 0;
 }
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-social {
-    right: -40px;
+    right: -50px;
   }
 }
 .bbg-banner .bbg-social__list {
@@ -3621,11 +3621,12 @@ fieldset {
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link {
     background-color: #91C7DC;
-    border-radius: 0;
-    margin-bottom: 1px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link :hover {
     background-color: #FFF;
+    border-radius: 50%;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link a {
     background-position: center center;
@@ -3647,23 +3648,6 @@ fieldset {
   .bbg-banner .bbg-social__list .bbg-social__list__link a.bbg-icon-twitter {
     background-image: url(img/social-icons/png/twitter16.png);
     background-image: url(img/social-icons/svg/twitter16.svg);
-  }
-  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
-    border-radius: 0.3rem 0 0 0;
-  }
-  .bbg-banner .bbg-social__list .bbg-social__list__link:last-of-type {
-    border-radius: 0 0 0 0.3rem;
-  }
-}
-@media screen and (min-width: 600px) and (min-width: 1201px) {
-  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
-    border-radius: 0;
-  }
-  .bbg-banner .bbg-social__list .bbg-social__list__link:first-of-type {
-    border-radius: 0 0.3rem 0 0;
-  }
-  .bbg-banner .bbg-social__list .bbg-social__list__link:last-of-type {
-    border-radius: 0 0 0.3rem 0;
   }
 }
 
