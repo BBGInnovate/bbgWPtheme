@@ -11,6 +11,16 @@
 		$twitterLink = "";
 		$teamLeader = $user->headOfTeam;
 
+
+		$authorEmailLink = '';
+		$addSeparator = FALSE;
+		if ( isset($teamLeader) && $teamLeader!="" ){
+			//$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
+			$authorEmailLink = '<a href="mailto:' . $authorEmail . '" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>';
+
+			$addSeparator = TRUE;
+		}
+
 		//Disabling the website url for now
 		//$website = esc_html( $user->user_url );
 
@@ -59,14 +69,12 @@
 				<?php 
 					if ( $twitterHandle && $twitterHandle != '' ) {
 						$twitterHandle = str_replace("@", "", $twitterHandle);
-						$twitterLink = '</a><span class="sep"></span><a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
-					}
+						$twitterLink = '<a href="//www.twitter.com/' . $twitterHandle. '" class="bbg-staff__author__contact-link twitter">@' . $twitterHandle . '</a> ';
 
-					$authorEmailLink = '';
-					if ( isset($teamLeader) && $teamLeader!="" ){
-						$authorEmailLink = '<a href="mailto:' . $authorEmail . '" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a> // ';
+						if ( $addSeparator ) {
+							$twitterLink = '<span class="u--seperator"></span> ' . $twitterLink;
+						}
 					}
-					//echo '<div class="bbg-staff__author-contact"><a href="mailto:'.$authorEmail.'" class="bbg-staff__author__contact-link email">'.$authorEmail . '</a>'. $twitterLink .'</div>';
 					echo '<div class="bbg-staff__author-contact">' . $authorEmailLink . $twitterLink . '</div>';
 				?>
 				<div class="bbg-staff__author-description">

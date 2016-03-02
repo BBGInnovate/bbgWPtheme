@@ -16,6 +16,11 @@
 	}
 }
 
+//Used to consistently specifiy seperators throughout the site.
+.u--seperator:before {
+	content: " | ";
+}
+
 
 @mixin backgroundCover() {
 	background-size: cover;
@@ -39,6 +44,7 @@
 	margin-right: auto;
 }
 
+
 // Define the larger typed readin for first paragraphs and page headers
 .readin {
 	font: {
@@ -56,6 +62,3 @@
 		font-size: $read-in-font-size;
 	}
 }
-
-
-

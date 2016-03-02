@@ -2700,6 +2700,10 @@ fieldset {
   }
 }
 
+.u--seperator:before {
+  content: " | ";
+}
+
 .readin, .bbg-staff__author-bio, .single-post .bbg__article-content > p:first-of-type, .bbg-page__header-description {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   font-size: 1.6rem;

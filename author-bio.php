@@ -19,8 +19,10 @@ if ( $curauth->isActive=="on" ) {
 	//$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
 }
 $teamLeader = $curauth->headOfTeam;
+$addSeparator = FALSE;
 if ( isset($teamLeader) && $teamLeader!="" ){
-	$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a> // ';
+	$authorEmail = '<a href="mailto:'. $curauth->user_email .'">'. $curauth->user_email .'</a>';
+	$addSeparator = TRUE;
 }
 
 
@@ -97,19 +99,22 @@ wp_reset_query();
 
 						if ( $twitterHandle && $twitterHandle != '' ) {
 							$twitterHandle=str_replace( "@", "", $twitterHandle );
-							$twitterHandle='<span class="sep"></span><a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+							$twitterLink='<a href="//www.twitter.com/' . $twitterHandle. '">@' . $twitterHandle . '</a> ';
+
+							if ( $addSeparator ) {
+								$twitterLink = '<span class="u--seperator"></span> ' . $twitterLink;
+							}
 						}
 						?>
 
 
 							<div class="bbg-author-contact">
-							<?php echo $authorEmail . $twitterHandle; ?>
+							<?php echo $authorEmail . $twitterLink; ?>
 							</div>
 
 						<div class="bbg-author-bio">
 							<?php echo $description; ?>
 						</div>
-
 
 
 				</div><!-- .author-description -->
