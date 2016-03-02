@@ -17,7 +17,7 @@ $ogTitle=$teamCategory->name . " team page";
 $ogDescription=$teamCategory->description; 
 /*** END SHARING VARS ****/
 
-$numPortfolioPostsToShow=9;
+$numPortfolioPostsToShow=3;
 $numBlogPostsToShow=2;
 
 $blogusers = get_users();
@@ -30,6 +30,7 @@ foreach($blogusers as $user) {
 }
 
 $teamPorfolioLink=add_query_arg('cat', get_query_var('cat'), get_permalink( get_page_by_path( 'projects' )));
+$fullOddiPorfolioLink=get_permalink( get_page_by_path( 'projects' ));
 
 
 get_header(); ?>
@@ -112,7 +113,7 @@ get_header(); ?>
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
-							<a href="<?php echo $teamPorfolioLink; ?>" style="display:block; clear: left;">Explore entire portfolio</a>
+							<a href="<?php echo $fullOddiPorfolioLink; ?>" style="display:block; clear: left;">Explore entire portfolio</a>
 						</section>
 				<?php
 					endif;
