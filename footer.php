@@ -16,12 +16,13 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer usa-footer usa-footer-big bbg-footer bbg-footer--big usa-sans" role="contentinfo">
-		<div class="usa-grid bbg-footer__return-to-top__container">
-			<div class="usa-footer-return-to-top bbg-footer__return-to-top">
-				<a href="#">Return to top</a>
-			</div>
+	<div class="usa-grid bbg-footer__return-to-top__container">
+		<div class="usa-footer-return-to-top bbg-footer__return-to-top">
+			<a href="#">Return to top</a>
 		</div>
+	</div>
+
+	<footer id="colophon" class="site-footer usa-footer usa-footer-big bbg-footer bbg-footer--big usa-sans" role="contentinfo">
 		<div class="usa-footer-primary-section">
 			<div class="usa-grid-full">
 				<nav class="usa-footer-nav usa-width-two-thirds">

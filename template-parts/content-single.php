@@ -100,10 +100,10 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 		?><!-- .bbg__article-header__thumbnail -->
 	</div>
 
-				<div class="bbg__article__nav">
-					<?php echo $prevLink; ?>
-					<?php echo $nextLink; ?>
-				</div><!-- .bbg__article__nav -->
+	<div class="bbg__article__nav">
+		<?php echo $prevLink; ?>
+		<?php echo $nextLink; ?>
+	</div><!-- .bbg__article__nav -->
 
 
 	<div class="usa-grid">

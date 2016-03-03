@@ -311,7 +311,7 @@ article {
 		right: auto;
 		left: auto;
 	}
-	max-width: $article-max-width;
+	max-width: $article-max-width + 60px;;
 }
 
 .bbg-footer__return-to-top {
