@@ -6,15 +6,15 @@ $read-in-font-size:         rem(20px);
 $caption-font-size:         rem(12px);
 $site-title-font-size:      rem(40px);
 
-$base-line-height:    1.7;
-$small-line-height:   1.4;
+$base-line-height:          1.7;
+$small-line-height:         1.4;
 
-$text-shadow: 		  1px 1px 1px rgba(#000, .5);
+$text-shadow:               1px 1px 1px rgba(#000, .5);
 
-$font-light:  	300;
-$font-normal: 	400;
-$font-medium:	500;
-$font-bold:  	700;
+$font-light:    300;
+$font-normal:   400;
+$font-medium:   500;
+$font-bold:     700;
 
 $focus-shadow:	none;
 
@@ -28,7 +28,7 @@ $color-visited:               #4773aa;
 
 
 // Mobile First Breakpoints
-$small-medium-screen:		  481px; //This repeats $small-screen variable
+$small-medium-screen:         481px; //This repeats $small-screen variable
 $medium-large-screen:         900px;
 
 
@@ -36,7 +36,7 @@ $medium-large-screen:         900px;
 $border-dotted:               1px dotted #CCC;
 $border-dotted-section:       1px dotted #981b1e;
 $border-solid:                1px solid #CCC;
-$border-solid-links:		  3px solid #02bfe7;
+$border-solid-links:          3px solid #02bfe7;
 $box-transparent:             rgba(#000, .4);
 
 

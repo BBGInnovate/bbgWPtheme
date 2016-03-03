@@ -236,6 +236,10 @@
 		text-align: left;
 	}
 
+	ul {
+		width: 100%;
+	}
+
 	li {
 		margin-bottom: 3.5em;
 	}
@@ -412,7 +416,7 @@
 	text-align: center;
 	@include clearfix();
 
-	@include media($small-medium-screen) {
+	@include media($small-screen) {
 		bottom: 4rem;
 		text-align: left;
 	}
@@ -425,7 +429,7 @@
 	.bbg__author-description {
 		margin-bottom: 1rem;
 
-		@include media($small-medium-screen) {
+		@include media($small-screen) {
 			margin-left: 110px;
 		}
 
@@ -454,7 +458,7 @@
 		margin-bottom: 0;
 		padding-left: 0;
 
-		@include media($small-medium-screen) {
+		@include media($small-screen) {
 			margin-left: 110px;
 		}
 
@@ -484,13 +488,6 @@
 			@include media($medium-screen) {
 				display: inline-block;
 				margin-right: .25rem;
-				/*
-				//Temporarily removing this because most profiles don't include an email.
-				//You could move this to the .email if you needed to...
-				&:before {
-					content: " | ";
-				}
-				*/
 			}
 		}
 
@@ -522,62 +519,62 @@
 	text-align: center;
 	width: 100%;
 	z-index: 1;
-}
 
-.bbg__article__nav-link {
-	height: 45px;
-	pointer-events: initial;
-	width: 30px;
 
-	@include media($medium-large-screen) {
-		width: 60px;
-		height: 90px;
-	}
-}
+	.bbg__article__nav-link {
+		height: 45px;
+		pointer-events: initial;
+		width: 30px;
 
-.bbg__article__nav-icon {
-	display: block;
-	height: 100%;
-	padding: 0;
-	width: 100%;
-
-	&.left-arrow{
-		background: {
-			position: left top;
-			repeat: no-repeat;
-			size: contain;
-			image: url(img/arrow_left.png);
+		@include media($medium-large-screen) {
+			width: 60px;
+			height: 90px;
 		}
 	}
 
-	&.right-arrow{
-		background: {
-			position: right top;
-			repeat: no-repeat;
-			size: contain;
-			image: url(img/arrow_right.png);
+	.bbg__article__nav-icon {
+		display: block;
+		height: 100%;
+		padding: 0;
+		width: 100%;
+
+		&.left-arrow{
+			background: {
+				position: left top;
+				repeat: no-repeat;
+				size: contain;
+				image: url(img/arrow_left.png);
+			}
 		}
+
+		&.right-arrow{
+			background: {
+				position: right top;
+				repeat: no-repeat;
+				size: contain;
+				image: url(img/arrow_right.png);
+			}
+		}
+
 	}
 
+	.bbg__article__nav-text {
+		display: none;
+	}
+
+	.bbg__article__nav-previous {
+		float: left;
+	}
+
+	.bbg__article__nav-next {
+		float: right;
+	}
 }
-
-
-.bbg__article__nav-text {
-	display: none;
-}
-
-.bbg__article__nav-previous {
-	float: left;
-}
-
-.bbg__article__nav-next {
-	float: right;
-}
-
 
 .bbg-tagline {
 	color: $color-gray-medium;
 	font-size: $small-font-size;
+	margin-bottom: $site-margins;
 }
 
 .bbg__article-footer {
