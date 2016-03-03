@@ -15,8 +15,8 @@ if (! isset ($includeMetaFeatured)) {
 }
 
 $postPermalink=esc_url( get_permalink() );
-if (get_query_var('cat',false)) {
-	$postPermalink=add_query_arg('cat', get_query_var('cat'), $postPermalink);
+if (get_query_var('category_id',false)) {
+	$postPermalink=add_query_arg('category_id', get_query_var('category_id'), $postPermalink);
 }
 
 ?>

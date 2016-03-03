@@ -56,7 +56,7 @@ get_header();
 							foreach ( $categories as $category ) {
 								$iconName = "bbg-team__icon__".$category->category_nicename;
 								//$categoryLink=get_category_link( $category->term_id );
-								$categoryLink= add_query_arg('cat', $category->term_id, get_permalink( get_page_by_path( 'team' ) ));
+								$categoryLink= add_query_arg('category_id', $category->term_id, get_permalink( get_page_by_path( 'team' ) ));
 							?>
 							<article class="bbg-team bbg-grid--1-1-1-2">
 

@@ -29,7 +29,7 @@ foreach($blogusers as $user) {
 	} 
 }
 
-$teamPorfolioLink=add_query_arg('cat', get_query_var('cat'), get_permalink( get_page_by_path( 'projects' )));
+$teamPorfolioLink=add_query_arg('category_id', get_query_var('category_id'), get_permalink( get_page_by_path( 'projects' )));
 $fullOddiPorfolioLink=get_permalink( get_page_by_path( 'projects' ));
 
 
