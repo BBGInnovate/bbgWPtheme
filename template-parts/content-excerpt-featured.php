@@ -13,14 +13,20 @@ global $includeMetaFeatured;
 if (! isset ($includeMetaFeatured)) {
 	$includeMetaFeatured=TRUE;
 }
+
+$postPermalink=esc_url( get_permalink() );
+if (get_query_var('cat',false)) {
+	$postPermalink=add_query_arg('cat', get_query_var('cat'), $postPermalink);
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("bbg-blog__excerpt--featured usa-grid-full"); ?>>
 	<header class="entry-header bbg-blog__excerpt-header--featured usa-grid-full">
 
 		<?php 
-			$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
-			$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', esc_url( get_permalink() ) );
+			$link = sprintf( '<a href="%s" rel="bookmark">', $postPermalink );
+			$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', $postPermalink );
 			$linkH2 = '<h2 class="entry-title bbg-blog__excerpt-title--featured">'.$link;
 			echo $linkImage;
 
@@ -32,7 +38,7 @@ if (! isset ($includeMetaFeatured)) {
 		?>
 		</a>
 <div class="usa-grid">
-		<?php the_title( sprintf( $linkH2, esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( $linkH2, $postPermalink ), '</a></h2>' ); ?>
 
 
 		<?php if ($includeMetaFeatured){ ?>

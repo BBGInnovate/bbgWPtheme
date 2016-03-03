@@ -15,6 +15,12 @@ if (! isset ($gridClass)) {
 	$gridClass="bbg-grid--1-2-2";
 }
 $classNames="bbg-portfolio__excerpt ".$gridClass;
+
+$postPermalink=esc_url( get_permalink() );
+if (get_query_var('cat',false)) {
+	$postPermalink=add_query_arg('cat', get_query_var('cat'), $postPermalink);
+}
+
 ?>
 
 
@@ -22,8 +28,8 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 	<header class="entry-header bbg-portfolio__excerpt-header">
 
 	<?php 
-		$link = sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) );
-		$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', esc_url( get_permalink() ) );
+		$link = sprintf( '<a href="%s" rel="bookmark">', $postPermalink );
+		$linkImage = sprintf( '<a href="%s" rel="bookmark" tabindex="-1">', $postPermalink );
 		$linkH3 = '<h3 class="entry-title bbg-portfolio__excerpt-title">'.$link;
 	?>
 		<div class="single-post-thumbnail clear bbg__excerpt-header__thumbnail--medium">
@@ -40,7 +46,7 @@ $classNames="bbg-portfolio__excerpt ".$gridClass;
 			?>
 			</a>
 		</div>
-		<?php the_title( sprintf( $linkH3, esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<?php the_title( sprintf( $linkH3, $postPermalink ), '</a></h3>' ); ?>
 		
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<!--
