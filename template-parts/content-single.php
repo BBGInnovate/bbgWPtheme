@@ -16,12 +16,22 @@ $nextLink="";
 if ($isProject) {
 	//$categories=get_the_category();
 	$post_id = $post->ID; // current post ID
-	$args = array( 
-		'category' => $projectCategoryID,
-		'orderby'  => 'post_date',
-		'order'    => 'DESC',
-		'posts_per_page' => -1
-	);
+	if (isset($_GET['category_id'])) {
+		$args = array( 
+			'category__and' => array($projectCategoryID,$_GET['category_id'])
+			'orderby'  => 'post_date',
+			'order'    => 'DESC',
+			'posts_per_page' => -1
+		);
+	} else {
+		$args = array( 
+			'category' => $projectCategoryID,
+			'orderby'  => 'post_date',
+			'order'    => 'DESC',
+			'posts_per_page' => -1
+		);
+	}
+	
 	$posts = get_posts( $args );
 	// get IDs of posts retrieved from get_posts
 	$ids = array();

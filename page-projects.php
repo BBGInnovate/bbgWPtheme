@@ -28,15 +28,15 @@ if ($currentPage > 1) {
 
 
 $hasTeamFilter=false;
-if (get_query_var('cat',false)) {
+if (isset(_GET['category_id'])) {
 	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
-	$teamCategoryID= get_query_var('cat',false);
+	$teamCategoryID= $_GET['category_id'];
 	$teamCategory=get_category($teamCategoryID);
 
 	$qParams=array(
 		'post_type' => array('post')
-		,'category__and' => array(get_cat_id('Project'),get_query_var('cat',false))
+		,'category__and' => array(get_cat_id('Project'), $_GET['category_id'])
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
 	);
