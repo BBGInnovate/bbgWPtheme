@@ -4660,6 +4660,14 @@ object {
   margin-left: auto;
   margin-right: auto;
 }
+.wp-caption .size-large {
+  max-width: 600px;
+}
+.wp-caption .size-large + .wp-caption-text {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+}
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }

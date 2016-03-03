@@ -6,6 +6,18 @@
 		@include center-block;
 	}
 
+	.size-large {
+		max-width: $article-max-width;
+
+		+ .wp-caption-text {
+			margin: {
+				right: auto;
+				left: auto;
+			}
+			max-width: $article-max-width;
+		}
+	}
+
 	.wp-caption-text {
 		margin: 0.8075em 0;
 	}
