@@ -56,7 +56,7 @@
 	margin: 0 auto 2.5rem;
 	width: $bbg-team__icon-width;
 
-	@include media($small-medium-screen)  {
+	@include media($small-screen)  {
 		margin-bottom: 0;
 	}
 }
