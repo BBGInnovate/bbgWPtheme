@@ -18,7 +18,7 @@ if ($isProject) {
 	$post_id = $post->ID; // current post ID
 	if (isset($_GET['category_id'])) {
 		$args = array( 
-			'category__and' => array($projectCategoryID,$_GET['category_id'])
+			'category__and' => array($projectCategoryID,$_GET['category_id']),
 			'orderby'  => 'post_date',
 			'order'    => 'DESC',
 			'posts_per_page' => -1
