@@ -4050,6 +4050,13 @@ article {
   width: 100%;
 }
 
+.fb_iframe_widget_fluid_desktop,
+.fb_iframe_widget_fluid_desktop span,
+.fb_iframe_widget_fluid_desktop iframe {
+  margin: 0 auto;
+  display: block;
+}
+
 /*****************************/
 .bbg__excerpt-meta {
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;
