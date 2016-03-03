@@ -79,3 +79,13 @@ select {
 .usa-social-links a {
 	display: inline-block;
 }
+
+
+
+//Why are these set to table-rows? Causes weird spacings after the bullet.
+ul li,
+ol li {
+	&:before {
+		display: inline-block;
+	}
+}

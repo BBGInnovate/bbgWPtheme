@@ -4506,6 +4506,11 @@ select {
   display: inline-block;
 }
 
+ul li:before,
+ol li:before {
+  display: inline-block;
+}
+
 /**
  *  Changing styles on content-single for portfolio posts
  *
