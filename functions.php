@@ -825,4 +825,11 @@ function search_excerpt_footer() {
 
 endif;
 
+// Add shortcode reference to Innovation Series on old posts and pages
+  function innovation_series_shortcode() {
+    return '<span class="bbg-tagline">This post originally appeared on <a href="http://www.innovation-series.com/" target="_blank">Innovation Series</a>.</span>';
+}
+add_shortcode('tagline', 'innovation_series_shortcode');
+
+
 ?>
