@@ -4,7 +4,7 @@ img {
 }
 
 // fix relative img links for background-images in the footer
-// from: ../img/ 
+// from: ../img/
 // to: img/
 
 
@@ -81,11 +81,9 @@ select {
 }
 
 
-
-//Why are these set to table-rows? Causes weird spacings after the bullet.
-ul li,
-ol li {
-	&:before {
-		display: inline-block;
+ul,
+ol {
+	li:before {
+		width: 1.2rem;
 	}
 }

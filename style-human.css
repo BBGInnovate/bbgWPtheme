@@ -4510,7 +4510,7 @@ select {
 
 ul li:before,
 ol li:before {
-  display: inline-block;
+  width: 1.2rem;
 }
 
 /**
