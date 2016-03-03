@@ -28,7 +28,7 @@ if ($currentPage > 1) {
 
 
 $hasTeamFilter=false;
-if (isset(_GET['category_id'])) {
+if (isset($_GET['category_id'])) {
 	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
 	$teamCategoryID= $_GET['category_id'];
