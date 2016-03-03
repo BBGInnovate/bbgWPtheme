@@ -4603,6 +4603,41 @@ select {
   }
 }
 
+.bbg-search-results--list {
+  margin-bottom: 2.4rem;
+}
+.bbg-search-results--list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media screen and (min-width: 481px) {
+  .bbg-search-results--list {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .bbg-search-results--list {
+    font-size: 3rem;
+  }
+}
+
+.bbg-search-results__title--list {
+  clear: none;
+}
+
+.bbg-search-results__excerpt-content {
+  font-size: 1.6rem;
+}
+
+.bbg-search-results__excerpt-categories {
+  color: #5b616b;
+  float: right;
+  font-size: 1.4rem;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

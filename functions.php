@@ -804,4 +804,25 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 	    add_editor_style( 'editor-styles.css' );
 	}
 	add_action( 'init', 'my_theme_add_editor_styles' );
+
+
+/**
+ * Search results category-only footer
+ * prints meta information for the categories
+ */
+if ( ! function_exists( 'search_excerpt_footer' ) ) :
+
+function search_excerpt_footer() {
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'bbginnovate' ) );
+		if ( $categories_list && bbginnovate_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bbginnovate' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+	}
+}
+
+endif;
+
 ?>

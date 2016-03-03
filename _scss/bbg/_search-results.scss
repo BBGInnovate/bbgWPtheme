@@ -1,0 +1,26 @@
+.bbg-search-results--list {
+	@include clearfix();
+	margin-bottom: $site-margins * .8;
+
+	@include media($small-screen) {
+		margin-bottom: $site-margins;
+	}
+
+	@include media($medium-screen) {
+		font-size: $h3-font-size * 1.5;
+	}
+}
+
+.bbg-search-results__title--list {
+	clear: none;
+}
+
+.bbg-search-results__excerpt-content {
+	font-size: $base-font-size;
+}
+
+.bbg-search-results__excerpt-categories {
+	color: $color-gray;
+	float: right;
+	font-size: $small-font-size;
+}
