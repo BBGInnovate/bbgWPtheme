@@ -9,7 +9,7 @@
  */
 
 /*** SHARING VARS ****/
-$teamCategoryID=$_GET["cat"];
+$teamCategoryID=$_GET["category_id"];
 $teamCategory=get_category($teamCategoryID);
 $iconName = "bbg-team__icon__".$teamCategory->category_nicename;
 
