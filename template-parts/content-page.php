@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("bbg__article"); ?>>
 
-	<?php echo bbginnovate_post_categories( '', true ); ?>
+	<?php echo bbginnovate_post_categories(); ?>
 	<!-- .bbg-label -->
 
 	<header class="entry-header">

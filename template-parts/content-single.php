@@ -132,7 +132,7 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 
 		<header class="entry-header bbg__article-header">
 
-		<?php echo bbginnovate_post_categories( '', true, true ); ?>
+		<?php echo bbginnovate_post_categories(); ?>
 		<!-- .bbg-label -->
 
 			<?php the_title( '<h1 class="entry-title bbg__article-header__title">', '</h1>' ); ?>

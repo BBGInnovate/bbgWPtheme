@@ -563,19 +563,40 @@ if ( ! function_exists( 'bbginnovate_post_categories' ) ) :
 	 *
 	 * @since bbginnovate 1.0
 	 */
-	function bbginnovate_post_categories( $separator = ',', $single = true , $ignorePortfolio = false) {
+	function bbginnovate_post_categories() {
+		$separator='';
 		$categories = get_the_category();
 		$output     = '';
+		$selectedCategory=false;
 		if ( $categories ) {
+
+			/* team categories take priority */
 			foreach ( $categories as $category ) {
-				if (!$ignorePortfolio || $category->name!="Project") {
-					$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $category->name ) ) . '">' . $category->cat_name . '</a></h5>' . $separator;
-					if ( $single )
+				$term = get_option( "taxonomy_" . $category->term_id );
+				if ( $term['isTeamName'] == 1 ) {
+					$selectedCategory=$category;
 					break;
 				}
 			}
+			/* followed by any non-project category */
+			if ( !$selectedCategory ) {
+				foreach ( $categories as $category ) {
+					if ( $category->name != "Project" ) {
+						$selectedCategory = $category;
+						break;
+					}
+				}
+			}
+			/* followed by project ... probably don't need a loop here but it's fien */
+			if ( !$selectedCategory ) {
+				foreach ( $categories as $category ) {
+					$selectedCategory = $category;
+				}
+			}
+			if ($selectedCategory) {
+				$output .= '<h5 class="entry-category bbg-label"><a href="' . get_category_link( $selectedCategory->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'bbginnovate' ), $selectedCategory->name ) ) . '">' . $selectedCategory->cat_name . '</a></h5>' . $separator;
+			}
 		}
-
 		return $output;
 	}
 endif;
