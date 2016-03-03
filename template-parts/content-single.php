@@ -33,15 +33,17 @@ if ($isProject) {
 
 	if ($thisindex > 0) {
 		$previd = $ids[ $thisindex - 1 ];
-		$prevPost=get_post($previd);
-		$prevPostTitle=$prevPost->post_title;
-		$prevLink='<a rel="prev" href="' . get_permalink($previd) . '"><span class="bbg__article__nav-icon"></span><span class="bbg__article__nav-text">Previous: ' . $prevPostTitle . '</span></a>';
+		$prevPost = get_post($previd);
+		$prevPostTitle = $prevPost->post_title;
+		$prevLink = '<a rel="prev" href="' . get_permalink($previd) . '" title="' . $prevPostTitle . '"><span class="bbg__article__nav-icon left-arrow"></span><span class="bbg__article__nav-text">Previous: ' . $prevPostTitle . '</span></a>';
+		$prevLink = '<div class="bbg__article__nav-link bbg__article__nav-previous">' . $prevLink . '</div>';
 	}
 	if ($thisindex < (count($ids)-1)) {
 		$nextid = $ids[ $thisindex + 1 ];
-		$nextPost=get_post($nextid);
-		$nextPostTitle=$nextPost->post_title;
-	    $nextLink='<a rel="next" href="' . get_permalink($nextid) . '"><span class="bbg__article__nav-icon"></span><span class="bbg__article__nav-text">Next: ' . $nextPostTitle . '</span></a>';
+		$nextPost = get_post($nextid);
+		$nextPostTitle = $nextPost->post_title;
+		$nextLink = '<a rel="next" href="' . get_permalink($nextid) . '" title="' . $nextPostTitle . '"><span class="bbg__article__nav-icon right-arrow"></span><span class="bbg__article__nav-text">Next: ' . $nextPostTitle . '</span></a>';
+		$nextLink = '<div class="bbg__article__nav-link bbg__article__nav-next">' . $nextLink . '</div>';
 	}
 }
 /**** END CREATING NEXT/PREV LINKS ****/
@@ -99,12 +101,8 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 	</div>
 
 				<div class="bbg__article__nav">
-					<div class="bbg__article__nav-link bbg__article__nav-previous">
-						<?php echo $prevLink; ?>
-					</div>
-					<div class="bbg__article__nav-link bbg__article__nav-next">
-						<?php echo $nextLink; ?>
-					</div>
+					<?php echo $prevLink; ?>
+					<?php echo $nextLink; ?>
 				</div><!-- .bbg__article__nav -->
 
 

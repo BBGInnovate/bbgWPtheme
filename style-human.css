@@ -3379,25 +3379,44 @@ fieldset {
 
 .bbg__article__nav {
   display: block;
+  margin: 0 auto;
+  pointer-events: none;
   position: fixed;
   bottom: 100px;
-  width: 100%;
-  margin: 0 auto;
   text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
 .bbg__article__nav-link {
+  height: 45px;
+  pointer-events: initial;
   width: 30px;
-  height: 30px;
-  background-color: #900;
+}
+@media screen and (min-width: 900px) {
+  .bbg__article__nav-link {
+    width: 60px;
+    height: 90px;
+  }
 }
 
 .bbg__article__nav-icon {
+  display: block;
+  height: 100%;
   padding: 0;
   width: 100%;
-  height: 100%;
-  display: block;
+}
+.bbg__article__nav-icon.left-arrow {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/arrow_left.png);
+}
+.bbg__article__nav-icon.right-arrow {
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/arrow_right.png);
 }
 
 .bbg__article__nav-text {
