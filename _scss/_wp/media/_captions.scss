@@ -8,6 +8,7 @@
 
 	.size-large {
 		max-width: $article-max-width;
+		width: 100%;
 
 		+ .wp-caption-text {
 			margin: {

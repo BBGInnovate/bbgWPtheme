@@ -3967,6 +3967,8 @@ article {
 
 .bbg-page__header-description {
   clear: none;
+  margin-top: 1rem;
+  margin-bottom: 0;
   max-width: 600px;
 }
 
@@ -4506,6 +4508,11 @@ select {
   display: inline-block;
 }
 
+ul li:before,
+ol li:before {
+  display: inline-block;
+}
+
 /**
  *  Changing styles on content-single for portfolio posts
  *
@@ -4648,6 +4655,15 @@ object {
   max-width: 100%;
 }
 
+.size-medium {
+  width: 100%;
+}
+@media screen and (min-width: 481px) {
+  .size-medium {
+    width: 50%;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -4662,6 +4678,7 @@ object {
 }
 .wp-caption .size-large {
   max-width: 600px;
+  width: 100%;
 }
 .wp-caption .size-large + .wp-caption-text {
   margin-right: auto;

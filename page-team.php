@@ -9,7 +9,7 @@
  */
 
 /*** SHARING VARS ****/
-$teamCategoryID=$_GET["cat"];
+$teamCategoryID=$_GET["category_id"];
 $teamCategory=get_category($teamCategoryID);
 $iconName = "bbg-team__icon__".$teamCategory->category_nicename;
 
@@ -29,7 +29,7 @@ foreach($blogusers as $user) {
 	} 
 }
 
-$teamPorfolioLink=add_query_arg('category_id', get_query_var('category_id'), get_permalink( get_page_by_path( 'projects' )));
+$teamPortfolioLink=add_query_arg('category_id', $teamCategoryID, get_permalink( get_page_by_path( 'projects' )));
 $fullOddiPorfolioLink=get_permalink( get_page_by_path( 'projects' ));
 
 
@@ -100,7 +100,7 @@ get_header(); ?>
 
 
 						<section class="usa-section usa-grid">
-							<h6 class="bbg-label small"><a href="<?php echo $teamPorfolioLink; ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
+							<h6 class="bbg-label small"><a href="<?php echo $teamPortfolioLink; ?>"><?php echo $teamCategory->name; ?> projects</a></h6>
 							<div class="bbg-grid__container">
 							
 							<?php
@@ -113,7 +113,7 @@ get_header(); ?>
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
-							<a href="<?php echo $teamPorfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio</a>
+							<a href="<?php echo $teamPortfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio</a>
 						</section>
 				<?php
 					endif;

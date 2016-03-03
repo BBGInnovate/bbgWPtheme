@@ -16,12 +16,22 @@ $nextLink="";
 if ($isProject) {
 	//$categories=get_the_category();
 	$post_id = $post->ID; // current post ID
-	$args = array( 
-		'category' => $projectCategoryID,
-		'orderby'  => 'post_date',
-		'order'    => 'DESC',
-		'posts_per_page' => -1
-	);
+	if (isset($_GET['category_id'])) {
+		$args = array( 
+			'category__and' => array($projectCategoryID,$_GET['category_id']),
+			'orderby'  => 'post_date',
+			'order'    => 'DESC',
+			'posts_per_page' => -1
+		);
+	} else {
+		$args = array( 
+			'category' => $projectCategoryID,
+			'orderby'  => 'post_date',
+			'order'    => 'DESC',
+			'posts_per_page' => -1
+		);
+	}
+	
 	$posts = get_posts( $args );
 	// get IDs of posts retrieved from get_posts
 	$ids = array();
@@ -35,14 +45,26 @@ if ($isProject) {
 		$previd = $ids[ $thisindex - 1 ];
 		$prevPost = get_post($previd);
 		$prevPostTitle = $prevPost->post_title;
-		$prevLink = '<a rel="prev" href="' . get_permalink($previd) . '" title="' . $prevPostTitle . '"><span class="bbg__article__nav-icon left-arrow"></span><span class="bbg__article__nav-text">Previous: ' . $prevPostTitle . '</span></a>';
+		
+		$prevPostPermalink=esc_url( get_permalink($previd) );
+		if (isset($_GET['category_id'])) {
+			$prevPostPermalink=add_query_arg('category_id', $_GET['category_id'], $prevPostPermalink);
+		}
+
+		$prevLink = '<a rel="prev" href="' . $prevPostPermalink . '" title="' . $prevPostTitle . '"><span class="bbg__article__nav-icon left-arrow"></span><span class="bbg__article__nav-text">Previous: ' . $prevPostTitle . '</span></a>';
 		$prevLink = '<div class="bbg__article__nav-link bbg__article__nav-previous">' . $prevLink . '</div>';
 	}
 	if ($thisindex < (count($ids)-1)) {
 		$nextid = $ids[ $thisindex + 1 ];
 		$nextPost = get_post($nextid);
 		$nextPostTitle = $nextPost->post_title;
-		$nextLink = '<a rel="next" href="' . get_permalink($nextid) . '" title="' . $nextPostTitle . '"><span class="bbg__article__nav-icon right-arrow"></span><span class="bbg__article__nav-text">Next: ' . $nextPostTitle . '</span></a>';
+
+		$nextPostPermalink=esc_url( get_permalink($nextid) );
+		if (isset($_GET['category_id'])) {
+			$nextPostPermalink=add_query_arg('category_id', $_GET['category_id'], $nextPostPermalink);
+		}
+
+		$nextLink = '<a rel="next" href="' . $nextPostPermalink . '" title="' . $nextPostTitle . '"><span class="bbg__article__nav-icon right-arrow"></span><span class="bbg__article__nav-text">Next: ' . $nextPostTitle . '</span></a>';
 		$nextLink = '<div class="bbg__article__nav-link bbg__article__nav-next">' . $nextLink . '</div>';
 	}
 }
