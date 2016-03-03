@@ -3422,7 +3422,7 @@ fieldset {
   float: right;
 }
 
-.bbg-tagline {
+.bbg-tagline, .bbg-tagline a {
   color: #757575;
   font-size: 1.4rem;
   margin-bottom: 3rem;
