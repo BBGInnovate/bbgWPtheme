@@ -4662,6 +4662,7 @@ object {
 }
 .wp-caption .size-large {
   max-width: 600px;
+  width: 100%;
 }
 .wp-caption .size-large + .wp-caption-text {
   margin-right: auto;
