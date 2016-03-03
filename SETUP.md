@@ -17,8 +17,8 @@ This drives the homepage which has:
 ![image alt text](documentation/img/teams.png)
 
 Enter category IDs to control the teams on the homepage
-    
-![image alt text](documentation/img/usermeta.png)    
+
+![image alt text](documentation/img/usermeta.png)
 Author bio includes additional profile information:
 *   Occupation - shows up on project detail page
 *   Active - determines whether the show on staff page
@@ -26,13 +26,13 @@ Author bio includes additional profile information:
 
 
 
-**Page-Projects** 
+**Page-Projects**
 
-* Landing page for projects.  
+* Landing page for projects.
 
 * Queries the DB for all items categorized Project and shows latest 10
 
-**Page-Fuego** 
+**Page-Fuego**
 
 * Called "Trending" on the front end
 
@@ -72,6 +72,10 @@ The landing page for a single team that includes:
 
 ![image alt text](documentation/img/image_0.png)![image alt text](documentation/img/image_1.png)
 
+## Custom Shortcodes
+
+**[tagline]** Adds a line of text which references and links to the Innovation Series blog
+
 Plugins
 
 The purpose of this doc is to summarize the plugins we have installed and what they’re for.
@@ -94,13 +98,13 @@ By default WP doesn’t let you set avatars for users (they are managed by grava
 
 # Google Analytics by Yoast
 
-Link: [https://wordpress.org/plugins/google-analytics-for-wordpress/] (https://wordpress.org/plugins/google-analytics-for-wordpress/) 
+Link: [https://wordpress.org/plugins/google-analytics-for-wordpress/] (https://wordpress.org/plugins/google-analytics-for-wordpress/)
 
 This plugin by Yoast has over a million downloads. It lets you pick between authenticating your Google Account or manually entering your account ID.  If you authenticate your account, you can view reports from within the Wordpress Admin area.
 
 # WP Embed Facebook
 
-Link: [https://wordpress.org/plugins/wp-embed-facebook/] (https://wordpress.org/plugins/wp-embed-facebook/) 
+Link: [https://wordpress.org/plugins/wp-embed-facebook/] (https://wordpress.org/plugins/wp-embed-facebook/)
 
 Facebook Video embeds aren't a simple iFrame - instead, they require some markup as well as Javascript.  This plugin makes the embed as simple as pasting the URL into either the visual or text editor and it automatically shows a preview in the visual view.
 
