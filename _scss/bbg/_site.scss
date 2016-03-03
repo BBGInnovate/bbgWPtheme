@@ -262,6 +262,10 @@ article {
 .bbg-page__header-description {
 	@extend .readin;
 	clear: none;
+	margin: {
+		top: 1rem;
+		bottom: 0;
+	};
 	max-width: $article-max-width;
 }
 
