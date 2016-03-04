@@ -40,7 +40,7 @@
 			.bbg__portfolio-members__member-name {
 				font-weight: $font-bold;
 				margin-bottom: 1.5rem;
-	    		line-height: 2.2rem;
+				line-height: 2.2rem;
 			}
 
 			.bbg__portfolio-members__member-job {
@@ -67,11 +67,23 @@
 				bottom: $site-margins;
 				left: auto;
 			}
-    		max-width: $article-max-width;
+			max-width: $article-max-width;
 		}
 	}
 
 	@include media($medium-large-screen) {
+
+		.bbg__article-content {
+			float: left;
+			margin: {
+				top: 0;
+				//right: auto;
+				bottom: $site-margins;
+				//left: auto;
+			}
+			width: 68%;
+		}
+
 		.bbg__article-share {
 			display: inline-block;
 			float: left;
@@ -79,14 +91,13 @@
 				top: 0;
 				right: $site-margins;
 			}
+			width: 15%;
 		}
 
 		.bbg__article-sidebar {
+			float: right;
 			max-width: 17rem;
-			position: absolute;
-				top: 0;
-				right: 0;
-			width: 14%;
+			width: 12%;
 		}
 	}
 }

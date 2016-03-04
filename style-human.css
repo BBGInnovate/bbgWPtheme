@@ -4595,18 +4595,23 @@ ol li:before {
   }
 }
 @media screen and (min-width: 900px) {
+  .category-project .bbg__article-content {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    width: 68%;
+  }
   .category-project .bbg__article-share {
     display: inline-block;
     float: left;
     margin-top: 0;
     margin-right: 3rem;
+    width: 15%;
   }
   .category-project .bbg__article-sidebar {
+    float: right;
     max-width: 17rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 14%;
+    width: 12%;
   }
 }
 
