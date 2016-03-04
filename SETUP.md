@@ -108,3 +108,9 @@ Link: [https://wordpress.org/plugins/wp-embed-facebook/] (https://wordpress.org/
 
 Facebook Video embeds aren't a simple iFrame - instead, they require some markup as well as Javascript.  This plugin makes the embed as simple as pasting the URL into either the visual or text editor and it automatically shows a preview in the visual view.
 
+# Mail From
+
+Link: [https://wordpress.org/plugins/mail-from/] (https://wordpress.org/plugins/mail-from/)
+
+The Mail From plugin allows admins to change the 'from' value in the emails - instead of being hardcoded to the address of "wordpress@innovation.bbg.gov" and a from name of "WordPress" we can set it to whatever we like.
+
