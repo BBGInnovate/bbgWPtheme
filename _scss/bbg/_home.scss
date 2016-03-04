@@ -75,12 +75,14 @@
 				font-size: $h1-font-size * 1.5;
 			}
 
+			/*
 			//Keeping it inline at smaller widths so that it doesn't break the screen.
 			.bbg-home__site-title--breakline {
 				@include media($small-screen) {
 					display: block;
 				}
 			}
+			*/
 		}
 
 		.bbg-banner-site-description{
