@@ -2993,6 +2993,10 @@ fieldset {
     max-width: 50%;
   }
 }
+.bbg__article-header__caption a {
+  color: #d6d7d9;
+  text-decoration: underline;
+}
 
 /* Post title */
 .bbg__article-header__title {
@@ -3279,6 +3283,7 @@ fieldset {
 .bbg__article-author {
   background-color: #f1f1f1;
   border-radius: 0.3rem;
+  margin-top: 4rem;
   margin-right: auto;
   margin-bottom: 3rem;
   margin-left: auto;
@@ -3598,6 +3603,14 @@ fieldset {
   max-width: 1040px;
   padding-right: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /*
+  //Keeping it inline at smaller widths so that it doesn't break the screen.
+  .bbg-home__site-title--breakline {
+  	@include media($small-screen) {
+  		display: block;
+  	}
+  }
+  */
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
@@ -3607,11 +3620,6 @@ fieldset {
 @media screen and (min-width: 1201px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
     font-size: 6rem;
-  }
-}
-@media screen and (min-width: 481px) {
-  .bbg-banner .bbg-banner-box .bbg-banner-site-title .bbg-home__site-title--breakline {
-    display: block;
   }
 }
 .bbg-banner .bbg-banner-box .bbg-banner-site-description {
