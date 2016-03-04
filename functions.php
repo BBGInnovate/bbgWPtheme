@@ -47,6 +47,30 @@ if ( ! function_exists( 'bbginnovate_setup' ) ) :
 		add_image_size( 'index-thumb', 780, 250, true );
 		add_image_size( 'medium-thumb', 600, 360, true );
 		add_image_size( 'small-thumb', 300, 180, true );
+		add_image_size( 'extra-large', 1040, 780, true );
+		add_image_size( 'mugshot', 200, 200 ); // 220 pixels wide by 180 pixels tall, soft proportional crop mode
+
+		function my_custom_sizes( $sizes ) {
+			/*  NOTE: the $sizes array here is simply an associative array.  It doesn't provide actual dimensions.
+				We are hardcoding that Mugshot goes second now (and thumbnail first) ... a more robust solution
+				could leverage something like https://codex.wordpress.org/Function_Reference/get_intermediate_image_sizes 
+			*/
+			/*
+			$newArray=array( 'mugshot' =>'Mugshot');
+			foreach ($sizes as $key => $value) {
+				$newArray[$key]=$value;
+			}
+			$reorderedSizes=array_swap("mugshot","thumbnail",$newArray);
+			*/
+			return array_merge( $sizes, array(
+		        'mugshot' => __('Mugshot'),
+		        'extra-large' => __('Extra Large'),
+		    ) );
+
+			return $reorderedSizes;
+		}
+		add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -110,7 +134,7 @@ function bbginnovate_site_name_html(){
  * @global int $content_width
  */
 function bbginnovate_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bbginnovate_content_width', 600 );
+	//$GLOBALS['content_width'] = apply_filters( 'bbginnovate_content_width', 600 );
 }
 add_action( 'after_setup_theme', 'bbginnovate_content_width', 0 );
 
