@@ -18,7 +18,7 @@
 
 .bbg__article-content__section-title {
   color: #323a45;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.3;
   margin-top: 1.2rem;
   margin-bottom: 0;
@@ -41,17 +41,18 @@ blockquote {
     padding-left: 2rem;
 }
 
-blockquote.pullquote {
+blockquote.pullquote p {
     border-bottom-color: #0071bc;
     border-bottom-style: solid;
     border-bottom-width: 6px;
     font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 3rem;
+    max-width: 80%;
 }
 
 @media screen and (min-width: 900px) {
-    blockquote.pullquote {
+	blockquote.pullquote p {
         float: left;
         margin-right: 3rem;
         max-width: 50%;
