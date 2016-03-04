@@ -33,6 +33,11 @@
 		right: 0;
 		max-width: 50%;
 	}
+
+	a {
+		color: $color-gray-lighter;
+		text-decoration: underline;
+	}
 }
 
 /* Post title */
@@ -402,11 +407,10 @@
 
 /** POST AUTHOR */
 .bbg__article-author {
-	background: {
-		color: $color-gray-lightest;
-	}
+	background-color: $color-gray-lightest;
 	border-radius: $border-radius;
 	margin: {
+		top: 4rem;
 		right: auto;
 		bottom: $site-margins;
 		left: auto;
@@ -430,7 +434,7 @@
 		margin-bottom: 1rem;
 
 		@include media($small-screen) {
-			margin-left: 110px;
+			margin-left: $bbg-team__icon-width + 10px;
 		}
 
 		.bbg__author-occupation {
@@ -459,7 +463,7 @@
 		padding-left: 0;
 
 		@include media($small-screen) {
-			margin-left: 110px;
+			margin-left: $bbg-team__icon-width + 10px;
 		}
 
 		@include media($medium-screen) {
@@ -478,7 +482,6 @@
 
 			@include media($medium-screen) {
 				display: inline-block;
-				// margin-right: .25rem;
 			}
 		}
 
@@ -511,7 +514,6 @@
 //Previous/next links on project posts
 .bbg__article__nav {
 	display: block;
-	//max-width: 1024px;
 	margin: 0 auto;
 	pointer-events: none;
 	position: fixed;
@@ -570,6 +572,9 @@
 		float: right;
 	}
 }
+
+
+
 
 .bbg-tagline, .bbg-tagline a  {
 	color: $color-gray-medium;

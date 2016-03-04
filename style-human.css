@@ -2993,6 +2993,10 @@ fieldset {
     max-width: 50%;
   }
 }
+.bbg__article-header__caption a {
+  color: #d6d7d9;
+  text-decoration: underline;
+}
 
 /* Post title */
 .bbg__article-header__title {
@@ -3279,6 +3283,7 @@ fieldset {
 .bbg__article-author {
   background-color: #f1f1f1;
   border-radius: 0.3rem;
+  margin-top: 4rem;
   margin-right: auto;
   margin-bottom: 3rem;
   margin-left: auto;
