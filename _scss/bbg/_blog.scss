@@ -213,16 +213,17 @@
 		color: $color-gray-medium;
   		line-height: $heading-line-height;
   		margin-top: $site-margins;
+  		text-transform: uppercase;
 	}
 
 	.bbg__article-content__section-title {
 		color: $color-gray-dark;
+		font-size: $h3-font-size;
 		line-height: $heading-line-height;
   		margin: {
   			top: $site-margins;
   			bottom: 0;
   		}
-  		text-transform: none;
 
   		+ p {
   			margin-top: .5rem;
