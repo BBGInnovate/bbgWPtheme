@@ -114,3 +114,21 @@ Link: [https://wordpress.org/plugins/mail-from/] (https://wordpress.org/plugins/
 
 The Mail From plugin allows admins to change the 'from' value in the emails - instead of being hardcoded to the address of "wordpress@innovation.bbg.gov" and a from name of "WordPress" we can set it to whatever we like.
 
+
+##Helpful Snippets
+
+###Auto-clear FB Open Graph cache on post update
+```php
+/* ODDI CUSTOM: Clear FB Cache when someone updates or publishes a post */
+function clearFBCache( $post_ID, $post) {
+	$urlToClear = get_permalink($post_ID);
+	$ch = curl_init();
+	curl_setopt ($ch, CURLOPT_URL,"https://graph.facebook.com");
+	curl_setopt ($ch, CURLOPT_POST, 1);
+	curl_setopt ($ch, CURLOPT_POSTFIELDS, http_build_query(array('scrape' => 'true','id' => $urlToClear)));
+	curl_exec ($ch);
+	curl_close ($ch);
+	
+}
+add_action( 'publish_post', 'clearFBCache', 10, 2 );
+```
