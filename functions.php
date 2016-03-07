@@ -890,4 +890,16 @@ function clearFBCache( $post_ID, $post) {
 }
 add_action( 'publish_post', 'clearFBCache', 10, 2 );
 
+
+add_filter( 'the_content', 'img_p_class_content_filter' ,20);
+
+function img_p_class_content_filter($content) {
+	/* from: http://wordpress.stackexchange.com/questions/16033/apply-class-to-every-paragraph-that-holds-image
+	   reason: When WP finds an image that isn't inside a block level element (such as <p> or <div>) AND the image doesn't have a caption, it wraps the image in a <p> tag.  When it has a caption, it gets <figure> <figcaption>.  We elected to swap the <p> with a <figure> and use the wp-caption class to make the max-width 100% */
+	   
+    //$content = preg_replace("/(<p[^>]*)(\>.*)(\<img.*)(<\/p>)/im", "\$1 class='content-img-wrap'\$2\$3\$4", $content);
+ 	$content = preg_replace("/(<p[^>]*)(\>.*)(\<img.*)(<\/p>)/im", "<figure class='wp-caption'\$2\$3</figure>", $content);
+    return $content;
+}
+
 ?>
