@@ -30,7 +30,7 @@ The next step is to install Sass.
 This will compile a human readable version of the CSS, a version of the CSS with vendor prefixes and the minified version for production (based on the Gruntfile.js)
 
 ### Plugins and Custom Fields
-We've documented our usage of custom fields and plugins in our SETUP.md file (https://github.com/BBGInnovate/bbgWPtheme/blob/master/SETUP.md)
+We've documented our usage of custom fields and plugins in our [SETUP.md] (https://github.com/BBGInnovate/bbgWPtheme/blob/master/SETUP.md) file 
 
 
 ## Got feedback?
