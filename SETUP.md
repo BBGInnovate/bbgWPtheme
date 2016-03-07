@@ -76,11 +76,11 @@ The landing page for a single team that includes:
 
 **[tagline]** Adds a line of text which references and links to the Innovation Series blog
 
-Plugins
+##Plugins
 
 The purpose of this doc is to summarize the plugins we have installed and what they’re for.
 
-# Advanced Custom Fields
+### Advanced Custom Fields
 
 Link: [https://wordpress.org/plugins/advanced-custom-fields/](https://wordpress.org/plugins/advanced-custom-fields/)
 
@@ -90,25 +90,25 @@ The advanced custom fields plugin makes it easy to attach custom fields to posts
 
 ![image alt text](documentation/img/image_2.png)
 
-# WP User Avatar
+### WP User Avatar
 
 Link: [https://wordpress.org/plugins/wp-user-avatar/](https://wordpress.org/plugins/wp-user-avatar/)
 
 By default WP doesn’t let you set avatars for users (they are managed by gravatar).  We needed the ability to set them outside of gravatar and this plugin gets the job done.
 
-# Google Analytics by Yoast
+### Google Analytics by Yoast
 
 Link: [https://wordpress.org/plugins/google-analytics-for-wordpress/] (https://wordpress.org/plugins/google-analytics-for-wordpress/)
 
 This plugin by Yoast has over a million downloads. It lets you pick between authenticating your Google Account or manually entering your account ID.  If you authenticate your account, you can view reports from within the Wordpress Admin area.
 
-# WP Embed Facebook
+### WP Embed Facebook
 
 Link: [https://wordpress.org/plugins/wp-embed-facebook/] (https://wordpress.org/plugins/wp-embed-facebook/)
 
 Facebook Video embeds aren't a simple iFrame - instead, they require some markup as well as Javascript.  This plugin makes the embed as simple as pasting the URL into either the visual or text editor and it automatically shows a preview in the visual view.
 
-# Mail From
+### Mail From
 
 Link: [https://wordpress.org/plugins/mail-from/] (https://wordpress.org/plugins/mail-from/)
 
