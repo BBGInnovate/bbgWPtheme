@@ -118,6 +118,9 @@ The Mail From plugin allows admins to change the 'from' value in the emails - in
 ##Helpful Snippets
 
 ###Auto-clear FB Open Graph cache on post update
+
+Facebook sometimes caches the featured image and text that will show when a user shares a URL of a Wordpress post.  This snippet clears that cache when a user publishes or updates the post.
+
 ```php
 /* ODDI CUSTOM: Clear FB Cache when someone updates or publishes a post */
 function clearFBCache( $post_ID, $post) {
