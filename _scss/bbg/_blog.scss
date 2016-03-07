@@ -214,6 +214,10 @@
   		line-height: $heading-line-height;
   		margin-top: $site-margins;
   		text-transform: uppercase;
+
+  		+ .bbg__article-content__section-title {
+		    margin-top: $site-margins-medium;
+		}
 	}
 
 	.bbg__article-content__section-title {

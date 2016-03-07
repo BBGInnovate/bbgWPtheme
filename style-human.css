@@ -3153,6 +3153,9 @@ fieldset {
   margin-top: 3rem;
   text-transform: uppercase;
 }
+.bbg__article-content .bbg__article-content__subhead + .bbg__article-content__section-title {
+  margin-top: 20px;
+}
 .bbg__article-content .bbg__article-content__section-title {
   color: #323a45;
   font-size: 2rem;
