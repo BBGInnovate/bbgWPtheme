@@ -14,6 +14,7 @@
   line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: -.75rem;
+  text-transform: uppercase;
 }
 
 .bbg__article-content__section-title {
@@ -22,7 +23,6 @@
   line-height: 1.3;
   margin-top: 1.2rem;
   margin-bottom: 0;
-  text-transform: uppercase;
 }
 
 .bbg__article-content__section-title + p {
