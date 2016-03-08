@@ -3611,14 +3611,6 @@ fieldset {
   max-width: 1040px;
   padding-right: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  /*
-  //Keeping it inline at smaller widths so that it doesn't break the screen.
-  .bbg-home__site-title--breakline {
-  	@include media($small-screen) {
-  		display: block;
-  	}
-  }
-  */
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner-box .bbg-banner-site-title {
@@ -3667,6 +3659,20 @@ fieldset {
 }
 .bbg-banner .bbg-social__list {
   display: none;
+  		/*
+  		@include media($large-screen) {
+  			.bbg-social__list__link:first-of-type {
+  				//border-radius: 0;
+  			}
+  
+  			.bbg-social__list__link:first-of-type {
+  				//border-radius: 0 $border-radius 0 0;
+  			}
+  			.bbg-social__list__link:last-of-type {
+  				//border-radius: 0 0 $border-radius 0;
+  			}
+  		}
+  		*/
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-social__list {
@@ -3675,6 +3681,15 @@ fieldset {
     margin: 0;
     padding: 0;
     display: block;
+    			/*
+    			.bbg-social__list__link:first-of-type {
+    				//border-radius: $border-radius 0 0 0;
+    			}
+    
+    			.bbg-social__list__link:last-of-type {
+    				//border-radius: 0 0 0 $border-radius;
+    			}
+    			*/
   }
   .bbg-banner .bbg-social__list li {
     display: list-item;
@@ -3693,6 +3708,10 @@ fieldset {
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link :hover {
     background-color: #FFF;
+    border-radius: 50%;
+  }
+  .bbg-banner .bbg-social__list .bbg-social__list__link :focus {
+    background-color: #dce4ef;
     border-radius: 50%;
   }
   .bbg-banner .bbg-social__list .bbg-social__list__link a {
@@ -4021,7 +4040,6 @@ article {
   text-align: right;
   margin-right: auto;
   margin-left: auto;
-  max-width: 660px;
 }
 
 .bbg-footer__return-to-top {

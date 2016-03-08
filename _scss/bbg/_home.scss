@@ -74,15 +74,6 @@
 			@include media($large-screen) {
 				font-size: $h1-font-size * 1.5;
 			}
-
-			/*
-			//Keeping it inline at smaller widths so that it doesn't break the screen.
-			.bbg-home__site-title--breakline {
-				@include media($small-screen) {
-					display: block;
-				}
-			}
-			*/
 		}
 
 		.bbg-banner-site-description{
@@ -145,6 +136,12 @@
 					border-radius: 50%;
 				};
 
+				:focus {
+					background-color: $color-gray-cool-light;
+					border-radius: 50%;
+				};
+
+
 				a {
 					background: {
 						position: center center;
@@ -179,10 +176,10 @@
 							image: url(img/social-icons/svg/twitter16.svg);
 						}
 					}
-
 				}
-			}
 
+			}
+			/*
 			.bbg-social__list__link:first-of-type {
 				//border-radius: $border-radius 0 0 0;
 			}
@@ -190,8 +187,9 @@
 			.bbg-social__list__link:last-of-type {
 				//border-radius: 0 0 0 $border-radius;
 			}
+			*/
 		}
-
+		/*
 		@include media($large-screen) {
 			.bbg-social__list__link:first-of-type {
 				//border-radius: 0;
@@ -203,8 +201,8 @@
 			.bbg-social__list__link:last-of-type {
 				//border-radius: 0 0 $border-radius 0;
 			}
-
 		}
+		*/
 
 
 	}
