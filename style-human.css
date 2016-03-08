@@ -3166,6 +3166,10 @@ fieldset {
 .bbg__article-content .bbg__article-content__section-title + p {
   margin-top: .5rem;
 }
+.bbg__article-content .bbg__article-content__image--extra-large {
+  margin: 0;
+  max-width: 100%;
+}
 .bbg__article-content .wp-caption-text {
   color: #323a45;
   font-family: "Merriweather", "Georgia", "Times New Roman", serif;

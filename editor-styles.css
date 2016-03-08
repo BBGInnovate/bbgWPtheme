@@ -29,6 +29,14 @@
 }
 
 /**
+ * Extra-large images
+ */
+.bbg__article-content__image--extra-large {
+  margin: 0;
+  max-width: 100%;
+}
+
+/**
  * Blockquotes and Pullquotes
  */
 blockquote {

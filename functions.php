@@ -53,7 +53,7 @@ if ( ! function_exists( 'bbginnovate_setup' ) ) :
 		function my_custom_sizes( $sizes ) {
 			/*  NOTE: the $sizes array here is simply an associative array.  It doesn't provide actual dimensions.
 				We are hardcoding that Mugshot goes second now (and thumbnail first) ... a more robust solution
-				could leverage something like https://codex.wordpress.org/Function_Reference/get_intermediate_image_sizes 
+				could leverage something like https://codex.wordpress.org/Function_Reference/get_intermediate_image_sizes
 			*/
 			/*
 			$newArray=array( 'mugshot' =>'Mugshot');
@@ -824,10 +824,16 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'wrapper' => false,
 		),
 		array(
-			'title' => 'Innovation Series tag',
+			'title' => 'BBG tagline',
 			'block' => 'span',
 			'classes' => 'bbg-tagline',
 			'wrapper' => true,
+		),
+		array(
+			'title' => 'Extra-wide images',
+			'block' => 'div',
+			'classes' => 'bbg__article-content__image--extra-large',
+			'wrapper' => false,
 		)
 
 	);
@@ -886,7 +892,7 @@ function clearFBCache( $post_ID, $post) {
 	curl_setopt ($ch, CURLOPT_POSTFIELDS, http_build_query(array('scrape' => 'true','id' => $urlToClear)));
 	curl_exec ($ch);
 	curl_close ($ch);
-	
+
 }
 add_action( 'publish_post', 'clearFBCache', 10, 2 );
 
