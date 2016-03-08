@@ -16,7 +16,7 @@ $font-normal:   400;
 $font-medium:   500;
 $font-bold:     700;
 
-$focus-shadow:	none;
+$focus-shadow: none; //overwriting default set in _variables.scss
 
 // Color
 $color-share-facebook:        #3d5a98;
@@ -27,8 +27,7 @@ $color-focus:                 #3e94cf;
 $color-visited:               #4773aa;
 
 
-// Mobile First Breakpoints
-$small-medium-screen:         481px; //This repeats $small-screen variable
+// Additional breakpoint(s)
 $medium-large-screen:         900px;
 
 
@@ -42,6 +41,7 @@ $box-transparent:             rgba(#000, .4);
 
 // Magic Numbers
 $banner-image-height:         400px;
+$thumbnail-small-max-width:   200px;
 $bbg-avatar-width:            200px;
 $bbg-avatar-width-small:       50px;
 $bbg-avatar-width-percentage:  20%;
@@ -50,7 +50,7 @@ $bbg-team__icon-width:        100px;
 $share-icon-small:             20px;
 $share-icon-large:             40px;
 $social-icon-home:             40px;
+
+// Are we (consistently) using these?
 $site-margins-small:           10px;
 $site-margins-medium:          20px;
-$thumbnail-small-max-width:   200px;
-
