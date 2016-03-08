@@ -87,9 +87,9 @@ get_header(); ?>
 					<?php if ($numBlogPostsAvailable > $numBlogPostsToShow) { ?>
 
 					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?>
-
+ 					posts</a>
 					<?php } ?>
-					 posts</a>
+					
 				</section>
 
 
