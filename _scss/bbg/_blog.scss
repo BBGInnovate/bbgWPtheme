@@ -396,6 +396,14 @@
 				}
 				padding-left: 2.5rem;
 			}
+			// Java apps
+			&[href*="java"] {
+				background: {
+					image: url(img/social-icons/png/java-icon.png);
+					image: url(img/social-icons/svg/java-icon.svg);
+				}
+				padding-left: 2.5rem;
+			}
 			// Android apps on GooglePlay
 			&[href*="play.google.com"] {
 				background: {
