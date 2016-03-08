@@ -73,6 +73,7 @@ get_header(); ?>
 								'category__not_in' => [get_cat_id('Project')]
 							);
 							query_posts($qParams);
+							$numBlogPostsAvailable=$wp_query->found_posts;
 
 							while ( have_posts() )  {
 								the_post();
@@ -83,7 +84,12 @@ get_header(); ?>
 							}
 						?>
 					</div><!-- .bbg-grid__container -->
-					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?> posts</a>
+					<?php if ($numBlogPostsAvailable > $numBlogPostsToShow) { ?>
+
+					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?>
+
+					<?php } ?>
+					 posts</a>
 				</section>
 
 
@@ -94,6 +100,7 @@ get_header(); ?>
 						'category__and' => [$teamCategoryID, get_cat_id('Project')]
 					);
 					query_posts($qParams);
+					$numProjectsAvailable=$wp_query->found_posts;
 				
 					if (have_posts()) :
  				?>
@@ -113,7 +120,9 @@ get_header(); ?>
 								}
 							?>
 							</div><!--.bbg-grid__containter -->
+							<?php if ($numProjectsAvailable > $numPortfolioPostsToShow) { ?>
 							<a href="<?php echo $teamPortfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio</a>
+							<?php } ?>
 						</section>
 				<?php
 					endif;
