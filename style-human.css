@@ -3276,11 +3276,6 @@ fieldset {
   background-image: url(img/social-icons/svg/epub-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="java"] {
-  background-image: url(img/social-icons/png/java-icon.png);
-  background-image: url(img/social-icons/svg/java-icon.svg);
-  padding-left: 2.5rem;
-}
 .bbg__related-links a[href*="play.google.com"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
