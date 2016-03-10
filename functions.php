@@ -190,6 +190,8 @@ function bbginnovate_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	wp_enqueue_script( 'bbginnovate-18f', get_template_directory_uri() . '/js/18f.js', array(), '20160223', true );
+
+	wp_enqueue_script( 'bbginnovate-bbginnovate', get_template_directory_uri() . '/js/bbginnovate.js', array(), '20160223', true );
 }
 add_action( 'wp_enqueue_scripts', 'bbginnovate_scripts' );
 
