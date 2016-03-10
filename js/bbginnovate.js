@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
     /*** Show the form (we keep it hidden until it has data) ****/
     jQuery("#appSelect").css("display","");
 
-    
+
     jQuery("#appSelect select[name=entity]").change(function() {
       var newEntity=jQuery(this).val();
       jQuery("#appSelect select[name=language]").empty();
@@ -78,16 +78,14 @@ jQuery(document).ready(function() {
       var entityValue=jQuery("#appSelect select[name=entity]").val();
       var languageValue=jQuery("#appSelect select[name=language] option:selected").text();
       var targetUrl="";
-      console.log('languageValue is ' + languageValue);
       for (var i=0; i < entityDetails[entityValue].length; i++) {
         var o = entityDetails[entityValue][i];
         if (o.language==languageValue) {
-          console.log("we found it");
           targetUrl=o.URL;
         }
       }
       if (targetUrl != "") {
-        window.location=targetUrl;
+        window.open(targetUrl,'_blank');
       }
     });
   }
