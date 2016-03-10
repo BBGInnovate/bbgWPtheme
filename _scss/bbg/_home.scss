@@ -1,15 +1,19 @@
 .bbg-banner{
-	/*background: #CCC no-repeat center center / cover;*/
 	background-color: $color-gray-lightest;
 	@include backgroundCover();
-	height: $banner-image-height;
+	height: $banner-image-height * .75;
 	margin-bottom: $site-margins;
 	max-width: 9999px;
 	position: relative;
 	width: 100%;
 
 	@include media($medium-screen) {
+		height: $banner-image-height;
 		margin-bottom: $site-margins * 2;
+	}
+
+	@include media($large-screen) {
+		height: $banner-image-height * 1.25;
 	}
 
 	.bbg-banner__container {
@@ -32,10 +36,13 @@
 	}
 
 	.bbg-banner__site-logo{
-		width: 150px;
+		width: 100px;
 
 		@include media($medium-screen) {
 			width: 150px;
+		}
+		@include media($large-screen) {
+			width: 200px;
 		}
 
 		:focus {
@@ -179,31 +186,7 @@
 				}
 
 			}
-			/*
-			.bbg-social__list__link:first-of-type {
-				//border-radius: $border-radius 0 0 0;
-			}
-
-			.bbg-social__list__link:last-of-type {
-				//border-radius: 0 0 0 $border-radius;
-			}
-			*/
 		}
-		/*
-		@include media($large-screen) {
-			.bbg-social__list__link:first-of-type {
-				//border-radius: 0;
-			}
-
-			.bbg-social__list__link:first-of-type {
-				//border-radius: 0 $border-radius 0 0;
-			}
-			.bbg-social__list__link:last-of-type {
-				//border-radius: 0 0 $border-radius 0;
-			}
-		}
-		*/
-
 
 	}
 

@@ -3552,12 +3552,11 @@ fieldset {
   }
 }
 .bbg-banner {
-  /*background: #CCC no-repeat center center / cover;*/
   background-color: #f1f1f1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 400px;
+  height: 300px;
   margin-bottom: 3rem;
   max-width: 9999px;
   position: relative;
@@ -3565,7 +3564,13 @@ fieldset {
 }
 @media screen and (min-width: 600px) {
   .bbg-banner {
+    height: 400px;
     margin-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-banner {
+    height: 500px;
   }
 }
 @media screen and (min-width: 600px) {
@@ -3585,11 +3590,16 @@ fieldset {
   background: none;
 }
 .bbg-banner .bbg-banner__site-logo {
-  width: 150px;
+  width: 100px;
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-banner__site-logo {
     width: 150px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .bbg-banner .bbg-banner__site-logo {
+    width: 200px;
   }
 }
 .bbg-banner .bbg-banner__site-logo :focus {
@@ -3664,20 +3674,6 @@ fieldset {
 }
 .bbg-banner .bbg-social__list {
   display: none;
-  		/*
-  		@include media($large-screen) {
-  			.bbg-social__list__link:first-of-type {
-  				//border-radius: 0;
-  			}
-  
-  			.bbg-social__list__link:first-of-type {
-  				//border-radius: 0 $border-radius 0 0;
-  			}
-  			.bbg-social__list__link:last-of-type {
-  				//border-radius: 0 0 $border-radius 0;
-  			}
-  		}
-  		*/
 }
 @media screen and (min-width: 600px) {
   .bbg-banner .bbg-social__list {
@@ -3686,15 +3682,6 @@ fieldset {
     margin: 0;
     padding: 0;
     display: block;
-    			/*
-    			.bbg-social__list__link:first-of-type {
-    				//border-radius: $border-radius 0 0 0;
-    			}
-    
-    			.bbg-social__list__link:last-of-type {
-    				//border-radius: 0 0 0 $border-radius;
-    			}
-    			*/
   }
   .bbg-banner .bbg-social__list li {
     display: list-item;
