@@ -1,4 +1,6 @@
 jQuery(document).ready(function() { 
+  
+  //for an example of this in action, see http://innovation.bbg.gov/blog/bbgs-new-java-based-apps-are-built-for-very-low-end-or-feature-phones/
   function initAppSelect() {
 
     select1=[ 
