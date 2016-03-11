@@ -312,10 +312,10 @@ article {
 .bbg-footer__return-to-top__container {
 	text-align: right;
 	margin: {
+		top: $site-margins;
 		right: auto;
 		left: auto;
 	}
-	//max-width: $article-max-width + 60px;;
 }
 
 .bbg-footer__return-to-top {

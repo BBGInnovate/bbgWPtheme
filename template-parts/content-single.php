@@ -98,11 +98,12 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 </style>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( "bbg__article" ); ?>>
-	<div class="usa-grid-full">
+	
 
 		<?php
 			$hideFeaturedImage = get_post_meta( get_the_ID(), "hide_featured_image", true );
 			if ( has_post_thumbnail() && ( $hideFeaturedImage != 1 ) ) {
+				echo '<div class="usa-grid-full">';
 				$featuredImageCutline="";
 				$thumbnail_image = get_posts(array('p' => get_post_thumbnail_id(get_the_ID()), 'post_type' => 'attachment'));
 				if ($thumbnail_image && isset($thumbnail_image[0])) {
@@ -111,16 +112,18 @@ $fbUrl="//www.facebook.com/sharer/sharer.php?u=" . urlencode( get_permalink() );
 				echo '<div class="single-post-thumbnail clear bbg__article-header__thumbnail--large">';
 				//echo '<div style="position: absolute;"><h5 class="bbg-label">Label</h5></div>';
 				echo the_post_thumbnail( 'large-thumb' );
-				if ($featuredImageCutline != "") {
-					echo "<div class='bbg__article-header__caption'>$featuredImageCutline</div>";
-				}
 
 				echo '</div>';
+				echo '</div> <!-- usa-grid-full -->';
 
-				
+				if ($featuredImageCutline != "") {
+					echo '<div class="usa-grid">';
+						echo "<div class='bbg__article-header__caption'>$featuredImageCutline</div>";
+					echo '</div> <!-- usa-grid -->';
+				}
+
 			}
 		?><!-- .bbg__article-header__thumbnail -->
-	</div>
 
 	<div class="bbg__article__nav">
 		<?php echo $prevLink; ?>

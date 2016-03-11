@@ -25,5 +25,13 @@
 }
 
 .wp-caption-text {
-	text-align: center;
+	color: $color-gray-dark;
+	font: {
+		family: $font-serif;
+		size: $caption-font-size;
+		style: italic;
+		weight: $font-light;
+	}
+	line-height: $lead-line-height;
+	text-align: left;
 }
