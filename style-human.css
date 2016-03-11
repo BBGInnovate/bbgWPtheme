@@ -1378,8 +1378,8 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: #ffffff;
-  background-image: url("../img/arrow-down.png");
-  background-image: url("../img/arrow-down.svg");
+  background-image: url("img/arrow-down.png");
+  background-image: url("img/arrow-down.svg");
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
   background-size: 1.3rem;
@@ -1464,8 +1464,8 @@ input[type="radio"]:focus + label::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  background-image: url("../img/correct8.png");
-  background-image: url("../img/correct8.svg");
+  background-image: url("img/correct8.png");
+  background-image: url("img/correct8.svg");
   background-position: 50%;
   background-repeat: no-repeat;
 }
@@ -2495,8 +2495,8 @@ fieldset {
 }
 
 .usa-checklist-checked:before {
-  background-image: url("../img/correct9.png");
-  background-image: url("../img/correct9.svg");
+  background-image: url("img/correct9.png");
+  background-image: url("img/correct9.svg");
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
