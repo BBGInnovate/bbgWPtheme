@@ -43,11 +43,10 @@ if ( ! function_exists( 'bbginnovate_setup' ) ) :
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'large-thumb', 1060, 636, true );
-		add_image_size( 'index-thumb', 780, 250, true );
+		add_image_size( 'large-thumb', 1040, 624, true );
 		add_image_size( 'medium-thumb', 600, 360, true );
 		add_image_size( 'small-thumb', 300, 180, true );
-		add_image_size( 'extra-large', 1040, 780, true );
+
 		add_image_size( 'mugshot', 200, 200 ); // 220 pixels wide by 180 pixels tall, soft proportional crop mode
 
 		function my_custom_sizes( $sizes ) {
@@ -64,7 +63,7 @@ if ( ! function_exists( 'bbginnovate_setup' ) ) :
 			*/
 			return array_merge( $sizes, array(
 		        'mugshot' => __('Mugshot'),
-		        'extra-large' => __('Extra Large'),
+		        'large-thumb' => __('Extra Large'),
 		    ) );
 
 			return $reorderedSizes;
