@@ -3571,28 +3571,28 @@ object {
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="facebook.com"] {
+.bbg__related-links a[href*="https://www.facebook.com/"] {
   background-image: url(img/social-icons/png/facebook-icon.png);
   background-image: url(img/social-icons/svg/facebook-icon.svg);
   /*margin-left: -1rem;*/
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="twitter.com"] {
+.bbg__related-links a[href*="https://twitter.com/AP/status/708413624830787585"] {
   background-image: url(img/social-icons/png/twitter-icon.png);
   background-image: url(img/social-icons/svg/twitter-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="linkedin.com"] {
+.bbg__related-links a[href*="https://www.linkedin.com"] {
   background-image: url(img/social-icons/png/linkedin-icon.png);
   background-image: url(img/social-icons/svg/linkedin-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="youtube.com"] {
+.bbg__related-links a[href*="https://www.youtube.com/watch?"] {
   background-image: url(img/social-icons/png/youtube-icon.png);
   background-image: url(img/social-icons/svg/youtube-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="vimeo.com"] {
+.bbg__related-links a[href*="https://vimeo.com/"] {
   background-image: url(img/social-icons/png/vimeo-icon.png);
   background-image: url(img/social-icons/svg/vimeo-icon.svg);
   padding-left: 2.5rem;
@@ -3602,7 +3602,7 @@ object {
   background-image: url(img/social-icons/svg/video-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="github.com"] {
+.bbg__related-links a[href*="https://github.com/"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
   padding-left: 2.5rem;
@@ -3617,12 +3617,12 @@ object {
   background-image: url(img/social-icons/svg/epub-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="play.google.com"] {
+.bbg__related-links a[href*="https://play.google.com/store/"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
   padding-left: 6.7rem;
 }
-.bbg__related-links a[href*="itunes.apple.com"] {
+.bbg__related-links a[href*="https://itunes.apple.com/"] {
   background-image: url(img/social-icons/png/apple-app-store-badge.png);
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
   padding-left: 6.7rem;

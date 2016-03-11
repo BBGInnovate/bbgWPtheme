@@ -301,7 +301,7 @@
 				padding-left: 2.5rem;
 			}
 			// Facebook links
-			&[href*="facebook.com"] {
+			&[href*="https://www.facebook.com/"] {
 				background: {
 					image: url(img/social-icons/png/facebook-icon.png);
 					image: url(img/social-icons/svg/facebook-icon.svg);
@@ -310,7 +310,7 @@
 				padding-left: 2.5rem;
 			}
 			// Twitter links
-			&[href*="twitter.com"] {
+			&[href*="https://twitter.com/AP/status/708413624830787585"] {
 				background: {
 					image: url(img/social-icons/png/twitter-icon.png);
 					image: url(img/social-icons/svg/twitter-icon.svg);
@@ -318,7 +318,7 @@
 				padding-left: 2.5rem;
 			}
 			// LinkedIn links
-			&[href*="linkedin.com"] {
+			&[href*="https://www.linkedin.com"] {
 				background: {
 					image: url(img/social-icons/png/linkedin-icon.png);
 					image: url(img/social-icons/svg/linkedin-icon.svg);
@@ -326,7 +326,7 @@
 				padding-left: 2.5rem;
 			}
 			//YouTube links
-			&[href*="youtube.com"]  {
+			&[href*="https://www.youtube.com/watch?"]  {
 				background: {
 					image: url(img/social-icons/png/youtube-icon.png);
 					image: url(img/social-icons/svg/youtube-icon.svg);
@@ -334,7 +334,7 @@
 				padding-left: 2.5rem;
 			}
 			//Vimeo links
-			&[href*="vimeo.com"]  {
+			&[href*="https://vimeo.com/"]  {
 				background: {
 					image: url(img/social-icons/png/vimeo-icon.png);
 					image: url(img/social-icons/svg/vimeo-icon.svg);
@@ -350,7 +350,7 @@
 				padding-left: 2.5rem;
 			}
 			// GitHub links
-			&[href*="github.com"] {
+			&[href*="https://github.com/"] {
 				background: {
 					image: url(img/social-icons/png/github-mark.png);
 					image: url(img/social-icons/svg/github-mark.svg);
@@ -374,7 +374,7 @@
 				padding-left: 2.5rem;
 			}
 			// Android apps on GooglePlay
-			&[href*="play.google.com"] {
+			&[href*="https://play.google.com/store/"] {
 				background: {
 					image: url(img/social-icons/png/google-play-badge.png);
 					image: url(img/social-icons/svg/google-play-badge.svg);
@@ -382,7 +382,7 @@
 				padding-left: 6.7rem;
 			}
 			// iOS apps on App Store
-			&[href*="itunes.apple.com"] {
+			&[href*="https://itunes.apple.com/"] {
 				background: {
 					image: url(img/social-icons/png/apple-app-store-badge.png);
 					image: url(img/social-icons/svg/apple-app-store-badge.svg);
