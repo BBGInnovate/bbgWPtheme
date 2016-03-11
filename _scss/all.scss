@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'core/utilities';
 
 @import 'bbg/variables-bbg'; /*MOVED FROM BELOW TO UPDATE FONTS*/
+@import 'bbg/utilities';
 
 
 // Elements -------------- //
@@ -64,9 +65,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'components/skipnav';
 
 
+// WordPress -------------- //
+@import '_wp/media/media';
+@import '_wp/modules/alignments';
+@import '_wp/navigation/menus';
+@import '_wp/layouts/sidebar-content';
+
+
 // BBG -------------- //
 /*@import 'bbg/variables-bbg'; MOVED ABOVE TO UPDATE FONTS */
-@import 'bbg/utilities';
 @import 'bbg/author';
 @import 'bbg/blog';
 @import 'bbg/grid';
@@ -79,9 +86,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'bbg/search-results';
 
 
-// WordPress -------------- //
-
-@import '_wp/media/media';
-@import '_wp/modules/alignments';
-@import '_wp/navigation/menus';
-@import '_wp/layouts/sidebar-content';
