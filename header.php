@@ -171,10 +171,8 @@ $ogDescription = str_replace('"','&qout;',$ogDescription);
 
 				<div class="bbg-header__container">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="bbg-header__link">
-						<div style="display: inline-block;">
-							<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="" class="bbg-header__logo">
-							<h1 class="bbg-header__site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
-						</div>
+						<img src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="" class="bbg-header__logo">
+						<h1 class="bbg-header__site-title"><?php echo bbginnovate_site_name_html(); ?></h1>
 					</a>
 				</div>
 
