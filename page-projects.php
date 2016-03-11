@@ -106,7 +106,12 @@ get_header(); ?>
 					echo '</div><!-- .usa-grid -->';
 
 					echo '<div class="usa-grid">';
-						the_posts_navigation();
+					$args = array(
+						'prev_text'          => __( 'Older projects' ),
+						'next_text'          => __( 'Newer projects' ),
+						'screen_reader_text' => __( 'Project navigation' )
+					);
+					echo the_posts_navigation($args);
 					echo '</div><!-- .usa-grid -->';
 
 				?>
