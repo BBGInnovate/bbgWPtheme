@@ -414,6 +414,15 @@
 		}
 	}
 
+/** FORMS */
+.bbg__article__form {
+	display: none;
+
+	.bbg__article__form-select--sub {
+		display: none;
+	}
+}
+
 /** POST AUTHOR */
 .bbg__article-author {
 	background-color: $color-gray-lightest;
@@ -519,8 +528,7 @@
 }
 
 
-
-//Previous/next links on project posts
+/** POST AUTHOR Previous/next links on project posts */
 .bbg__article__nav {
 	display: block;
 	margin: 0 auto;
@@ -582,9 +590,7 @@
 	}
 }
 
-
-
-
+/** BBG tagline */
 .bbg-tagline, .bbg-tagline a  {
 	color: $color-gray-medium;
 	font-size: $small-font-size;
