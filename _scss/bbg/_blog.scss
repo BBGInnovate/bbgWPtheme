@@ -19,24 +19,13 @@
 
 
 .bbg__article-header__caption {
-/*
-	color: $color-gray-dark;
-	font: {
-		family: $font-serif;
-		size: $caption-font-size;
-		style: italic;
-		weight: $font-light;
-	}
-	line-height: $lead-line-height;
-*/
-
 	@extend .wp-caption-text;
 	margin: -2rem 0 $site-margins auto;
-	text-align: right;
 	width: 100%;
 
 	@include media($medium-screen) {
 		max-width: 50%;
+		text-align: right;
 	}
 }
 

@@ -3338,23 +3338,13 @@ object {
 }
 
 .bbg__article-header__caption {
-  /*
-  	color: $color-gray-dark;
-  	font: {
-  		family: $font-serif;
-  		size: $caption-font-size;
-  		style: italic;
-  		weight: $font-light;
-  	}
-  	line-height: $lead-line-height;
-  */
   margin: -2rem 0 3rem auto;
-  text-align: right;
   width: 100%;
 }
 @media screen and (min-width: 600px) {
   .bbg__article-header__caption {
     max-width: 50%;
+    text-align: right;
   }
 }
 
