@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 
     stores = ["binu", "opera", "getjar"];
 
-    links={};
+    var links={};
     links["Alhurra"]={};
     links["Alhurra"]["binu"]={};
     links["Alhurra"]["getjar"]={};
@@ -180,6 +180,143 @@ jQuery(document).ready(function() {
 
   function initSawaSelect() {
 
+    var osList=["iOS","Android","Java"]
+    var javaStores = ["binu", "opera", "getjar"];
+    var androidStores=["amazon","getjar","google","opera"];
+    
+    var iOSLink="https://itunes.apple.com/app/radyw-swa-radio-sawa/id886220964?ls=1&mt=8";
+
+    var str = "";
+
+    var links={};
+
+    function fillStores(storeType) {
+        var stores=(storeType=="Java") ? javaStores : androidStores;
+         /*** Populate the store selector ****/
+        str="";
+        for (var i = 0; i < stores.length; i++) {
+            str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
+        }
+        jQuery("select[name=store]").empty();
+        jQuery("select[name=store]").append(str);    
+        
+    }
+
+
+    links["Java"]={};
+    links["Java"]["binu"]={};
+    links["Java"]["getjar"]={};
+    links["Java"]["opera"]={};
+    links["Java"]["binu"]["multi"]="http://m.binu.com/sawa/";
+    links["Java"]["getjar"]["multi"]="http://www.getjar.mobi/mobile/851300/-Radio-Sawa-for-Java-Phones";
+    links["Java"]["opera"]["multi"]="http://java.apps.opera.com/en_us/radio_sawa_for_java_phones.html?pm=1&multi=1";
+
+    links["Android"]={}
+    links["Android"]["amazon"]={}
+    links["Android"]["getjar"]={}
+    links["Android"]["google"]={}
+    links["Android"]["opera"]={}
+
+    links["Android"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=com.bbg.radiosawa";
+    links["Android"]["google"]["multi"]="https://play.google.com/store/apps/details?id=com.bbg.radiosawa";
+    links["Android"]["opera"]["multi"]="http://apps.opera.com/en_us/radio_sawa_r9511.html?dm=1&multi=1";
+    
+    links["Android"]["getjar"]["Arabic"] = "http://www.getjar.mobi/mobile/851300/-Radio-Sawa-for-Java-Phones";
+    links["Android"]["getjar"]["English"] = "http://www.getjar.mobi/mobile/821090/Radio-Sawa";
+
+    /*** Populate the entity selector ****/
+    str="";
+    for (var i = 0; i < osList.length; i++) {
+        str += "<option value=" + osList[i] + ">" + osList[i] + "</option>";
+    }
+    jQuery("select[name=os]").append(str);
+
+    jQuery("#stores").hide();   
+
+    /*** Show the form (we keep it hidden until it has data) ****/
+    jQuery("#appSelect-sawa").css("display", "block");
+
+    function refreshLanguages() {
+        jQuery("select[name=language]").empty();
+        var selectedOS= jQuery("select[name=os]").val();
+        var selectedStore= jQuery("select[name=store]").val();
+        var languages = links[selectedOS][selectedStore];
+
+        var str = "";
+        var hasMulti=false;
+        for (var key in languages) {
+            if (languages.hasOwnProperty(key)) {
+                if (key == "multi") {
+                    hasMulti=true;
+                } else {
+                    str += "<option value=" + key + ">" + key + "</option>";
+                }
+            }
+        }
+        console.log("hasMulti? " + selectedOS + "," + selectedStore + " ... " + hasMulti);
+        jQuery("select[name=language]").append(str);    
+        if (!hasMulti) {
+            jQuery("#languages").show();
+        } else {
+            jQuery("#languages").hide();
+            jQuery("select[name=language]").prop('selectedIndex',1);
+            jQuery("input[name=btnGo]").show();
+        }
+    }
+
+    /*** when entity is changed, clear the store selection and remove language options***/
+    jQuery("select[name=os]").change(function() {
+        var newOS = jQuery(this).val();
+        jQuery("#appSelect-java select[name=store]").prop('selectedIndex',0);
+        jQuery("#appSelect-java select[name=language]").empty();
+        jQuery("#languages").hide();
+        
+        if (newOS == "iOS") {
+            jQuery("input[name=btnGo]").show();
+            jQuery("#stores").hide();
+        } else {
+            jQuery("input[name=btnGo]").hide(); 
+            
+            fillStores(newOS);
+
+            jQuery("#stores").show(); 
+        }
+    })
+
+    /*** when store is changed, fill in the languages ***/
+    jQuery("select[name=store]").change(function() {
+        var storeValue = jQuery("select[name=store]").val();
+        if (storeValue != "") {
+            refreshLanguages();
+        } else {
+            jQuery("#languages").hide();
+            jQuery("input[name=btnGo]").hide();
+        }
+    })
+
+    jQuery("input[name=btnGo]").click(function() {
+        var osValue = jQuery("select[name=os]").val();
+        var storeValue = jQuery("select[name=store]").val();
+        var languageValue = jQuery("select[name=language] option:selected").text();
+        var targetUrl = "";
+
+        if (osValue=="iOS") {
+            targetUrl=iOSLink;
+        } else {
+            if (links[osValue][storeValue].hasOwnProperty("multi")) {
+                targetUrl=links[osValue][storeValue]["multi"];
+            } else {
+                targetUrl=links[osValue][storeValue][languageValue];
+            }
+        }
+
+        if (targetUrl != "") {
+            window.open(targetUrl, '_blank');
+        }
+    });
+
+    jQuery("#languages").hide();
+    jQuery("input[name=btnGo]").hide();
   }
 
   function initStreamerSelect() {
@@ -189,6 +326,8 @@ jQuery(document).ready(function() {
   if (jQuery("#appSelect-java").length) {
     initJavaSelect();
   }
-  
+  if (jQuery("#appSelect-sawa").length) {
+    initSawaSelect();
+  }
 
 });
