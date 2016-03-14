@@ -274,6 +274,9 @@ jQuery(document).ready(function() {
         if (newOS == "iOS") {
             jQuery("input[name=btnGo]").show();
             jQuery("#stores").hide();
+        } else if (newOS == "") {
+            jQuery("#stores").hide();   
+            jQuery("input[name=btnGo]").hide(); 
         } else {
             jQuery("input[name=btnGo]").hide(); 
             
