@@ -181,8 +181,8 @@ jQuery(document).ready(function() {
   function initSawaSelect() {
 
     var osList=["iOS","Android","Java"]
-    var javaStores = ["binu", "opera", "getjar"];
-    var androidStores=["amazon","getjar","google","opera"];
+    var javaStores = ["","binu", "opera", "getjar"];
+    var androidStores=["","amazon","getjar","google","opera"];
     
     var iOSLink="https://itunes.apple.com/app/radyw-swa-radio-sawa/id886220964?ls=1&mt=8";
 
