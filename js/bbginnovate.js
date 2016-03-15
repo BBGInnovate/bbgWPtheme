@@ -86,8 +86,6 @@ jQuery(document).ready(function() {
     links["VOA"]["getjar"]["Chinese Traditional"] = "http://www.getjar.mobi/mobile/848266/VOA-Chinese-Traditional-for-Java-Phones";
     links["VOA"]["opera"]["multi"]="http://java.apps.opera.com/en_us/voa_news_for_java_phones.html?dm=1&multi=1&set_lang=en";
 
-
-
     /*** Populate the entity selector ****/
     var str = "";
     for (var i = 0; i < entities.length; i++) {
@@ -101,6 +99,8 @@ jQuery(document).ready(function() {
         str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
     }
     jQuery("#appSelect-java select[name=store]").append(str);    
+    jQuery("#stores").hide();
+
     
 
     /*** Show the form (we keep it hidden until it has data) ****/
@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
         var selectedStore= jQuery("select[name=store]").val();
         var languages = links[selectedEntity][selectedStore];
 
-        var str = "";
+        var str = '<option value="" disabled selected>Select a language</option>';
         var hasMulti=false;
         for (var key in languages) {
             if (languages.hasOwnProperty(key)) {
@@ -123,10 +123,15 @@ jQuery(document).ready(function() {
                 }
             }
         }
+
         jQuery("select[name=language]").append(str);    
+        console.log("hasMulti? ? " + hasMulti);
         if (!hasMulti) {
             jQuery("#languages").show();
+            jQuery("select[name=language]").prop('selectedIndex',0);
+            jQuery("input[name=btnGo]").hide();
         } else {
+
             jQuery("#languages").hide();
             jQuery("select[name=language]").prop('selectedIndex',1);
             jQuery("input[name=btnGo]").show();
@@ -140,6 +145,7 @@ jQuery(document).ready(function() {
         jQuery("#appSelect-java select[name=language]").empty();
         jQuery("#languages").hide();
         jQuery("input[name=btnGo]").hide();
+        jQuery("#stores").show();
 
     })
 
@@ -153,6 +159,10 @@ jQuery(document).ready(function() {
             jQuery("input[name=btnGo]").hide();
         }
     })
+
+    jQuery("select[name=language]").change(function() {
+        jQuery("input[name=btnGo]").show();
+    });
 
     jQuery("input[name=btnGo]").click(function() {
         var entityValue = jQuery("select[name=entity]").val();
