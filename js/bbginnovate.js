@@ -191,8 +191,8 @@ jQuery(document).ready(function() {
   function initSawaSelect() {
 
     var osList=["iOS","Android","Java"]
-    var javaStores = ["","binu", "opera", "getjar"];
-    var androidStores=["","amazon","getjar","google","opera"];
+    var javaStores = ["binu", "opera", "getjar"];
+    var androidStores=["amazon","getjar","google","opera"];
     
     var iOSLink="https://itunes.apple.com/app/radyw-swa-radio-sawa/id886220964?ls=1&mt=8";
 
@@ -203,7 +203,7 @@ jQuery(document).ready(function() {
     function fillStores(storeType) {
         var stores=(storeType=="Java") ? javaStores : androidStores;
          /*** Populate the store selector ****/
-        str="";
+        str = '<option value="" disabled selected>Select a language</option>';
         for (var i = 0; i < stores.length; i++) {
             str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
         }
@@ -252,7 +252,7 @@ jQuery(document).ready(function() {
         var selectedStore= jQuery("select[name=store]").val();
         var languages = links[selectedOS][selectedStore];
 
-        var str = "";
+        var str = '<option value="" disabled selected>Select a language</option>';
         var hasMulti=false;
         for (var key in languages) {
             if (languages.hasOwnProperty(key)) {
@@ -267,6 +267,7 @@ jQuery(document).ready(function() {
         jQuery("select[name=language]").append(str);    
         if (!hasMulti) {
             jQuery("#languages").show();
+            jQuery("input[name=btnGo]").hide();
         } else {
             jQuery("#languages").hide();
             jQuery("select[name=language]").prop('selectedIndex',1);
@@ -306,6 +307,10 @@ jQuery(document).ready(function() {
             jQuery("input[name=btnGo]").hide();
         }
     })
+
+    jQuery("select[name=language]").change(function() {
+        jQuery("input[name=btnGo]").show();
+    });
 
     jQuery("input[name=btnGo]").click(function() {
         var osValue = jQuery("select[name=os]").val();
