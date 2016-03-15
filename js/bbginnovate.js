@@ -125,7 +125,6 @@ jQuery(document).ready(function() {
         }
 
         jQuery("select[name=language]").append(str);    
-        console.log("hasMulti? ? " + hasMulti);
         if (!hasMulti) {
             jQuery("#languages").show();
             jQuery("select[name=language]").prop('selectedIndex',0);
@@ -263,7 +262,6 @@ jQuery(document).ready(function() {
                 }
             }
         }
-        console.log("hasMulti? " + selectedOS + "," + selectedStore + " ... " + hasMulti);
         jQuery("select[name=language]").append(str);    
         if (!hasMulti) {
             jQuery("#languages").show();
@@ -278,8 +276,6 @@ jQuery(document).ready(function() {
     /*** when entity is changed, clear the store selection and remove language options***/
     jQuery("select[name=os]").change(function() {
         var newOS = jQuery(this).val();
-        jQuery("#appSelect-java select[name=store]").prop('selectedIndex',0);
-        jQuery("#appSelect-java select[name=language]").empty();
         jQuery("#languages").hide();
         
         if (newOS == "iOS") {
@@ -335,9 +331,171 @@ jQuery(document).ready(function() {
 
     jQuery("#languages").hide();
     jQuery("input[name=btnGo]").hide();
-  }
+}
 
   function initStreamerSelect() {
+    var osList=["iOS","Android"]
+    var androidStores=["amazon","getjar","google","imimobile","opera","safaricom","vodacom"];
+    
+    var iOSLink="https://itunes.apple.com/app/voa-mobile-streamer/id1000757271?ls=1&mt=8+";
+
+    var str = "";
+
+    var links={};
+
+    function fillStores() {
+        var stores=androidStores;
+         /*** Populate the store selector ****/
+        str = '<option value="" disabled selected>Select a store</option>';
+        for (var i = 0; i < stores.length; i++) {
+            str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
+        }
+        jQuery("select[name=store]").empty();
+        jQuery("select[name=store]").append(str);    
+        
+    }
+
+    links["Android"]={}
+    links["Android"]["amazon"]={}
+    links["Android"]["getjar"]={}
+    links["Android"]["google"]={}
+    links["Android"]["imimobile"]={}
+    links["Android"]["opera"]={}
+    links["Android"]["safaricom"]={}
+    links["Android"]["vodacom"]={}
+
+    links["Android"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=com.audionowdigital.player.voa";
+    links["Android"]["google"]["multi"]="https://play.google.com/store/apps/details?id=com.audionowdigital.player.voa";
+    links["Android"]["opera"]["multi"]="http://apps.opera.com/en_us/voa_mobile_streamer.html?pm=1&multi=1";
+    
+    links["Android"]["getjar"]["Amharic"] = "www.getjar.mobi/mobile/856571/VOA-Amharic-Mobile-Streamer";
+    links["Android"]["getjar"]["Bangla"] = "www.getjar.mobi/mobile/856573/VOA-Bengali-Mobile-Streamer";
+    links["Android"]["getjar"]["Burmese"] = "www.getjar.mobi/mobile/856574/VOA-Burmese-Mobile-Streamer";
+    links["Android"]["getjar"]["Chinese Simplified"] = "www.getjar.mobi/mobile/856575/VOA-Chinese-Simplified-Mobile-Streamer";
+    links["Android"]["getjar"]["Chinese Traditional"] = "www.getjar.mobi/mobile/856577/VOA-Chinese-Traditional-Mobile-Streamer";
+    links["Android"]["getjar"]["English"] = "www.getjar.mobi/mobile/856570/VOA-Mobile-Streamer";
+    links["Android"]["getjar"]["French"] = "www.getjar.mobi/mobile/856578/VOA-French-Mobile-Streamer";
+    links["Android"]["getjar"]["Indonesian"] = "www.getjar.mobi/mobile/856579/VOA-Indonesian-Mobile-Streamer";
+    links["Android"]["getjar"]["Khmer"] = "www.getjar.mobi/mobile/856582/VOA-Khmer-Mobile-Streamer";
+    links["Android"]["getjar"]["Korean"] = "www.getjar.mobi/mobile/856583/VOA-Korean-Mobile-Streamer";
+    links["Android"]["getjar"]["Lao"] = "www.getjar.mobi/mobile/856585/VOA-Lao-Mobile-Streamer";
+    links["Android"]["getjar"]["Portuguese"] = "www.getjar.mobi/mobile/856587/VOA-Portuguese-Mobile-Streamer";
+    links["Android"]["getjar"]["Spanish"] = "www.getjar.mobi/mobile/856588/VOA-Spanish-Mobile-Streamer";
+    links["Android"]["getjar"]["Swahili"] = "www.getjar.mobi/mobile/856590/VOA-Swahili-Mobile-Streamer";
+    links["Android"]["getjar"]["Thai"] = "www.getjar.mobi/mobile/856591/VOA-Thai-Mobile-Streamer";
+    links["Android"]["getjar"]["Vietnamese"] = "www.getjar.mobi/mobile/856592/VOA-Vietnamese-Mobile-Streamer";
+
+    links["Android"]["imimobile"]["English (SA)"] = "http://vfsa-mstore.imimobile.co/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
+    links["Android"]["imimobile"]["Swahili (SA)"] = "http://vfsa-mstore.imimobile.co/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
+
+    links["Android"]["safaricom"]["Swahili"] = "http://appstore.safaricom.com/web/shop/details.aspx?cid=147534&ct=AP";
+    links["Android"]["safaricom"]["English"] = "http://appstore.safaricom.com/web/shop/details.aspx?cid=147533&ct=AP";
+    links["Android"]["safaricom"]["English (Kenya)"] = "http://appstore.safaricom.com/Portal/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
+    links["Android"]["safaricom"]["Swahili (Kenya)"] = "http://appstore.safaricom.com/Portal/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
+
+    links["Android"]["vodacom"]["English (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
+    links["Android"]["vodacom"]["Swahili (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
+
+    /*** Populate the entity selector ****/
+    str="";
+    for (var i = 0; i < osList.length; i++) {
+        str += "<option value=" + osList[i] + ">" + osList[i] + "</option>";
+    }
+    jQuery("select[name=os]").append(str);
+
+    jQuery("#stores").hide();   
+
+    /*** Show the form (we keep it hidden until it has data) ****/
+    jQuery("#appSelect-streamer").css("display", "block");
+
+    function refreshLanguages() {
+        jQuery("select[name=language]").empty();
+        var selectedOS= jQuery("select[name=os]").val();
+        var selectedStore= jQuery("select[name=store]").val();
+        var languages = links[selectedOS][selectedStore];
+
+        var str = '<option value="" disabled selected>Select a language</option>';
+        var hasMulti=false;
+        for (var key in languages) {
+            if (languages.hasOwnProperty(key)) {
+                if (key == "multi") {
+                    hasMulti=true;
+                } else {
+                    str += "<option value=" + key + ">" + key + "</option>";
+                }
+            }
+        }
+        jQuery("select[name=language]").append(str);    
+        if (!hasMulti) {
+            jQuery("#languages").show();
+            jQuery("input[name=btnGo]").hide();
+        } else {
+            jQuery("#languages").hide();
+            jQuery("select[name=language]").prop('selectedIndex',1);
+            jQuery("input[name=btnGo]").show();
+        }
+    }
+
+    /*** when entity is changed, clear the store selection and remove language options***/
+    jQuery("select[name=os]").change(function() {
+        var newOS = jQuery(this).val();
+        jQuery("#appSelect-streamer select[name=store]").prop('selectedIndex',0);
+        jQuery("#appSelect-streamer select[name=language]").empty();
+        jQuery("#languages").hide();
+        
+        if (newOS == "iOS") {
+            jQuery("input[name=btnGo]").show();
+            jQuery("#stores").hide();
+        } else if (newOS == "") {
+            jQuery("#stores").hide();   
+            jQuery("input[name=btnGo]").hide(); 
+        } else {
+            jQuery("input[name=btnGo]").hide(); 
+            
+            fillStores(newOS);
+
+            jQuery("#stores").show(); 
+        }
+    })
+
+    /*** when store is changed, fill in the languages ***/
+    jQuery("select[name=store]").change(function() {
+        var storeValue = jQuery("select[name=store]").val();
+        if (storeValue != "") {
+            refreshLanguages();
+        } else {
+            jQuery("#languages").hide();
+            jQuery("input[name=btnGo]").hide();
+        }
+    })
+
+    jQuery("select[name=language]").change(function() {
+        jQuery("input[name=btnGo]").show();
+    });
+
+    jQuery("input[name=btnGo]").click(function() {
+        var osValue = jQuery("select[name=os]").val();
+        var storeValue = jQuery("select[name=store]").val();
+        var languageValue = jQuery("select[name=language] option:selected").text();
+        var targetUrl = "";
+
+        if (osValue=="iOS") {
+            targetUrl=iOSLink;
+        } else {
+            if (links[osValue][storeValue].hasOwnProperty("multi")) {
+                targetUrl=links[osValue][storeValue]["multi"];
+            } else {
+                targetUrl=links[osValue][storeValue][languageValue];
+            }
+        }
+
+        if (targetUrl != "") {
+            window.open(targetUrl, '_blank');
+        }
+    });
+
+    jQuery("#languages").hide();
+    jQuery("input[name=btnGo]").hide();
 
   }
 
@@ -346,6 +504,9 @@ jQuery(document).ready(function() {
   }
   if (jQuery("#appSelect-sawa").length) {
     initSawaSelect();
+  }
+  if (jQuery("#appSelect-streamer").length) {
+    initStreamerSelect();
   }
 
 });
