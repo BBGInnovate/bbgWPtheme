@@ -27,6 +27,27 @@ li.usa-footer-primary-content {
 }
 
 
+//Switching padding for margin to make 3 dropdowns fit in grid.
+.usa-input-grid {
+	@include media($medium-screen) {
+		margin-right: 5%;
+	}
+}
+
+.usa-input-grid:last-of-type {
+	@include media($medium-screen) {
+		margin-right: 0;
+	}
+}
+
+.usa-input-grid-small {
+	@include media($medium-screen) {
+		width: 30%;
+	}
+}
+
+
+
 
 //Primary footer category links should have a hand cursor on hover
 .usa-footer-big nav .usa-footer-primary-link {
@@ -71,6 +92,9 @@ textarea,
 select {
 	border: 1px solid #CCC;
 }
+
+form select:focus {background-color: #dce4ef;}
+
 
 .screen-reader-text {
 	display: none;

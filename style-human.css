@@ -4835,6 +4835,24 @@ li.usa-footer-primary-content:last-child {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .usa-input-grid {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .usa-input-grid:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .usa-input-grid-small {
+    width: 30%;
+  }
+}
+
 .usa-footer-big nav .usa-footer-primary-link {
   cursor: pointer;
 }
@@ -4872,6 +4890,10 @@ input[type="week"],
 textarea,
 select {
   border: 1px solid #CCC;
+}
+
+form select:focus {
+  background-color: #dce4ef;
 }
 
 .screen-reader-text {
