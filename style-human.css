@@ -4838,6 +4838,7 @@ li.usa-footer-primary-content:last-child {
 @media screen and (min-width: 600px) {
   .usa-input-grid {
     margin-right: 5%;
+    padding-right: 0;
   }
 }
 

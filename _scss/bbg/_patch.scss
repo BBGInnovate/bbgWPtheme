@@ -31,6 +31,7 @@ li.usa-footer-primary-content {
 .usa-input-grid {
 	@include media($medium-screen) {
 		margin-right: 5%;
+		padding-right: 0;
 	}
 }
 
