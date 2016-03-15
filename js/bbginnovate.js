@@ -1,4 +1,24 @@
 jQuery(document).ready(function() { 
+  
+   function niceStoreName(str) {
+     var names={};
+     names["amazon"]="Amazon";
+     names["binu"]="biNu";
+     names["getjar"]="GetJar";
+     names["google"]="Google";
+     names["opera"]="Opera";
+     names["safaricom"]="Safari";
+     names["imimobile"]="IMImobile";
+     names["vodacom"]="Vodacom";
+
+     var niceName=str;
+     if (names.hasOwnProperty(str)) {
+        niceName=names[str];
+     }
+     return niceName;
+
+   }
+
   function initJavaSelect() {
     //for an example of this in action, see http://innovation.bbg.gov/blog/bbgs-new-java-based-apps-are-built-for-very-low-end-or-feature-phones/
     entities = [{
@@ -96,7 +116,7 @@ jQuery(document).ready(function() {
     /*** Populate the store selector ****/
     str="";
     for (var i = 0; i < stores.length; i++) {
-        str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
+        str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
     }
     jQuery("#appSelect-java select[name=store]").append(str);    
     jQuery("#stores").hide();
@@ -204,7 +224,7 @@ jQuery(document).ready(function() {
          /*** Populate the store selector ****/
         str = '<option value="" disabled selected>Select a store</option>';
         for (var i = 0; i < stores.length; i++) {
-            str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
+            str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
         }
         jQuery("select[name=store]").empty();
         jQuery("select[name=store]").append(str);    
@@ -348,7 +368,7 @@ jQuery(document).ready(function() {
          /*** Populate the store selector ****/
         str = '<option value="" disabled selected>Select a store</option>';
         for (var i = 0; i < stores.length; i++) {
-            str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
+            str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
         }
         jQuery("select[name=store]").empty();
         jQuery("select[name=store]").append(str);    
