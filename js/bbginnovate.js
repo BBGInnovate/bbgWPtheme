@@ -203,7 +203,7 @@ jQuery(document).ready(function() {
     function fillStores(storeType) {
         var stores=(storeType=="Java") ? javaStores : androidStores;
          /*** Populate the store selector ****/
-        str = '<option value="" disabled selected>Select a language</option>';
+        str = '<option value="" disabled selected>Select a store</option>';
         for (var i = 0; i < stores.length; i++) {
             str += "<option value=" + stores[i] + ">" + stores[i] + "</option>";
         }
