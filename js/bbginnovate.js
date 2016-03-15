@@ -388,22 +388,22 @@ jQuery(document).ready(function() {
     links["Android"]["google"]["multi"]="https://play.google.com/store/apps/details?id=com.audionowdigital.player.voa";
     links["Android"]["opera"]["multi"]="http://apps.opera.com/en_us/voa_mobile_streamer.html?pm=1&multi=1";
     
-    links["Android"]["getjar"]["Amharic"] = "www.getjar.mobi/mobile/856571/VOA-Amharic-Mobile-Streamer";
-    links["Android"]["getjar"]["Bangla"] = "www.getjar.mobi/mobile/856573/VOA-Bengali-Mobile-Streamer";
-    links["Android"]["getjar"]["Burmese"] = "www.getjar.mobi/mobile/856574/VOA-Burmese-Mobile-Streamer";
-    links["Android"]["getjar"]["Chinese Simplified"] = "www.getjar.mobi/mobile/856575/VOA-Chinese-Simplified-Mobile-Streamer";
-    links["Android"]["getjar"]["Chinese Traditional"] = "www.getjar.mobi/mobile/856577/VOA-Chinese-Traditional-Mobile-Streamer";
-    links["Android"]["getjar"]["English"] = "www.getjar.mobi/mobile/856570/VOA-Mobile-Streamer";
-    links["Android"]["getjar"]["French"] = "www.getjar.mobi/mobile/856578/VOA-French-Mobile-Streamer";
-    links["Android"]["getjar"]["Indonesian"] = "www.getjar.mobi/mobile/856579/VOA-Indonesian-Mobile-Streamer";
-    links["Android"]["getjar"]["Khmer"] = "www.getjar.mobi/mobile/856582/VOA-Khmer-Mobile-Streamer";
-    links["Android"]["getjar"]["Korean"] = "www.getjar.mobi/mobile/856583/VOA-Korean-Mobile-Streamer";
-    links["Android"]["getjar"]["Lao"] = "www.getjar.mobi/mobile/856585/VOA-Lao-Mobile-Streamer";
-    links["Android"]["getjar"]["Portuguese"] = "www.getjar.mobi/mobile/856587/VOA-Portuguese-Mobile-Streamer";
-    links["Android"]["getjar"]["Spanish"] = "www.getjar.mobi/mobile/856588/VOA-Spanish-Mobile-Streamer";
-    links["Android"]["getjar"]["Swahili"] = "www.getjar.mobi/mobile/856590/VOA-Swahili-Mobile-Streamer";
-    links["Android"]["getjar"]["Thai"] = "www.getjar.mobi/mobile/856591/VOA-Thai-Mobile-Streamer";
-    links["Android"]["getjar"]["Vietnamese"] = "www.getjar.mobi/mobile/856592/VOA-Vietnamese-Mobile-Streamer";
+    links["Android"]["getjar"]["Amharic"] = "http://www.getjar.mobi/mobile/856571/VOA-Amharic-Mobile-Streamer";
+    links["Android"]["getjar"]["Bangla"] = "http://www.getjar.mobi/mobile/856573/VOA-Bengali-Mobile-Streamer";
+    links["Android"]["getjar"]["Burmese"] = "http://www.getjar.mobi/mobile/856574/VOA-Burmese-Mobile-Streamer";
+    links["Android"]["getjar"]["Chinese Simplified"] = "http://www.getjar.mobi/mobile/856575/VOA-Chinese-Simplified-Mobile-Streamer";
+    links["Android"]["getjar"]["Chinese Traditional"] = "http://www.getjar.mobi/mobile/856577/VOA-Chinese-Traditional-Mobile-Streamer";
+    links["Android"]["getjar"]["English"] = "http://www.getjar.mobi/mobile/856570/VOA-Mobile-Streamer";
+    links["Android"]["getjar"]["French"] = "http://www.getjar.mobi/mobile/856578/VOA-French-Mobile-Streamer";
+    links["Android"]["getjar"]["Indonesian"] = "http://www.getjar.mobi/mobile/856579/VOA-Indonesian-Mobile-Streamer";
+    links["Android"]["getjar"]["Khmer"] = "http://www.getjar.mobi/mobile/856582/VOA-Khmer-Mobile-Streamer";
+    links["Android"]["getjar"]["Korean"] = "http://www.getjar.mobi/mobile/856583/VOA-Korean-Mobile-Streamer";
+    links["Android"]["getjar"]["Lao"] = "http://www.getjar.mobi/mobile/856585/VOA-Lao-Mobile-Streamer";
+    links["Android"]["getjar"]["Portuguese"] = "http://www.getjar.mobi/mobile/856587/VOA-Portuguese-Mobile-Streamer";
+    links["Android"]["getjar"]["Spanish"] = "http://www.getjar.mobi/mobile/856588/VOA-Spanish-Mobile-Streamer";
+    links["Android"]["getjar"]["Swahili"] = "http://www.getjar.mobi/mobile/856590/VOA-Swahili-Mobile-Streamer";
+    links["Android"]["getjar"]["Thai"] = "http://www.getjar.mobi/mobile/856591/VOA-Thai-Mobile-Streamer";
+    links["Android"]["getjar"]["Vietnamese"] = "http://www.getjar.mobi/mobile/856592/VOA-Vietnamese-Mobile-Streamer";
 
     links["Android"]["imimobile"]["English (SA)"] = "http://vfsa-mstore.imimobile.co/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
     links["Android"]["imimobile"]["Swahili (SA)"] = "http://vfsa-mstore.imimobile.co/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
