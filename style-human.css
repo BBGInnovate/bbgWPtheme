@@ -3048,12 +3048,32 @@ object {
   float: left;
   width: 50%;
 }
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+  background-image: url("img/arrow-previous.png");
+  background-image: url("img/arrow-previous.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 25px;
+}
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%;
+}
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+  background-image: url("img/arrow-next.png");
+  background-image: url("img/arrow-next.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-right: 25px;
 }
 
 /*

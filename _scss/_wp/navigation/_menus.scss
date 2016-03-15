@@ -239,11 +239,33 @@ body:not(.home) .menu-all-pages-container {
 	.nav-previous {
 		float: left;
 		width: 50%;
+
+		a {
+			background: {
+				image: url('img/arrow-previous.png');
+				image: url('img/arrow-previous.svg');
+				position: left top;
+				repeat: no-repeat;
+				size: contain;
+			}
+			padding-left: 25px;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		a {
+			background: {
+				image: url('img/arrow-next.png');
+				image: url('img/arrow-next.svg');
+				position: right top;
+				repeat: no-repeat;
+				size: contain;
+			}
+			padding-right: 25px;
+		}
 	}
 }
