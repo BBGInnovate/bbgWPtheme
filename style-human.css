@@ -3376,8 +3376,7 @@ object {
 }
 @media screen and (min-width: 600px) {
   .bbg__article-header__caption {
-    max-width: 50%;
-    text-align: right;
+    max-width: 33%;
   }
 }
 
@@ -4927,10 +4926,6 @@ select {
 
 form select:focus {
   background-color: #dce4ef;
-}
-
-.screen-reader-text {
-  display: none;
 }
 
 .usa-social-links a {

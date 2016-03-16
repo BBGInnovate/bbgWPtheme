@@ -48,8 +48,6 @@ li.usa-footer-primary-content {
 }
 
 
-
-
 //Primary footer category links should have a hand cursor on hover
 .usa-footer-big nav .usa-footer-primary-link {
 	cursor: pointer;
@@ -94,11 +92,8 @@ select {
 	border: 1px solid #CCC;
 }
 
-form select:focus {background-color: #dce4ef;}
-
-
-.screen-reader-text {
-	display: none;
+form select:focus {
+	background-color: $color-gray-cool-light;
 }
 
 .usa-social-links a {
