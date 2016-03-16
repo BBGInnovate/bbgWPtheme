@@ -598,3 +598,10 @@ input[type="radio"] {
 .bbg__article-footer {
 	margin-top: $site-margins * 2;
 }
+
+.usa-table, .usa-table-borderless {
+	font-size: $small-font-size;
+	@include media($small-screen) {
+			font-size: $base-font-size;
+		}
+}
