@@ -114,6 +114,9 @@ Link: [https://wordpress.org/plugins/mail-from/] (https://wordpress.org/plugins/
 
 The Mail From plugin allows admins to change the 'from' value in the emails - instead of being hardcoded to the address of "wordpress@innovation.bbg.gov" and a from name of "WordPress" we can set it to whatever we like.
 
+### Google XML Sitemaps
+Link: [https://wordpress.org/plugins/google-sitemap-generator/] (https://wordpress.org/plugins/google-sitemap-generator/)
+Generates a sitemap for Google.
 
 ##Helpful Snippets
 
