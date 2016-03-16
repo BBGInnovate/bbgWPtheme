@@ -278,13 +278,14 @@ jQuery(document).ready(function() {
     links["RFERL"]["google"]={};
     links["RFERL"]["opera"]={};
     links["RFERL"]["getjar"]={};
-    links["RFERL"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.rfa";
-    links["RFERL"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.rfa";
-    links["RFERL"]["opera"]["multi"]="http://apps.opera.com/en_us/radio_free_asia.html?dm=1&multi=1";
-    links["RFERL"]["getjar"]["Chinese Simplified"]="http://www.getjar.mobi/mobile/813207/-Simplified-Chinese";
-    links["RFERL"]["getjar"]["Chinese Traditional"]="http://www.getjar.mobi/mobile/841500/-Traditional-Chinese";
-    links["RFERL"]["getjar"]["English"]="http://www.getjar.mobi/mobile/812723/RFA";
-    links["RFERL"]["getjar"]["Korean"]="http://www.getjar.mobi/mobile/813208/";
+    links["RFERL"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=org.rferl.en";
+    links["RFERL"]["google"]["multi"]="https://play.google.com/store/apps/details?id=org.rferl.en";
+    links["RFERL"]["opera"]["multi"]="http://apps.opera.com/en_us/rferl.html?dm=1&multi=1";
+    links["RFERL"]["getjar"]["Belarusian"]="http://www.getjar.mobi/mobile/813214/RFE-";
+    links["RFERL"]["getjar"]["English"]="http://www.getjar.mobi/mobile/812940/RFE";
+    links["RFERL"]["getjar"]["Persian"]="http://www.getjar.mobi/mobile/813215/-";
+    links["RFERL"]["getjar"]["Russian"]="http://www.getjar.mobi/mobile/813217/RFE-";
+    links["RFERL"]["getjar"]["Ukrainian"]="http://www.getjar.mobi/mobile/813218/RFE-";
 
     
     links["VOA"]={};
