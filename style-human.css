@@ -3673,14 +3673,15 @@ object {
   display: none;
 }
 
+/*
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-appearance: radio;
-  display: inline;
-  position: relative;
-  left: 0;
+	-webkit-appearance: radio;
+	display: inline;
+    position: relative;
+	left: 0;
 }
-
+*/
 /** POST AUTHOR */
 .bbg__article-author {
   background-color: #f1f1f1;
