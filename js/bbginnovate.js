@@ -203,8 +203,242 @@ jQuery(document).ready(function() {
 
   }
 
-  function initSmartSelect() {
+  function initSmartphoneSelect() {
+    //see http://innovation.bbg.gov/blog/mobile-news-apps/
+    console.log("initSmartphoneSelect");
 
+    var iOSLinks={}
+    iOSLinks["Alhurra"]="https://itunes.apple.com/app/alhurra/id639637717?ls=1&mt=8";
+    iOSLinks["Marti"]="https://itunes.apple.com/app/marti-noticias/id639624682?mt=8";
+    iOSLinks["RFA"]="https://itunes.apple.com/app/rfa/id744921169?ls=1&mt=8";
+    iOSLinks["RFERL"]="https://itunes.apple.com/app/id475986784";
+    iOSLinks["VOA"]="https://itunes.apple.com/app/voa/id632618796?ls=1&mt=8";
+
+
+
+    var stores = ["amazon", "getjar", "google", "opera"];
+
+    var entities = [{
+        "value": "VOA",
+        "display": "VOA News"
+    }, {
+        "value": "Alhurra",
+        "display": "Alhurra TV"
+    }, {
+        "value": "Marti",
+        "display": "Martí Noticias"
+    }, {
+        "value": "RFERL",
+        "display": "Radio Free Europe/Radio Liberty"
+    }, {
+        "value": "RFA",
+        "display": "Radio Free Asia"
+    }];
+
+    var links={};
+    links["Alhurra"]={};
+    links["Alhurra"]["amazon"]={};
+    links["Alhurra"]["google"]={};
+    links["Alhurra"]["opera"]={};
+    links["Alhurra"]["getjar"]={};
+    links["Alhurra"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.mbn";
+    links["Alhurra"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.mbn&hl=en";
+    links["Alhurra"]["opera"]["multi"]="http://apps.opera.com/en_us/alhurra.html?dm=1&multi=1";
+    links["Alhurra"]["getjar"]["Arabic"]="http://www.getjar.mobi/mobile/812946/";
+    links["Alhurra"]["getjar"]["English"]="http://www.getjar.mobi/mobile/812939/Alhurra";
+
+
+    links["Marti"]={};
+    links["Marti"]["amazon"]={};
+    links["Marti"]["google"]={};
+    links["Marti"]["opera"]={};
+    links["Marti"]["getjar"]={};
+    links["Marti"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.ocb";
+    links["Marti"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.ocb";
+    links["Marti"]["opera"]["multi"]="http://apps.opera.com/en_us/mart_noticias.html?dm=1&multi=1";
+    links["Marti"]["getjar"]["English"]="http://www.getjar.mobi/mobile/771913/martinoticias";
+    links["Marti"]["getjar"]["Spanish"]="http://www.getjar.mobi/mobile/812951/OCB-Mart-Noticias";
+
+    links["RFA"]={};
+    links["RFA"]["amazon"]={};
+    links["RFA"]["google"]={};
+    links["RFA"]["opera"]={};
+    links["RFA"]["getjar"]={};
+    links["RFA"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.rfa";
+    links["RFA"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.rfa";
+    links["RFA"]["opera"]["multi"]="http://apps.opera.com/en_us/radio_free_asia.html?dm=1&multi=1";
+    links["RFA"]["getjar"]["Chinese Simplified"]="http://www.getjar.mobi/mobile/813207/-Simplified-Chinese";
+    links["RFA"]["getjar"]["Chinese Traditional"]="http://www.getjar.mobi/mobile/841500/-Traditional-Chinese";
+    links["RFA"]["getjar"]["English"]="http://www.getjar.mobi/mobile/812723/RFA";
+    links["RFA"]["getjar"]["Korean"]="http://www.getjar.mobi/mobile/813208/";
+
+    
+    links["RFERL"]={};
+    links["RFERL"]["amazon"]={};
+    links["RFERL"]["google"]={};
+    links["RFERL"]["opera"]={};
+    links["RFERL"]["getjar"]={};
+    links["RFERL"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=org.rferl.en";
+    links["RFERL"]["google"]["multi"]="https://play.google.com/store/apps/details?id=org.rferl.en";
+    links["RFERL"]["opera"]["multi"]="http://apps.opera.com/en_us/rferl.html?dm=1&multi=1";
+    links["RFERL"]["getjar"]["Belarusian"]="http://www.getjar.mobi/mobile/813214/RFE-";
+    links["RFERL"]["getjar"]["English"]="http://www.getjar.mobi/mobile/812940/RFE";
+    links["RFERL"]["getjar"]["Persian"]="http://www.getjar.mobi/mobile/813215/-";
+    links["RFERL"]["getjar"]["Russian"]="http://www.getjar.mobi/mobile/813217/RFE-";
+    links["RFERL"]["getjar"]["Ukrainian"]="http://www.getjar.mobi/mobile/813218/RFE-";
+
+    
+    links["VOA"]={};
+    links["VOA"]["amazon"]={};
+    links["VOA"]["google"]={};
+    links["VOA"]["opera"]={};
+    links["VOA"]["getjar"]={}; 
+    links["VOA"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.voa";
+    links["VOA"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.voa";
+    links["VOA"]["opera"]["multi"]="http://apps.opera.com/en_us/voa_news.html?dm=1&multi=1";
+    links["VOA"]["getjar"]["Amharic"] = "http://www.getjar.mobi/mobile/812952/";
+    links["VOA"]["getjar"]["Chinese Simplified"] = "http://www.getjar.mobi/mobile/812943/";
+    links["VOA"]["getjar"]["Chinese Traditional"] = "http://www.getjar.mobi/mobile/812945/";
+    links["VOA"]["getjar"]["English"] = "http://www.getjar.mobi/mobile/812715/Voice-of-America";
+    links["VOA"]["getjar"]["French"] = "http://www.getjar.mobi/mobile/812953/VOA-French";
+    links["VOA"]["getjar"]["Indonesian"] = "http://www.getjar.mobi/mobile/812955/VOA-Indonesia";
+    links["VOA"]["getjar"]["Korean"] = "http://www.getjar.mobi/mobile/812956/VOA-";
+    links["VOA"]["getjar"]["Persian"] = "http://www.getjar.mobi/mobile/812957/-";
+    links["VOA"]["getjar"]["Portuguese"] = "http://www.getjar.mobi/mobile/812960/VOA-Portugus";
+    links["VOA"]["getjar"]["Russian"] = "http://www.getjar.mobi/mobile/813024/-";
+    links["VOA"]["getjar"]["Serbian"] = "http://www.getjar.mobi/mobile/813040/Glas-Amerike";
+    links["VOA"]["getjar"]["Spanish"] = "http://www.getjar.mobi/mobile/813042/Voz-de-Amrica";
+    links["VOA"]["getjar"]["Swahili"] = "http://www.getjar.mobi/mobile/813043/VOA-Swahili";
+    links["VOA"]["getjar"]["Thai"] = "http://www.getjar.mobi/mobile/813044/VOA-Thai";
+    links["VOA"]["getjar"]["Turkish"] = "http://www.getjar.mobi/mobile/813196/VOA-Turkish";
+    links["VOA"]["getjar"]["Ukrainian"] = "http://www.getjar.mobi/mobile/813197/VOA-";
+    links["VOA"]["getjar"]["Vietnamese"] = "http://www.getjar.mobi/mobile/813205/VOA-Ting-Vit";
+
+    /*** Populate the entity selector ****/
+    var str = "";
+    for (var i = 0; i < entities.length; i++) {
+        str += "<option value=" + entities[i].value + ">" + entities[i].display + "</option>";
+    }
+    jQuery("#appSelect-smartphone-android select[name=entity]").append(str);
+    jQuery("#appSelect-smartphone-iOS select[name=entity]").append(str);
+
+    /*** Populate the store selector ****/
+    str="";
+    for (var i = 0; i < stores.length; i++) {
+        str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
+    }
+    jQuery("select[name=store]").append(str);    
+    jQuery("#stores").hide();
+    
+
+    /*** Show the form (we keep it hidden until it has data) ****/
+    //jQuery("#appSelect-smartphone-iOS").css("display", "block");
+    //jQuery("#appSelect-smartphone-android").css("display", "block");
+
+    function refreshLanguages() {
+
+        jQuery("select[name=language]").empty();
+        var selectedEntity= jQuery("#appSelect-smartphone-android select[name=entity]").val();
+        var selectedStore= jQuery("select[name=store]").val();
+        var languages = links[selectedEntity][selectedStore];
+
+        var str = '<option value="" disabled selected>Select a language</option>';
+        var hasMulti=false;
+        for (var key in languages) {
+            if (languages.hasOwnProperty(key)) {
+                if (key == "multi") {
+                    hasMulti=true;
+                } else {
+                    str += "<option value=" + key + ">" + key + "</option>";
+                }
+            }
+        }
+
+        jQuery("select[name=language]").append(str);    
+        if (!hasMulti) {
+            jQuery("#languages").show();
+            jQuery("select[name=language]").prop('selectedIndex',0);
+            jQuery("input[name=btnGo]").hide();
+        } else {
+
+            jQuery("#languages").hide();
+            jQuery("select[name=language]").prop('selectedIndex',1);
+            jQuery("input[name=btnGo]").show();
+        }
+    }
+
+    jQuery("input[name=os]").change(function() {
+        var newOS = jQuery(this).val();
+        console.log("os is " + newOS);
+        if (newOS == "iOS") {
+            jQuery("form#appSelect-smartphone-android").hide();
+            jQuery("form#appSelect-smartphone-iOS").show();
+        } else {
+            jQuery("form#appSelect-smartphone-android").show();
+            jQuery("form#appSelect-smartphone-iOS").hide();
+        }
+    });
+
+    /*** when entity is changed, clear the store selection and remove language options***/
+    jQuery("#appSelect-smartphone-android select[name=entity]").change(function() {
+        var newEntity = jQuery(this).val();
+        jQuery("#appSelect-smartphone-android select[name=store]").prop('selectedIndex',0);
+        jQuery("#appSelect-smartphone-android select[name=language]").empty();
+        jQuery("#languages").hide();
+        jQuery("input[name=btnGo]").hide();
+        jQuery("#stores").show();
+
+    })
+    jQuery("#appSelect-smartphone-iOS select[name=entity]").change(function() {
+        var newEntity = jQuery(this).val();
+        jQuery("input[name=btnGoIOS]").show();
+
+    })
+
+    /*** when store is changed, fill in the languages ***/
+    jQuery("select[name=store]").change(function() {
+        var storeValue = jQuery("select[name=store]").val();
+        if (storeValue != "") {
+            refreshLanguages();
+        } else {
+            jQuery("#languages").hide();
+            jQuery("input[name=btnGo]").hide();
+        }
+    })
+
+    jQuery("select[name=language]").change(function() {
+        jQuery("input[name=btnGo]").show();
+    });
+
+    jQuery("input[name=btnGo]").click(function() {
+        var entityValue = jQuery("#appSelect-smartphone-android select[name=entity]").val();
+        var storeValue = jQuery("select[name=store]").val();
+        var languageValue = jQuery("select[name=language] option:selected").text();
+        var targetUrl = "";
+        if (links[entityValue][storeValue].hasOwnProperty("multi")) {
+            targetUrl=links[entityValue][storeValue]["multi"];
+        } else {
+            targetUrl=links[entityValue][storeValue][languageValue];
+        }
+        if (targetUrl != "") {
+            window.open(targetUrl, '_blank');
+        }
+    });
+
+    jQuery("input[name=btnGoIOS]").click(function() {
+        var entityValue = jQuery("#appSelect-smartphone-iOS select[name=entity]").val();
+        var targetUrl="";
+        if (iOSLinks.hasOwnProperty(entityValue)) {
+            targetUrl=iOSLinks[entityValue];
+        }
+        if (targetUrl != "") {
+            window.open(targetUrl, '_blank');
+        }
+    });
+
+    jQuery("#languages").hide();
+    jQuery("input[name=btnGo]").hide();
+    jQuery("input[name=btnGoIOS]").hide();
   }
 
   function initSawaSelect() {
@@ -527,6 +761,9 @@ jQuery(document).ready(function() {
   }
   if (jQuery("#appSelect-streamer").length) {
     initStreamerSelect();
+  }
+  if (jQuery("#appSelect-smartphone-android").length) {
+    initSmartphoneSelect();
   }
 
 });
