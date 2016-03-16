@@ -482,3 +482,22 @@ article {
 		margin-bottom: 0rem;
 	}
 }
+
+
+//Table styles
+.bbg-table-container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.usa-table,
+.usa-table-borderless {
+	&.bbg-table-half {
+		@include media($medium-screen) {
+			float: right;
+			margin-left: $site-margins;
+			min-width: 50%;
+			width: 50%;
+		}
+	}
+}

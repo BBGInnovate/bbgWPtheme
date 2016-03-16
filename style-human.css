@@ -4573,6 +4573,21 @@ article {
   margin-bottom: 0rem;
 }
 
+.bbg-table-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+@media screen and (min-width: 600px) {
+  .usa-table.bbg-table-half,
+  .usa-table-borderless.bbg-table-half {
+    float: right;
+    margin-left: 3rem;
+    min-width: 50%;
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .multicolumn {
     -webkit-column-count: 2;
