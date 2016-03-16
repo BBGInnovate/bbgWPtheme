@@ -71,8 +71,6 @@ li.usa-footer-primary-content {
 	}
 }
 
-
-
 input,
 input[type="text"],
 input[type="email"],
@@ -99,6 +97,12 @@ form select:focus {
 .usa-social-links a {
 	display: inline-block;
 }
+
+.screen-reader-text {
+	//display: none;
+	@extend .usa-sr-only;
+}
+
 
 
 ul,

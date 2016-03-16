@@ -778,7 +778,7 @@ body {
   padding: 0;
 }
 
-.usa-sr-only {
+.usa-sr-only, .screen-reader-text {
   position: absolute;
   left: -999em;
 }
