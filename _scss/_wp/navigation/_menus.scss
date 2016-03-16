@@ -250,6 +250,13 @@ body:not(.home) .menu-all-pages-container {
 			}
 			padding-left: 25px;
 		}
+
+		a:hover {
+			background: {
+				image: url('img/arrow-previous-hover.png');
+				image: url('img/arrow-previous-hover.svg');
+			}
+		}
 	}
 
 	.nav-next {
@@ -266,6 +273,14 @@ body:not(.home) .menu-all-pages-container {
 				size: contain;
 			}
 			padding-right: 25px;
+		}
+
+
+		a:hover {
+			background: {
+				image: url('img/arrow-next-hover.png');
+				image: url('img/arrow-next-hover.svg');
+			}
 		}
 	}
 }

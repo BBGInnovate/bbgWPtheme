@@ -86,8 +86,7 @@ get_header(); ?>
 					</div><!-- .bbg-grid__container -->
 					<?php if ($numBlogPostsAvailable > $numBlogPostsToShow) { ?>
 
-					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?>
- 					posts</a>
+					<a href="<?php echo $categoryLink; ?>" style="display: block; clear: left;">Read more <?php echo $teamCategory->name; ?> posts »</a>
 					<?php } ?>
 					
 				</section>
@@ -121,7 +120,7 @@ get_header(); ?>
 							?>
 							</div><!--.bbg-grid__containter -->
 							<?php if ($numProjectsAvailable > $numPortfolioPostsToShow) { ?>
-							<a href="<?php echo $teamPortfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio</a>
+							<a href="<?php echo $teamPortfolioLink; ?>" style="display:block; clear: left;">Explore the <?php echo $teamCategory->name; ?> portfolio »</a>
 							<?php } ?>
 						</section>
 				<?php

@@ -3058,6 +3058,12 @@ object {
   background-size: contain;
   padding-left: 25px;
 }
+.comment-navigation .nav-previous a:hover,
+.posts-navigation .nav-previous a:hover,
+.post-navigation .nav-previous a:hover {
+  background-image: url("img/arrow-previous-hover.png");
+  background-image: url("img/arrow-previous-hover.svg");
+}
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -3074,6 +3080,12 @@ object {
   background-repeat: no-repeat;
   background-size: contain;
   padding-right: 25px;
+}
+.comment-navigation .nav-next a:hover,
+.posts-navigation .nav-next a:hover,
+.post-navigation .nav-next a:hover {
+  background-image: url("img/arrow-next-hover.png");
+  background-image: url("img/arrow-next-hover.svg");
 }
 
 /*
