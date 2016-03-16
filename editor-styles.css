@@ -126,25 +126,30 @@ blockquote.pullquote p {
   background-image: url(img/social-icons/svg/github-mark.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*=".pdf"] {
+.bbg__related-links a[href*=".pdf"], .bbg__related-links a[type="application/pdf"] {
   background-image: url(img/social-icons/png/pdf-icon.png);
   background-image: url(img/social-icons/svg/pdf-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*=".epub"] {
+.bbg__related-links a[href*=".epub"], .bbg__related-links a[type="application/epub+zip"] {
   background-image: url(img/social-icons/png/epub-icon.png);
   background-image: url(img/social-icons/svg/epub-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="play.google.com"] {
+.bbg__related-links a[href*="https://play.google.com/store/"], .bbg__related-links a[type="text/html+play"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
-  padding-left: 4.5rem;
+  padding-left: 6.7rem;
 }
-.bbg__related-links a[href*="itunes.apple.com"] {
+.bbg__related-links a[href*="itunes.apple.com/us/app"], .bbg__related-links a[type="text/html+app"] {
   background-image: url(img/social-icons/png/apple-app-store-badge.png);
   background-image: url(img/social-icons/svg/apple-app-store-badge.svg);
-  padding-left: 4.5rem;
+  padding-left: 6.7rem;
+}
+.bbg__related-links a[href*="itunes.apple.com/us/book"], .bbg__related-links a[type="text/html+ibook"] {
+  background-image: url(img/social-icons/png/badge_ibooks-sm.png);
+  background-image: url(img/social-icons/svg/badge_ibooks-sm.svg);
+  padding-left: 6.2rem;
 }
 
 /**

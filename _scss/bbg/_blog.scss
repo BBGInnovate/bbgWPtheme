@@ -289,7 +289,7 @@
 				text-decoration: underline;
 			}
 
-			// Generic external website URL
+						// Generic external website URL
 			&[href] {
 				background: {
 					image: url(img/social-icons/png/link-icon.png);
@@ -339,7 +339,8 @@
 				padding-left: 2.5rem;
 			}
 			//Video links
-			&[href*="video"] {
+			&[href*="video"],
+			&[type="video"] {
 				background: {
 					image: url(img/social-icons/png/video-icon.png);
 					image: url(img/social-icons/svg/video-icon.svg);
@@ -355,7 +356,8 @@
 				padding-left: 2.5rem;
 			}
 			//PDF links
-			&[href*=".pdf"]  {
+			&[href*=".pdf"],
+			&[type="application/pdf"]  {
 				background: {
 					image: url(img/social-icons/png/pdf-icon.png);
 					image: url(img/social-icons/svg/pdf-icon.svg);
@@ -363,7 +365,8 @@
 				padding-left: 2.5rem;
 			}
 			// ePub links
-			&[href*=".epub"] {
+			&[href*=".epub"],
+			&[type="application/epub+zip"] {
 				background: {
 					image: url(img/social-icons/png/epub-icon.png);
 					image: url(img/social-icons/svg/epub-icon.svg);
@@ -371,7 +374,8 @@
 				padding-left: 2.5rem;
 			}
 			// Android apps on GooglePlay
-			&[href*="https://play.google.com/store/"] {
+			&[href*="https://play.google.com/store/"],
+			&[type="text/html+play"]  {
 				background: {
 					image: url(img/social-icons/png/google-play-badge.png);
 					image: url(img/social-icons/svg/google-play-badge.svg);
@@ -379,12 +383,22 @@
 				padding-left: 6.7rem;
 			}
 			// iOS apps on App Store
-			&[href*="https://itunes.apple.com/"] {
+			&[href*="itunes.apple.com/us/app"],
+			&[type="text/html+app"] {
 				background: {
 					image: url(img/social-icons/png/apple-app-store-badge.png);
 					image: url(img/social-icons/svg/apple-app-store-badge.svg);
 				}
 				padding-left: 6.7rem;
+			}
+			// iBooks
+			&[href*="itunes.apple.com/us/book"],
+			&[type="text/html+ibook"] {
+				background: {
+					image: url(img/social-icons/png/badge_ibooks-sm.png);
+					image: url(img/social-icons/svg/badge_ibooks-sm.svg);
+				}
+				padding-left: 6.2rem;
 			}
 		}
 	}
@@ -396,6 +410,14 @@
 	.bbg__article__form-select--sub {
 		display: none;
 	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-appearance: radio;
+	display: inline;
+    position: relative;
+	left: 0;
 }
 
 /** POST AUTHOR */
