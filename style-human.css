@@ -4573,19 +4573,17 @@ article {
   margin-bottom: 0rem;
 }
 
-.bbg-table-container {
+.type-post .usa-table,
+.type-post .usa-table-borderless {
   margin: 0 auto;
+  min-width: auto;
   max-width: 600px;
+  width: 100%;
 }
-
-@media screen and (min-width: 600px) {
-  .usa-table.bbg-table-half,
-  .usa-table-borderless.bbg-table-half {
-    float: right;
-    margin-left: 3rem;
-    min-width: 50%;
-    width: 50%;
-  }
+.type-post .usa-table.bbg-full-width,
+.type-post .usa-table-borderless.bbg-full-width {
+  min-width: 100%;
+  max-width: auto;
 }
 
 @media screen and (min-width: 900px) {

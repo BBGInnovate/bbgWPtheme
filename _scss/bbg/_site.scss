@@ -485,19 +485,16 @@ article {
 
 
 //Table styles
-.bbg-table-container {
+.type-post .usa-table,
+.type-post .usa-table-borderless {
 	margin: 0 auto;
-	max-width: 600px;
-}
+	min-width: auto;
+	max-width: $article-max-width;
+	width: 100%;
 
-.usa-table,
-.usa-table-borderless {
-	&.bbg-table-half {
-		@include media($medium-screen) {
-			float: right;
-			margin-left: $site-margins;
-			min-width: 50%;
-			width: 50%;
-		}
+	&.bbg-full-width {
+		min-width: 100%;
+		max-width: auto;
 	}
 }
+
