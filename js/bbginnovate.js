@@ -295,23 +295,23 @@ jQuery(document).ready(function() {
     links["VOA"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=gov.bbg.voa";
     links["VOA"]["google"]["multi"]="https://play.google.com/store/apps/details?id=gov.bbg.voa";
     links["VOA"]["opera"]["multi"]="http://apps.opera.com/en_us/voa_news.html?dm=1&multi=1";
-    links["VOA"]["getjar"]["Amharic"] = "www.getjar.mobi/mobile/812952/";
-    links["VOA"]["getjar"]["Chinese Simplified"] = "www.getjar.mobi/mobile/812943/";
-    links["VOA"]["getjar"]["Chinese Traditional"] = "www.getjar.mobi/mobile/812945/";
-    links["VOA"]["getjar"]["English"] = "www.getjar.mobi/mobile/812715/Voice-of-America";
-    links["VOA"]["getjar"]["French"] = "www.getjar.mobi/mobile/812953/VOA-French";
-    links["VOA"]["getjar"]["Indonesian"] = "www.getjar.mobi/mobile/812955/VOA-Indonesia";
-    links["VOA"]["getjar"]["Korean"] = "www.getjar.mobi/mobile/812956/VOA-";
-    links["VOA"]["getjar"]["Persian"] = "www.getjar.mobi/mobile/812957/-";
-    links["VOA"]["getjar"]["Portuguese"] = "www.getjar.mobi/mobile/812960/VOA-Portugus";
-    links["VOA"]["getjar"]["Russian"] = "www.getjar.mobi/mobile/813024/-";
-    links["VOA"]["getjar"]["Serbian"] = "www.getjar.mobi/mobile/813040/Glas-Amerike";
-    links["VOA"]["getjar"]["Spanish"] = "www.getjar.mobi/mobile/813042/Voz-de-Amrica";
-    links["VOA"]["getjar"]["Swahili"] = "www.getjar.mobi/mobile/813043/VOA-Swahili";
-    links["VOA"]["getjar"]["Thai"] = "www.getjar.mobi/mobile/813044/VOA-Thai";
-    links["VOA"]["getjar"]["Turkish"] = "www.getjar.mobi/mobile/813196/VOA-Turkish";
-    links["VOA"]["getjar"]["Ukrainian"] = "www.getjar.mobi/mobile/813197/VOA-";
-    links["VOA"]["getjar"]["Vietnamese"] = "www.getjar.mobi/mobile/813205/VOA-Ting-Vit";
+    links["VOA"]["getjar"]["Amharic"] = "http://www.getjar.mobi/mobile/812952/";
+    links["VOA"]["getjar"]["Chinese Simplified"] = "http://www.getjar.mobi/mobile/812943/";
+    links["VOA"]["getjar"]["Chinese Traditional"] = "http://www.getjar.mobi/mobile/812945/";
+    links["VOA"]["getjar"]["English"] = "http://www.getjar.mobi/mobile/812715/Voice-of-America";
+    links["VOA"]["getjar"]["French"] = "http://www.getjar.mobi/mobile/812953/VOA-French";
+    links["VOA"]["getjar"]["Indonesian"] = "http://www.getjar.mobi/mobile/812955/VOA-Indonesia";
+    links["VOA"]["getjar"]["Korean"] = "http://www.getjar.mobi/mobile/812956/VOA-";
+    links["VOA"]["getjar"]["Persian"] = "http://www.getjar.mobi/mobile/812957/-";
+    links["VOA"]["getjar"]["Portuguese"] = "http://www.getjar.mobi/mobile/812960/VOA-Portugus";
+    links["VOA"]["getjar"]["Russian"] = "http://www.getjar.mobi/mobile/813024/-";
+    links["VOA"]["getjar"]["Serbian"] = "http://www.getjar.mobi/mobile/813040/Glas-Amerike";
+    links["VOA"]["getjar"]["Spanish"] = "http://www.getjar.mobi/mobile/813042/Voz-de-Amrica";
+    links["VOA"]["getjar"]["Swahili"] = "http://www.getjar.mobi/mobile/813043/VOA-Swahili";
+    links["VOA"]["getjar"]["Thai"] = "http://www.getjar.mobi/mobile/813044/VOA-Thai";
+    links["VOA"]["getjar"]["Turkish"] = "http://www.getjar.mobi/mobile/813196/VOA-Turkish";
+    links["VOA"]["getjar"]["Ukrainian"] = "http://www.getjar.mobi/mobile/813197/VOA-";
+    links["VOA"]["getjar"]["Vietnamese"] = "http://www.getjar.mobi/mobile/813205/VOA-Ting-Vit";
 
     /*** Populate the entity selector ****/
     var str = "";
@@ -326,7 +326,6 @@ jQuery(document).ready(function() {
     for (var i = 0; i < stores.length; i++) {
         str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
     }
-    console.log("stores is " + str);
     jQuery("select[name=store]").append(str);    
     jQuery("#stores").hide();
     
@@ -389,6 +388,11 @@ jQuery(document).ready(function() {
         jQuery("#stores").show();
 
     })
+    jQuery("#appSelect-smartphone-iOS select[name=entity]").change(function() {
+        var newEntity = jQuery(this).val();
+        jQuery("input[name=btnGoIOS]").show();
+
+    })
 
     /*** when store is changed, fill in the languages ***/
     jQuery("select[name=store]").change(function() {
@@ -420,8 +424,20 @@ jQuery(document).ready(function() {
         }
     });
 
+    jQuery("input[name=btnGoIOS]").click(function() {
+        var entityValue = jQuery("#appSelect-smartphone-iOS select[name=entity]").val();
+        var targetUrl="";
+        if (iOSLinks.hasOwnProperty(entityValue)) {
+            targetUrl=iOSLinks[entityValue];
+        }
+        if (targetUrl != "") {
+            window.open(targetUrl, '_blank');
+        }
+    });
+
     jQuery("#languages").hide();
     jQuery("input[name=btnGo]").hide();
+    jQuery("input[name=btnGoIOS]").hide();
   }
 
   function initSawaSelect() {
