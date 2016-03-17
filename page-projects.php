@@ -51,6 +51,10 @@ if (isset($_GET['category_id'])) {
 	);
 }
 
+/*** late in the game we ran into a pagination issue, so we're running a second query here ***/
+$custom_query_args= array($qParams);
+$custom_query = new WP_Query( $custom_query_args );
+
 
 query_posts($qParams);
 
@@ -108,12 +112,24 @@ get_header(); ?>
 					echo '</div><!-- .usa-grid -->';
 
 					echo '<div class="usa-grid">';
+					/*
 					$args = array(
 						'prev_text'          => __( 'Older projects' ),
 						'next_text'          => __( 'Newer projects' ),
 						'screen_reader_text' => __( 'Project navigation' )
-					);
-					echo the_posts_navigation($args);
+					);*/
+
+					echo '<nav class="navigation posts-navigation" role="navigation">';
+					echo '<h2 class="screen-reader-text">Project navigation</h2>';
+					echo '<div class="nav-links">';
+					echo '<div class="nav-previous">';
+					next_posts_link( 'Older Posts', $custom_query->max_num_pages );
+					echo '</div>';
+					echo '<div class="nav-next">';
+					previous_posts_link( 'Newer Posts' );
+					echo '</div>';
+					echo '</div>';
+					echo '</nav>';
 					echo '</div><!-- .usa-grid -->';
 
 				?>
