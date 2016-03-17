@@ -39,7 +39,7 @@ if (isset($_GET['category_id'])) {
 		,'category__and' => array(get_cat_id('Project'), $_GET['category_id'])
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
-		,'post_status' => array('publish')
+		,'post_status' => array('public')
 	);
 } else {
 	$qParams=array(
@@ -47,7 +47,7 @@ if (isset($_GET['category_id'])) {
 		,'cat' => get_cat_id('Project')
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
-		,'post_status' => array('publish')
+		,'post_status' => array('public')
 	);
 }
 
@@ -122,12 +122,21 @@ get_header(); ?>
 					echo '<nav class="navigation posts-navigation" role="navigation">';
 					echo '<h2 class="screen-reader-text">Project navigation</h2>';
 					echo '<div class="nav-links">';
-					echo '<div class="nav-previous">';
-					next_posts_link( 'Older Posts', $custom_query->max_num_pages );
-					echo '</div>';
-					echo '<div class="nav-next">';
-					previous_posts_link( 'Newer Posts' );
-					echo '</div>';
+					echo '<!-- max is '  $custom_query->max_num_pages . '-->';
+					$nextLink=get_next_posts_link('Older Posts', $custom_query->max_num_pages);
+					$prevLink=get_previous_posts_link('Newer Posts');
+					if ($nextLink != "") {
+						echo '<div class="nav-previous">';
+						echo $nextLink;
+						echo '</div>';
+					}
+
+					if ($prevLink != "") {
+						echo '<div class="nav-next">';
+						$prevLink;
+						echo '</div>';	
+					}
+					
 					echo '</div>';
 					echo '</nav>';
 					echo '</div><!-- .usa-grid -->';
