@@ -39,7 +39,7 @@ if (isset($_GET['category_id'])) {
 		,'category__and' => array(get_cat_id('Project'), $_GET['category_id'])
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
-		,'post_status' => array('public')
+		,'post_status' => array('publish')
 	);
 } else {
 	$qParams=array(
@@ -47,7 +47,7 @@ if (isset($_GET['category_id'])) {
 		,'cat' => get_cat_id('Project')
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
-		,'post_status' => array('public')
+		,'post_status' => array('publish')
 	);
 }
 
