@@ -1,6 +1,6 @@
 jQuery(document).ready(function() { 
   
-   function niceStoreName(str) {
+   function friendlyName(str) {
      var names={};
      names["amazon"]="Amazon";
      names["binu"]="biNu";
@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
      names["safaricom"]="Safari";
      names["imimobile"]="IMImobile";
      names["vodacom"]="Vodacom";
+     names["iOS"]="Apple iOS";
 
      var niceName=str;
      if (names.hasOwnProperty(str)) {
@@ -116,7 +117,7 @@ jQuery(document).ready(function() {
     /*** Populate the store selector ****/
     str="";
     for (var i = 0; i < stores.length; i++) {
-        str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
+        str += "<option value=" + stores[i] + ">" + friendlyName(stores[i]) + "</option>";
     }
     jQuery("#appSelect-java select[name=store]").append(str);    
     jQuery("#stores").hide();
@@ -325,7 +326,7 @@ jQuery(document).ready(function() {
     /*** Populate the store selector ****/
     str="";
     for (var i = 0; i < stores.length; i++) {
-        str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
+        str += "<option value=" + stores[i] + ">" + friendlyName(stores[i]) + "</option>";
     }
     jQuery("select[name=store]").append(str);    
     jQuery("#stores").hide();
@@ -458,7 +459,7 @@ jQuery(document).ready(function() {
          /*** Populate the store selector ****/
         str = '<option value="" disabled selected>Select a store</option>';
         for (var i = 0; i < stores.length; i++) {
-            str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
+            str += "<option value=" + stores[i] + ">" + friendlyName(stores[i]) + "</option>";
         }
         jQuery("select[name=store]").empty();
         jQuery("select[name=store]").append(str);    
@@ -490,7 +491,7 @@ jQuery(document).ready(function() {
     /*** Populate the entity selector ****/
     str="";
     for (var i = 0; i < osList.length; i++) {
-        str += "<option value=" + osList[i] + ">" + osList[i] + "</option>";
+        str += "<option value=" + osList[i] + ">" + friendlyName(osList[i]) + "</option>";
     }
     jQuery("select[name=os]").append(str);
 
@@ -602,7 +603,7 @@ jQuery(document).ready(function() {
          /*** Populate the store selector ****/
         str = '<option value="" disabled selected>Select a store</option>';
         for (var i = 0; i < stores.length; i++) {
-            str += "<option value=" + stores[i] + ">" + niceStoreName(stores[i]) + "</option>";
+            str += "<option value=" + stores[i] + ">" + friendlyName(stores[i]) + "</option>";
         }
         jQuery("select[name=store]").empty();
         jQuery("select[name=store]").append(str);    
@@ -653,7 +654,7 @@ jQuery(document).ready(function() {
     /*** Populate the entity selector ****/
     str="";
     for (var i = 0; i < osList.length; i++) {
-        str += "<option value=" + osList[i] + ">" + osList[i] + "</option>";
+        str += "<option value=" + osList[i] + ">" + friendlyName(osList[i]) + "</option>";
     }
     jQuery("select[name=os]").append(str);
 
