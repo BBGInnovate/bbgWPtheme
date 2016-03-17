@@ -5161,7 +5161,8 @@ ol li:before {
 }
 .bbg__article__form--inline div {
   display: table-cell;
-  margin-right: 2rem;
+  padding-top: 2rem;
+  padding-right: 6rem;
 }
 
 /*

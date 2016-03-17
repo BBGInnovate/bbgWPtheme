@@ -49,7 +49,10 @@
 
 	div {
 		display: table-cell;
-		margin-right: 2rem;
+		padding: {
+			top: 2rem;
+			right: 6rem;
+		}
 	}
 }
 /*
