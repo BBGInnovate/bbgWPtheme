@@ -122,7 +122,7 @@ get_header(); ?>
 					echo '<nav class="navigation posts-navigation" role="navigation">';
 					echo '<h2 class="screen-reader-text">Project navigation</h2>';
 					echo '<div class="nav-links">';
-					echo '<!-- max is '  $custom_query->max_num_pages . '-->';
+					echo '<!-- max is '  . $custom_query->max_num_pages . '-->';
 					$nextLink=get_next_posts_link('Older Posts', $custom_query->max_num_pages);
 					$prevLink=get_previous_posts_link('Newer Posts');
 					if ($nextLink != "") {
