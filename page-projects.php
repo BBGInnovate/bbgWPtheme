@@ -133,7 +133,7 @@ get_header(); ?>
 
 					if ($prevLink != "") {
 						echo '<div class="nav-next">';
-						$prevLink;
+						echo $prevLink;
 						echo '</div>';	
 					}
 					
