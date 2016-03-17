@@ -1,3 +1,6 @@
+/** ---------------
+ * TABLES
+ ------------------ */
 .usa-table,
 .usa-table-borderless,
 .bbg__table-plain {
@@ -21,3 +24,40 @@
         padding: 0 1.5rem;
     }
 }
+
+/** ---------------
+ * FORMS
+ ------------------ */
+.bbg__article__form {
+	display: none;
+
+	.bbg__article__form-select--sub {
+		display: none;
+	}
+}
+
+.bbg__article__form--inline {
+	@extend .bbg__table-plain;
+
+	fieldset {
+		display: table-row;
+	}
+
+	legend {
+		display: table-caption;
+	}
+
+	div {
+		display: table-cell;
+		margin-right: 2rem;
+	}
+}
+/*
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-appearance: radio;
+	display: inline;
+    position: relative;
+	left: 0;
+}
+*/

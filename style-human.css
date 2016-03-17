@@ -5111,28 +5111,65 @@ ol li:before {
   font-size: 1.3rem;
 }
 
+/** ---------------
+ * TABLES
+ ------------------ */
 .usa-table,
 .usa-table-borderless,
-.bbg__table-plain {
+.bbg__table-plain,
+.bbg__article__form--inline {
   font-size: 1.3rem;
 }
 @media screen and (min-width: 481px) {
   .usa-table,
   .usa-table-borderless,
-  .bbg__table-plain {
+  .bbg__table-plain,
+  .bbg__article__form--inline {
     font-size: 1.6rem;
   }
 }
 
-.bbg__table-plain {
+.bbg__table-plain, .bbg__article__form--inline {
   display: block;
   margin: 0 auto;
   min-width: auto;
   max-width: 600px;
   width: 100%;
 }
-.bbg__table-plain th,
-.bbg__table-plain td {
+.bbg__table-plain th, .bbg__article__form--inline th,
+.bbg__table-plain td,
+.bbg__article__form--inline td {
   border: none;
   padding: 0 1.5rem;
 }
+
+/** ---------------
+ * FORMS
+ ------------------ */
+.bbg__article__form {
+  display: none;
+}
+.bbg__article__form .bbg__article__form-select--sub {
+  display: none;
+}
+
+.bbg__article__form--inline fieldset {
+  display: table-row;
+}
+.bbg__article__form--inline legend {
+  display: table-caption;
+}
+.bbg__article__form--inline div {
+  display: table-cell;
+  margin-right: 2rem;
+}
+
+/*
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-appearance: radio;
+	display: inline;
+    position: relative;
+	left: 0;
+}
+*/
