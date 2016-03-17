@@ -5135,9 +5135,12 @@ ol li:before {
 .bbg__article__form .bbg__article__form-select--sub {
   display: none;
 }
-.bbg__article__form .bbg__article__form-select--main label {
+
+.usa-fieldset-inputs .bbg__article__form-radio__label,
+.bbg__article__form-select--main label {
   color: #757575;
   font-size: 80%;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -5150,7 +5153,6 @@ ol li:before {
 }
 .bbg__article__form--inline div {
   display: table-cell;
-  padding-top: 2rem;
   padding-right: 6rem;
 }
 

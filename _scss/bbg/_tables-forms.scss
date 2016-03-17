@@ -34,13 +34,17 @@
 	.bbg__article__form-select--sub {
 		display: none;
 	}
+}
 
-	.bbg__article__form-select--main label {
-		color: $color-gray-medium;
-		font-size: 80%;
-		margin-bottom: 1rem;
-		text-transform: uppercase;
+.usa-fieldset-inputs .bbg__article__form-radio__label,
+.bbg__article__form-select--main label {
+	color: $color-gray-medium;
+	font-size: 80%;
+	margin: {
+		top: $site-margins;
+		bottom: 1rem;
 	}
+	text-transform: uppercase;
 }
 
 .bbg__article__form--inline {
@@ -57,7 +61,6 @@
 	div {
 		display: table-cell;
 		padding: {
-			top: 2rem;
 			right: 6rem;
 		}
 	}
