@@ -52,7 +52,7 @@ if (isset($_GET['category_id'])) {
 }
 
 /*** late in the game we ran into a pagination issue, so we're running a second query here ***/
-$custom_query_args= array($qParams);
+$custom_query_args= $qParams;
 $custom_query = new WP_Query( $custom_query_args );
 
 
