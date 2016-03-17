@@ -5103,3 +5103,29 @@ ol li:before {
   color: #5b616b;
   font-size: 1.3rem;
 }
+
+.usa-table,
+.usa-table-borderless,
+.bbg__table-plain {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 481px) {
+  .usa-table,
+  .usa-table-borderless,
+  .bbg__table-plain {
+    font-size: 1.6rem;
+  }
+}
+
+.bbg__table-plain {
+  display: block;
+  margin: 0 auto;
+  min-width: auto;
+  max-width: 600px;
+  width: 100%;
+}
+.bbg__table-plain th,
+.bbg__table-plain td {
+  border: none;
+  padding: 0 1.5rem;
+}
