@@ -220,6 +220,18 @@
   		}
 	}
 
+	.bbg__article-content__form-title {
+		color: $color-gray-dark;
+		font-size: $h3-font-size;
+		line-height: $heading-line-height;
+  		margin: {
+  			top: $site-margins * 2;
+  			bottom: 0;
+  		}
+	}
+
+
+
 	.bbg__article-content__image--extra-large {
 		margin: 0;
 		max-width: 100%;
