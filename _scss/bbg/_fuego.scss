@@ -24,7 +24,7 @@
 	border-radius: $border-radius;
 	margin: {
 		top: 0;
-		bottom: $site-margins * .5;
+		bottom: $site-margins-medium;
 	}
 	padding: $site-margins * .75;
 
@@ -78,7 +78,7 @@
 	@include backgroundCover();
 	float: left;
 	height: 120px;
-	margin: 0 1.5rem 1rem 0;
+	margin: 0 $site-margins-medium 1rem 0;
 	max-width: $thumbnail-small-max-width;
 	width: 50%;
 }
@@ -94,7 +94,7 @@
 
 .bbg-fuego__article__footer {
 	color: #999;
-	font-size: 1.4rem;
+	font-size: $small-font-size;
 	text-align: right;
 }
 
@@ -126,7 +126,7 @@
 
 .bbg-fuego__twitter__author-name {
 	font: {
-		size: 17px;
+		size: $base-font-size;
 		weight: bold;
 	}
 	margin-bottom: 0;
@@ -142,7 +142,7 @@
 
 .bbg-fuego__twitter__tweet {
 	font: {
-		size: 2rem;
+		size: $lead-font-size;
 		weight: bold;
 	}
 	padding-left: $bbg-avatar-twitter + 10px;
@@ -154,7 +154,7 @@
 	border: 1px solid #EFEFEF;
 	margin-bottom: 1rem;
 	padding: $site-margins;
-	padding-bottom: $site-margins * .5;
+	padding-bottom: $site-margins-medium;
 }
 
 .bbg-fuego__twitter__quote-text {

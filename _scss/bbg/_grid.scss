@@ -1,4 +1,7 @@
-//Custom bbg grid stuff to set how/when columns will split.
+// Custom bbg grid stuff to set how/when columns will split.
+// Ideally this would be setup like this:
+// https://medium.com/@pstonier/using-bourbon-neat-for-css-grid-structure-with-semantic-markup-cd1b13d48dc1#.it31zyc4u
+// But USWDS supersedes Neat's mixin for media (which would accept min, max and column count)
 
 //Grid converts from 1- to 2- to 3-columns (small, medium and large).
 @include media($medium-screen) {

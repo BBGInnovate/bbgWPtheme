@@ -81,9 +81,9 @@ img,
 	}
 	margin: {
 		top: 0;
-		bottom: 1rem;
+		bottom: $site-margins-small;
 	}
-	padding: .5rem 1rem;
+	padding: .5rem $site-margins-small;
 	text-transform: uppercase;
 
 	a {
@@ -98,7 +98,7 @@ img,
 			size: 2.5rem;
 			weight: $font-bold;
 		}
-		margin-bottom: 1.5rem;
+		margin-bottom: $site-margins-medium;
 		padding: 0;
 
 		a {
@@ -140,17 +140,17 @@ img,
 
 		@include media($small-screen) {
 			font-size: 3rem;
-			margin-bottom: 1.5rem;
+			margin-bottom: $site-margins-medium;
 		}
 	}
 
 	&--mobile.large {
-		margin-bottom: 1rem;
+		margin-bottom: $site-margins-small;
 	}
 }
 
 section.usa-section {
-	margin-bottom: $site-margins * 2;
+	margin-bottom: $site-margins-large;
 }
 
 article {
@@ -173,7 +173,7 @@ article {
 
 .bbg-header__container {
 	@include clearfix();
-	padding-right: $site-margins * 2; // bump down at small widths so it doesn't hit the navigation dropdown button
+	padding-right: $site-margins-large; // bump down at small widths so it doesn't hit the navigation dropdown button
 	&:focus {
 		background: none;
 	}
@@ -218,7 +218,7 @@ article {
 
 	@include media($small-screen) {
 		font-size: $site-title-font-size /1.5;
-		padding-top: 1rem;
+		padding-top: $site-margins-small;
 	}
 
 	@include media($medium-screen) {
@@ -263,7 +263,7 @@ article {
 	@extend .readin;
 	clear: none;
 	margin: {
-		top: 1rem;
+		top: $site-margins-small;
 		bottom: 0;
 	};
 	max-width: $article-max-width;
@@ -327,7 +327,7 @@ article {
 
 	a {
 		display: block;
-		padding: 1.5rem 2rem;
+		padding: $site-margins-medium 2rem;
 	}
 }
 
@@ -383,17 +383,17 @@ article {
 }
 
 .bbg__excerpt-meta--featured {
-	margin-bottom: $site-margins *.5;
+	margin-bottom: $site-margins-medium;
 }
 
 .bbg-blog__excerpt--featured {
-	margin-bottom: $site-margins * 1.5;
+	margin-bottom: $site-margins-medium;
 }
 
 .bbg-blog__excerpt-title--featured {
 	margin: {
-		top: $site-margins / 2;
-		bottom: 1rem;
+		top: $site-margins-medium;
+		bottom: $site-margins-small;
 	}
 
 	@include media($medium-screen) {
@@ -416,7 +416,7 @@ article {
 
 .bbg-portfolio__excerpt-title {
 	margin: {
-		top: 1rem;
+		top: $site-margins-small;
 		bottom: .75rem;
 	}
 }
@@ -446,7 +446,7 @@ article {
 .bbg__excerpt-header__thumbnail--small {
 	display: block;
 	float: left;
-	margin-right: 1.5rem;
+	margin-right: $site-margins-medium;
 	max-width: $thumbnail-small-max-width;
 	width: 50%;
 }
@@ -472,14 +472,14 @@ article {
 	}
 
 	.bbg-blog__excerpt--list {
-		margin-bottom: 1rem;
+		margin-bottom: $site-margins-small;
 		@include media($medium-screen) {
 			margin-bottom: 2rem;
 		}
 	}
 
 	.bbg-blog__excerpt--list:last-of-type {
-		margin-bottom: 0rem;
+		margin-bottom: 0;
 	}
 }
 

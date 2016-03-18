@@ -4,25 +4,25 @@
 .usa-table,
 .usa-table-borderless,
 .bbg__table-plain {
-    font-size: $small-font-size;
+	font-size: $small-font-size;
 
-    @include media($small-screen) {
-        font-size: $base-font-size;
-    }
+	@include media($small-screen) {
+		font-size: $base-font-size;
+	}
 }
 
 .bbg__table-plain {
-    display: block;
-    margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 	min-width: auto;
 	max-width: $article-max-width;
 	width: 100%;
 
-    th,
-    td {
-        border: none;
-        padding: 0 1.5rem;
-    }
+	th,
+	td {
+		border: none;
+		padding: 0 $site-margins-medium;
+	}
 }
 
 /** ---------------
@@ -42,7 +42,7 @@
 	font-size: 80%;
 	margin: {
 		top: $site-margins;
-		bottom: 1rem;
+		bottom: $site-margins-small;
 	}
 	text-transform: uppercase;
 }
@@ -61,17 +61,7 @@
 	div {
 		display: table-cell;
 		padding: {
-			right: 6rem;
+			right: $site-margins-large;
 		}
 	}
 }
-
-/*
-input[type="checkbox"],
-input[type="radio"] {
-	-webkit-appearance: radio;
-	display: inline;
-    position: relative;
-	left: 0;
-}
-*/
