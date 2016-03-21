@@ -590,7 +590,7 @@ jQuery(document).ready(function() {
 
   function initStreamerSelect() {
     var osList=["iOS","Android"]
-    var androidStores=["amazon","getjar","google","imimobile","opera","safaricom","vodacom"];
+    var androidStores=["amazon","getjar","google","imimobile","opera","safaricom"]; //,"vodacom"
     
     var iOSLink="https://itunes.apple.com/app/voa-mobile-streamer/id1000757271?ls=1&mt=8+";
 
@@ -617,7 +617,7 @@ jQuery(document).ready(function() {
     links["Android"]["imimobile"]={}
     links["Android"]["opera"]={}
     links["Android"]["safaricom"]={}
-    links["Android"]["vodacom"]={}
+    // links["Android"]["vodacom"]={}
 
     links["Android"]["amazon"]["multi"]="http://www.amazon.com/gp/mas/dl/android?p=com.audionowdigital.player.voa";
     links["Android"]["google"]["multi"]="https://play.google.com/store/apps/details?id=com.audionowdigital.player.voa";
@@ -648,8 +648,8 @@ jQuery(document).ready(function() {
     links["Android"]["safaricom"]["English (Kenya)"] = "http://appstore.safaricom.com/Portal/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
     links["Android"]["safaricom"]["Swahili (Kenya)"] = "http://appstore.safaricom.com/Portal/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
 
-    links["Android"]["vodacom"]["English (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
-    links["Android"]["vodacom"]["Swahili (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
+    // links["Android"]["vodacom"]["English (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147533";
+    // links["Android"]["vodacom"]["Swahili (Tanzania)"] = "http://appstore.vodacom.co.tz/Defaultx.aspx?mnu=prev&ctype=AP&cc=147534";
 
     /*** Populate the entity selector ****/
     str="";
