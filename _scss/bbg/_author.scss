@@ -87,7 +87,7 @@
 	margin-bottom: $site-margins;
 
 	@include media($medium-screen) {
-		margin-bottom: $site-margins*2;
+		margin-bottom: $site-margins-large;
 	}
 }
 
@@ -175,7 +175,7 @@
 }
 
 .bbg-author-bio {
-	font-family: "Merriweather","Georgia","Times New Roman",serif;
+	font-family: $font-serif;
 	line-height: 1.8;
 	margin-top: 1rem;
 

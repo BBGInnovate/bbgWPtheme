@@ -3281,7 +3281,7 @@ object {
 }
 
 .bbg-author-bio {
-  font-family: "Merriweather","Georgia","Times New Roman",serif;
+  font-family: "Merriweather", "Georgia", "Times New Roman", serif;
   line-height: 1.8;
   margin-top: 1rem;
 }
@@ -3536,7 +3536,7 @@ object {
   text-transform: uppercase;
 }
 .bbg__article-content .bbg__article-content__subhead + .bbg__article-content__section-title {
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 .bbg__article-content .bbg__article-content__section-title {
   color: #323a45;
@@ -3613,48 +3613,38 @@ object {
 .bbg__related-links a[href*="https://www.facebook.com/"] {
   background-image: url(img/social-icons/png/facebook-icon.png);
   background-image: url(img/social-icons/svg/facebook-icon.svg);
-  /*margin-left: -1rem;*/
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://twitter.com/AP/status/708413624830787585"] {
   background-image: url(img/social-icons/png/twitter-icon.png);
   background-image: url(img/social-icons/svg/twitter-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://www.linkedin.com"] {
   background-image: url(img/social-icons/png/linkedin-icon.png);
   background-image: url(img/social-icons/svg/linkedin-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://www.youtube.com/watch?"] {
   background-image: url(img/social-icons/png/youtube-icon.png);
   background-image: url(img/social-icons/svg/youtube-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://vimeo.com/"] {
   background-image: url(img/social-icons/png/vimeo-icon.png);
   background-image: url(img/social-icons/svg/vimeo-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="video"], .bbg__related-links a[type="video"] {
   background-image: url(img/social-icons/png/video-icon.png);
   background-image: url(img/social-icons/svg/video-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://github.com/"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*=".pdf"], .bbg__related-links a[type="application/pdf"] {
   background-image: url(img/social-icons/png/pdf-icon.png);
   background-image: url(img/social-icons/svg/pdf-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*=".epub"], .bbg__related-links a[type="application/epub+zip"] {
   background-image: url(img/social-icons/png/epub-icon.png);
   background-image: url(img/social-icons/svg/epub-icon.svg);
-  padding-left: 2.5rem;
 }
 .bbg__related-links a[href*="https://play.google.com/store/"], .bbg__related-links a[type="text/html+play"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
@@ -3769,56 +3759,6 @@ object {
   .bbg__article-author .bbg__author-contact .bbg__author-contact__website:before {
     content: " | ";
   }
-}
-
-/** POST AUTHOR Previous/next links on project posts */
-.bbg__article__nav {
-  display: block;
-  margin: 0 auto;
-  pointer-events: none;
-  position: fixed;
-  bottom: 100px;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-}
-.bbg__article__nav .bbg__article__nav-link {
-  height: 45px;
-  pointer-events: initial;
-  width: 30px;
-}
-@media screen and (min-width: 900px) {
-  .bbg__article__nav .bbg__article__nav-link {
-    width: 60px;
-    height: 90px;
-  }
-}
-.bbg__article__nav .bbg__article__nav-icon {
-  display: block;
-  height: 100%;
-  padding: 0;
-  width: 100%;
-}
-.bbg__article__nav .bbg__article__nav-icon.left-arrow {
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(img/arrow_left.png);
-}
-.bbg__article__nav .bbg__article__nav-icon.right-arrow {
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(img/arrow_right.png);
-}
-.bbg__article__nav .bbg__article__nav-text {
-  display: none;
-}
-.bbg__article__nav .bbg__article__nav-previous {
-  float: left;
-}
-.bbg__article__nav .bbg__article__nav-next {
-  float: right;
 }
 
 /** BBG tagline */
@@ -4214,7 +4154,7 @@ img > a:focus,
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
 }
 .bbg-label a {
@@ -4484,7 +4424,7 @@ article {
 }
 
 .bbg-blog__excerpt--featured {
-  margin-bottom: 4.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .bbg-blog__excerpt-title--featured {
@@ -4583,7 +4523,7 @@ article {
   }
 }
 .tertiary-stories .bbg-blog__excerpt--list:last-of-type {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 .type-post .usa-table,
@@ -4701,7 +4641,7 @@ article {
 
 .bbg-fuego__article__footer {
   color: #999;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: right;
 }
 
@@ -4735,7 +4675,7 @@ article {
 }
 
 .bbg-fuego__twitter__author-name {
-  font-size: 17px;
+  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 0;
   padding-left: 80px;
@@ -5057,6 +4997,56 @@ ol li:before {
   }
 }
 
+/** POST AUTHOR Previous/next links on project posts */
+.bbg__article__nav {
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  position: fixed;
+  bottom: 100px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+.bbg__article__nav .bbg__article__nav-link {
+  height: 45px;
+  pointer-events: initial;
+  width: 30px;
+}
+@media screen and (min-width: 900px) {
+  .bbg__article__nav .bbg__article__nav-link {
+    width: 60px;
+    height: 90px;
+  }
+}
+.bbg__article__nav .bbg__article__nav-icon {
+  display: block;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+}
+.bbg__article__nav .bbg__article__nav-icon.left-arrow {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/arrow_left.png);
+}
+.bbg__article__nav .bbg__article__nav-icon.right-arrow {
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(img/arrow_right.png);
+}
+.bbg__article__nav .bbg__article__nav-text {
+  display: none;
+}
+.bbg__article__nav .bbg__article__nav-previous {
+  float: left;
+}
+.bbg__article__nav .bbg__article__nav-next {
+  float: right;
+}
+
 .bbg-search-results--list {
   margin-bottom: 3.75rem;
 }
@@ -5155,13 +5145,3 @@ ol li:before {
   display: table-cell;
   padding-right: 6rem;
 }
-
-/*
-input[type="checkbox"],
-input[type="radio"] {
-	-webkit-appearance: radio;
-	display: inline;
-    position: relative;
-	left: 0;
-}
-*/

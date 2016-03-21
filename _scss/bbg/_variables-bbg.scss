@@ -53,5 +53,6 @@ $share-icon-large:             40px;
 $social-icon-home:             40px;
 
 // Are we (consistently) using these?
-$site-margins-small:           10px;
-$site-margins-medium:          20px;
+$site-margins-small:           1rem;
+$site-margins-medium:         $site-margins / 2;
+$site-margins-large:          $site-margins * 2;

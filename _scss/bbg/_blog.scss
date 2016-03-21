@@ -66,7 +66,7 @@
 	margin: {
 		top: 0;
 		bottom: 1rem;
-		}
+	}
 
 	@include media ($medium-screen) {
 		margin: {
@@ -225,7 +225,7 @@
 		font-size: $h3-font-size;
 		line-height: $heading-line-height;
   		margin: {
-  			top: $site-margins * 2;
+  			top: $site-margins-large;
   			bottom: 0;
   		}
 	}
@@ -281,7 +281,7 @@
 
 /** RELATED LINKS */
 /* Style related links for portfolio projects */
-	.bbg__related-links  {
+	.bbg__related-links {
 		a {
 			background: {
 				position: left top;
@@ -315,8 +315,7 @@
 					image: url(img/social-icons/png/facebook-icon.png);
 					image: url(img/social-icons/svg/facebook-icon.svg);
 				}
-				/*margin-left: -1rem;*/
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			// Twitter links
 			&[href*="https://twitter.com/AP/status/708413624830787585"] {
@@ -324,7 +323,7 @@
 					image: url(img/social-icons/png/twitter-icon.png);
 					image: url(img/social-icons/svg/twitter-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			// LinkedIn links
 			&[href*="https://www.linkedin.com"] {
@@ -332,7 +331,7 @@
 					image: url(img/social-icons/png/linkedin-icon.png);
 					image: url(img/social-icons/svg/linkedin-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			//YouTube links
 			&[href*="https://www.youtube.com/watch?"]  {
@@ -340,7 +339,7 @@
 					image: url(img/social-icons/png/youtube-icon.png);
 					image: url(img/social-icons/svg/youtube-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			//Vimeo links
 			&[href*="https://vimeo.com/"]  {
@@ -348,7 +347,7 @@
 					image: url(img/social-icons/png/vimeo-icon.png);
 					image: url(img/social-icons/svg/vimeo-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			//Video links
 			&[href*="video"],
@@ -357,7 +356,7 @@
 					image: url(img/social-icons/png/video-icon.png);
 					image: url(img/social-icons/svg/video-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			// GitHub links
 			&[href*="https://github.com/"] {
@@ -365,7 +364,7 @@
 					image: url(img/social-icons/png/github-mark.png);
 					image: url(img/social-icons/svg/github-mark.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			//PDF links
 			&[href*=".pdf"],
@@ -374,7 +373,7 @@
 					image: url(img/social-icons/png/pdf-icon.png);
 					image: url(img/social-icons/svg/pdf-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			// ePub links
 			&[href*=".epub"],
@@ -383,7 +382,7 @@
 					image: url(img/social-icons/png/epub-icon.png);
 					image: url(img/social-icons/svg/epub-icon.svg);
 				}
-				padding-left: 2.5rem;
+				//padding-left: 2.5rem;
 			}
 			// Android apps on GooglePlay
 			&[href*="https://play.google.com/store/"],
@@ -522,67 +521,6 @@
 }
 
 
-/** POST AUTHOR Previous/next links on project posts */
-.bbg__article__nav {
-	display: block;
-	margin: 0 auto;
-	pointer-events: none;
-	position: fixed;
-		bottom: 100px;
-	text-align: center;
-	width: 100%;
-	z-index: 1;
-
-
-	.bbg__article__nav-link {
-		height: 45px;
-		pointer-events: initial;
-		width: 30px;
-
-		@include media($medium-large-screen) {
-			width: 60px;
-			height: 90px;
-		}
-	}
-
-	.bbg__article__nav-icon {
-		display: block;
-		height: 100%;
-		padding: 0;
-		width: 100%;
-
-		&.left-arrow{
-			background: {
-				position: left top;
-				repeat: no-repeat;
-				size: contain;
-				image: url(img/arrow_left.png);
-			}
-		}
-
-		&.right-arrow{
-			background: {
-				position: right top;
-				repeat: no-repeat;
-				size: contain;
-				image: url(img/arrow_right.png);
-			}
-		}
-
-	}
-
-	.bbg__article__nav-text {
-		display: none;
-	}
-
-	.bbg__article__nav-previous {
-		float: left;
-	}
-
-	.bbg__article__nav-next {
-		float: right;
-	}
-}
 
 /** BBG tagline */
 .bbg-tagline, .bbg-tagline a  {
@@ -592,12 +530,12 @@
 }
 
 .bbg__article-footer {
-	margin-top: $site-margins * 2;
+	margin-top: $site-margins-large;
 }
 
 .usa-table, .usa-table-borderless {
 	font-size: $small-font-size;
 	@include media($small-screen) {
-			font-size: $base-font-size;
-		}
+		font-size: $base-font-size;
+	}
 }

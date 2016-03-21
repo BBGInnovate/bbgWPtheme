@@ -37,13 +37,12 @@
 	display: block;
 }
 
-// Center block
+// Center block (from wordpress)
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 // Define the larger typed readin for first paragraphs and page headers
 .readin {
