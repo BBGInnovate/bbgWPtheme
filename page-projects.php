@@ -26,9 +26,10 @@ if ($currentPage > 1) {
 }
 
 
-
+$categoryID=0;
 $hasTeamFilter=false;
 if (isset($_GET['category_id'])) {
+	$categoryID=$_GET['category_id'];
 	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
 	$teamCategoryID= $_GET['category_id'];
@@ -69,6 +70,8 @@ $portfolioDescription="some portfolio description could go here based on the cat
 
 
 
+
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -89,7 +92,38 @@ get_header(); ?>
 					</h6>
 				</header><!-- .page-header -->
 			</div>
+			<?php
+				/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
+				$mobileAppsCategory=get_category_by_slug("mobile-apps");
+				if ($categoryID==$mobileAppsCategory->term_id) {
+				?>
 
+					<section id="mission" class="usa-section usa-grid">
+					<?php
+						$qParams=array(
+							'post_type' => array('post'),
+							'posts_per_page' => 1,
+							'cat' => get_cat_id('MobileApps Introduction')
+						);
+						$the_query = new WP_Query( $qParams );
+
+						$siteIntroContent="";
+						if ( $the_query->have_posts() ) :
+							while ( $the_query->have_posts() ) : $the_query->the_post();
+								$siteIntroTitle=get_the_title();
+								echo '<h3 id="site-intro" class="usa-font-lead">';
+								/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
+								echo get_the_content();
+								echo '</h3>';
+							endwhile;
+						endif;
+						wp_reset_postdata();
+					?>
+					</section><!-- Site introduction -->
+			<?php
+				/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
+				}
+			?>
 			<div class="usa-grid-full">
 				<?php
 					$counter=0;

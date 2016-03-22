@@ -134,7 +134,7 @@ get_header();
 						'posts_per_page' => $maxPostsToShow,
 						'orderby' => 'post_date',
 						'order' => 'desc',
-						'category__not_in' => (array(get_cat_id('Project'),get_cat_id('Site Introduction')))
+						'category__not_in' => (array(get_cat_id('Project'),get_cat_id('Site Introduction'), get_cat_id('MobileApps Introduction')))
 					);
 					query_posts($qParams);
 
