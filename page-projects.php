@@ -27,7 +27,7 @@ if ($currentPage > 1) {
 
 
 $hasTeamFilter=false;
-$mobileAppsPostContent="":
+$mobileAppsPostContent="";
 if (isset($_GET['category_id'])) {
 	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
@@ -46,12 +46,12 @@ if (isset($_GET['category_id'])) {
 	/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
 	$mobileAppsCategory=get_category_by_slug("mobile-apps");
 	if ($teamCategoryID==$mobileAppsCategory->term_id) {
-		$qParams=array(
+		$qParams2=array(
 			'post_type' => array('post'),
 			'posts_per_page' => 1,
 			'cat' => get_cat_id('MobileApps Introduction')
 		);
-		$the_query = new WP_Query( $qParams );
+		$the_query = new WP_Query( $qParams2 );
 
 		$siteIntroContent="";
 		if ( $the_query->have_posts() ) :
@@ -114,9 +114,9 @@ get_header(); ?>
 			</div>
 			<?php
 				if ($mobileAppsPostContent != "") {
-					echo '<section id="mobileAppsIntro" class="usa-section usa-grid">';
+					//echo '<section id="mobileAppsIntro" class="usa-section usa-grid">';
 					echo $mobileAppsPostContent;
-					echo '</section>';
+					//echo '</section>';
 				}
 			?>
 			<div class="usa-grid-full">
