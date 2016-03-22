@@ -26,10 +26,9 @@ if ($currentPage > 1) {
 }
 
 
-$categoryID=0;
 $hasTeamFilter=false;
+$mobileAppsPostContent="":
 if (isset($_GET['category_id'])) {
-	$categoryID=$_GET['category_id'];
 	/*** this is a filtered team page ***/
 	$hasTeamFilter=true;
 	$teamCategoryID= $_GET['category_id'];
@@ -37,11 +36,32 @@ if (isset($_GET['category_id'])) {
 
 	$qParams=array(
 		'post_type' => array('post')
-		,'category__and' => array(get_cat_id('Project'), $_GET['category_id'])
+		,'category__and' => array(get_cat_id('Project'), $teamCategoryID)
 		,'posts_per_page' => $postsPerPage
 		,'offset' => $offset
 		,'post_status' => array('publish')
 	);
+
+
+	/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
+	$mobileAppsCategory=get_category_by_slug("mobile-apps");
+	if ($teamCategoryID==$mobileAppsCategory->term_id) {
+		$qParams=array(
+			'post_type' => array('post'),
+			'posts_per_page' => 1,
+			'cat' => get_cat_id('MobileApps Introduction')
+		);
+		$the_query = new WP_Query( $qParams );
+
+		$siteIntroContent="";
+		if ( $the_query->have_posts() ) :
+			while ( $the_query->have_posts() ) : $the_query->the_post();
+				$mobileAppsPostContent=get_the_content();
+			endwhile;
+		endif;
+		wp_reset_postdata();
+	}
+	/***** END mobile apps landing page special case ****/
 } else {
 	$qParams=array(
 		'post_type' => array('post')
@@ -93,35 +113,10 @@ get_header(); ?>
 				</header><!-- .page-header -->
 			</div>
 			<?php
-				/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
-				$mobileAppsCategory=get_category_by_slug("mobile-apps");
-				if ($categoryID==$mobileAppsCategory->term_id) {
-				?>
-
-					<section id="mission" class="usa-section usa-grid">
-					<?php
-						$qParams=array(
-							'post_type' => array('post'),
-							'posts_per_page' => 1,
-							'cat' => get_cat_id('MobileApps Introduction')
-						);
-						$the_query = new WP_Query( $qParams );
-
-						$siteIntroContent="";
-						if ( $the_query->have_posts() ) :
-							while ( $the_query->have_posts() ) : $the_query->the_post();
-								$siteIntroTitle=get_the_title();
-								echo '<h3 id="site-intro" class="usa-font-lead">';
-								/* echo '<h2>' . $siteIntroTitle . '</h2>'; */
-								echo get_the_content();
-								echo '</h3>';
-							endwhile;
-						endif;
-						wp_reset_postdata();
-					?>
-					</section><!-- Site introduction -->
-			<?php
-				/**** SPECIAL CASE: mobile apps landing page gets a little teaser with contact info ***/
+				if ($mobileAppsPostContent != "") {
+					echo '<section id="mobileAppsIntro" class="usa-section usa-grid">';
+					echo $mobileAppsPostContent;
+					echo '</section>';
 				}
 			?>
 			<div class="usa-grid-full">
