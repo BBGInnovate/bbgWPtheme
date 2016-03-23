@@ -3631,23 +3631,27 @@ ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href*="https://www.facebook.com/"] {
+.bbg__related-links a[href|="mailto:"] {
+  background-image: url(img/social-icons/png/email-icon.png);
+  background-image: url(img/social-icons/svg/email-icon.svg);
+}
+.bbg__related-links a[href*="facebook.com/"] {
   background-image: url(img/social-icons/png/facebook-icon.png);
   background-image: url(img/social-icons/svg/facebook-icon.svg);
 }
-.bbg__related-links a[href*="https://twitter.com/AP/status/708413624830787585"] {
+.bbg__related-links a[href*="twitter.com/"] {
   background-image: url(img/social-icons/png/twitter-icon.png);
   background-image: url(img/social-icons/svg/twitter-icon.svg);
 }
-.bbg__related-links a[href*="https://www.linkedin.com"] {
+.bbg__related-links a[href*="linkedin.com"] {
   background-image: url(img/social-icons/png/linkedin-icon.png);
   background-image: url(img/social-icons/svg/linkedin-icon.svg);
 }
-.bbg__related-links a[href*="https://www.youtube.com/watch?"] {
+.bbg__related-links a[href*="youtube.com/watch?"] {
   background-image: url(img/social-icons/png/youtube-icon.png);
   background-image: url(img/social-icons/svg/youtube-icon.svg);
 }
-.bbg__related-links a[href*="https://vimeo.com/"] {
+.bbg__related-links a[href*="vimeo.com/"] {
   background-image: url(img/social-icons/png/vimeo-icon.png);
   background-image: url(img/social-icons/svg/vimeo-icon.svg);
 }
@@ -3655,7 +3659,7 @@ ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--
   background-image: url(img/social-icons/png/video-icon.png);
   background-image: url(img/social-icons/svg/video-icon.svg);
 }
-.bbg__related-links a[href*="https://github.com/"] {
+.bbg__related-links a[href*="github.com/"] {
   background-image: url(img/social-icons/png/github-mark.png);
   background-image: url(img/social-icons/svg/github-mark.svg);
 }
@@ -3667,7 +3671,7 @@ ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--
   background-image: url(img/social-icons/png/epub-icon.png);
   background-image: url(img/social-icons/svg/epub-icon.svg);
 }
-.bbg__related-links a[href*="https://play.google.com/store/"], .bbg__related-links a[type="text/html+play"] {
+.bbg__related-links a[href*="play.google.com/store/"], .bbg__related-links a[type="text/html+play"] {
   background-image: url(img/social-icons/png/google-play-badge.png);
   background-image: url(img/social-icons/svg/google-play-badge.svg);
   padding-left: 6.7rem;

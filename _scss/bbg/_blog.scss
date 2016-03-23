@@ -329,8 +329,16 @@ ul.bbg__article-content__list--inline {
 			padding-left: 2.5rem;
 		}
 
+		// email links
+		&[href|="mailto:"] {
+			background: {
+				image: url(img/social-icons/png/email-icon.png);
+				image: url(img/social-icons/svg/email-icon.svg);
+			}
+		}
+
 		// Facebook links
-		&[href*="https://www.facebook.com/"] {
+		&[href*="facebook.com/"] {
 			background: {
 				image: url(img/social-icons/png/facebook-icon.png);
 				image: url(img/social-icons/svg/facebook-icon.svg);
@@ -338,7 +346,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		// Twitter links
-		&[href*="https://twitter.com/AP/status/708413624830787585"] {
+		&[href*="twitter.com/"], {
 			background: {
 				image: url(img/social-icons/png/twitter-icon.png);
 				image: url(img/social-icons/svg/twitter-icon.svg);
@@ -346,7 +354,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		// LinkedIn links
-		&[href*="https://www.linkedin.com"] {
+		&[href*="linkedin.com"] {
 			background: {
 				image: url(img/social-icons/png/linkedin-icon.png);
 				image: url(img/social-icons/svg/linkedin-icon.svg);
@@ -354,7 +362,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		//YouTube links
-		&[href*="https://www.youtube.com/watch?"] {
+		&[href*="youtube.com/watch?"] {
 			background: {
 				image: url(img/social-icons/png/youtube-icon.png);
 				image: url(img/social-icons/svg/youtube-icon.svg);
@@ -362,7 +370,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		//Vimeo links
-		&[href*="https://vimeo.com/"] {
+		&[href*="vimeo.com/"] {
 			background: {
 				image: url(img/social-icons/png/vimeo-icon.png);
 				image: url(img/social-icons/svg/vimeo-icon.svg);
@@ -379,7 +387,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		// GitHub links
-		&[href*="https://github.com/"] {
+		&[href*="github.com/"] {
 			background: {
 				image: url(img/social-icons/png/github-mark.png);
 				image: url(img/social-icons/svg/github-mark.svg);
@@ -405,7 +413,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		// Android apps on GooglePlay
-		&[href*="https://play.google.com/store/"],
+		&[href*="play.google.com/store/"],
 		&[type="text/html+play"] {
 			background: {
 				image: url(img/social-icons/png/google-play-badge.png);

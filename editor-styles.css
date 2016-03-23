@@ -90,6 +90,11 @@ blockquote.pullquote p {
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.5rem;
 }
+.bbg__related-links a[href|="mailto:"] {
+  background-image: url(img/social-icons/png/email-icon.png);
+  background-image: url(img/social-icons/svg/email-icon.svg);
+  padding-left: 2.5rem;
+}
 .bbg__related-links a[href*="facebook.com"] {
   background-image: url(img/social-icons/png/facebook-icon.png);
   background-image: url(img/social-icons/svg/facebook-icon.svg);
