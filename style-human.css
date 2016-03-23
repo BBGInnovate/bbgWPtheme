@@ -3610,6 +3610,7 @@ ul.bbg__article-content__list--inline {
 }
 ul.bbg__article-content__list--inline li {
   display: inline-block;
+  margin: 0;
   padding-right: 3rem;
 }
 ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--inline li:after {
