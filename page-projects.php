@@ -114,9 +114,9 @@ get_header(); ?>
 			</div>
 			<?php
 				if ($mobileAppsPostContent != "") {
-					//echo '<section id="mobileAppsIntro" class="usa-section usa-grid">';
+					echo '<section id="mobileAppsIntro" class=" usa-grid">';
 					echo $mobileAppsPostContent;
-					//echo '</section>';
+					echo '</section>';
 				}
 			?>
 			<div class="usa-grid-full">
