@@ -3602,10 +3602,14 @@ object {
 ul.bbg__article-content__list--inline {
   display: block;
   list-style-type: none;
-  margin-top: -3rem;
+}
+@media screen and (min-width: 481px) {
+  ul.bbg__article-content__list--inline {
+    margin-top: -3rem;
+  }
 }
 ul.bbg__article-content__list--inline li {
-  display: table-cell;
+  display: inline-block;
   padding-right: 3rem;
 }
 ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--inline li:after {

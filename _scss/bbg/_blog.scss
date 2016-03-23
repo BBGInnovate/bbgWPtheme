@@ -283,10 +283,13 @@
 ul.bbg__article-content__list--inline {
 		display: block;
 		list-style-type: none;
-		margin-top: -3rem;
+
+		@include media($small-screen) {
+			margin-top: -3rem;
+		}
 
 	li {
-		display: table-cell;
+		display: inline-block;
 		padding-right: $site-margins;
 
 	    &:before,
