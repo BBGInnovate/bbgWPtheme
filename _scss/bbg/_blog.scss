@@ -1,4 +1,5 @@
 /** HEADER AREA */
+
 /* Featured image */
 .bbg__article-header__thumbnail--large {
 	line-height: 0;
@@ -9,7 +10,6 @@
 	max-height: 624px;
 	overflow: hidden;
 	position: relative;
-
 	img {
 		width: 100%;
 	}
@@ -19,25 +19,24 @@
 	@extend .wp-caption-text;
 	margin: -2rem 0 $site-margins auto;
 	width: 100%;
-
 	@include media($medium-screen) {
 		max-width: 33%;
 		//text-align: right;
 	}
 }
 
+
 /* Post title */
 .bbg__article-header__title {
 	font-size: $h1-font-size * .8;
-
 	@include media($medium-screen) {
 		font-size: $h1-font-size;
 	}
 	@include media($medium-large-screen) {
 		font-size: $h1-font-size * 1.25;
 	}
-
 }
+
 
 /* Author byline */
 .bbg__article-meta {
@@ -46,20 +45,18 @@
 		size: $small-font-size;
 		weight: $font-light;
 	}
-
 	@include media($medium-large-screen) {
 		font-size: $base-font-size;
 		margin-bottom: $site-margins * 1.3;
 	}
-
 	.author {
 		font: {
 			weight: $font-bold;
 			style: italic;
 		}
 	}
-
 }
+
 
 /** ARTICLE SHARE AREA */
 .bbg__article-share {
@@ -67,30 +64,29 @@
 		top: 0;
 		bottom: 1rem;
 	}
-
 	@include media ($medium-screen) {
 		margin: {
 			top: 0;
 			bottom: 0;
 		}
 	}
-
 	@include media($medium-large-screen) {
 		float: left;
-		margin-top: -1%; /* Added to overwrite the existing margin-top applied to all UL tags by USDS :: GIGI */
+		margin-top: -1%;
+		/* Added to overwrite the existing margin-top applied to all UL tags by USDS :: GIGI */
 	}
 }
+
 
 /* Article share links */
 .bbg__article-share__link {
 	display: inline-block;
 	margin-right: 1rem;
-
-	a:hover, a:focus {
+	a:hover,
+	a:focus {
 		background: none;
 		text-decoration: none;
 	}
-
 	@include media($medium-large-screen) {
 		display: block;
 	}
@@ -105,14 +101,12 @@
 .bbg__article-share__icon {
 	background-color: $color-gray-lightest;
 	@include backgroundCover();
-
 	border-radius: $border-radius;
 	display: inline-block;
 	height: $share-icon-large;
 	margin-right: .5rem;
 	vertical-align: middle;
 	width: $share-icon-large;
-
 	@include media($medium-screen) {
 		border-radius: 0;
 		height: $share-icon-small;
@@ -145,12 +139,11 @@
 /* Article share links: text */
 .bbg__article-share__text {
 	display: none;
-
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background: none;
 		text-decoration: underline;
 	}
-
 	@include media($medium-screen) {
 		display: inline-block;
 	}
@@ -181,7 +174,13 @@
 		clear: none;
 	}
 
-	h1, h2, h3, h4, h5, h6, p {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
 		+ ul,
 		+ ol {
 			margin: {
@@ -191,18 +190,18 @@
 		}
 	}
 
-	a, p {
+	a,
+	p {
 		word-wrap: break-word;
 	}
 
 	.bbg__article-content__subhead {
 		color: $color-gray-medium;
 		font-size: 2.5rem;
-  		line-height: $heading-line-height;
-  		text-transform: uppercase;
-
-  		+ .bbg__article-content__section-title {
-		    margin-top: $site-margins-medium;
+		line-height: $heading-line-height;
+		text-transform: uppercase;
+		+ .bbg__article-content__section-title {
+			margin-top: $site-margins-medium;
 		}
 	}
 
@@ -210,27 +209,24 @@
 		color: $color-gray-dark;
 		font-size: $h3-font-size;
 		line-height: $heading-line-height;
-  		margin: {
-  			top: $site-margins;
-  			bottom: 0;
-  		}
-
-  		+ p {
-  			margin-top: .5rem;
-  		}
+		margin: {
+			top: $site-margins;
+			bottom: 0;
+		}
+		+ p {
+			margin-top: .5rem;
+		}
 	}
 
 	.bbg__article-content__form-title {
 		color: $color-gray-dark;
 		font-size: $h3-font-size;
 		line-height: $heading-line-height;
-  		margin: {
-  			top: $site-margins-large;
-  			bottom: 0;
-  		}
+		margin: {
+			top: $site-margins-large;
+			bottom: 0;
+		}
 	}
-
-
 
 	.bbg__article-content__image--extra-large {
 		margin: 0;
@@ -239,6 +235,21 @@
 
 	ul {
 		width: 100%;
+
+		&.bbg__article-content__list--inline {
+  			display: block;
+  			list-style-type: none;
+
+			li {
+				display: table-cell;
+				padding-right: $site-margins;
+
+			    &:before,
+			    &:after {
+			      display: none;
+			    }
+			}
+		}
 	}
 
 	li {
@@ -251,6 +262,7 @@
 			right: auto;
 			left: auto;
 		}
+
 		padding: {
 			top: 0;
 			right: 4rem;
@@ -263,10 +275,12 @@
 				style: solid;
 				width: 6px;
 			}
+
 			font: {
 				family: $font-serif;
 				size: 2rem;
 			}
+
 			margin-bottom: $site-margins;
 
 			@include media($medium-large-screen) {
@@ -279,141 +293,147 @@
 	}
 }
 
+
 /** RELATED LINKS */
+
 /* Style related links for portfolio projects */
-	.bbg__related-links {
-		a {
+.bbg__related-links {
+	a {
+		background: {
+			position: left top;
+			repeat: no-repeat;
+			size: contain;
+		}
+
+		color: $color-primary-darkest;
+		font: {
+			size: $small-font-size;
+			weight: $font-bold;
+		}
+
+		text-decoration: none;
+
+		&:hover {
+			color: black;
+			text-decoration: underline;
+		}
+
+		// Generic external website URL
+		&[href] {
 			background: {
-				position: left top;
-				repeat: no-repeat;
-				size: contain;
+				image: url(img/social-icons/png/link-icon.png);
+				image: url(img/social-icons/svg/link-icon.svg);
 			}
+			padding-left: 2.5rem;
+		}
 
-			color: $color-primary-darkest;
-			font: {
-				size: $small-font-size;
-				weight: $font-bold;
-			}
-			text-decoration: none;
-
-			&:hover {
-				color: black;
-				text-decoration: underline;
-			}
-
-						// Generic external website URL
-			&[href] {
-				background: {
-					image: url(img/social-icons/png/link-icon.png);
-					image: url(img/social-icons/svg/link-icon.svg);
-				}
-				padding-left: 2.5rem;
-			}
-			// Facebook links
-			&[href*="https://www.facebook.com/"] {
-				background: {
-					image: url(img/social-icons/png/facebook-icon.png);
-					image: url(img/social-icons/svg/facebook-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			// Twitter links
-			&[href*="https://twitter.com/AP/status/708413624830787585"] {
-				background: {
-					image: url(img/social-icons/png/twitter-icon.png);
-					image: url(img/social-icons/svg/twitter-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			// LinkedIn links
-			&[href*="https://www.linkedin.com"] {
-				background: {
-					image: url(img/social-icons/png/linkedin-icon.png);
-					image: url(img/social-icons/svg/linkedin-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			//YouTube links
-			&[href*="https://www.youtube.com/watch?"]  {
-				background: {
-					image: url(img/social-icons/png/youtube-icon.png);
-					image: url(img/social-icons/svg/youtube-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			//Vimeo links
-			&[href*="https://vimeo.com/"]  {
-				background: {
-					image: url(img/social-icons/png/vimeo-icon.png);
-					image: url(img/social-icons/svg/vimeo-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			//Video links
-			&[href*="video"],
-			&[type="video"] {
-				background: {
-					image: url(img/social-icons/png/video-icon.png);
-					image: url(img/social-icons/svg/video-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			// GitHub links
-			&[href*="https://github.com/"] {
-				background: {
-					image: url(img/social-icons/png/github-mark.png);
-					image: url(img/social-icons/svg/github-mark.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			//PDF links
-			&[href*=".pdf"],
-			&[type="application/pdf"]  {
-				background: {
-					image: url(img/social-icons/png/pdf-icon.png);
-					image: url(img/social-icons/svg/pdf-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			// ePub links
-			&[href*=".epub"],
-			&[type="application/epub+zip"] {
-				background: {
-					image: url(img/social-icons/png/epub-icon.png);
-					image: url(img/social-icons/svg/epub-icon.svg);
-				}
-				//padding-left: 2.5rem;
-			}
-			// Android apps on GooglePlay
-			&[href*="https://play.google.com/store/"],
-			&[type="text/html+play"]  {
-				background: {
-					image: url(img/social-icons/png/google-play-badge.png);
-					image: url(img/social-icons/svg/google-play-badge.svg);
-				}
-				padding-left: 6.7rem;
-			}
-			// iOS apps on App Store
-			&[href*="itunes.apple.com/us/app"],
-			&[type="text/html+app"] {
-				background: {
-					image: url(img/social-icons/png/apple-app-store-badge.png);
-					image: url(img/social-icons/svg/apple-app-store-badge.svg);
-				}
-				padding-left: 6.7rem;
-			}
-			// iBooks
-			&[href*="itunes.apple.com/us/book"],
-			&[type="text/html+ibook"] {
-				background: {
-					image: url(img/social-icons/png/badge_ibooks-sm.png);
-					image: url(img/social-icons/svg/badge_ibooks-sm.svg);
-				}
-				padding-left: 6.2rem;
+		// Facebook links
+		&[href*="https://www.facebook.com/"] {
+			background: {
+				image: url(img/social-icons/png/facebook-icon.png);
+				image: url(img/social-icons/svg/facebook-icon.svg);
 			}
 		}
-	}
 
+		// Twitter links
+		&[href*="https://twitter.com/AP/status/708413624830787585"] {
+			background: {
+				image: url(img/social-icons/png/twitter-icon.png);
+				image: url(img/social-icons/svg/twitter-icon.svg);
+			}
+		}
+
+		// LinkedIn links
+		&[href*="https://www.linkedin.com"] {
+			background: {
+				image: url(img/social-icons/png/linkedin-icon.png);
+				image: url(img/social-icons/svg/linkedin-icon.svg);
+			}
+		}
+
+		//YouTube links
+		&[href*="https://www.youtube.com/watch?"] {
+			background: {
+				image: url(img/social-icons/png/youtube-icon.png);
+				image: url(img/social-icons/svg/youtube-icon.svg);
+			}
+		}
+
+		//Vimeo links
+		&[href*="https://vimeo.com/"] {
+			background: {
+				image: url(img/social-icons/png/vimeo-icon.png);
+				image: url(img/social-icons/svg/vimeo-icon.svg);
+			}
+		}
+
+		//Video links
+		&[href*="video"],
+		&[type="video"] {
+			background: {
+				image: url(img/social-icons/png/video-icon.png);
+				image: url(img/social-icons/svg/video-icon.svg);
+			}
+		}
+
+		// GitHub links
+		&[href*="https://github.com/"] {
+			background: {
+				image: url(img/social-icons/png/github-mark.png);
+				image: url(img/social-icons/svg/github-mark.svg);
+			}
+		}
+
+		//PDF links
+		&[href*=".pdf"],
+		&[type="application/pdf"] {
+			background: {
+				image: url(img/social-icons/png/pdf-icon.png);
+				image: url(img/social-icons/svg/pdf-icon.svg);
+			}
+		}
+
+		// ePub links
+		&[href*=".epub"],
+		&[type="application/epub+zip"] {
+			background: {
+				image: url(img/social-icons/png/epub-icon.png);
+				image: url(img/social-icons/svg/epub-icon.svg);
+			}
+		}
+
+		// Android apps on GooglePlay
+		&[href*="https://play.google.com/store/"],
+		&[type="text/html+play"] {
+			background: {
+				image: url(img/social-icons/png/google-play-badge.png);
+				image: url(img/social-icons/svg/google-play-badge.svg);
+			}
+			padding-left: 6.7rem;
+		}
+
+		// iOS apps on App Store
+		&[href*="itunes.apple.com/us/app"],
+		&[type="text/html+app"] {
+			background: {
+				image: url(img/social-icons/png/apple-app-store-badge.png);
+				image: url(img/social-icons/svg/apple-app-store-badge.svg);
+			}
+			padding-left: 6.7rem;
+		}
+
+		// iBooks
+		&[href*="itunes.apple.com/us/book"],
+		&[type="text/html+ibook"] {
+			background: {
+				image: url(img/social-icons/png/badge_ibooks-sm.png);
+				image: url(img/social-icons/svg/badge_ibooks-sm.svg);
+			}
+
+			padding-left: 6.2rem;
+		}
+	}
+}
 
 
 /** POST AUTHOR */
@@ -426,9 +446,11 @@
 		bottom: $site-margins;
 		left: auto;
 	}
+
 	max-width: $article-max-width;
 	padding: 2rem;
 	text-align: center;
+
 	@include clearfix();
 
 	@include media($small-screen) {
@@ -459,6 +481,7 @@
 				size: $small-font-size;
 				weight: $font-light;
 			}
+
 			line-height: $lead-line-height;
 			margin-bottom: 1rem;
 		}
@@ -469,6 +492,7 @@
 			size: $small-font-size;
 			weight: $font-light;
 		}
+
 		line-height: $lead-line-height;
 		margin-bottom: 0;
 		padding-left: 0;
@@ -489,6 +513,7 @@
 				size: $base-font-size;
 				weight: 500;
 			}
+
 			margin-bottom: .5rem;
 
 			@include media($medium-screen) {
@@ -510,20 +535,18 @@
 
 			@include media($medium-screen) {
 				display: inline-block;
-
 				&:before {
 					content: " | ";
 				}
 			}
 		}
 	}
-
 }
 
 
-
 /** BBG tagline */
-.bbg-tagline, .bbg-tagline a  {
+.bbg-tagline,
+.bbg-tagline a {
 	color: $color-gray-medium;
 	font-size: $small-font-size;
 	margin-bottom: $site-margins;
@@ -533,8 +556,10 @@
 	margin-top: $site-margins-large;
 }
 
-.usa-table, .usa-table-borderless {
+.usa-table,
+.usa-table-borderless {
 	font-size: $small-font-size;
+
 	@include media($small-screen) {
 		font-size: $base-font-size;
 	}

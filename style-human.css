@@ -3436,7 +3436,8 @@ object {
   display: inline-block;
   margin-right: 1rem;
 }
-.bbg__article-share__link a:hover, .bbg__article-share__link a:focus {
+.bbg__article-share__link a:hover,
+.bbg__article-share__link a:focus {
   background: none;
   text-decoration: none;
 }
@@ -3516,17 +3517,24 @@ object {
   clear: none;
 }
 .bbg__article-content h1 + ul,
-.bbg__article-content h1 + ol, .bbg__article-content h2 + ul,
-.bbg__article-content h2 + ol, .bbg__article-content h3 + ul,
-.bbg__article-content h3 + ol, .bbg__article-content h4 + ul,
-.bbg__article-content h4 + ol, .bbg__article-content h5 + ul,
-.bbg__article-content h5 + ol, .bbg__article-content h6 + ul,
-.bbg__article-content h6 + ol, .bbg__article-content p + ul,
+.bbg__article-content h1 + ol,
+.bbg__article-content h2 + ul,
+.bbg__article-content h2 + ol,
+.bbg__article-content h3 + ul,
+.bbg__article-content h3 + ol,
+.bbg__article-content h4 + ul,
+.bbg__article-content h4 + ol,
+.bbg__article-content h5 + ul,
+.bbg__article-content h5 + ol,
+.bbg__article-content h6 + ul,
+.bbg__article-content h6 + ol,
+.bbg__article-content p + ul,
 .bbg__article-content p + ol {
   margin-top: 0;
   margin-bottom: 1em;
 }
-.bbg__article-content a, .bbg__article-content p {
+.bbg__article-content a,
+.bbg__article-content p {
   word-wrap: break-word;
 }
 .bbg__article-content .bbg__article-content__subhead {
@@ -3561,6 +3569,17 @@ object {
 }
 .bbg__article-content ul {
   width: 100%;
+}
+.bbg__article-content ul.bbg__article-content__list--inline {
+  display: block;
+  list-style-type: none;
+}
+.bbg__article-content ul.bbg__article-content__list--inline li {
+  display: table-cell;
+  padding-right: 3rem;
+}
+.bbg__article-content ul.bbg__article-content__list--inline li:before, .bbg__article-content ul.bbg__article-content__list--inline li:after {
+  display: none;
 }
 .bbg__article-content li {
   margin-bottom: 3.5em;
@@ -3762,7 +3781,8 @@ object {
 }
 
 /** BBG tagline */
-.bbg-tagline, .bbg-tagline a {
+.bbg-tagline,
+.bbg-tagline a {
   color: #757575;
   font-size: 1.3rem;
   margin-bottom: 3rem;
@@ -3772,11 +3792,13 @@ object {
   margin-top: 6rem;
 }
 
-.usa-table, .usa-table-borderless {
+.usa-table,
+.usa-table-borderless {
   font-size: 1.3rem;
 }
 @media screen and (min-width: 481px) {
-  .usa-table, .usa-table-borderless {
+  .usa-table,
+  .usa-table-borderless {
     font-size: 1.6rem;
   }
 }
