@@ -235,21 +235,6 @@
 
 	ul {
 		width: 100%;
-
-		&.bbg__article-content__list--inline {
-  			display: block;
-  			list-style-type: none;
-
-			li {
-				display: table-cell;
-				padding-right: $site-margins;
-
-			    &:before,
-			    &:after {
-			      display: none;
-			    }
-			}
-		}
 	}
 
 	li {
@@ -290,6 +275,23 @@
 				padding: 0;
 			}
 		}
+	}
+}
+
+
+/** INLINE LISTS */
+ul.bbg__article-content__list--inline {
+		display: block;
+		list-style-type: none;
+
+	li {
+		display: table-cell;
+		padding-right: $site-margins;
+
+	    &:before,
+	    &:after {
+	      display: none;
+	    }
 	}
 }
 

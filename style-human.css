@@ -3570,17 +3570,6 @@ object {
 .bbg__article-content ul {
   width: 100%;
 }
-.bbg__article-content ul.bbg__article-content__list--inline {
-  display: block;
-  list-style-type: none;
-}
-.bbg__article-content ul.bbg__article-content__list--inline li {
-  display: table-cell;
-  padding-right: 3rem;
-}
-.bbg__article-content ul.bbg__article-content__list--inline li:before, .bbg__article-content ul.bbg__article-content__list--inline li:after {
-  display: none;
-}
 .bbg__article-content li {
   margin-bottom: 3.5em;
 }
@@ -3607,6 +3596,19 @@ object {
     max-width: 50%;
     padding: 0;
   }
+}
+
+/** INLINE LISTS */
+ul.bbg__article-content__list--inline {
+  display: block;
+  list-style-type: none;
+}
+ul.bbg__article-content__list--inline li {
+  display: table-cell;
+  padding-right: 3rem;
+}
+ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--inline li:after {
+  display: none;
 }
 
 /** RELATED LINKS */
