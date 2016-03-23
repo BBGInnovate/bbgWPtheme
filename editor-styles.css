@@ -90,7 +90,7 @@ blockquote.pullquote p {
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href|="mailto:"] {
+.bbg__related-links a[href^="mailto:"] {
   background-image: url(img/social-icons/png/email-icon.png);
   background-image: url(img/social-icons/svg/email-icon.svg);
   padding-left: 2.5rem;

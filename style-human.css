@@ -3602,6 +3602,7 @@ object {
 ul.bbg__article-content__list--inline {
   display: block;
   list-style-type: none;
+  margin-top: -3rem;
 }
 ul.bbg__article-content__list--inline li {
   display: table-cell;
@@ -3631,7 +3632,7 @@ ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--
   background-image: url(img/social-icons/svg/link-icon.svg);
   padding-left: 2.5rem;
 }
-.bbg__related-links a[href|="mailto:"] {
+.bbg__related-links a[href^="mailto:"] {
   background-image: url(img/social-icons/png/email-icon.png);
   background-image: url(img/social-icons/svg/email-icon.svg);
 }

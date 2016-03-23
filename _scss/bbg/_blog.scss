@@ -283,6 +283,7 @@
 ul.bbg__article-content__list--inline {
 		display: block;
 		list-style-type: none;
+		margin-top: -3rem;
 
 	li {
 		display: table-cell;
@@ -330,7 +331,7 @@ ul.bbg__article-content__list--inline {
 		}
 
 		// email links
-		&[href|="mailto:"] {
+		&[href^="mailto:"] {
 			background: {
 				image: url(img/social-icons/png/email-icon.png);
 				image: url(img/social-icons/svg/email-icon.svg);
