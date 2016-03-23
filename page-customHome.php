@@ -20,17 +20,7 @@ siteintroduction
 get_header();
 
 ?>
-<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-<div id="SkypeButton_Call_atgatwork_1">
- <script type="text/javascript">
- Skype.ui({
- "name": "dropdown",
- "element": "SkypeButton_Call_atgatwork_1",
- "participants": ["atgatwork"],
- "imageSize": 14
- });
- </script>
-</div>
+
 <div id="main" class="site-main">
 
 	<div id="primary" class="content-area">
