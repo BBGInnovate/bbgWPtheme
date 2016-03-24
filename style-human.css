@@ -3617,6 +3617,16 @@ ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--
   display: none;
 }
 
+#SkypeButton_Call_atgatwork_1 #SkypeButton_Call_atgatwork_1_paraElement {
+  font-size: 1.3rem;
+  line-height: 0;
+  margin: 0;
+}
+#SkypeButton_Call_atgatwork_1 img {
+  margin: 0 !important;
+  vertical-align: -5px !important;
+}
+
 /** RELATED LINKS */
 /* Style related links for portfolio projects */
 .bbg__related-links a {
