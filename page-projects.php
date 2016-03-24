@@ -26,6 +26,7 @@ if ($currentPage > 1) {
 }
 
 
+
 $hasTeamFilter=false;
 $mobileAppsPostContent="";
 if (isset($_GET['category_id'])) {
@@ -76,8 +77,12 @@ if (isset($_GET['category_id'])) {
 $custom_query_args= $qParams;
 $custom_query = new WP_Query( $custom_query_args );
 
+$totalPages=1;
+if ($custom_query->found_posts > $numPostsFirstPage) {
+	$totalPages = 1 + ceil( ($custom_query->found_posts - $numPostsFirstPage)/$numPostsSubsequentPages);
+}
 
-query_posts($qParams);
+//query_posts($qParams);
 
 
 /*** SHARING VARS ****/
@@ -98,7 +103,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="usa-grid">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( $custom_query->have_posts() ) : ?>
 
 				<header class="page-header">
 					<h6 class="bbg-label--mobile large">
@@ -122,8 +127,8 @@ get_header(); ?>
 			<div class="usa-grid-full">
 				<?php
 					$counter=0;
-					while ( have_posts() )  {
-						the_post();
+					while ( $custom_query->have_posts() )  {
+						$custom_query->the_post();
 						$counter=$counter+1;
 						if ( $counter == 1 && $currentPage==1 ) {
 							$includeMetaFeatured = FALSE;
@@ -151,8 +156,7 @@ get_header(); ?>
 					echo '<nav class="navigation posts-navigation" role="navigation">';
 					echo '<h2 class="screen-reader-text">Project navigation</h2>';
 					echo '<div class="nav-links">';
-					echo '<!-- max is '  . $custom_query->max_num_pages . '-->';
-					$nextLink=get_next_posts_link('Older Posts', $custom_query->max_num_pages);
+					$nextLink=get_next_posts_link('Older Posts', $totalPages);
 					$prevLink=get_previous_posts_link('Newer Posts');
 					if ($nextLink != "") {
 						echo '<div class="nav-previous">';
