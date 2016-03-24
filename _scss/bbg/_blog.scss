@@ -285,7 +285,10 @@ ul.bbg__article-content__list--inline {
 		list-style-type: none;
 
 		@include media($small-screen) {
-			margin-top: -3rem;
+			margin: {
+				top: -1rem;
+				bottom: 0;
+			}
 		}
 
 	li {

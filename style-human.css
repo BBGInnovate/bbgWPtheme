@@ -3605,7 +3605,8 @@ ul.bbg__article-content__list--inline {
 }
 @media screen and (min-width: 481px) {
   ul.bbg__article-content__list--inline {
-    margin-top: -3rem;
+    margin-top: -1rem;
+    margin-bottom: 0;
   }
 }
 ul.bbg__article-content__list--inline li {
