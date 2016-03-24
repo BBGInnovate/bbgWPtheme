@@ -293,8 +293,12 @@ ul.bbg__article-content__list--inline {
 
 	li {
 		display: inline-block;
-		margin: 0;
+		margin: 1rem 0;
 		padding-right: $site-margins;
+
+		@include media($small-screen) {
+			margin: 0;
+		}
 
 	    &:before,
 	    &:after {

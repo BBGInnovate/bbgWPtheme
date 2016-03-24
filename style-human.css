@@ -3611,8 +3611,13 @@ ul.bbg__article-content__list--inline {
 }
 ul.bbg__article-content__list--inline li {
   display: inline-block;
-  margin: 0;
+  margin: 1rem 0;
   padding-right: 3rem;
+}
+@media screen and (min-width: 481px) {
+  ul.bbg__article-content__list--inline li {
+    margin: 0;
+  }
 }
 ul.bbg__article-content__list--inline li:before, ul.bbg__article-content__list--inline li:after {
   display: none;
