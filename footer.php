@@ -99,7 +99,7 @@
 					</div>
 
 					<address>
-						<h3 class="usa-footer-contact-heading">Contact us</h3>
+						<h3 class="usa-footer-contact-heading">Contact the BBG</h3>
 						<p>(202) 203-4400</p>
 						<a href="mailto:publicaffairs@bbg.gov">publicaffairs@bbg.gov</a>
 					</address>
