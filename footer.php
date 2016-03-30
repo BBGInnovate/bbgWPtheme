@@ -42,9 +42,9 @@
 					</ul>
 					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
 						<h4 class="usa-footer-primary-link">Departments</h4>
-						<li><a href="http://www.bbgstrategy.com/">Strategy</a></li>
+						<li><a href="http://strategy.bbg.gov/">Strategy</a></li>
 						<li><a href="http://innovation.bbg.gov">Innovation</a></li>
-						<li><a href="http://www.bbg.gov/blog/ceo_blog_post/">CEO's office</a></li>
+						<li><a href="http://www.bbg.gov/blog/ceo_blog_post/">CEO’s office</a></li>
 					</ul>
 					<ul class="usa-unstyled-list usa-width-one-fourth usa-footer-primary-content">
 						<h4 class="usa-footer-primary-link">Resources</h4>
@@ -64,8 +64,10 @@
 		<div class="usa-footer-secondary_section usa-footer-big-secondary-section">
 			<div class="usa-grid">
 				<div class="usa-footer-logo usa-width-one-half">
-					<img class="usa-footer-logo-img" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Broadcasting Board of Governors logo">
-					<h3 class="usa-footer-logo-heading">Broadcasting Board of Governors</h3>
+					<a href="http://www.bbg.gov">
+						<img class="usa-footer-logo-img" src="<?php echo get_template_directory_uri() ?>/img/logo-agency-square.png" alt="Broadcasting Board of Governors logo">
+						<h3 class="usa-footer-logo-heading">Broadcasting Board of Governors</h3>
+					</a>
 				</div>
 
 				<div class="usa-footer-contact-links usa-width-one-half">
