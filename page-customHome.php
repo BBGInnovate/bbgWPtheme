@@ -10,13 +10,6 @@
 
 $templateName = "customHome";
 
-/*
-require(dirname(__FILE__).'/../../fuego/init.php');
-use OpenFuego\app\Getter as Getter;
-$fuego = new Getter();
-siteintroduction
-*/
-
 get_header();
 
 ?>
